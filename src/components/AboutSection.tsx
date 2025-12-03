@@ -1,4 +1,5 @@
 import { Check } from "lucide-react";
+import hopefulFamily from "@/assets/hopeful-family.jpg";
 
 const features = [
   "New episodes every week",
@@ -52,18 +53,12 @@ const AboutSection = () => {
 
           {/* Visual */}
           <div className="relative">
-            <div className="aspect-square rounded-2xl bg-gradient-to-br from-secondary to-background border border-border p-8 flex items-center justify-center">
-              <div className="text-center">
-                <div className="font-script text-7xl sm:text-8xl text-primary animate-pulse-glow">
-                  Hope
-                </div>
-                <h4 className="text-2xl text-foreground mt-4 uppercase tracking-widest">
-                  Starts Here
-                </h4>
-                <p className="text-muted-foreground mt-2">
-                  You're not alone in this journey
-                </p>
-              </div>
+            <div className="aspect-square rounded-2xl overflow-hidden border border-border">
+              <img 
+                src={hopefulFamily} 
+                alt="A happy family reconnected through recovery" 
+                className="w-full h-full object-cover"
+              />
             </div>
             
             {/* Floating badges */}
