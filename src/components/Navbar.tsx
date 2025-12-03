@@ -1,7 +1,13 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import logo from "@/assets/party-wreckers-logo.png";
 
 const navLinks = [
@@ -9,6 +15,14 @@ const navLinks = [
   { label: "Meet the Host", href: "/host" },
   { label: "Support Our Sponsors", href: "/sponsors" },
   { label: "About", href: "/#about" },
+];
+
+const podcastLinks = [
+  { label: "Apple Podcasts", href: "https://podcasts.apple.com/us/podcast/the-party-wreckers/id1611904917" },
+  { label: "Spotify", href: "https://open.spotify.com/show/4YJLvnFuZr5EkcGs9b47fn?si=bde59f5f480c45a2" },
+  { label: "Amazon Music", href: "https://music.amazon.com/podcasts/b7bf2801-8447-4dfc-9857-aa41cd4cfc64/the-party-wreckers" },
+  { label: "PodBay", href: "https://podbay.fm/p/the-party-wreckers-podcast" },
+  { label: "PodChaser", href: "https://www.podchaser.com/podcasts/the-party-wreckers-4256744" },
 ];
 
 const Navbar = () => {
@@ -48,9 +62,27 @@ const Navbar = () => {
                 </a>
               )
             ))}
-            <Button variant="default" size="sm">
-              Subscribe
-            </Button>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="default" size="sm">
+                  Subscribe <ChevronDown className="ml-1 h-4 w-4" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end" className="bg-background border-border">
+                {podcastLinks.map((link) => (
+                  <DropdownMenuItem key={link.label} asChild>
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="cursor-pointer"
+                    >
+                      {link.label}
+                    </a>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
           </div>
 
           {/* Mobile menu button */}
@@ -88,9 +120,27 @@ const Navbar = () => {
                   </a>
                 )
               ))}
-              <Button variant="default" size="sm" className="w-full mt-2">
-                Subscribe
-              </Button>
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="default" size="sm" className="w-full mt-2">
+                    Subscribe <ChevronDown className="ml-1 h-4 w-4" />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end" className="w-full bg-background border-border">
+                  {podcastLinks.map((link) => (
+                    <DropdownMenuItem key={link.label} asChild>
+                      <a
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="cursor-pointer"
+                      >
+                        {link.label}
+                      </a>
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
             </div>
           </div>
         )}
