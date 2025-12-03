@@ -1,5 +1,12 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Phone, Mail } from "lucide-react";
+import { ArrowRight, Mail } from "lucide-react";
+
+const platforms = [
+  { name: "Spotify", url: "#" },
+  { name: "Apple Podcasts", url: "#" },
+  { name: "YouTube", url: "#" },
+  { name: "Google Podcasts", url: "#" },
+];
 
 const CTASection = () => {
   return (
@@ -13,18 +20,31 @@ const CTASection = () => {
 
       <div className="container px-4 relative">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="font-display text-5xl sm:text-6xl md:text-7xl text-foreground mb-6">
-            READY TO <span className="text-gradient-primary">WRECK</span>?
+          <h2 className="font-script text-5xl sm:text-6xl text-foreground mb-6">
+            Start Listening
           </h2>
           
           <p className="text-muted-foreground text-lg sm:text-xl max-w-2xl mx-auto mb-10">
-            Let's turn your next event into something extraordinary. 
-            Get in touch and let the party planning begin.
+            Don't miss an episode. Subscribe wherever you listen to podcasts 
+            and join the party.
           </p>
+
+          {/* Platform buttons */}
+          <div className="flex flex-wrap gap-4 justify-center items-center mb-12">
+            {platforms.map((platform) => (
+              <a
+                key={platform.name}
+                href={platform.url}
+                className="px-6 py-3 rounded-lg bg-secondary border border-border text-foreground font-medium hover:bg-secondary/80 hover:border-primary/50 transition-all duration-300"
+              >
+                {platform.name}
+              </a>
+            ))}
+          </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <Button variant="hero" size="xl">
-              Get Started
+              Subscribe Now
               <ArrowRight className="w-5 h-5" />
             </Button>
           </div>
@@ -32,22 +52,13 @@ const CTASection = () => {
           {/* Contact info */}
           <div className="flex flex-col sm:flex-row gap-8 justify-center items-center pt-8 border-t border-border">
             <a 
-              href="tel:+1234567890" 
-              className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
-            >
-              <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center">
-                <Phone className="w-5 h-5" />
-              </div>
-              <span>(123) 456-7890</span>
-            </a>
-            <a 
-              href="mailto:hello@partywreckers.com" 
+              href="mailto:hello@partywreckerspodcast.com" 
               className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
             >
               <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center">
                 <Mail className="w-5 h-5" />
               </div>
-              <span>hello@partywreckers.com</span>
+              <span>hello@partywreckerspodcast.com</span>
             </a>
           </div>
         </div>

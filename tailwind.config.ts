@@ -59,7 +59,7 @@ export default {
         },
       },
       fontFamily: {
-        display: ['"Bebas Neue"', "sans-serif"],
+        script: ['"Pacifico"', "cursive"],
         body: ['"Inter"', "sans-serif"],
       },
       borderRadius: {
