@@ -5,8 +5,14 @@ const features = [
   "Available on all major platforms",
   "Free family support groups via Zoom",
   "Professional intervention guidance",
-  "Expert guests from the recovery industry",
+  "Expert guests from recovery industry",
   "Real stories, real hope",
+  "Enabling vs. supporting explained",
+  "Boundary-setting strategies",
+  "Treatment program guidance",
+  "Relapse prevention insights",
+  "Family recovery planning",
+  "Case-based learning",
 ];
 
 const AboutSection = () => {
@@ -32,16 +38,16 @@ const AboutSection = () => {
               The Party Wreckers Podcast is designed as a reliable guide for anyone who feels stuck between loving someone with a substance use disorder and not knowing how to help. Through solo episodes, interviews with treatment and recovery experts, and case-based insights from hundreds of interventions, the show gives families language, tools, and step-by-step strategies they can use immediately. Listeners come away with a deeper understanding of support versus enabling, how to set and hold healthy boundaries, and how to build a long-term recovery plan that includes the whole family—not just the addicted person.
             </p>
 
-            <ul className="space-y-4">
+            <div className="grid grid-cols-2 gap-x-6 gap-y-2">
               {features.map((feature, index) => (
-                <li key={index} className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Check className="w-4 h-4 text-primary" />
+                <div key={index} className="flex items-start gap-2">
+                  <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Check className="w-3 h-3 text-primary" />
                   </div>
-                  <span className="text-foreground">{feature}</span>
-                </li>
+                  <span className="text-foreground text-sm">{feature}</span>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
 
           {/* Visual */}
