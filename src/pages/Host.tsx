@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet";
 import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import Footer, { SocialLinks } from "@/components/Footer";
 import { Mic, Heart, Users, Clock } from "lucide-react";
 import mattHeadshot from "@/assets/matt-headshot.jpg";
 
@@ -49,6 +49,9 @@ const Host = () => {
                       alt="Matt - Host of The Party Wreckers Podcast" 
                       className="w-48 sm:w-64 rounded-xl object-cover shadow-lg"
                     />
+                    <div className="mt-4 flex justify-center">
+                      <SocialLinks />
+                    </div>
                   </div>
                   <div className="flex-1 text-center md:text-left">
                     <h2 className="font-script text-3xl text-foreground mb-6">
