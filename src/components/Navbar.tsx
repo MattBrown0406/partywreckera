@@ -3,9 +3,9 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { label: "Services", href: "#services" },
+  { label: "Episodes", href: "#episodes" },
   { label: "About", href: "#about" },
-  { label: "Gallery", href: "#gallery" },
+  { label: "Listen", href: "#listen" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -17,8 +17,8 @@ const Navbar = () => {
       <nav className="container px-4">
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
-          <a href="/" className="font-display text-2xl sm:text-3xl tracking-tight">
-            PARTY<span className="text-primary">WRECKERS</span>
+          <a href="/" className="font-script text-2xl sm:text-3xl text-foreground">
+            The Party Wreckers
           </a>
 
           {/* Desktop nav */}
@@ -33,7 +33,7 @@ const Navbar = () => {
               </a>
             ))}
             <Button variant="default" size="sm">
-              Book Now
+              Subscribe
             </Button>
           </div>
 
@@ -62,7 +62,7 @@ const Navbar = () => {
                 </a>
               ))}
               <Button variant="default" size="sm" className="w-full mt-2">
-                Book Now
+                Subscribe
               </Button>
             </div>
           </div>

@@ -1,4 +1,4 @@
-import { Instagram, Facebook, Twitter, Youtube } from "lucide-react";
+import { Instagram, Youtube, Twitter } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -6,8 +6,8 @@ const Footer = () => {
       <div className="container px-4">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo */}
-          <a href="/" className="font-display text-2xl tracking-tight">
-            PARTY<span className="text-primary">WRECKERS</span>
+          <a href="/" className="font-script text-2xl text-foreground">
+            The Party Wreckers
           </a>
 
           {/* Social links */}
@@ -18,13 +18,6 @@ const Footer = () => {
               aria-label="Instagram"
             >
               <Instagram className="w-5 h-5" />
-            </a>
-            <a
-              href="#"
-              className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-secondary/80 transition-colors"
-              aria-label="Facebook"
-            >
-              <Facebook className="w-5 h-5" />
             </a>
             <a
               href="#"
@@ -44,7 +37,7 @@ const Footer = () => {
 
           {/* Copyright */}
           <p className="text-muted-foreground text-sm">
-            © {new Date().getFullYear()} Party Wreckers. All rights reserved.
+            © {new Date().getFullYear()} The Party Wreckers Podcast. All rights reserved.
           </p>
         </div>
       </div>
