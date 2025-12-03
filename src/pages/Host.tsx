@@ -43,7 +43,7 @@ const Host = () => {
             <div className="max-w-4xl mx-auto">
               <div className="bg-card border border-border rounded-xl p-8 sm:p-12">
                 <div className="flex flex-col md:flex-row gap-8 items-center md:items-start">
-                  <div className="flex-shrink-0">
+                  <div className="flex-shrink-0 mt-12 sm:mt-16">
                     <img 
                       src={mattHeadshot} 
                       alt="Matt - Host of The Party Wreckers Podcast" 
