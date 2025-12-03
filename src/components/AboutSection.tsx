@@ -25,15 +25,11 @@ const AboutSection = () => {
             </h2>
             
             <p className="text-muted-foreground text-lg mb-4">
-              Matt Brown is a practicing full-time addiction interventionist. 
-              He sits down with industry guests to discuss intervention, 
-              addiction, and mental health.
+              The Party Wreckers Podcast is a weekly show for families, loved ones, and professionals who are tired of watching addiction destroy lives and relationships. Hosted by an experienced interventionist with more than two decades in the field, the podcast breaks down complex topics like enabling, boundaries, relapse, treatment programs, and recovery planning into clear, practical conversations. Each episode blends real-world intervention experience, storytelling, and education to help listeners understand addiction as a medical disease with a spiritual solution—while also showing them what to do next, not just what to think or feel about it.
             </p>
             
             <p className="text-muted-foreground text-lg mb-8">
-              The goal? Entertain, remove the negative stigma around addiction, 
-              and help as many families as possible find recovery. If someone 
-              you love is struggling, this podcast is for you.
+              The Party Wreckers Podcast is designed as a reliable guide for anyone who feels stuck between loving someone with a substance use disorder and not knowing how to help. Through solo episodes, interviews with treatment and recovery experts, and case-based insights from hundreds of interventions, the show gives families language, tools, and step-by-step strategies they can use immediately. Listeners come away with a deeper understanding of support versus enabling, how to set and hold healthy boundaries, and how to build a long-term recovery plan that includes the whole family—not just the addicted person.
             </p>
 
             <ul className="space-y-4">
