@@ -32,10 +32,24 @@ const Sponsors = () => {
                 Support Our Sponsors
               </h1>
               
-              <p className="text-lg sm:text-xl text-muted-foreground">
+              <p className="text-lg sm:text-xl text-muted-foreground mb-6">
                 These amazing partners help make The Party Wreckers Podcast possible. 
                 By supporting them, you're helping us continue our mission to help families.
               </p>
+              
+              <p className="text-muted-foreground mb-4">
+                Do you want to support the podcast directly? Your contribution of $1, $5, or $10 can help us keep getting the message out!
+              </p>
+              <Button variant="outline" className="bg-background/10 border-border/50 hover:bg-background/20" asChild>
+                <a
+                  href="https://www.buzzsprout.com/1941777/support"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Support the Podcast
+                  <Heart className="w-4 h-4 ml-2" />
+                </a>
+              </Button>
             </div>
           </div>
         </section>
