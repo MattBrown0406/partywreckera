@@ -56,10 +56,18 @@ const Sponsors = () => {
                   <h2 className="font-script text-3xl text-foreground mb-3">
                     Intervention on Call
                   </h2>
+                  <p className="text-muted-foreground mb-4">
+                    Not everyone needs a professionally led intervention. Sometimes all that's needed 
+                    is a change in strategy, language, and perspective.
+                  </p>
+                  <p className="text-muted-foreground mb-4">
+                    Intervention on Call offers <span className="text-foreground font-medium">on-demand access</span> to 
+                    professional, experienced interventionists for just <span className="text-foreground font-medium">$150 per hour</span>. 
+                    Get expert guidance when you need it—no waiting, no long-term commitments.
+                  </p>
                   <p className="text-muted-foreground mb-6">
-                    Intervention on Call provides 24/7 intervention services and family support 
-                    for those struggling with addiction. Their team of certified interventionists 
-                    helps families navigate the difficult journey toward recovery.
+                    Whether you need help planning a conversation, understanding treatment options, 
+                    or navigating a crisis, their team is ready to help.
                   </p>
                   <a
                     href="https://interventiononcall.com"
