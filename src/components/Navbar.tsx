@@ -7,7 +7,6 @@ import logo from "@/assets/party-wreckers-logo.png";
 const navLinks = [
   { label: "Episodes", href: "/episodes" },
   { label: "About", href: "/#about" },
-  { label: "Listen", href: "/#listen" },
   { label: "Contact", href: "/#contact" },
 ];
 
