@@ -59,9 +59,14 @@ const AboutSection = () => {
             <div className="absolute -top-4 -right-4 bg-primary text-primary-foreground px-4 py-2 rounded-lg font-semibold text-sm uppercase tracking-wider shadow-lg glow-primary z-10">
               Top Rated
             </div>
-            <div className="absolute -bottom-4 -left-4 bg-accent text-accent-foreground px-4 py-2 rounded-lg font-semibold text-sm uppercase tracking-wider shadow-lg glow-accent z-10">
+            <a 
+              href="https://interventiononcall.com/live-family-friends-zoom/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="absolute -bottom-4 -left-4 bg-accent text-accent-foreground px-4 py-2 rounded-lg font-semibold text-sm uppercase tracking-wider shadow-lg glow-accent z-10 hover:scale-105 transition-transform"
+            >
               Free Support
-            </div>
+            </a>
           </div>
         </div>
       </div>
