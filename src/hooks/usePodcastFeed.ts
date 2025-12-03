@@ -22,7 +22,10 @@ const RSS_URL = "https://feeds.buzzsprout.com/1941777.rss";
 
 const parseRSSFeed = async (): Promise<PodcastInfo> => {
   // Use a CORS proxy to fetch the RSS feed
-  const response = await fetch(`https://api.allorigins.win/raw?url=${encodeURIComponent(RSS_URL)}`);
+  const response = await fetch(`https://corsproxy.io/?${encodeURIComponent(RSS_URL)}`);
+  if (!response.ok) {
+    throw new Error("Failed to fetch RSS feed");
+  }
   const text = await response.text();
   
   const parser = new DOMParser();
