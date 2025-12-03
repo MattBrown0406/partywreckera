@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Headphones, Play } from "lucide-react";
+import { Headphones, Play, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "@/assets/party-wreckers-logo.png";
 
@@ -39,13 +39,19 @@ const HeroSection = () => {
             find hope and practical guidance.
           </p>
 
-          {/* CTA Button */}
-          <div className="flex justify-center items-center">
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
             <Button variant="hero" size="xl" asChild>
               <Link to="/episodes">
                 <Play className="w-5 h-5" />
                 Listen Now
               </Link>
+            </Button>
+            <Button variant="heroOutline" size="xl" asChild>
+              <a href="mailto:matt@partywreckers.com?subject=Guest%20Inquiry%20-%20The%20Party%20Wreckers%20Podcast">
+                <Mail className="w-5 h-5" />
+                Want to Be a Guest?
+              </a>
             </Button>
           </div>
 
