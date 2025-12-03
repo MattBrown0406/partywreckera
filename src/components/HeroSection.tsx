@@ -56,25 +56,25 @@ const HeroSection = () => {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-3 gap-4 sm:gap-8 mt-16 pt-16 border-t border-border/50">
+          <div className="grid grid-cols-3 gap-4 sm:gap-8 mt-16 pt-16 border-t border-border/50 pb-20">
             <div className="text-center">
               <div className="font-script text-3xl sm:text-5xl text-primary">60+</div>
-              <div className="text-xs sm:text-sm text-muted-foreground mt-1 uppercase tracking-wider">Episodes</div>
+              <div className="text-xs sm:text-sm text-muted-foreground mt-2 uppercase tracking-wider">Episodes</div>
             </div>
             <div className="text-center">
               <div className="font-script text-3xl sm:text-5xl text-accent">1000s</div>
-              <div className="text-xs sm:text-sm text-muted-foreground mt-2 uppercase tracking-wider">Families Helped</div>
+              <div className="text-xs sm:text-sm text-muted-foreground mt-2 uppercase tracking-wider whitespace-nowrap">Families Helped</div>
             </div>
             <div className="text-center">
               <div className="font-script text-3xl sm:text-5xl text-foreground">4.9★</div>
-              <div className="text-xs sm:text-sm text-muted-foreground mt-1 uppercase tracking-wider">Rating</div>
+              <div className="text-xs sm:text-sm text-muted-foreground mt-2 uppercase tracking-wider">Rating</div>
             </div>
           </div>
         </div>
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
         <span className="text-xs text-muted-foreground uppercase tracking-widest">Scroll</span>
         <div className="w-6 h-10 rounded-full border-2 border-muted-foreground/30 flex justify-center pt-2">
           <div className="w-1.5 h-1.5 rounded-full bg-primary animate-bounce" />
