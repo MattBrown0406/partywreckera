@@ -9,7 +9,6 @@ const navLinks = [
   { label: "Meet the Host", href: "/host" },
   { label: "Support Our Sponsors", href: "/sponsors" },
   { label: "About", href: "/#about" },
-  { label: "Contact", href: "/#contact" },
 ];
 
 const Navbar = () => {
