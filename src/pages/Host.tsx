@@ -47,7 +47,7 @@ const Host = () => {
                     <img 
                       src={mattHeadshot} 
                       alt="Matt - Host of The Party Wreckers Podcast" 
-                      className="w-48 h-48 sm:w-64 sm:h-64 rounded-xl object-cover object-top shadow-lg"
+                      className="w-48 sm:w-64 rounded-xl object-cover shadow-lg"
                     />
                   </div>
                   <div className="flex-1 text-center md:text-left">
