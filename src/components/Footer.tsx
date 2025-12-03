@@ -6,43 +6,43 @@ const TikTokIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
-export const SocialLinks = () => (
-  <div className="flex items-center gap-4">
+export const SocialLinks = ({ size = "default" }: { size?: "default" | "small" }) => (
+  <div className={`flex items-center ${size === "small" ? "gap-2 sm:gap-3" : "gap-3 sm:gap-4"}`}>
     <a
       href="https://www.tiktok.com/@mattbrowninterventionist"
       target="_blank"
       rel="noopener noreferrer"
-      className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-secondary/80 transition-colors"
+      className={`${size === "small" ? "w-8 h-8 sm:w-9 sm:h-9" : "w-9 h-9 sm:w-10 sm:h-10"} rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-secondary/80 transition-colors`}
       aria-label="TikTok"
     >
-      <TikTokIcon className="w-5 h-5" />
+      <TikTokIcon className={size === "small" ? "w-4 h-4" : "w-4 h-4 sm:w-5 sm:h-5"} />
     </a>
     <a
       href="https://www.instagram.com/mattbrowninterventionist/"
       target="_blank"
       rel="noopener noreferrer"
-      className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-secondary/80 transition-colors"
+      className={`${size === "small" ? "w-8 h-8 sm:w-9 sm:h-9" : "w-9 h-9 sm:w-10 sm:h-10"} rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-secondary/80 transition-colors`}
       aria-label="Instagram"
     >
-      <Instagram className="w-5 h-5" />
+      <Instagram className={size === "small" ? "w-4 h-4" : "w-4 h-4 sm:w-5 sm:h-5"} />
     </a>
     <a
       href="https://www.facebook.com/mbrownsober"
       target="_blank"
       rel="noopener noreferrer"
-      className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-secondary/80 transition-colors"
+      className={`${size === "small" ? "w-8 h-8 sm:w-9 sm:h-9" : "w-9 h-9 sm:w-10 sm:h-10"} rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-secondary/80 transition-colors`}
       aria-label="Facebook"
     >
-      <Facebook className="w-5 h-5" />
+      <Facebook className={size === "small" ? "w-4 h-4" : "w-4 h-4 sm:w-5 sm:h-5"} />
     </a>
     <a
       href="https://www.youtube.com/@ThePartyWreckers"
       target="_blank"
       rel="noopener noreferrer"
-      className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-secondary/80 transition-colors"
+      className={`${size === "small" ? "w-8 h-8 sm:w-9 sm:h-9" : "w-9 h-9 sm:w-10 sm:h-10"} rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-secondary/80 transition-colors`}
       aria-label="YouTube"
     >
-      <Youtube className="w-5 h-5" />
+      <Youtube className={size === "small" ? "w-4 h-4" : "w-4 h-4 sm:w-5 sm:h-5"} />
     </a>
   </div>
 );
