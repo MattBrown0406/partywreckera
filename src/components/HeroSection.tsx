@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Headphones, Play, Mic } from "lucide-react";
+import { Headphones, Play } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "@/assets/party-wreckers-logo.png";
 
@@ -39,18 +39,12 @@ const HeroSection = () => {
             find hope and practical guidance.
           </p>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          {/* CTA Button */}
+          <div className="flex justify-center items-center">
             <Button variant="hero" size="xl" asChild>
               <Link to="/episodes">
                 <Play className="w-5 h-5" />
                 Listen Now
-              </Link>
-            </Button>
-            <Button variant="heroOutline" size="xl" asChild>
-              <Link to="/episodes">
-                <Mic className="w-5 h-5" />
-                Latest Episode
               </Link>
             </Button>
           </div>
