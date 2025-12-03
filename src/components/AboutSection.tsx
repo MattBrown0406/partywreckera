@@ -1,5 +1,6 @@
-import { Check } from "lucide-react";
+import { Check, ExternalLink } from "lucide-react";
 import FamilyCarousel from "@/components/FamilyCarousel";
+import iocLogo from "@/assets/ioc-logo.jpg";
 
 const features = [
   "New episodes every week",
@@ -68,6 +69,29 @@ const AboutSection = () => {
               Free Support
             </a>
           </div>
+        </div>
+
+        {/* Free Support Group CTA */}
+        <div className="bg-background border border-border rounded-xl p-8 max-w-2xl mx-auto mt-16 text-center">
+          <img 
+            src={iocLogo} 
+            alt="Intervention on Call" 
+            className="w-48 mx-auto mb-4"
+          />
+          <h3 className="font-script text-3xl text-foreground mb-3">Free Family Support</h3>
+          <p className="text-muted-foreground mb-4">
+            Join our free nightly Zoom support groups. Sunday at 8PM PST, 
+            Monday-Thursday at 8PM EST.
+          </p>
+          <a
+            href="https://interventiononcall.com/live-family-friends-zoom/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-primary hover:underline font-medium"
+          >
+            Register for Free
+            <ExternalLink className="w-4 h-4" />
+          </a>
         </div>
       </div>
     </section>
