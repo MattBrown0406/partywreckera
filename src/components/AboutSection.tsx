@@ -1,5 +1,5 @@
 import { Check } from "lucide-react";
-import hopefulFamily from "@/assets/hopeful-family.jpg";
+import FamilyCarousel from "@/components/FamilyCarousel";
 
 const features = [
   "New episodes every week",
@@ -53,30 +53,13 @@ const AboutSection = () => {
 
           {/* Visual */}
           <div className="relative">
-            <div className="aspect-square rounded-2xl overflow-hidden border border-border relative">
-              <img 
-                src={hopefulFamily} 
-                alt="A happy family reconnected through recovery" 
-                className="w-full h-full object-cover"
-              />
-              {/* Dark gradient overlay on bottom 25% */}
-              <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/90 via-black/60 to-transparent" />
-              {/* Text overlay */}
-              <div className="absolute inset-x-0 bottom-0 p-6 text-center">
-                <p className="font-script text-3xl sm:text-4xl text-white mb-1">
-                  Hope Starts Here
-                </p>
-                <p className="text-white/80 text-sm uppercase tracking-widest">
-                  You're Not Alone
-                </p>
-              </div>
-            </div>
+            <FamilyCarousel />
             
             {/* Floating badges */}
-            <div className="absolute -top-4 -right-4 bg-primary text-primary-foreground px-4 py-2 rounded-lg font-semibold text-sm uppercase tracking-wider shadow-lg glow-primary">
+            <div className="absolute -top-4 -right-4 bg-primary text-primary-foreground px-4 py-2 rounded-lg font-semibold text-sm uppercase tracking-wider shadow-lg glow-primary z-10">
               Top Rated
             </div>
-            <div className="absolute -bottom-4 -left-4 bg-accent text-accent-foreground px-4 py-2 rounded-lg font-semibold text-sm uppercase tracking-wider shadow-lg glow-accent">
+            <div className="absolute -bottom-4 -left-4 bg-accent text-accent-foreground px-4 py-2 rounded-lg font-semibold text-sm uppercase tracking-wider shadow-lg glow-accent z-10">
               Free Support
             </div>
           </div>
