@@ -63,7 +63,7 @@ const HeroSection = () => {
             </div>
             <div className="text-center">
               <div className="font-script text-3xl sm:text-5xl text-accent">1000s</div>
-              <div className="text-xs sm:text-sm text-muted-foreground mt-1 uppercase tracking-wider leading-tight">Families Helped</div>
+              <div className="text-xs sm:text-sm text-muted-foreground mt-2 uppercase tracking-wider">Families Helped</div>
             </div>
             <div className="text-center">
               <div className="font-script text-3xl sm:text-5xl text-foreground">4.9★</div>
