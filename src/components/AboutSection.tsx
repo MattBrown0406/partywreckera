@@ -24,12 +24,13 @@ const AboutSection = () => {
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
 
       <div className="container px-4 relative">
+        <h2 className="font-script text-6xl sm:text-7xl text-foreground mb-12 text-center">
+          About the Show
+        </h2>
+        
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Content */}
           <div>
-            <h2 className="font-script text-6xl sm:text-7xl text-foreground mb-6 text-center">
-              About the Show
-            </h2>
             
             <p className="text-muted-foreground text-lg mb-4">
               The Party Wreckers Podcast is a weekly show for families, loved ones, and professionals who are tired of watching addiction destroy lives and relationships. Hosted by an experienced interventionist with more than two decades in the field, the podcast breaks down complex topics like enabling, boundaries, relapse, treatment programs, and recovery planning into clear, practical conversations. Each episode blends real-world intervention experience, storytelling, and education to help listeners understand addiction as a medical disease with a spiritual solution—while also showing them what to do next, not just what to think or feel about it.
