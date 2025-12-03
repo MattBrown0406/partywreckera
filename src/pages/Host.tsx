@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Mic, Heart, Users, Clock } from "lucide-react";
+import mattHeadshot from "@/assets/matt-headshot.jpg";
 
 const Host = () => {
   return (
@@ -41,9 +42,18 @@ const Host = () => {
           <div className="container px-4">
             <div className="max-w-4xl mx-auto">
               <div className="bg-card border border-border rounded-xl p-8 sm:p-12">
-                <h2 className="font-script text-3xl text-foreground mb-6">
-                  20+ Years of Experience
-                </h2>
+                <div className="flex flex-col md:flex-row gap-8 items-center md:items-start">
+                  <div className="flex-shrink-0">
+                    <img 
+                      src={mattHeadshot} 
+                      alt="Matt - Host of The Party Wreckers Podcast" 
+                      className="w-48 h-48 sm:w-64 sm:h-64 rounded-xl object-cover object-top shadow-lg"
+                    />
+                  </div>
+                  <div className="flex-1 text-center md:text-left">
+                    <h2 className="font-script text-3xl text-foreground mb-6">
+                      20+ Years of Experience
+                    </h2>
                 
                 <div className="space-y-6 text-muted-foreground">
                   <p>
@@ -61,12 +71,14 @@ const Host = () => {
                     <span className="text-foreground font-medium"> what to do next</span>.
                   </p>
                   
-                  <p>
-                    Matt approaches addiction as a medical disease with a spiritual solution, helping 
-                    listeners distinguish between support and enabling, set healthy boundaries, and 
-                    develop long-term family-based recovery plans.
-                  </p>
+                    <p>
+                      Matt approaches addiction as a medical disease with a spiritual solution, helping 
+                      listeners distinguish between support and enabling, set healthy boundaries, and 
+                      develop long-term family-based recovery plans.
+                    </p>
+                  </div>
                 </div>
+              </div>
 
                 {/* Stats */}
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-10 pt-10 border-t border-border">
