@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Mail, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
-import logo from "@/assets/party-wreckers-logo.png";
+import iocLogo from "@/assets/ioc-logo.jpg";
 
 const platforms = [
   { name: "Spotify", url: "https://open.spotify.com/show/your-show-id" },
@@ -59,7 +59,7 @@ const CTASection = () => {
           {/* Free Support Group CTA */}
           <div className="bg-card border border-border rounded-xl p-8 max-w-2xl mx-auto mb-12">
             <img 
-              src={logo} 
+              src={iocLogo} 
               alt="Intervention on Call" 
               className="w-48 mx-auto mb-4"
             />
