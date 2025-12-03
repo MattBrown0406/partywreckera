@@ -105,7 +105,7 @@ const Sponsors = () => {
                     all the difference.
                   </p>
                   <p className="text-muted-foreground mb-6">
-                    Use our link to get started and support the podcast.
+                    Use our link to get started and get 10% off your first month.
                   </p>
                   <a
                     href="https://www.betterhelp.com/partywreckers"
