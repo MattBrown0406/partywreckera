@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/party-wreckers-logo.png";
 
 const navLinks = [
   { label: "Episodes", href: "#episodes" },
@@ -17,8 +18,12 @@ const Navbar = () => {
       <nav className="container px-4">
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
-          <a href="/" className="font-script text-2xl sm:text-3xl text-foreground">
-            The Party Wreckers
+          <a href="/" className="flex items-center">
+            <img 
+              src={logo} 
+              alt="The Party Wreckers Podcast" 
+              className="h-12 sm:h-14 w-auto"
+            />
           </a>
 
           {/* Desktop nav */}
