@@ -50,7 +50,7 @@ const Host = () => {
                       className="w-48 sm:w-64 rounded-xl object-cover shadow-lg"
                     />
                     <div className="mt-4 flex justify-center">
-                      <SocialLinks />
+                      <SocialLinks size="small" />
                     </div>
                   </div>
                   <div className="flex-1 text-center md:text-left">
