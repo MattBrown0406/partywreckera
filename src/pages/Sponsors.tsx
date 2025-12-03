@@ -81,6 +81,41 @@ const Sponsors = () => {
                 </div>
               </div>
 
+              {/* BetterHelp Sponsor Card */}
+              <div className="mt-8 bg-card border border-border rounded-xl p-8 sm:p-12 flex flex-col md:flex-row items-center gap-8">
+                <div className="flex-shrink-0 w-64 flex items-center justify-center">
+                  <div className="text-4xl font-bold text-[#00a67e]">
+                    BetterHelp
+                  </div>
+                </div>
+                <div className="flex-1 text-center md:text-left">
+                  <h2 className="font-script text-3xl text-foreground mb-3">
+                    BetterHelp
+                  </h2>
+                  <p className="text-muted-foreground mb-4">
+                    Professional therapy, made accessible. BetterHelp connects you with licensed therapists 
+                    from the comfort of your home—on your schedule.
+                  </p>
+                  <p className="text-muted-foreground mb-4">
+                    Whether you're dealing with anxiety, depression, relationship issues, or the stress 
+                    of supporting a loved one through addiction, having a professional to talk to can make 
+                    all the difference.
+                  </p>
+                  <p className="text-muted-foreground mb-6">
+                    Use our link to get started and support the podcast.
+                  </p>
+                  <a
+                    href="https://www.betterhelp.com/partywreckers"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-primary hover:underline font-medium"
+                  >
+                    Get Started with BetterHelp
+                    <ExternalLink className="w-4 h-4" />
+                  </a>
+                </div>
+              </div>
+
               {/* Become a Sponsor CTA */}
               <div className="mt-12 bg-secondary/30 border border-border rounded-xl p-8 text-center">
                 <h3 className="font-script text-2xl text-foreground mb-3">
