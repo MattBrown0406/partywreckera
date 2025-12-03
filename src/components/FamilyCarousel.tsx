@@ -91,21 +91,6 @@ const FamilyCarousel = () => {
         <ChevronRight className="w-6 h-6" />
       </button>
 
-      {/* Dots indicator */}
-      <div className="absolute bottom-20 left-1/2 -translate-x-1/2 flex gap-2">
-        {images.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => emblaApi?.scrollTo(index)}
-            className={`w-2 h-2 rounded-full transition-all ${
-              index === selectedIndex
-                ? "bg-white w-6"
-                : "bg-white/50 hover:bg-white/70"
-            }`}
-            aria-label={`Go to slide ${index + 1}`}
-          />
-        ))}
-      </div>
     </div>
   );
 };
