@@ -27,7 +27,7 @@ const AboutSection = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Content */}
           <div>
-            <h2 className="font-script text-5xl sm:text-6xl text-foreground mb-6">
+            <h2 className="font-script text-6xl sm:text-7xl text-foreground mb-6 text-center">
               About the Show
             </h2>
             
