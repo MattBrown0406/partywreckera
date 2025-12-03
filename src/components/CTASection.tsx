@@ -1,16 +1,17 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Mail } from "lucide-react";
+import { ArrowRight, Mail, ExternalLink } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const platforms = [
-  { name: "Spotify", url: "#" },
-  { name: "Apple Podcasts", url: "#" },
-  { name: "YouTube", url: "#" },
-  { name: "Google Podcasts", url: "#" },
+  { name: "Spotify", url: "https://open.spotify.com/show/your-show-id" },
+  { name: "Apple Podcasts", url: "https://podcasts.apple.com/us/podcast/your-show" },
+  { name: "YouTube", url: "https://youtube.com/@partywreckers" },
+  { name: "Buzzsprout", url: "https://www.buzzsprout.com/1941777" },
 ];
 
 const CTASection = () => {
   return (
-    <section className="py-24 bg-background relative overflow-hidden">
+    <section className="py-24 bg-background relative overflow-hidden" id="contact">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent" />
       
@@ -25,8 +26,8 @@ const CTASection = () => {
           </h2>
           
           <p className="text-muted-foreground text-lg sm:text-xl max-w-2xl mx-auto mb-10">
-            Don't miss an episode. Subscribe wherever you listen to podcasts 
-            and join the party.
+            Subscribe wherever you listen to podcasts. New episodes drop weekly 
+            with real conversations and practical guidance.
           </p>
 
           {/* Platform buttons */}
@@ -35,30 +36,53 @@ const CTASection = () => {
               <a
                 key={platform.name}
                 href={platform.url}
-                className="px-6 py-3 rounded-lg bg-secondary border border-border text-foreground font-medium hover:bg-secondary/80 hover:border-primary/50 transition-all duration-300"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-secondary border border-border text-foreground font-medium hover:bg-secondary/80 hover:border-primary/50 transition-all duration-300"
               >
                 {platform.name}
+                <ExternalLink className="w-4 h-4" />
               </a>
             ))}
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button variant="hero" size="xl">
-              Subscribe Now
-              <ArrowRight className="w-5 h-5" />
+            <Button variant="hero" size="xl" asChild>
+              <Link to="/episodes">
+                All Episodes
+                <ArrowRight className="w-5 h-5" />
+              </Link>
             </Button>
+          </div>
+
+          {/* Free Support Group CTA */}
+          <div className="bg-card border border-border rounded-xl p-8 max-w-2xl mx-auto mb-12">
+            <h3 className="font-script text-3xl text-foreground mb-3">Free Family Support</h3>
+            <p className="text-muted-foreground mb-4">
+              Join our free nightly Zoom support groups. Sunday at 8PM PST, 
+              Monday-Thursday at 8PM EST.
+            </p>
+            <a
+              href="https://interventiononcall.com/live-family-friends-zoom/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-primary hover:underline font-medium"
+            >
+              Register for Free
+              <ExternalLink className="w-4 h-4" />
+            </a>
           </div>
 
           {/* Contact info */}
           <div className="flex flex-col sm:flex-row gap-8 justify-center items-center pt-8 border-t border-border">
             <a 
-              href="mailto:hello@partywreckerspodcast.com" 
+              href="mailto:matt@partywreckers.com" 
               className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
             >
               <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center">
                 <Mail className="w-5 h-5" />
               </div>
-              <span>hello@partywreckerspodcast.com</span>
+              <span>matt@partywreckers.com</span>
             </a>
           </div>
         </div>
