@@ -59,7 +59,7 @@ export default {
         },
       },
       fontFamily: {
-        script: ['"Yellowtail"', "cursive"],
+        script: ['"Lobster"', "cursive"],
         body: ['"Inter"', "sans-serif"],
       },
       borderRadius: {
