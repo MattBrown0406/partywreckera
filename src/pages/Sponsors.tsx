@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import { Heart, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import iocLogo from "@/assets/ioc-logo.jpg";
+import betterhelpLogo from "@/assets/betterhelp-logo.png";
 
 const Sponsors = () => {
   return (
@@ -83,10 +84,12 @@ const Sponsors = () => {
 
               {/* BetterHelp Sponsor Card */}
               <div className="mt-8 bg-card border border-border rounded-xl p-8 sm:p-12 flex flex-col md:flex-row items-center gap-8">
-                <div className="flex-shrink-0 w-64 flex items-center justify-center">
-                  <div className="text-4xl font-bold text-[#00a67e]">
-                    BetterHelp
-                  </div>
+                <div className="flex-shrink-0">
+                  <img 
+                    src={betterhelpLogo} 
+                    alt="BetterHelp" 
+                    className="w-64 h-auto"
+                  />
                 </div>
                 <div className="flex-1 text-center md:text-left">
                   <h2 className="font-script text-3xl text-foreground mb-3">
