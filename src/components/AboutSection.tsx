@@ -1,6 +1,7 @@
 import { Check, ExternalLink } from "lucide-react";
 import FamilyCarousel from "@/components/FamilyCarousel";
 import iocLogo from "@/assets/ioc-logo.jpg";
+import { Button } from "@/components/ui/button";
 
 const features = [
   "New episodes every week",
@@ -83,15 +84,16 @@ const AboutSection = () => {
             Join our free nightly Zoom support groups. Sunday at 8PM PST, 
             Monday-Thursday at 8PM EST.
           </p>
-          <a
-            href="https://interventiononcall.com/live-family-friends-zoom/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-primary hover:underline font-medium"
-          >
-            Register for Free
-            <ExternalLink className="w-4 h-4" />
-          </a>
+          <Button asChild>
+            <a
+              href="https://interventiononcall.com/live-family-friends-zoom/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Register for Free
+              <ExternalLink className="w-4 h-4" />
+            </a>
+          </Button>
         </div>
       </div>
     </section>
