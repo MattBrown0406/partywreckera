@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Mail, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
+import logo from "@/assets/party-wreckers-logo.png";
 
 const platforms = [
   { name: "Spotify", url: "https://open.spotify.com/show/your-show-id" },
@@ -57,6 +58,11 @@ const CTASection = () => {
 
           {/* Free Support Group CTA */}
           <div className="bg-card border border-border rounded-xl p-8 max-w-2xl mx-auto mb-12">
+            <img 
+              src={logo} 
+              alt="Intervention on Call" 
+              className="w-48 mx-auto mb-4"
+            />
             <h3 className="font-script text-3xl text-foreground mb-3">Free Family Support</h3>
             <p className="text-muted-foreground mb-4">
               Join our free nightly Zoom support groups. Sunday at 8PM PST, 
