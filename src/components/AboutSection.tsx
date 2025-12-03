@@ -3,10 +3,10 @@ import { Check } from "lucide-react";
 const features = [
   "New episodes every week",
   "Available on all major platforms",
-  "Exclusive behind-the-scenes content",
-  "Active community of listeners",
-  "Guest appearances you won't find elsewhere",
-  "No topic is off limits",
+  "Free family support groups via Zoom",
+  "Professional intervention guidance",
+  "Expert guests from the recovery industry",
+  "Real stories, real hope",
 ];
 
 const AboutSection = () => {
@@ -21,13 +21,19 @@ const AboutSection = () => {
           {/* Content */}
           <div>
             <h2 className="font-script text-5xl sm:text-6xl text-foreground mb-6">
-              Join the Party
+              About the Show
             </h2>
             
+            <p className="text-muted-foreground text-lg mb-4">
+              Matt Brown is a practicing full-time addiction interventionist. 
+              He sits down with industry guests to discuss intervention, 
+              addiction, and mental health.
+            </p>
+            
             <p className="text-muted-foreground text-lg mb-8">
-              The Party Wreckers isn't just a podcast — it's a community. 
-              We're here to entertain, inspire, and maybe cause a little chaos 
-              along the way. Grab your headphones and let's go.
+              The goal? Entertain, remove the negative stigma around addiction, 
+              and help as many families as possible find recovery. If someone 
+              you love is struggling, this podcast is for you.
             </p>
 
             <ul className="space-y-4">
@@ -47,23 +53,23 @@ const AboutSection = () => {
             <div className="aspect-square rounded-2xl bg-gradient-to-br from-secondary to-background border border-border p-8 flex items-center justify-center">
               <div className="text-center">
                 <div className="font-script text-7xl sm:text-8xl text-primary animate-pulse-glow">
-                  200+
+                  Hope
                 </div>
                 <h4 className="text-2xl text-foreground mt-4 uppercase tracking-widest">
-                  Episodes
+                  Starts Here
                 </h4>
                 <p className="text-muted-foreground mt-2">
-                  and counting...
+                  You're not alone in this journey
                 </p>
               </div>
             </div>
             
             {/* Floating badges */}
             <div className="absolute -top-4 -right-4 bg-primary text-primary-foreground px-4 py-2 rounded-lg font-semibold text-sm uppercase tracking-wider shadow-lg glow-primary">
-              Top 100
+              Top Rated
             </div>
             <div className="absolute -bottom-4 -left-4 bg-accent text-accent-foreground px-4 py-2 rounded-lg font-semibold text-sm uppercase tracking-wider shadow-lg glow-accent">
-              Fan Favorite
+              Free Support
             </div>
           </div>
         </div>

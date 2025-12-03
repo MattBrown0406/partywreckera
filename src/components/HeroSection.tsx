@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Headphones, Play, Mic } from "lucide-react";
+import { Link } from "react-router-dom";
 import logo from "@/assets/party-wreckers-logo.png";
 
 const HeroSection = () => {
@@ -33,31 +34,36 @@ const HeroSection = () => {
 
           {/* Subheadline */}
           <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-10">
-            Dive into unfiltered conversations, wild stories, and the moments 
-            that make life worth celebrating. Every episode is a party.
+            Real conversations about addiction, intervention, and recovery. 
+            Host Matt Brown sits down with industry experts to help families 
+            find hope and practical guidance.
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button variant="hero" size="xl">
-              <Play className="w-5 h-5" />
-              Listen Now
+            <Button variant="hero" size="xl" asChild>
+              <Link to="/episodes">
+                <Play className="w-5 h-5" />
+                Listen Now
+              </Link>
             </Button>
-            <Button variant="heroOutline" size="xl">
-              <Mic className="w-5 h-5" />
-              Latest Episode
+            <Button variant="heroOutline" size="xl" asChild>
+              <Link to="/episodes">
+                <Mic className="w-5 h-5" />
+                Latest Episode
+              </Link>
             </Button>
           </div>
 
           {/* Stats */}
           <div className="grid grid-cols-3 gap-8 mt-16 pt-16 border-t border-border/50">
             <div className="text-center">
-              <div className="font-script text-4xl sm:text-5xl text-primary">200+</div>
+              <div className="font-script text-4xl sm:text-5xl text-primary">60+</div>
               <div className="text-sm text-muted-foreground mt-1 uppercase tracking-wider">Episodes</div>
             </div>
             <div className="text-center">
-              <div className="font-script text-4xl sm:text-5xl text-accent">1M+</div>
-              <div className="text-sm text-muted-foreground mt-1 uppercase tracking-wider">Downloads</div>
+              <div className="font-script text-4xl sm:text-5xl text-accent">1000s</div>
+              <div className="text-sm text-muted-foreground mt-1 uppercase tracking-wider">Families Helped</div>
             </div>
             <div className="text-center">
               <div className="font-script text-4xl sm:text-5xl text-foreground">4.9★</div>

@@ -1,30 +1,30 @@
-import { Mic2, Users, Laugh, MessageCircle, Star, Radio } from "lucide-react";
+import { Heart, Users, Shield, MessageCircle, Lightbulb, Radio } from "lucide-react";
 
 const features = [
   {
-    icon: Mic2,
-    title: "Raw Conversations",
-    description: "Unscripted, authentic discussions that go deep and keep it real.",
+    icon: Heart,
+    title: "Addiction & Recovery",
+    description: "Honest discussions about the realities of addiction and the path to lasting recovery.",
+  },
+  {
+    icon: Shield,
+    title: "Intervention Strategies",
+    description: "Learn proven approaches to help your loved one accept treatment.",
   },
   {
     icon: Users,
-    title: "Amazing Guests",
-    description: "From comedians to entrepreneurs, we bring the most interesting voices.",
+    title: "Family Support",
+    description: "Guidance for families navigating the challenges of a loved one's addiction.",
   },
   {
-    icon: Laugh,
-    title: "Wild Stories",
-    description: "Laugh-out-loud moments and unforgettable tales from every walk of life.",
+    icon: Lightbulb,
+    title: "Mental Health",
+    description: "Exploring the connection between mental health and substance use disorders.",
   },
   {
     icon: MessageCircle,
-    title: "Listener Q&A",
-    description: "Your questions answered and your stories featured on the show.",
-  },
-  {
-    icon: Star,
-    title: "Weekly Episodes",
-    description: "Fresh content every week to keep the party going strong.",
+    title: "Expert Guests",
+    description: "Industry professionals share insights from the front lines of recovery.",
   },
   {
     icon: Radio,
@@ -42,10 +42,10 @@ const ServicesSection = () => {
       <div className="container px-4">
         <div className="text-center mb-16">
           <h2 className="font-script text-5xl sm:text-6xl text-foreground mb-4">
-            What to Expect
+            What We Cover
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Every episode brings something new. Here's what makes The Party Wreckers special.
+            Real talk about the topics that matter most to families dealing with addiction.
           </p>
         </div>
 
