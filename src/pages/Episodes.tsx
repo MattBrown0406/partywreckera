@@ -69,7 +69,7 @@ const Episodes = () => {
 
             {data && (
               <div className="max-w-4xl mx-auto space-y-6">
-                {data.episodes.map((episode) => (
+                {data.episodes.slice(0, 10).map((episode) => (
                   <article
                     key={episode.id}
                     className="group p-6 rounded-xl bg-card border border-border hover:border-primary/30 transition-all duration-300"
