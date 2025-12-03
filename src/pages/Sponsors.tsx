@@ -133,6 +133,22 @@ const Sponsors = () => {
                     <ExternalLink className="w-4 h-4 ml-2" />
                   </a>
                 </Button>
+                
+                <div className="mt-8 pt-8 border-t border-border">
+                  <p className="text-muted-foreground mb-4">
+                    Do you want to support the podcast directly? Your contribution of $1, $5, or $10 can help us keep getting the message out!
+                  </p>
+                  <Button variant="outline" asChild>
+                    <a
+                      href="https://www.buzzsprout.com/1941777/support"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Support the Podcast
+                      <Heart className="w-4 h-4 ml-2" />
+                    </a>
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
