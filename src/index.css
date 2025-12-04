@@ -36,6 +36,9 @@
 
     --radius: 0.75rem;
 
+    /* Custom color tokens */
+    --burgundy: 345 50% 35%;
+
     /* Custom tokens */
     --glow-primary: 0 0 40px hsl(35 25% 82% / 0.2);
     --glow-accent: 0 0 40px hsl(35 30% 75% / 0.2);
@@ -88,6 +91,7 @@
 
   h1, h2, h3 {
     font-family: "Lobster", cursive;
+    color: hsl(var(--burgundy));
   }
 
   h4, h5, h6 {
