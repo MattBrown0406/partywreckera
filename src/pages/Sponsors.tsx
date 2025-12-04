@@ -79,9 +79,9 @@ const Sponsors = () => {
                     Sober Helpline
                   </h2>
                   <p className="text-muted-foreground mb-4">
-                    Sober Helpline provides free, confidential support for individuals and families 
-                    affected by addiction. Available 24/7, their trained specialists can help connect 
-                    you with resources and treatment options.
+                    Sober Helpline provides families and professionals looking for treatment resources 
+                    with a place to find ethical and responsible providers of recovery support services. 
+                    These providers have been vetted and have a proven track record of success.
                   </p>
                   <p className="text-muted-foreground mb-6">
                     Whether you're seeking help for yourself or a loved one, Sober Helpline is here 
