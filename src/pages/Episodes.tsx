@@ -109,7 +109,7 @@ const Episodes = () => {
                           </span>
                         </div>
 
-                        <h2 className="font-semibold text-lg text-foreground mb-2 group-hover:text-primary transition-colors">
+                        <h2 className="font-semibold text-lg text-burgundy mb-2 group-hover:text-burgundy/70 transition-colors">
                           {episode.title}
                         </h2>
 
