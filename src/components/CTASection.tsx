@@ -22,7 +22,7 @@ const CTASection = () => {
 
       <div className="container px-4 relative">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="font-script text-5xl sm:text-6xl text-foreground mb-6">
+          <h2 className="font-script text-5xl sm:text-6xl text-burgundy mb-6">
             Start Listening
           </h2>
           
@@ -63,7 +63,7 @@ const CTASection = () => {
               alt="Intervention on Call" 
               className="w-48 mx-auto mb-4"
             />
-            <h3 className="font-script text-3xl text-foreground mb-3">Free Family Support</h3>
+            <h3 className="font-script text-3xl text-burgundy mb-3">Free Family Support</h3>
             <p className="text-muted-foreground mb-4">
               Join our free nightly Zoom support groups. Sunday at 8PM PST, 
               Monday-Thursday at 8PM EST.

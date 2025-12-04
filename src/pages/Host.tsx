@@ -26,7 +26,7 @@ const Host = () => {
                 <span className="text-sm text-muted-foreground uppercase tracking-widest">Your Host</span>
               </div>
               
-              <h1 className="font-script text-5xl sm:text-6xl text-foreground mb-6">
+              <h1 className="font-script text-5xl sm:text-6xl text-burgundy mb-6">
                 Meet Matt
               </h1>
               
@@ -54,7 +54,7 @@ const Host = () => {
                     </div>
                   </div>
                   <div className="flex-1 text-center md:text-left">
-                    <h2 className="font-script text-3xl text-foreground mb-6">
+                    <h2 className="font-script text-3xl text-burgundy mb-6">
                       20+ Years of Experience
                     </h2>
                 
@@ -98,7 +98,7 @@ const Host = () => {
                     <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 mb-3">
                       <Clock className="w-6 h-6 text-primary" />
                     </div>
-                    <div className="font-script text-2xl text-foreground">20+</div>
+                    <div className="font-script text-2xl text-burgundy">20+</div>
                     <div className="text-sm text-muted-foreground">Years Experience</div>
                   </div>
                   
@@ -106,7 +106,7 @@ const Host = () => {
                     <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 mb-3">
                       <Users className="w-6 h-6 text-primary" />
                     </div>
-                    <div className="font-script text-2xl text-foreground">1000s</div>
+                    <div className="font-script text-2xl text-burgundy">1000s</div>
                     <div className="text-sm text-muted-foreground">Families Helped</div>
                   </div>
                   
@@ -114,7 +114,7 @@ const Host = () => {
                     <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 mb-3">
                       <Heart className="w-6 h-6 text-primary" />
                     </div>
-                    <div className="font-script text-2xl text-foreground">100%</div>
+                    <div className="font-script text-2xl text-burgundy">100%</div>
                     <div className="text-sm text-muted-foreground">Dedication</div>
                   </div>
                 </div>
@@ -122,7 +122,7 @@ const Host = () => {
 
               {/* Philosophy */}
               <div className="mt-8 bg-secondary/30 border border-border rounded-xl p-8 text-center">
-                <h3 className="font-script text-2xl text-foreground mb-4">
+                <h3 className="font-script text-2xl text-burgundy mb-4">
                   Philosophy
                 </h3>
                 <blockquote className="text-lg text-muted-foreground italic max-w-2xl mx-auto">
@@ -135,7 +135,7 @@ const Host = () => {
 
               {/* Contact CTA */}
               <div className="mt-8 bg-card border border-border rounded-xl p-8 text-center">
-                <h3 className="font-script text-2xl text-foreground mb-3">
+                <h3 className="font-script text-2xl text-burgundy mb-3">
                   Get in Touch
                 </h3>
                 <p className="text-muted-foreground mb-6">

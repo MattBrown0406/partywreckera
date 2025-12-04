@@ -58,15 +58,15 @@ const HeroSection = () => {
           {/* Stats */}
           <div className="grid grid-cols-3 gap-4 sm:gap-8 mt-16 pt-16 border-t border-border/50">
             <div className="text-center">
-              <div className="font-script text-3xl sm:text-5xl text-primary">60+</div>
+              <div className="font-script text-3xl sm:text-5xl text-burgundy">60+</div>
               <div className="text-xs sm:text-sm text-muted-foreground mt-2 uppercase tracking-wider">Episodes</div>
             </div>
             <div className="text-center">
-              <div className="font-script text-3xl sm:text-5xl text-accent">1000s</div>
+              <div className="font-script text-3xl sm:text-5xl text-burgundy">1000s</div>
               <div className="text-xs sm:text-sm text-muted-foreground mt-2 uppercase tracking-wider whitespace-nowrap">Families Helped</div>
             </div>
             <div className="text-center">
-              <div className="font-script text-3xl sm:text-5xl text-foreground">4.9★</div>
+              <div className="font-script text-3xl sm:text-5xl text-burgundy">4.9★</div>
               <div className="text-xs sm:text-sm text-muted-foreground mt-2 uppercase tracking-wider">Rating</div>
             </div>
           </div>
