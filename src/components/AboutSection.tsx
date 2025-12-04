@@ -29,7 +29,7 @@ const AboutSection = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Content */}
           <div>
-            <h2 className="font-script text-6xl sm:text-7xl text-foreground mb-6 text-center">
+            <h2 className="font-script text-6xl sm:text-7xl text-burgundy mb-6 text-center">
               About the Show
             </h2>
             
@@ -79,7 +79,7 @@ const AboutSection = () => {
             alt="Intervention on Call" 
             className="w-48 mx-auto mb-4"
           />
-          <h3 className="font-script text-3xl text-foreground mb-3">Free Family Support</h3>
+          <h3 className="font-script text-3xl text-burgundy mb-3">Free Family Support</h3>
           <p className="text-muted-foreground mb-4">
             Join our free nightly Zoom support groups. Sunday at 8PM PST, 
             Monday-Thursday at 8PM EST.

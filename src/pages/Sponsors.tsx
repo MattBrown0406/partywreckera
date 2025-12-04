@@ -28,7 +28,7 @@ const Sponsors = () => {
                 <span className="text-sm text-muted-foreground uppercase tracking-widest">Our Partners</span>
               </div>
               
-              <h1 className="font-script text-5xl sm:text-6xl text-foreground mb-6">
+              <h1 className="font-script text-5xl sm:text-6xl text-burgundy mb-6">
                 Support Our Sponsors
               </h1>
               
@@ -68,7 +68,7 @@ const Sponsors = () => {
                   />
                 </div>
                 <div className="flex-1 text-center md:text-left">
-                  <h2 className="font-script text-3xl text-foreground mb-3">
+                  <h2 className="font-script text-3xl text-burgundy mb-3">
                     Intervention on Call
                   </h2>
                   <p className="text-muted-foreground mb-4">
@@ -106,7 +106,7 @@ const Sponsors = () => {
                   />
                 </div>
                 <div className="flex-1 text-center md:text-left">
-                  <h2 className="font-script text-3xl text-foreground mb-3">
+                  <h2 className="font-script text-3xl text-burgundy mb-3">
                     BetterHelp
                   </h2>
                   <p className="text-muted-foreground mb-4">
@@ -135,7 +135,7 @@ const Sponsors = () => {
 
               {/* Become a Sponsor CTA */}
               <div className="mt-12 bg-secondary/30 border border-border rounded-xl p-8 text-center">
-                <h3 className="font-script text-2xl text-foreground mb-3">
+                <h3 className="font-script text-2xl text-burgundy mb-3">
                   Interested in Sponsoring?
                 </h3>
                 <p className="text-muted-foreground mb-6 max-w-lg mx-auto">

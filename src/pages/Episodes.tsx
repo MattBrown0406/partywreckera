@@ -40,7 +40,7 @@ const Episodes = () => {
         <section className="py-16 bg-gradient-hero">
           <div className="container px-4">
             <div className="max-w-3xl mx-auto text-center">
-              <h1 className="font-script text-5xl sm:text-6xl text-foreground mb-4">
+              <h1 className="font-script text-5xl sm:text-6xl text-burgundy mb-4">
                 Episodes
               </h1>
               <p className="text-muted-foreground text-lg">
