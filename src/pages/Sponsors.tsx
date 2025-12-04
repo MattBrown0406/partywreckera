@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Heart, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import soberHelplineLogo from "@/assets/sober-helpline-logo.png";
 import iocLogo from "@/assets/ioc-logo.jpg";
 import betterhelpLogo from "@/assets/betterhelp-logo.png";
 
@@ -58,14 +59,60 @@ const Sponsors = () => {
         <section className="py-16 sm:py-24">
           <div className="container px-4">
             <div className="max-w-4xl mx-auto">
-              {/* IOC Sponsor Card */}
+              {/* Sober Helpline Sponsor Card */}
               <div className="bg-card border border-border rounded-xl p-8 sm:p-12 flex flex-col md:flex-row items-center gap-8">
                 <div className="flex-shrink-0">
-                  <img 
-                    src={iocLogo} 
-                    alt="Intervention on Call" 
-                    className="w-64 h-auto"
-                  />
+                  <a
+                    href="https://soberhelpline.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img 
+                      src={soberHelplineLogo} 
+                      alt="Sober Helpline" 
+                      className="w-64 h-auto hover:opacity-80 transition-opacity"
+                    />
+                  </a>
+                </div>
+                <div className="flex-1 text-center md:text-left">
+                  <h2 className="font-script text-3xl text-burgundy mb-3">
+                    Sober Helpline
+                  </h2>
+                  <p className="text-muted-foreground mb-4">
+                    Sober Helpline provides free, confidential support for individuals and families 
+                    affected by addiction. Available 24/7, their trained specialists can help connect 
+                    you with resources and treatment options.
+                  </p>
+                  <p className="text-muted-foreground mb-6">
+                    Whether you're seeking help for yourself or a loved one, Sober Helpline is here 
+                    to guide you through the next steps on your recovery journey.
+                  </p>
+                  <a
+                    href="https://soberhelpline.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-primary hover:underline font-medium"
+                  >
+                    Visit Website
+                    <ExternalLink className="w-4 h-4" />
+                  </a>
+                </div>
+              </div>
+
+              {/* IOC Sponsor Card */}
+              <div className="mt-8 bg-card border border-border rounded-xl p-8 sm:p-12 flex flex-col md:flex-row items-center gap-8">
+                <div className="flex-shrink-0">
+                  <a
+                    href="https://interventiononcall.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img 
+                      src={iocLogo} 
+                      alt="Intervention on Call" 
+                      className="w-64 h-auto hover:opacity-80 transition-opacity"
+                    />
+                  </a>
                 </div>
                 <div className="flex-1 text-center md:text-left">
                   <h2 className="font-script text-3xl text-burgundy mb-3">
@@ -99,11 +146,17 @@ const Sponsors = () => {
               {/* BetterHelp Sponsor Card */}
               <div className="mt-8 bg-card border border-border rounded-xl p-8 sm:p-12 flex flex-col md:flex-row items-center gap-8">
                 <div className="flex-shrink-0">
-                  <img 
-                    src={betterhelpLogo} 
-                    alt="BetterHelp" 
-                    className="w-64 h-auto"
-                  />
+                  <a
+                    href="https://www.betterhelp.com/partywreckers"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img 
+                      src={betterhelpLogo} 
+                      alt="BetterHelp" 
+                      className="w-64 h-auto hover:opacity-80 transition-opacity"
+                    />
+                  </a>
                 </div>
                 <div className="flex-1 text-center md:text-left">
                   <h2 className="font-script text-3xl text-burgundy mb-3">
