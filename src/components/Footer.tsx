@@ -57,6 +57,11 @@ const Footer = () => {
             The Party Wreckers
           </a>
 
+          {/* Blog link */}
+          <a href="/blog" className="text-muted-foreground hover:text-primary transition-colors">
+            Blog
+          </a>
+
           {/* Social links */}
           <SocialLinks />
 
