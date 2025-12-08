@@ -11,7 +11,7 @@ const Blog = () => {
       </Helmet>
       <Navbar />
       
-      <main className="container px-4 py-16">
+      <main className="container px-4 pt-32 pb-16">
         <h1 className="font-script text-4xl md:text-5xl text-primary mb-8 text-center">
           Blog
         </h1>
