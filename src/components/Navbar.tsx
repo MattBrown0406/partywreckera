@@ -14,6 +14,7 @@ const navLinks = [
   { label: "Episodes", href: "/episodes" },
   { label: "Meet the Host", href: "/host" },
   { label: "Support Our Sponsors", href: "/sponsors" },
+  { label: "Blog", href: "/blog" },
   { label: "About", href: "/#about" },
 ];
 
