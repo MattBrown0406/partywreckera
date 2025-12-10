@@ -4,18 +4,18 @@ import iocLogo from "@/assets/ioc-logo.jpg";
 import { Button } from "@/components/ui/button";
 
 const features = [
-  "New episodes every week",
-  "Available on all major platforms",
-  "Free family support groups via Zoom",
-  "Professional intervention guidance",
-  "Expert guests from recovery industry",
-  "Real stories, real hope",
-  "Enabling vs. supporting explained",
-  "Boundary-setting strategies",
-  "Treatment program guidance",
-  "Relapse prevention insights",
-  "Family recovery planning",
-  "Case-based learning",
+  { text: "New episodes every week", link: null },
+  { text: "Available on all major platforms", link: null },
+  { text: "Free family support groups via Zoom", link: "https://interventiononcall.com/live-family-friends-zoom/" },
+  { text: "Professional intervention guidance", link: null },
+  { text: "Expert guests from recovery industry", link: null },
+  { text: "Real stories, real hope", link: null },
+  { text: "Enabling vs. supporting explained", link: null },
+  { text: "Boundary-setting strategies", link: null },
+  { text: "Treatment program guidance", link: null },
+  { text: "Relapse prevention insights", link: null },
+  { text: "Family recovery planning", link: null },
+  { text: "Case-based learning", link: null },
 ];
 
 const AboutSection = () => {
@@ -47,7 +47,18 @@ const AboutSection = () => {
                   <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Check className="w-3 h-3 text-primary" />
                   </div>
-                  <span className="text-foreground text-sm">{feature}</span>
+                  {feature.link ? (
+                    <a 
+                      href={feature.link} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-primary text-sm hover:underline"
+                    >
+                      {feature.text}
+                    </a>
+                  ) : (
+                    <span className="text-foreground text-sm">{feature.text}</span>
+                  )}
                 </div>
               ))}
             </div>
