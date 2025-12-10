@@ -23,12 +23,6 @@ const HeroSection = () => {
             <ThemePlayer />
           </div>
 
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/50 border border-border mb-8">
-            <Headphones className="w-4 h-4 text-primary" />
-            <span className="text-sm text-muted-foreground uppercase tracking-widest">New Episodes Weekly</span>
-          </div>
-
           {/* Logo */}
           <div className="mb-8">
             <img 
