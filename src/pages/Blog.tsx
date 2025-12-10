@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import blogImageEnabling from "@/assets/blog-family-support-enabling.jpg";
 import blogImageConversation from "@/assets/blog-right-moment-conversation.jpg";
+import blogImageBrainReward from "@/assets/blog-brain-reward-pathways.jpg";
 
 const Blog = () => {
   return (
@@ -17,6 +18,79 @@ const Blog = () => {
         <h1 className="font-script text-4xl md:text-5xl text-primary mb-12 text-center">
           Blog
         </h1>
+        
+        {/* Article 3 - Brain Reward Pathways */}
+        <article className="max-w-3xl mx-auto mb-20">
+          <img 
+            src={blogImageBrainReward} 
+            alt="Illustration of brain reward pathways and dopamine circuits" 
+            className="w-full h-64 md:h-80 object-cover rounded-lg mb-8"
+          />
+          
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+            Food and Exercise Addictions: Understanding the Brain's Reward Circuitry
+          </h2>
+          
+          <p className="text-muted-foreground text-sm mb-8">December 10, 2025</p>
+          
+          <div className="prose prose-lg max-w-none text-foreground/90 space-y-6">
+            <p>
+              Food and exercise addictions are behavioral addictions that tap into the same reward circuitry as substance use disorders (SUD), which is why they can feel just as compulsive and devastating for families to watch. At the brain level, all three—food, exercise, and drugs—converge on dopamine‑driven reward pathways that learn, remember, and then relentlessly seek the next hit.
+            </p>
+            
+            <h3 className="text-xl font-semibold text-foreground mt-8 mb-4">The Brain's Reward Circuit</h3>
+            
+            <p>
+              When someone eats highly palatable food, uses a substance, or pushes through an intense workout, the brain's mesolimbic reward pathway releases dopamine, especially in areas like the ventral tegmental area (VTA), nucleus accumbens, and striatum. This dopamine surge creates a sense of pleasure or relief and "teaches" the brain that this behavior is important and should be repeated.
+            </p>
+            
+            <p>
+              Over time, repeated overstimulation—whether from sugary foods, long runs, or drugs—can lead to adaptations such as reduced dopamine D2 receptors in the striatum, meaning the person needs more of the behavior to feel the same effect. This is the same biological pattern seen in SUD and helps explain why both food and exercise can shift from healthy choices into compulsive, ritualized habits.
+            </p>
+            
+            <h3 className="text-xl font-semibold text-foreground mt-8 mb-4">Food Addiction and SUD</h3>
+            
+            <p>
+              Research on food addiction points to strong overlap with binge eating and patterns that closely resemble drug addiction, including cravings, loss of control, and continued use despite harm. Highly processed, high‑fat, high‑sugar foods appear particularly capable of activating reward circuitry in ways that mimic drugs of abuse, driving cycles of overeating and shame.
+            </p>
+            
+            <p>
+              Neuroimaging and animal studies show that chronic overeating can produce changes in brain structure and function similar to those found in people with substance addictions, including alterations in dopamine signaling and reward sensitivity. Clinically, this means a person may swear off certain foods in the morning yet feel powerless in front of them at night, just like someone with SUD who cannot follow through on promises to quit using.
+            </p>
+            
+            <h3 className="text-xl font-semibold text-foreground mt-8 mb-4">Exercise Addiction and SUD</h3>
+            
+            <p>
+              Exercise is usually protective in recovery, but at the extreme it can become an addiction that uses the same reward systems as drugs. Intense physical activity increases dopamine in the mesolimbic pathway, and for some vulnerable people this "high" becomes something they chase compulsively, even when injured, exhausted, or socially isolated.
+            </p>
+            
+            <p>
+              Studies suggest that, as with substances, repeated overuse of exercise can reshape dopamine signaling, with low baseline reward and heightened response to exercise cues, reinforcing rigid routines and distress when workouts are missed. This can look like withdrawal: irritability, anxiety, or depressed mood if the person cannot exercise, mirroring the emotional crashes seen in SUD.
+            </p>
+            
+            <h3 className="text-xl font-semibold text-foreground mt-8 mb-4">Shared Pathways, Shared Patterns</h3>
+            
+            <p>
+              Across food addiction, exercise addiction, and SUD, the same core circuits are involved: the reward system (VTA, nucleus accumbens, striatum), the prefrontal cortex that governs self‑control, and regions like the amygdala that encode emotional memories. When these systems are repeatedly hijacked, the balance shifts from voluntary, pleasure‑seeking use to compulsive behavior aimed at avoiding negative feelings like anxiety, guilt, or emptiness.
+            </p>
+            
+            <p>
+              This shared biology also produces familiar behavioral signs: increasing tolerance, unsuccessful attempts to cut back, neglect of relationships or responsibilities, and persistence despite clear harm to health or life. For families, it can be confusing when the "drug" is socially sanctioned—food and exercise are everywhere celebrated—yet the underlying brain processes and the suffering they create are strikingly similar to SUD.
+            </p>
+            
+            <h3 className="text-xl font-semibold text-foreground mt-8 mb-4">What Families Can Do</h3>
+            
+            <p>
+              Recognizing food or exercise addiction as a real, brain‑based condition—not a simple issue of willpower—can reduce blame and open the door to compassionate help. Families can watch for red‑flag patterns, like rigid rules around eating or exercise, secretive behavior, or intense distress when routines are interrupted, and gently express concern without moralizing about discipline or appearance.
+            </p>
+            
+            <p className="font-semibold text-lg mt-8">
+              Seeking professional support from providers experienced in both eating disorders and addiction is crucial, because treatment often needs to address the shared reward pathways and the emotional drivers beneath them. With informed support, it is possible to re‑train these brain circuits—using therapy, structured nutrition, balanced movement, and, when needed, medication—so that food and exercise can return to their rightful place as tools for health rather than chains of compulsion.
+            </p>
+          </div>
+        </article>
+        
+        <hr className="max-w-3xl mx-auto border-border mb-20" />
         
         {/* Article 2 - Right Moment Conversation */}
         <article className="max-w-3xl mx-auto mb-20">
