@@ -28,13 +28,13 @@ const ThemePlayer = () => {
       <span className="text-sm text-muted-foreground font-medium">The Party Wreckers Theme</span>
       <button
         onClick={togglePlay}
-        className="w-8 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-primary/90 transition-colors"
+        className="w-8 h-8 rounded-full bg-burgundy flex items-center justify-center hover:bg-burgundy/90 transition-colors"
         aria-label={isPlaying ? "Pause theme" : "Play theme"}
       >
         {isPlaying ? (
-          <Pause className="w-4 h-4 text-primary-foreground" />
+          <Pause className="w-4 h-4 text-white" />
         ) : (
-          <Play className="w-4 h-4 text-primary-foreground ml-0.5" />
+          <Play className="w-4 h-4 text-white ml-0.5" />
         )}
       </button>
     </div>
