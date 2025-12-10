@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Headphones, Play, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "@/assets/party-wreckers-logo.png";
+import ThemePlayer from "@/components/ThemePlayer";
 
 const HeroSection = () => {
   return (
@@ -17,6 +18,11 @@ const HeroSection = () => {
 
       <div className="container relative z-10 px-4 py-20">
         <div className="max-w-4xl mx-auto text-center">
+          {/* Theme Player */}
+          <div className="mb-6">
+            <ThemePlayer />
+          </div>
+
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/50 border border-border mb-8">
             <Headphones className="w-4 h-4 text-primary" />
