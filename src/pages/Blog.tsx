@@ -124,7 +124,7 @@ const Blog = () => {
             </p>
             
             <ul className="list-disc pl-6 space-y-2">
-              <li>Attending Al-Anon, Nar-Anon, or SMART Recovery Family & Friends meetings.</li>
+              <li>Attending <a href="https://al-anon.org" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Al-Anon</a>, <a href="https://www.nar-anon.org" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Nar-Anon</a>, or <a href="https://www.smartrecovery.org/family" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">SMART Recovery Family & Friends</a> meetings.</li>
               <li>Reading evidence-based books such as those by Dr. Gabor Maté, Dr. Nora Volkow, or William White.</li>
               <li>Consulting addiction specialists rather than relying on fear-driven advice online.</li>
               <li>Participating in family programs offered by treatment centers, many of which teach communication, boundary setting, and self-care.</li>
@@ -268,7 +268,7 @@ const Blog = () => {
               <li><strong>Don't provide money or excuses.</strong> Anyone actively using will likely divert resources to feed the addiction. Offer food, shelter (with conditions), or treatment support instead.</li>
               <li><strong>Set clear, fair boundaries.</strong> "You're welcome in our home if you're sober." "We'll support treatment but not continued use." Boundaries are acts of love, not punishment.</li>
               <li><strong>Use compassionate communication.</strong> Avoid yelling or guilt. Speak from vulnerability: "I love you, but I can't watch you destroy yourself."</li>
-              <li><strong>Get outside support.</strong> Groups like Al-Anon, Families Anonymous, and CRAFT programs teach healthy responses rooted in compassion, not control.</li>
+              <li><strong>Get outside support.</strong> Groups like <a href="https://al-anon.org" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Al-Anon</a>, <a href="https://www.familiesanonymous.org" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Families Anonymous</a>, and <a href="https://craftinterventionprogram.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">CRAFT programs</a> teach healthy responses rooted in compassion, not control.</li>
             </ul>
             
             <p>
@@ -282,7 +282,7 @@ const Blog = () => {
             </p>
             
             <p>
-              Detaching is uncomfortable. You'll feel guilt, fear, and sadness. But as one Al-Anon saying goes: "Detach with love, not anger." It's possible to care deeply while protecting your own sanity.
+              Detaching is uncomfortable. You'll feel guilt, fear, and sadness. But as one <a href="https://al-anon.org" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Al-Anon</a> saying goes: "Detach with love, not anger." It's possible to care deeply while protecting your own sanity.
             </p>
             
             <p>
