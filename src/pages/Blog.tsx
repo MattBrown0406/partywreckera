@@ -10,6 +10,8 @@ import blogImageEnabling from "@/assets/blog-family-support-enabling.jpg";
 import blogImageConversation from "@/assets/blog-right-moment-conversation.jpg";
 import blogImageBrainReward from "@/assets/blog-brain-reward-pathways.jpg";
 import blogImageEducation from "@/assets/blog-understanding-addiction-education.jpg";
+import blogImageHelpingVsEnabling from "@/assets/blog-helping-vs-enabling.jpg";
+import blogImageFamilySupport from "@/assets/blog-family-support-recovery.jpg";
 
 interface BlogArticle {
   id: string;
@@ -497,8 +499,8 @@ const articles: BlogArticle[] = [
     id: "helping-vs-enabling",
     title: "Helping vs. Enabling: The Fine Line Families Struggle to See",
     date: "December 10, 2025",
-    image: blogImageEnabling,
-    imageAlt: "Two hands reaching toward each other symbolizing support with healthy boundaries",
+    image: blogImageHelpingVsEnabling,
+    imageAlt: "Two hands symbolizing the balance between helping and enabling",
     excerpt: "When love and fear blur into protection that unintentionally feeds the disease. Understanding the difference between helping and enabling can be life-changing.",
     content: (
       <div className="prose prose-lg max-w-none text-foreground/90 space-y-6">
@@ -844,8 +846,8 @@ const articles: BlogArticle[] = [
     id: "family-support-enabling",
     title: "The Fine Line Between Family Support and Enabling in Addiction Recovery",
     date: "December 8, 2025",
-    image: blogImageEnabling,
-    imageAlt: "Family members supporting each other in recovery",
+    image: blogImageFamilySupport,
+    imageAlt: "Family standing together supportively in recovery",
     excerpt: "Families often struggle to distinguish between love and enabling. Real support empowers a loved one to grow; enabling keeps them stuck.",
     content: (
       <div className="prose prose-lg max-w-none text-foreground/90 space-y-6">
