@@ -13,6 +13,7 @@ import blogImageEducation from "@/assets/blog-understanding-addiction-education.
 import blogImageHelpingVsEnabling from "@/assets/blog-helping-vs-enabling.jpg";
 import blogImageFamilySupport from "@/assets/blog-family-support-recovery.jpg";
 import blogImageMedicalDetox from "@/assets/blog-medical-detox.jpg";
+import blogImageDepressionAddiction from "@/assets/blog-depression-addiction.jpg";
 
 interface BlogArticle {
   id: string;
@@ -25,6 +26,87 @@ interface BlogArticle {
 }
 
 const articles: BlogArticle[] = [
+  {
+    id: "depression-and-addiction",
+    title: "Depression and Addiction—How Each Fuels the Other",
+    date: "December 15, 2025",
+    image: blogImageDepressionAddiction,
+    imageAlt: "Silhouette of person sitting by rainy window, reflecting isolation and contemplation",
+    excerpt: "Depression and addiction frequently coexist, creating a cycle that is difficult to break. Families often struggle to understand which came first—and how to address both.",
+    content: (
+      <div className="prose prose-lg max-w-none text-foreground/90 space-y-6">
+        <p>
+          Depression and addiction frequently coexist, creating a cycle that is difficult to break. Families often struggle to understand which came first—and how to address both.
+        </p>
+        
+        <p>
+          In practice, the order matters less than recognizing that untreated depression significantly undermines recovery.
+        </p>
+        
+        <h3 className="text-xl font-semibold text-foreground mt-8 mb-4">How Depression Increases Addiction Risk</h3>
+        
+        <p>
+          Depression can bring:
+        </p>
+        
+        <ul className="list-disc pl-6 space-y-2">
+          <li>Hopelessness</li>
+          <li>Emotional numbness</li>
+          <li>Fatigue</li>
+          <li>Low motivation</li>
+          <li>Suicidal thinking</li>
+        </ul>
+        
+        <p>
+          Substances may initially feel like relief, offering temporary escape or emotional blunting. Over time, however, substance use worsens depressive symptoms.
+        </p>
+        
+        <h3 className="text-xl font-semibold text-foreground mt-8 mb-4">How Addiction Deepens Depression</h3>
+        
+        <p>
+          Chronic substance use disrupts brain chemistry, sleep, relationships, and self-esteem. Shame and regret accumulate. The result is often deeper, more persistent depression.
+        </p>
+        
+        <p>
+          When depression is dismissed as "just part of addiction," individuals are left without tools to manage their internal distress.
+        </p>
+        
+        <h3 className="text-xl font-semibold text-foreground mt-8 mb-4">Why Treating Addiction Alone Is Not Enough</h3>
+        
+        <p>
+          If depression remains untreated, sobriety can feel empty, overwhelming, or pointless. This dramatically increases relapse risk.
+        </p>
+        
+        <p>
+          Effective recovery requires:
+        </p>
+        
+        <ul className="list-disc pl-6 space-y-2">
+          <li>Proper mental health assessment</li>
+          <li>Therapy that addresses mood and thinking patterns</li>
+          <li>Ongoing emotional support</li>
+          <li>Clear relapse-prevention planning</li>
+        </ul>
+        
+        <h3 className="text-xl font-semibold text-foreground mt-8 mb-4">What Families Should Watch For</h3>
+        
+        <p>
+          Warning signs that depression is driving addiction include:
+        </p>
+        
+        <ul className="list-disc pl-6 space-y-2">
+          <li>Persistent hopelessness after stopping substances</li>
+          <li>Social withdrawal</li>
+          <li>Lack of pleasure or motivation</li>
+          <li>Statements of worthlessness</li>
+        </ul>
+        
+        <p>
+          When depression is addressed alongside addiction, recovery becomes more stable and sustainable.
+        </p>
+      </div>
+    ),
+  },
   {
     id: "medical-detox-matters",
     title: "Why Medical Detox Matters: The Serious Risks of Detoxing at Home Without Supervision",
