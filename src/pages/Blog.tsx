@@ -19,6 +19,7 @@ import blogImageEnablingVsSupporting from "@/assets/blog-enabling-vs-supporting.
 import blogImagePersonalityChanges from "@/assets/blog-addiction-personality-changes.jpg";
 import blogImageDryDrunk from "@/assets/blog-dry-drunk-syndrome.jpg";
 import blogImageRockBottom from "@/assets/blog-rock-bottom-myth.jpg";
+import blogImageWineOclock from "@/assets/blog-wine-oclock-humor.jpg";
 
 interface BlogArticle {
   id: string;
@@ -31,6 +32,96 @@ interface BlogArticle {
 }
 
 const articles: BlogArticle[] = [
+  {
+    id: "wine-oclock-humor-addiction",
+    title: "\"It's Just Wine O'Clock\"…Until It's Not: How We Joke About Addiction Right Up Until We Can't",
+    date: "December 22, 2025",
+    image: blogImageWineOclock,
+    imageAlt: "Wine glass with comedy and tragedy theater masks symbolizing how humor masks addiction problems",
+    excerpt: "Addiction has a strange relationship with humor. We laugh about it, normalize it, and minimize it right up until someone crosses an invisible line—and suddenly it's deadly serious.",
+    content: (
+      <div className="prose prose-lg max-w-none text-foreground/90 space-y-6">
+        <p>
+          If you've spent any time on social media, you've seen it. Memes about "mommy juice." Jokes about needing a drink to survive parenting. Viral videos celebrating blackout weekends as badges of honor. It's all funny—until it's not.
+        </p>
+        
+        <p>
+          Addiction has a strange relationship with humor. We laugh about it, normalize it, and minimize it right up until someone crosses an invisible line—and suddenly it's deadly serious.
+        </p>
+        
+        <h3 className="text-xl font-semibold text-foreground mt-8 mb-4">How Humor Hides Real Problems</h3>
+        
+        <p>Humor can be a coping mechanism. It can also be camouflage.</p>
+        
+        <p>Many families say:</p>
+        
+        <ul className="list-disc pl-6 space-y-2">
+          <li>"We always joked about their drinking."</li>
+          <li>"Everyone laughed it off."</li>
+          <li>"It was never serious…until it was."</li>
+        </ul>
+        
+        <p>
+          When substance use is wrapped in humor, it becomes harder to question. Jokes create permission. Permission delays intervention.
+        </p>
+        
+        <h3 className="text-xl font-semibold text-foreground mt-8 mb-4">When "Functioning" Becomes the Punchline</h3>
+        
+        <p>
+          One of the most dangerous jokes in addiction culture is the idea of the "functional mess." The person who drinks too much but still works. Who uses but still shows up. Who's a disaster—but a lovable one.
+        </p>
+        
+        <p>Until they're not lovable anymore.</p>
+        
+        <p>
+          Functioning is not a diagnosis. It's a phase—and often a temporary one.
+        </p>
+        
+        <h3 className="text-xl font-semibold text-foreground mt-8 mb-4">Families Laugh Because They're Uncomfortable</h3>
+        
+        <p>
+          Families often laugh along because calling attention to the issue feels awkward, dramatic, or judgmental. Humor becomes a way to avoid being "that person."
+        </p>
+        
+        <p>But addiction doesn't care about social comfort.</p>
+        
+        <h3 className="text-xl font-semibold text-foreground mt-8 mb-4">When the Tone Has to Change</h3>
+        
+        <p>There's often a moment when the jokes stop landing:</p>
+        
+        <ul className="list-disc pl-6 space-y-2">
+          <li>The hangovers get worse</li>
+          <li>The stories stop being funny</li>
+          <li>The behavior starts scaring people</li>
+          <li>The laughter feels forced</li>
+        </ul>
+        
+        <p>
+          That moment matters. It's often the first intuitive signal that things have crossed into dangerous territory.
+        </p>
+        
+        <h3 className="text-xl font-semibold text-foreground mt-8 mb-4">Using Humor Without Avoidance</h3>
+        
+        <p>
+          The Party Wreckers approach isn't about killing humor—it's about using it honestly. Humor can open conversations. It can disarm defensiveness. But it can't replace truth.
+        </p>
+        
+        <p>
+          Laughing with awareness is different than laughing to avoid awareness.
+        </p>
+        
+        <h3 className="text-xl font-semibold text-foreground mt-8 mb-4">The Real Punchline</h3>
+        
+        <p>
+          Addiction doesn't need to be treated like a joke to be approachable—but it does need to be taken seriously before the punchline becomes tragedy.
+        </p>
+        
+        <p>
+          If the laughter in your family feels thinner than it used to, that's worth paying attention to.
+        </p>
+      </div>
+    ),
+  },
   {
     id: "helping-turns-harmful-enabling",
     title: "When Helping Turns Harmful: How Enabling Develops Without Intent",
