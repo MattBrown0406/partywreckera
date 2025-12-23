@@ -20,6 +20,7 @@ import blogImagePersonalityChanges from "@/assets/blog-addiction-personality-cha
 import blogImageDryDrunk from "@/assets/blog-dry-drunk-syndrome.jpg";
 import blogImageRockBottom from "@/assets/blog-rock-bottom-myth.jpg";
 import blogImageWineOclock from "@/assets/blog-wine-oclock-humor.jpg";
+import blogImageEveryoneDrinks from "@/assets/blog-everyone-drinks-like-this.jpg";
 
 interface BlogArticle {
   id: string;
@@ -32,6 +33,95 @@ interface BlogArticle {
 }
 
 const articles: BlogArticle[] = [
+  {
+    id: "everyone-drinks-like-this",
+    title: "When \"Everyone Drinks Like This\" Stops Being Funny",
+    date: "December 23, 2025",
+    image: blogImageEveryoneDrinks,
+    imageAlt: "Vintage microphone with deflated party balloon on dimly lit stage symbolizing how humor fades when addiction becomes serious",
+    excerpt: "There's a moment in a lot of families where the jokes stop landing. What used to be funny—stories, memes, eye-rolling—starts feeling uncomfortable. Addiction doesn't start with drama. It starts with normalization.",
+    content: (
+      <div className="prose prose-lg max-w-none text-foreground/90 space-y-6">
+        <p>
+          There's a moment in a lot of families where the jokes stop landing. What used to be funny—stories, memes, eye-rolling—starts feeling uncomfortable. The laughter gets forced. The hangovers get heavier. The stories stop being harmless.
+        </p>
+        
+        <p>
+          Addiction doesn't start with drama. It starts with normalization.
+        </p>
+        
+        <h3 className="text-xl font-semibold text-foreground mt-8 mb-4">How Humor Becomes Cover</h3>
+        
+        <p>Culturally, we joke about substance use constantly:</p>
+        
+        <ul className="list-disc pl-6 space-y-2">
+          <li>"Wine o'clock"</li>
+          <li>"I earned this"</li>
+          <li>"That's just how we blow off steam"</li>
+        </ul>
+        
+        <p>
+          Humor makes behavior untouchable. If it's funny, it's not serious—right?
+        </p>
+        
+        <p>Until it is.</p>
+        
+        <h3 className="text-xl font-semibold text-foreground mt-8 mb-4">The Shift Families Feel First</h3>
+        
+        <p>Families often sense the shift before anyone else:</p>
+        
+        <ul className="list-disc pl-6 space-y-2">
+          <li>The person isn't present anymore</li>
+          <li>Conversations repeat</li>
+          <li>Irritability replaces humor</li>
+          <li>Defensiveness shows up</li>
+          <li>"Jokes" feel sharp instead of light</li>
+        </ul>
+        
+        <p>
+          The problem isn't the joke. It's what the joke is hiding.
+        </p>
+        
+        <h3 className="text-xl font-semibold text-foreground mt-8 mb-4">When Functioning Becomes the Excuse</h3>
+        
+        <p>
+          We love a "hot mess who still shows up." The problem is that functioning masks deterioration.
+        </p>
+        
+        <p>
+          Functioning delays consequences. Delayed consequences delay change.
+        </p>
+        
+        <h3 className="text-xl font-semibold text-foreground mt-8 mb-4">Why Calling It Out Feels Risky</h3>
+        
+        <p>Nobody wants to be the buzzkill. Families fear:</p>
+        
+        <ul className="list-disc pl-6 space-y-2">
+          <li>Being dramatic</li>
+          <li>Losing connection</li>
+          <li>Being labeled controlling</li>
+        </ul>
+        
+        <p>
+          So they laugh along—while anxiety grows.
+        </p>
+        
+        <h3 className="text-xl font-semibold text-foreground mt-8 mb-4">The Real Party Wrecker</h3>
+        
+        <p>
+          Addiction isn't the party wrecker. Silence is.
+        </p>
+        
+        <p>
+          The moment families stop pretending it's funny is often the moment things start to shift.
+        </p>
+        
+        <p>
+          You don't need to shame. You don't need to lecture. You just need to stop laughing when it's not funny anymore.
+        </p>
+      </div>
+    ),
+  },
   {
     id: "wine-oclock-humor-addiction",
     title: "\"It's Just Wine O'Clock\"…Until It's Not: How We Joke About Addiction Right Up Until We Can't",
