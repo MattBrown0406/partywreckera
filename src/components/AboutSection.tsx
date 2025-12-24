@@ -1,6 +1,7 @@
 import { Check, ExternalLink } from "lucide-react";
 import FamilyCarousel from "@/components/FamilyCarousel";
 import iocLogo from "@/assets/ioc-logo.jpg";
+import soberHelplineLogo from "@/assets/sober-helpline-logo.png";
 import { Button } from "@/components/ui/button";
 
 const features = [
@@ -83,28 +84,55 @@ const AboutSection = () => {
           </div>
         </div>
 
-        {/* Free Support Group CTA */}
-        <div className="bg-background border border-border rounded-xl p-8 max-w-2xl mx-auto mt-16 text-center">
-          <img 
-            src={iocLogo} 
-            alt="Intervention on Call" 
-            className="w-48 mx-auto mb-4"
-          />
-          <h3 className="font-script text-3xl text-burgundy mb-3">Free Family Support</h3>
-          <p className="text-muted-foreground mb-4">
-            Join our free nightly Zoom support groups. Sunday at 8PM PST, 
-            Monday-Thursday at 8PM EST.
-          </p>
-          <Button asChild>
-            <a
-              href="https://interventiononcall.com/live-family-friends-zoom/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Register for Free
-              <ExternalLink className="w-4 h-4" />
-            </a>
-          </Button>
+        {/* Support Resources Grid */}
+        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mt-16">
+          {/* Free Support Group CTA */}
+          <div className="bg-background border border-border rounded-xl p-8 text-center">
+            <img 
+              src={iocLogo} 
+              alt="Intervention on Call" 
+              className="w-48 mx-auto mb-4"
+            />
+            <h3 className="font-script text-3xl text-burgundy mb-3">Free Family Support</h3>
+            <p className="text-muted-foreground mb-4">
+              Join our free nightly Zoom support groups. Sunday at 8PM PST, 
+              Monday-Thursday at 8PM EST.
+            </p>
+            <Button asChild>
+              <a
+                href="https://interventiononcall.com/live-family-friends-zoom/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Register for Free
+                <ExternalLink className="w-4 h-4" />
+              </a>
+            </Button>
+          </div>
+
+          {/* Sober Helpline CTA */}
+          <div className="bg-background border border-border rounded-xl p-8 text-center">
+            <img 
+              src={soberHelplineLogo} 
+              alt="Sober Helpline" 
+              className="w-48 mx-auto mb-4"
+            />
+            <h3 className="font-script text-3xl text-burgundy mb-3">Sober Helpline</h3>
+            <p className="text-muted-foreground mb-4">
+              Find treatment resources, educational materials, and connect with a strong 
+              community of families supporting each other through recovery.
+            </p>
+            <Button asChild>
+              <a
+                href="https://soberhelpline.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Visit Sober Helpline
+                <ExternalLink className="w-4 h-4" />
+              </a>
+            </Button>
+          </div>
         </div>
       </div>
     </section>
