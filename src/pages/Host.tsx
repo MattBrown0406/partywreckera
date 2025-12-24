@@ -60,25 +60,33 @@ const Host = () => {
                 
                 <div className="space-y-6 text-muted-foreground">
                   <p>
-                    Matt is a professional interventionist with over two decades of experience in the field 
-                    of addiction and recovery. He has dedicated his career to helping families navigate one 
-                    of the most challenging experiences they may ever face—watching a loved one struggle with 
-                    substance use disorder.
+                    Matt is a professional interventionist with more than twenty years of frontline experience 
+                    working with addiction, recovery, and the families caught in between. Having guided hundreds 
+                    of families through the chaos, fear, and uncertainty that surround substance use disorder, 
+                    he understands both the clinical realities of addiction and the emotional toll it takes on 
+                    the people who love someone struggling.
                   </p>
                   
                   <p>
-                    Through The Party Wreckers Podcast, Matt breaks down complex topics like enabling, 
-                    boundaries, relapse, treatment options, and recovery planning into practical, 
-                    actionable conversations. He blends real-world intervention experience with storytelling 
-                    and education to help families understand not just what to think or feel, but 
-                    <span className="text-foreground font-medium"> what to do next</span>.
+                    On The Party Wreckers Podcast, Matt pulls back the curtain on addiction and intervention—cutting 
+                    through stigma, misinformation, and false hope. He translates complex subjects like enabling, 
+                    boundaries, relapse, treatment selection, and recovery planning into clear, practical conversations 
+                    families can actually use. Each episode blends real-world intervention experience, hard-earned 
+                    insight, and honest storytelling to help listeners move from paralysis to purposeful action.
                   </p>
                   
-                    <p>
-                      Matt approaches addiction as a medical disease with a spiritual solution, helping 
-                      listeners distinguish between support and enabling, set healthy boundaries, and 
-                      develop long-term family-based recovery plans.
-                    </p>
+                  <p>
+                    Matt approaches addiction as a medical disease that demands accountability, structure, and 
+                    compassion—and recognizes that lasting recovery often includes a spiritual component defined 
+                    by meaning, connection, and responsibility rather than rigid ideology. His work helps families 
+                    learn the difference between helping and enabling, how to set boundaries they can hold, and 
+                    how to build sustainable, family-centered recovery plans that support long-term change.
+                  </p>
+                  
+                  <p className="text-foreground font-medium">
+                    The Party Wreckers Podcast exists for families who are done pretending, done waiting, and 
+                    ready to understand what actually works.
+                  </p>
                     
                     <a
                       href="https://interventiononcall.com/drug-intervention-specialist/matt-brown-2/"
