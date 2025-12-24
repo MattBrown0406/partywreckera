@@ -1,8 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Mail, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
-import iocLogo from "@/assets/ioc-logo.jpg";
-import soberHelplineLogo from "@/assets/sober-helpline-logo.png";
 
 const platforms = [
   { name: "Spotify", url: "https://open.spotify.com/show/your-show-id" },
@@ -55,55 +53,6 @@ const CTASection = () => {
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </Button>
-          </div>
-
-          {/* Support Resources Grid */}
-          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-12">
-            {/* Free Support Group CTA */}
-            <div className="bg-card border border-border rounded-xl p-8">
-              <img 
-                src={iocLogo} 
-                alt="Intervention on Call" 
-                className="w-48 mx-auto mb-4"
-              />
-              <h3 className="font-script text-3xl text-burgundy mb-3">Free Family Support</h3>
-              <p className="text-muted-foreground mb-4">
-                Join our free nightly Zoom support groups. Sunday at 8PM PST, 
-                Monday-Thursday at 8PM EST.
-              </p>
-              <a
-                href="https://interventiononcall.com/live-family-friends-zoom/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-primary hover:underline font-medium"
-              >
-                Register for Free
-                <ExternalLink className="w-4 h-4" />
-              </a>
-            </div>
-
-            {/* Sober Helpline CTA */}
-            <div className="bg-card border border-border rounded-xl p-8">
-              <img 
-                src={soberHelplineLogo} 
-                alt="Sober Helpline" 
-                className="w-48 mx-auto mb-4"
-              />
-              <h3 className="font-script text-3xl text-burgundy mb-3">Sober Helpline</h3>
-              <p className="text-muted-foreground mb-4">
-                Find treatment resources, educational materials, and connect with a strong 
-                community of families supporting each other through recovery.
-              </p>
-              <a
-                href="https://soberhelpline.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-primary hover:underline font-medium"
-              >
-                Visit Sober Helpline
-                <ExternalLink className="w-4 h-4" />
-              </a>
-            </div>
           </div>
 
           {/* Contact info */}
