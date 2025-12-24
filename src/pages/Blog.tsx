@@ -21,6 +21,7 @@ import blogImageDryDrunk from "@/assets/blog-dry-drunk-syndrome.jpg";
 import blogImageRockBottom from "@/assets/blog-rock-bottom-myth.jpg";
 import blogImageWineOclock from "@/assets/blog-wine-oclock-humor.jpg";
 import blogImageEveryoneDrinks from "@/assets/blog-everyone-drinks-like-this.jpg";
+import blogImageJokesAboutDrinking from "@/assets/blog-jokes-about-drinking.jpg";
 
 interface BlogArticle {
   id: string;
@@ -33,6 +34,55 @@ interface BlogArticle {
 }
 
 const articles: BlogArticle[] = [
+  {
+    id: "jokes-about-drinking",
+    title: "When the Jokes About Drinking Stop Being Funny",
+    date: "December 24, 2025",
+    image: blogImageJokesAboutDrinking,
+    imageAlt: "Empty wine glass on a table at a family gathering with blurred silhouettes in the background looking uncomfortable",
+    excerpt: "There's a moment most families can identify in hindsight. The jokes that used to land start feeling uncomfortable. What once felt harmless now carries a quiet edge of concern.",
+    content: (
+      <div className="prose prose-lg max-w-none text-foreground/90 space-y-6">
+        <p>
+          There's a moment most families can identify in hindsight. The jokes that used to land start feeling uncomfortable. The stories get repeated. The laughter feels forced. What once felt harmless now carries a quiet edge of concern.
+        </p>
+        
+        <p>
+          Culturally, we joke about substance use constantly. We celebrate excess, laugh off hangovers, and bond over shared chaos. Humor makes it all feel manageable. If it's funny, it can't be that serious.
+        </p>
+        
+        <p>Until it is.</p>
+        
+        <p>
+          Families often say they didn't realize how bad things were because everyone laughed along. The memes, the wine jokes, the stories retold at holidays—all of it created a sense that this was just normal adult behavior. Pointing it out felt like being dramatic or judgmental.
+        </p>
+        
+        <p>
+          The shift usually happens subtly. The person is still drinking or using, but they're not really present anymore. Irritability replaces humor. Defensiveness creeps in. The jokes stop landing because they're covering something heavier.
+        </p>
+        
+        <p>
+          Functioning becomes the punchline. "At least they still work." "At least they're not like that guy." The problem with functioning is that it delays consequences, and delayed consequences delay change.
+        </p>
+        
+        <p>
+          No one wants to be the person who ruins the mood. Families often stay quiet because silence feels kinder than confrontation. But silence doesn't protect relationships. It protects avoidance.
+        </p>
+        
+        <p>
+          The Party Wreckers approach isn't about killing humor. Humor can be a bridge. It can disarm. It can open doors. But it can't replace honesty. Laughing through discomfort eventually stops working, and when it does, families are left with a choice.
+        </p>
+        
+        <p>
+          You don't have to shame. You don't have to lecture. Sometimes the most powerful move is simply not laughing anymore. Letting the silence sit. Letting the moment be what it is.
+        </p>
+        
+        <p className="text-foreground font-medium">
+          Addiction doesn't need to be treated like a joke to be approachable. It needs to be taken seriously before the punchline turns into something no one can laugh at.
+        </p>
+      </div>
+    ),
+  },
   {
     id: "everyone-drinks-like-this",
     title: "When \"Everyone Drinks Like This\" Stops Being Funny",
