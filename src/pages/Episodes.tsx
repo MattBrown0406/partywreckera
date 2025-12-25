@@ -1,26 +1,109 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { usePodcastFeed, formatDuration, formatDate } from "@/hooks/usePodcastFeed";
+import { usePodcastFeed, formatDuration, formatDate, Episode } from "@/hooks/usePodcastFeed";
 import { Button } from "@/components/ui/button";
-import { Play, Pause, Clock, Calendar, Loader2 } from "lucide-react";
+import { Play, Pause, Clock, Calendar, Loader2, Sparkles } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+
+type Category = "all" | "understanding" | "family" | "intervention" | "recovery";
+
+const categories: { id: Category; label: string; keywords: string[] }[] = [
+  { id: "all", label: "All Episodes", keywords: [] },
+  { 
+    id: "understanding", 
+    label: "Understanding Addiction", 
+    keywords: ["brain", "science", "disease", "mental health", "psychology", "myth", "stigma", "alcoholism", "addiction", "substance", "understand", "why", "how addiction", "nature of"]
+  },
+  { 
+    id: "family", 
+    label: "Family & Relationships", 
+    keywords: ["family", "enabling", "codependency", "boundaries", "loved one", "parent", "spouse", "marriage", "relationship", "support", "helping", "care"]
+  },
+  { 
+    id: "intervention", 
+    label: "Intervention & Treatment", 
+    keywords: ["intervention", "treatment", "detox", "rehab", "facility", "professional", "help", "getting help", "therapy", "therapist", "counselor", "process"]
+  },
+  { 
+    id: "recovery", 
+    label: "Recovery & Sobriety", 
+    keywords: ["recovery", "sobriety", "sober", "aa", "12 step", "relapse", "maintain", "life after", "clean", "journey", "story", "success", "hope"]
+  },
+];
+
+const getCategoryForEpisode = (episode: Episode): Category => {
+  const searchText = `${episode.title} ${episode.description}`.toLowerCase();
+  
+  // Score each category based on keyword matches
+  let bestCategory: Category = "understanding"; // default
+  let bestScore = 0;
+  
+  for (const cat of categories) {
+    if (cat.id === "all") continue;
+    
+    const score = cat.keywords.reduce((acc, keyword) => {
+      return acc + (searchText.includes(keyword.toLowerCase()) ? 1 : 0);
+    }, 0);
+    
+    if (score > bestScore) {
+      bestScore = score;
+      bestCategory = cat.id;
+    }
+  }
+  
+  return bestCategory;
+};
+
+const getCategoryColor = (category: Category): string => {
+  switch (category) {
+    case "understanding":
+      return "bg-blue-500/20 text-blue-700 dark:text-blue-300 border-blue-500/30";
+    case "family":
+      return "bg-rose-500/20 text-rose-700 dark:text-rose-300 border-rose-500/30";
+    case "intervention":
+      return "bg-amber-500/20 text-amber-700 dark:text-amber-300 border-amber-500/30";
+    case "recovery":
+      return "bg-emerald-500/20 text-emerald-700 dark:text-emerald-300 border-emerald-500/30";
+    default:
+      return "bg-muted text-muted-foreground";
+  }
+};
+
+const getCategoryLabel = (category: Category): string => {
+  return categories.find(c => c.id === category)?.label || "Understanding Addiction";
+};
 
 const Episodes = () => {
   const { data, isLoading, error } = usePodcastFeed();
   const [playingId, setPlayingId] = useState<string | null>(null);
   const [audioElement, setAudioElement] = useState<HTMLAudioElement | null>(null);
+  const [selectedCategory, setSelectedCategory] = useState<Category>("all");
+
+  const categorizedEpisodes = useMemo(() => {
+    if (!data?.episodes) return [];
+    return data.episodes.map(episode => ({
+      ...episode,
+      category: getCategoryForEpisode(episode),
+    }));
+  }, [data?.episodes]);
+
+  const filteredEpisodes = useMemo(() => {
+    if (selectedCategory === "all") return categorizedEpisodes;
+    return categorizedEpisodes.filter(ep => ep.category === selectedCategory);
+  }, [categorizedEpisodes, selectedCategory]);
+
+  const latestEpisode = categorizedEpisodes[0];
+  const remainingEpisodes = filteredEpisodes.slice(selectedCategory === "all" ? 1 : 0);
 
   const handlePlay = (episodeId: string, audioUrl: string) => {
     if (playingId === episodeId) {
-      // Pause current
       audioElement?.pause();
       setPlayingId(null);
       setAudioElement(null);
     } else {
-      // Stop previous
       audioElement?.pause();
       
-      // Play new
       const audio = new Audio(audioUrl);
       audio.play();
       audio.onended = () => {
@@ -51,7 +134,7 @@ const Episodes = () => {
           </div>
         </section>
 
-        {/* Episodes List */}
+        {/* Content */}
         <section className="py-16">
           <div className="container px-4">
             {isLoading && (
@@ -67,59 +150,146 @@ const Episodes = () => {
               </div>
             )}
 
-            {data && (
-              <div className="max-w-4xl mx-auto space-y-6">
-                {data.episodes.slice(0, 10).map((episode) => (
-                  <article
-                    key={episode.id}
-                    className="group p-6 rounded-xl bg-card border border-border hover:border-primary/30 transition-all duration-300"
-                  >
-                    <div className="flex flex-col sm:flex-row gap-4">
-                      {/* Play button */}
-                      <div className="flex-shrink-0">
+            {data && latestEpisode && (
+              <div className="max-w-4xl mx-auto">
+                {/* Latest Episode Feature */}
+                <div className="mb-12">
+                  <div className="flex items-center gap-2 mb-4">
+                    <Sparkles className="w-5 h-5 text-primary" />
+                    <h2 className="text-lg font-semibold text-foreground">Latest Episode</h2>
+                  </div>
+                  
+                  <article className="p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-primary/10 via-card to-card border-2 border-primary/20 shadow-lg">
+                    <div className="flex flex-col gap-4">
+                      <div className="flex items-start gap-4">
                         <Button
                           variant="default"
                           size="icon"
-                          className="w-14 h-14 rounded-full"
-                          onClick={() => handlePlay(episode.id, episode.audioUrl)}
+                          className="w-16 h-16 rounded-full flex-shrink-0 shadow-lg"
+                          onClick={() => handlePlay(latestEpisode.id, latestEpisode.audioUrl)}
                         >
-                          {playingId === episode.id ? (
-                            <Pause className="w-6 h-6" />
+                          {playingId === latestEpisode.id ? (
+                            <Pause className="w-7 h-7" />
                           ) : (
-                            <Play className="w-6 h-6 ml-1" />
+                            <Play className="w-7 h-7 ml-1" />
                           )}
                         </Button>
-                      </div>
-
-                      {/* Content */}
-                      <div className="flex-1 min-w-0">
-                        <div className="flex items-center gap-3 mb-2 text-sm text-muted-foreground">
-                          {episode.episodeNumber > 0 && (
-                            <span className="font-semibold text-primary">
-                              EP {episode.episodeNumber}
+                        
+                        <div className="flex-1 min-w-0">
+                          <div className="flex flex-wrap items-center gap-2 mb-2">
+                            {latestEpisode.episodeNumber > 0 && (
+                              <span className="font-semibold text-primary text-sm">
+                                EP {latestEpisode.episodeNumber}
+                              </span>
+                            )}
+                            <Badge variant="outline" className={getCategoryColor(latestEpisode.category)}>
+                              {getCategoryLabel(latestEpisode.category)}
+                            </Badge>
+                          </div>
+                          
+                          <h3 className="font-semibold text-xl text-burgundy mb-2">
+                            {latestEpisode.title}
+                          </h3>
+                          
+                          <div className="flex items-center gap-3 text-sm text-muted-foreground mb-3">
+                            <span className="flex items-center gap-1">
+                              <Calendar className="w-3.5 h-3.5" />
+                              {formatDate(latestEpisode.pubDate)}
                             </span>
-                          )}
-                          <span className="flex items-center gap-1">
-                            <Calendar className="w-3.5 h-3.5" />
-                            {formatDate(episode.pubDate)}
-                          </span>
-                          <span className="flex items-center gap-1">
-                            <Clock className="w-3.5 h-3.5" />
-                            {formatDuration(episode.duration)}
-                          </span>
+                            <span className="flex items-center gap-1">
+                              <Clock className="w-3.5 h-3.5" />
+                              {formatDuration(latestEpisode.duration)}
+                            </span>
+                          </div>
+                          
+                          <p className="text-muted-foreground text-sm leading-relaxed">
+                            {latestEpisode.description}
+                          </p>
                         </div>
-
-                        <h2 className="font-semibold text-lg text-burgundy mb-2 group-hover:text-burgundy/70 transition-colors">
-                          {episode.title}
-                        </h2>
-
-                        <p className="text-muted-foreground text-sm leading-relaxed">
-                          {episode.description}
-                        </p>
                       </div>
                     </div>
                   </article>
-                ))}
+                </div>
+
+                {/* Category Filters */}
+                <div className="mb-8">
+                  <h2 className="text-lg font-semibold text-foreground mb-4">Browse by Topic</h2>
+                  <div className="flex flex-wrap gap-2">
+                    {categories.map((cat) => (
+                      <Button
+                        key={cat.id}
+                        variant={selectedCategory === cat.id ? "default" : "outline"}
+                        size="sm"
+                        onClick={() => setSelectedCategory(cat.id)}
+                        className="rounded-full"
+                      >
+                        {cat.label}
+                      </Button>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Episodes List */}
+                <div className="space-y-4">
+                  {remainingEpisodes.length === 0 && selectedCategory !== "all" && (
+                    <div className="text-center py-12">
+                      <p className="text-muted-foreground">No episodes found in this category.</p>
+                    </div>
+                  )}
+                  
+                  {remainingEpisodes.map((episode) => (
+                    <article
+                      key={episode.id}
+                      className="group p-5 rounded-xl bg-card border border-border hover:border-primary/30 transition-all duration-300"
+                    >
+                      <div className="flex flex-col sm:flex-row gap-4">
+                        <div className="flex-shrink-0">
+                          <Button
+                            variant="default"
+                            size="icon"
+                            className="w-12 h-12 rounded-full"
+                            onClick={() => handlePlay(episode.id, episode.audioUrl)}
+                          >
+                            {playingId === episode.id ? (
+                              <Pause className="w-5 h-5" />
+                            ) : (
+                              <Play className="w-5 h-5 ml-0.5" />
+                            )}
+                          </Button>
+                        </div>
+
+                        <div className="flex-1 min-w-0">
+                          <div className="flex flex-wrap items-center gap-2 mb-2 text-sm">
+                            {episode.episodeNumber > 0 && (
+                              <span className="font-semibold text-primary">
+                                EP {episode.episodeNumber}
+                              </span>
+                            )}
+                            <Badge variant="outline" className={`text-xs ${getCategoryColor(episode.category)}`}>
+                              {getCategoryLabel(episode.category)}
+                            </Badge>
+                            <span className="flex items-center gap-1 text-muted-foreground">
+                              <Calendar className="w-3.5 h-3.5" />
+                              {formatDate(episode.pubDate)}
+                            </span>
+                            <span className="flex items-center gap-1 text-muted-foreground">
+                              <Clock className="w-3.5 h-3.5" />
+                              {formatDuration(episode.duration)}
+                            </span>
+                          </div>
+
+                          <h3 className="font-semibold text-foreground mb-2 group-hover:text-burgundy transition-colors">
+                            {episode.title}
+                          </h3>
+
+                          <p className="text-muted-foreground text-sm leading-relaxed line-clamp-2">
+                            {episode.description}
+                          </p>
+                        </div>
+                      </div>
+                    </article>
+                  ))}
+                </div>
               </div>
             )}
           </div>
