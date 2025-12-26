@@ -23,6 +23,7 @@ import blogImageWineOclock from "@/assets/blog-wine-oclock-humor.jpg";
 import blogImageEveryoneDrinks from "@/assets/blog-everyone-drinks-like-this.jpg";
 import blogImageJokesAboutDrinking from "@/assets/blog-jokes-about-drinking.jpg";
 import blogImageHumorHidesAddiction from "@/assets/blog-humor-hides-addiction.jpg";
+import blogImageFamilyConstantAlert from "@/assets/blog-family-constant-alert.jpg";
 
 interface BlogArticle {
   id: string;
@@ -35,6 +36,53 @@ interface BlogArticle {
 }
 
 const articles: BlogArticle[] = [
+  {
+    id: "family-constant-alert",
+    title: "When Addiction Turns Family Life Into a Constant State of Alert",
+    date: "December 26, 2025",
+    image: blogImageFamilyConstantAlert,
+    imageAlt: "Family sitting together in a living room looking tense and on edge despite ordinary domestic setting",
+    excerpt: "Families living with addiction often describe their lives using the same language reserved for emergencies. They are always watching, always listening, always waiting for the next disruption.",
+    content: (
+      <div className="prose prose-lg max-w-none text-foreground/90 space-y-6">
+        <p>
+          Families living with addiction often describe their lives using the same language reserved for emergencies. They are always watching, always listening, always waiting for the next disruption. Even during calm periods, tension lingers just beneath the surface, ready to spike without warning. This constant state of alertness becomes so familiar that many families no longer recognize it as stress.
+        </p>
+        
+        <p>
+          At first, the vigilance feels justified. A loved one has been unpredictable. There have been broken promises, emotional outbursts, or frightening close calls. Staying alert feels like protection. It feels responsible. Over time, however, this hyper-awareness begins to reshape family life in ways that are difficult to reverse.
+        </p>
+        
+        <p>
+          Conversations become cautious. Tone is carefully managed. Certain topics are avoided altogether. Family members learn to scan moods before speaking, adjusting their behavior to prevent conflict. What starts as adaptation slowly becomes self-erasure.
+        </p>
+        
+        <p>
+          Children raised in these environments often become emotionally attuned beyond their years. They learn to anticipate reactions and manage tension, sometimes at the cost of their own needs. Adults, too, may lose touch with what they feel, focusing instead on keeping the environment stable.
+        </p>
+        
+        <p>
+          This constant alertness is not a personality trait. It is a response to chronic uncertainty. Addiction creates instability not only through substance use, but through emotional inconsistency. Families never quite know which version of their loved one they will encounter, and the body responds accordingly.
+        </p>
+        
+        <p>
+          Living this way takes a toll. Anxiety becomes normalized. Sleep is disrupted. Joy feels risky, as if relaxing might invite disaster. Families may pride themselves on being resilient, but resilience built on constant stress is fragile.
+        </p>
+        
+        <p>
+          What makes this state especially damaging is how invisible it is from the outside. Loved ones may still be working, parenting, or socializing. There may be no obvious crisis to justify the exhaustion. This invisibility often leads families to dismiss their own experience, telling themselves they should be able to handle it.
+        </p>
+        
+        <p>
+          Recognizing this hyper-vigilance as a consequence of addiction—not a personal failure—can be a turning point. It allows families to see that their nervous systems have been living in survival mode, even if life looks "normal" on the surface.
+        </p>
+        
+        <p className="text-foreground font-medium">
+          Families deserve more than endurance. They deserve peace, predictability, and emotional safety. Reclaiming those things often requires stepping out of constant alertness and acknowledging how much the environment has been shaped by addiction.
+        </p>
+      </div>
+    ),
+  },
   {
     id: "humor-hides-addiction",
     title: "How Addiction Hides Behind Humor Until Nobody's Laughing Anymore",
