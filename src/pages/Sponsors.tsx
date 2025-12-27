@@ -536,15 +536,15 @@ const Sponsors = () => {
                         <div className="w-14 h-14 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center mx-auto mb-2">
                           <Radio className="w-7 h-7 text-white" />
                         </div>
-                        <p className="text-white font-bold text-xl">150+</p>
-                        <p className="text-white/70 text-xs">Episodes</p>
+                        <p className="text-white font-bold text-xl">75+</p>
+                        <p className="text-white/70 text-xs">Episodes & Growing</p>
                       </div>
                       
                       <div className="text-center">
                         <div className="w-14 h-14 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center mx-auto mb-2">
                           <Users className="w-7 h-7 text-white" />
                         </div>
-                        <p className="text-white font-bold text-xl">10K+</p>
+                        <p className="text-white font-bold text-xl">25K+</p>
                         <p className="text-white/70 text-xs">Listeners</p>
                       </div>
                       
