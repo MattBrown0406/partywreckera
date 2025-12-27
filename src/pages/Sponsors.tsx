@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Heart, ExternalLink, Phone, Users, BookOpen, Shield, CheckCircle, MessageCircle, Headphones, Clock, Video, HeartHandshake, Target, Calendar, Zap, Smile, MessageSquare, Laptop, UserCheck, BadgePercent, Globe, Mic, Sparkles, DollarSign, Gift } from "lucide-react";
+import { Heart, ExternalLink, Phone, Users, BookOpen, Shield, CheckCircle, MessageCircle, Headphones, Clock, Video, HeartHandshake, Target, Calendar, Zap, Smile, MessageSquare, Laptop, UserCheck, BadgePercent, Globe, Mic, Sparkles, DollarSign, Gift, TrendingUp, Radio, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import soberHelplineLogo from "@/assets/sober-helpline-logo.png";
 import iocLogo from "@/assets/ioc-logo.jpg";
@@ -499,72 +499,129 @@ const Sponsors = () => {
                 </div>
               </div>
 
-              {/* Become a Sponsor CTA */}
-              <div className="mt-12 bg-secondary/30 border border-border rounded-xl p-8 text-center">
-                <h3 className="font-script text-2xl text-burgundy mb-3">
-                  Interested in Sponsoring?
-                </h3>
-                <p className="text-muted-foreground mb-6 max-w-lg mx-auto">
-                  Partner with us to reach families who need help navigating addiction and recovery.
-                </p>
-                <Button variant="hero" asChild>
-                  <a href="mailto:matt@partywreckers.com">
-                    Become a Sponsor
-                    <ExternalLink className="w-4 h-4 ml-2" />
-                  </a>
-                </Button>
+              {/* Become a Sponsor - Dynamic Banner */}
+              <div className="mt-12 relative overflow-hidden rounded-2xl">
+                {/* Animated gradient background */}
+                <div className="absolute inset-0 bg-gradient-to-r from-burgundy via-primary to-burgundy bg-[length:200%_100%] animate-[shimmer_3s_ease-in-out_infinite]" />
                 
-                {/* Direct Support CTA - Bottom */}
-                <div className="mt-8 pt-8 border-t border-border">
-                  <div className="relative bg-gradient-to-br from-primary/10 via-burgundy/5 to-primary/10 border border-primary/20 rounded-xl p-6 overflow-hidden">
-                    {/* Animated elements */}
-                    <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                      <div className="absolute -top-10 -right-10 w-40 h-40 bg-primary/10 rounded-full blur-3xl animate-pulse" />
-                      <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-burgundy/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1.5s" }} />
+                {/* Overlay pattern */}
+                <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMSIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjEpIi8+PC9zdmc+')] opacity-50" />
+                
+                {/* Floating elements */}
+                <div className="absolute top-4 left-8 w-16 h-16 bg-white/10 rounded-full blur-xl animate-pulse" />
+                <div className="absolute bottom-4 right-12 w-20 h-20 bg-white/10 rounded-full blur-xl animate-pulse" style={{ animationDelay: "1s" }} />
+                <div className="absolute top-1/2 left-1/4 w-12 h-12 bg-white/5 rounded-full blur-lg animate-pulse" style={{ animationDelay: "0.5s" }} />
+                
+                <div className="relative px-6 py-10 sm:px-12 sm:py-12">
+                  <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
+                    {/* Left content */}
+                    <div className="flex-1 text-center lg:text-left">
+                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/20 backdrop-blur-sm mb-4">
+                        <TrendingUp className="w-4 h-4 text-white" />
+                        <span className="text-white/90 text-sm font-medium">Growing Audience</span>
+                      </div>
+                      
+                      <h3 className="font-script text-3xl sm:text-4xl text-white mb-3">
+                        Partner With Us
+                      </h3>
+                      
+                      <p className="text-white/80 text-lg max-w-lg">
+                        Reach families actively seeking help with addiction and recovery. Your brand in front of an engaged, grateful audience.
+                      </p>
                     </div>
                     
-                    <div className="relative">
-                      <div className="flex items-center justify-center gap-3 mb-4">
-                        <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
-                          <Heart className="w-5 h-5 text-primary animate-pulse" />
+                    {/* Stats */}
+                    <div className="flex items-center gap-6 sm:gap-8">
+                      <div className="text-center">
+                        <div className="w-14 h-14 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center mx-auto mb-2">
+                          <Radio className="w-7 h-7 text-white" />
                         </div>
-                        <h4 className="font-script text-2xl text-primary">Support Directly</h4>
+                        <p className="text-white font-bold text-xl">150+</p>
+                        <p className="text-white/70 text-xs">Episodes</p>
                       </div>
                       
-                      <p className="text-muted-foreground mb-6 max-w-md mx-auto">
-                        Love what we do? Your direct contribution helps us produce more episodes, reach more families, and keep spreading hope.
-                      </p>
-                      
-                      {/* Contribution options */}
-                      <div className="flex flex-wrap items-center justify-center gap-3 mb-6">
-                        <div className="flex items-center gap-1 px-4 py-2 rounded-full bg-background/50 border border-border">
-                          <DollarSign className="w-4 h-4 text-primary" />
-                          <span className="font-semibold text-foreground">1</span>
+                      <div className="text-center">
+                        <div className="w-14 h-14 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center mx-auto mb-2">
+                          <Users className="w-7 h-7 text-white" />
                         </div>
-                        <div className="flex items-center gap-1 px-4 py-2 rounded-full bg-background/50 border border-border">
-                          <DollarSign className="w-4 h-4 text-primary" />
-                          <span className="font-semibold text-foreground">5</span>
-                        </div>
-                        <div className="flex items-center gap-1 px-4 py-2 rounded-full bg-primary/20 border border-primary/30">
-                          <DollarSign className="w-4 h-4 text-primary" />
-                          <span className="font-semibold text-foreground">10</span>
-                          <Sparkles className="w-3 h-3 text-primary ml-1" />
-                        </div>
-                        <span className="text-muted-foreground text-sm">or any amount</span>
+                        <p className="text-white font-bold text-xl">10K+</p>
+                        <p className="text-white/70 text-xs">Listeners</p>
                       </div>
                       
-                      <Button className="bg-primary hover:bg-primary/90 shadow-lg shadow-primary/25" asChild>
-                        <a
-                          href="https://www.buzzsprout.com/1941777/support"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <Gift className="w-4 h-4 mr-2" />
-                          Support The Party Wreckers
+                      <div className="text-center">
+                        <div className="w-14 h-14 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center mx-auto mb-2">
+                          <Heart className="w-7 h-7 text-white" />
+                        </div>
+                        <p className="text-white font-bold text-xl">100%</p>
+                        <p className="text-white/70 text-xs">Mission-Driven</p>
+                      </div>
+                    </div>
+                    
+                    {/* CTA */}
+                    <div className="flex-shrink-0">
+                      <Button 
+                        size="lg" 
+                        className="bg-white text-burgundy hover:bg-white/90 shadow-xl shadow-black/20 font-semibold group"
+                        asChild
+                      >
+                        <a href="mailto:matt@partywreckers.com">
+                          <Mail className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
+                          Become a Sponsor
                         </a>
                       </Button>
                     </div>
                   </div>
+                </div>
+              </div>
+                
+              {/* Direct Support CTA - Bottom */}
+              <div className="mt-8 relative bg-gradient-to-br from-primary/10 via-burgundy/5 to-primary/10 border border-primary/20 rounded-xl p-6 overflow-hidden">
+                {/* Animated elements */}
+                <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                  <div className="absolute -top-10 -right-10 w-40 h-40 bg-primary/10 rounded-full blur-3xl animate-pulse" />
+                  <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-burgundy/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1.5s" }} />
+                </div>
+                
+                <div className="relative text-center">
+                  <div className="flex items-center justify-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+                      <Heart className="w-5 h-5 text-primary animate-pulse" />
+                    </div>
+                    <h4 className="font-script text-2xl text-primary">Support Directly</h4>
+                  </div>
+                  
+                  <p className="text-muted-foreground mb-6 max-w-md mx-auto">
+                    Love what we do? Your direct contribution helps us produce more episodes, reach more families, and keep spreading hope.
+                  </p>
+                  
+                  {/* Contribution options */}
+                  <div className="flex flex-wrap items-center justify-center gap-3 mb-6">
+                    <div className="flex items-center gap-1 px-4 py-2 rounded-full bg-background/50 border border-border">
+                      <DollarSign className="w-4 h-4 text-primary" />
+                      <span className="font-semibold text-foreground">1</span>
+                    </div>
+                    <div className="flex items-center gap-1 px-4 py-2 rounded-full bg-background/50 border border-border">
+                      <DollarSign className="w-4 h-4 text-primary" />
+                      <span className="font-semibold text-foreground">5</span>
+                    </div>
+                    <div className="flex items-center gap-1 px-4 py-2 rounded-full bg-primary/20 border border-primary/30">
+                      <DollarSign className="w-4 h-4 text-primary" />
+                      <span className="font-semibold text-foreground">10</span>
+                      <Sparkles className="w-3 h-3 text-primary ml-1" />
+                    </div>
+                    <span className="text-muted-foreground text-sm">or any amount</span>
+                  </div>
+                  
+                  <Button className="bg-primary hover:bg-primary/90 shadow-lg shadow-primary/25" asChild>
+                    <a
+                      href="https://www.buzzsprout.com/1941777/support"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Gift className="w-4 h-4 mr-2" />
+                      Support The Party Wreckers
+                    </a>
+                  </Button>
                 </div>
               </div>
             </div>
