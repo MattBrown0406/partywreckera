@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Heart, ExternalLink, Phone, Users, BookOpen, Shield, CheckCircle, MessageCircle, Headphones, Clock, Video, HeartHandshake, Target, Calendar, Zap, Smile, MessageSquare, Laptop, UserCheck, BadgePercent, Globe } from "lucide-react";
+import { Heart, ExternalLink, Phone, Users, BookOpen, Shield, CheckCircle, MessageCircle, Headphones, Clock, Video, HeartHandshake, Target, Calendar, Zap, Smile, MessageSquare, Laptop, UserCheck, BadgePercent, Globe, Mic, Sparkles, DollarSign, Gift } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import soberHelplineLogo from "@/assets/sober-helpline-logo.png";
 import iocLogo from "@/assets/ioc-logo.jpg";
@@ -38,19 +38,39 @@ const Sponsors = () => {
                 By supporting them, you're helping us continue our mission to help families.
               </p>
               
-              <p className="text-muted-foreground mb-4">
-                Do you want to support the podcast directly? Your contribution of $1, $5, or $10 can help us keep getting the message out!
-              </p>
-              <Button variant="outline" className="bg-background/10 border-border/50 hover:bg-background/20" asChild>
-                <a
-                  href="https://www.buzzsprout.com/1941777/support"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Support the Podcast
-                  <Heart className="w-4 h-4 ml-2" />
-                </a>
-              </Button>
+              {/* Direct Support CTA - Top */}
+              <div className="relative bg-gradient-to-r from-burgundy/20 via-primary/10 to-burgundy/20 border border-primary/30 rounded-2xl p-6 sm:p-8 overflow-hidden">
+                {/* Animated background */}
+                <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                  <div className="absolute top-0 left-1/4 w-32 h-32 bg-primary/10 rounded-full blur-2xl animate-pulse" />
+                  <div className="absolute bottom-0 right-1/4 w-32 h-32 bg-burgundy/10 rounded-full blur-2xl animate-pulse" style={{ animationDelay: "1s" }} />
+                </div>
+                
+                <div className="relative flex flex-col sm:flex-row items-center justify-center gap-6">
+                  <div className="flex items-center gap-4">
+                    <div className="w-14 h-14 rounded-full bg-primary/20 flex items-center justify-center animate-pulse">
+                      <Mic className="w-7 h-7 text-primary" />
+                    </div>
+                    <div className="text-center sm:text-left">
+                      <p className="text-foreground font-semibold text-lg">Support the Podcast Directly</p>
+                      <p className="text-muted-foreground text-sm">Every $1, $5, or $10 helps us reach more families</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center gap-3">
+                    <Button className="bg-primary hover:bg-primary/90 shadow-lg shadow-primary/25" asChild>
+                      <a
+                        href="https://www.buzzsprout.com/1941777/support"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Gift className="w-4 h-4 mr-2" />
+                        Contribute Now
+                      </a>
+                    </Button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -494,20 +514,57 @@ const Sponsors = () => {
                   </a>
                 </Button>
                 
+                {/* Direct Support CTA - Bottom */}
                 <div className="mt-8 pt-8 border-t border-border">
-                  <p className="text-muted-foreground mb-4">
-                    Do you want to support the podcast directly? Your contribution of $1, $5, or $10 can help us keep getting the message out!
-                  </p>
-                  <Button variant="outline" asChild>
-                    <a
-                      href="https://www.buzzsprout.com/1941777/support"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Support the Podcast
-                      <Heart className="w-4 h-4 ml-2" />
-                    </a>
-                  </Button>
+                  <div className="relative bg-gradient-to-br from-primary/10 via-burgundy/5 to-primary/10 border border-primary/20 rounded-xl p-6 overflow-hidden">
+                    {/* Animated elements */}
+                    <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                      <div className="absolute -top-10 -right-10 w-40 h-40 bg-primary/10 rounded-full blur-3xl animate-pulse" />
+                      <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-burgundy/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1.5s" }} />
+                    </div>
+                    
+                    <div className="relative">
+                      <div className="flex items-center justify-center gap-3 mb-4">
+                        <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+                          <Heart className="w-5 h-5 text-primary animate-pulse" />
+                        </div>
+                        <h4 className="font-script text-2xl text-primary">Support Directly</h4>
+                      </div>
+                      
+                      <p className="text-muted-foreground mb-6 max-w-md mx-auto">
+                        Love what we do? Your direct contribution helps us produce more episodes, reach more families, and keep spreading hope.
+                      </p>
+                      
+                      {/* Contribution options */}
+                      <div className="flex flex-wrap items-center justify-center gap-3 mb-6">
+                        <div className="flex items-center gap-1 px-4 py-2 rounded-full bg-background/50 border border-border">
+                          <DollarSign className="w-4 h-4 text-primary" />
+                          <span className="font-semibold text-foreground">1</span>
+                        </div>
+                        <div className="flex items-center gap-1 px-4 py-2 rounded-full bg-background/50 border border-border">
+                          <DollarSign className="w-4 h-4 text-primary" />
+                          <span className="font-semibold text-foreground">5</span>
+                        </div>
+                        <div className="flex items-center gap-1 px-4 py-2 rounded-full bg-primary/20 border border-primary/30">
+                          <DollarSign className="w-4 h-4 text-primary" />
+                          <span className="font-semibold text-foreground">10</span>
+                          <Sparkles className="w-3 h-3 text-primary ml-1" />
+                        </div>
+                        <span className="text-muted-foreground text-sm">or any amount</span>
+                      </div>
+                      
+                      <Button className="bg-primary hover:bg-primary/90 shadow-lg shadow-primary/25" asChild>
+                        <a
+                          href="https://www.buzzsprout.com/1941777/support"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Gift className="w-4 h-4 mr-2" />
+                          Support The Party Wreckers
+                        </a>
+                      </Button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
