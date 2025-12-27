@@ -1,4 +1,4 @@
-import { Check, ExternalLink } from "lucide-react";
+import { Check, ExternalLink, Video, Users, BookOpen, Phone, Zap } from "lucide-react";
 import FamilyCarousel from "@/components/FamilyCarousel";
 import iocLogo from "@/assets/ioc-logo.jpg";
 import soberHelplineLogo from "@/assets/sober-helpline-logo.png";
@@ -85,53 +85,133 @@ const AboutSection = () => {
         </div>
 
         {/* Support Resources Grid */}
-        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mt-16">
-          {/* Free Support Group CTA */}
-          <div className="bg-background border border-border rounded-xl p-8 text-center">
-            <img 
-              src={iocLogo} 
-              alt="Intervention on Call" 
-              className="w-48 mx-auto mb-4"
-            />
-            <h3 className="font-script text-3xl text-burgundy mb-3">Free Family Support</h3>
-            <p className="text-muted-foreground mb-4">
-              Join our free nightly Zoom support groups. Sunday at 8PM PST, 
-              Monday-Thursday at 8PM EST.
-            </p>
-            <Button asChild>
-              <a
-                href="https://interventiononcall.com/live-family-friends-zoom/"
-                target="_blank"
-                rel="noopener noreferrer"
+        <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto mt-16">
+          {/* Intervention on Call - Dynamic Card */}
+          <div className="relative bg-gradient-to-br from-cyan-900/20 via-sky-900/10 to-background border border-cyan-600/30 rounded-xl overflow-hidden group">
+            {/* Animated Background */}
+            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+              <div className="absolute -top-10 -left-10 w-32 h-32 bg-cyan-500/10 rounded-full blur-2xl animate-pulse" />
+              <div className="absolute -bottom-10 -right-10 w-28 h-28 bg-sky-500/10 rounded-full blur-2xl animate-pulse" style={{ animationDelay: "1s" }} />
+            </div>
+            
+            {/* Badge */}
+            <div className="absolute top-3 right-3 z-10">
+              <span className="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-cyan-600 text-cyan-50 text-[10px] font-semibold uppercase tracking-wider">
+                <Zap className="w-3 h-3" />
+                Free Support
+              </span>
+            </div>
+            
+            <div className="relative p-6">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="bg-white rounded-lg p-2 shadow-md flex-shrink-0">
+                  <img 
+                    src={iocLogo} 
+                    alt="Intervention on Call" 
+                    className="w-16 h-auto"
+                  />
+                </div>
+                <div>
+                  <h3 className="font-script text-2xl text-cyan-400">Intervention on Call</h3>
+                  <p className="text-xs text-muted-foreground">On-Demand Support • $150/hr</p>
+                </div>
+              </div>
+              
+              <p className="text-muted-foreground text-sm mb-4">
+                Join free nightly Zoom support groups. Connect with families navigating the same journey.
+              </p>
+              
+              {/* Quick features */}
+              <div className="flex flex-wrap gap-2 mb-4">
+                <div className="flex items-center gap-1.5 px-2 py-1 rounded-full bg-cyan-600/10 border border-cyan-600/20 text-xs text-cyan-400">
+                  <Video className="w-3 h-3" />
+                  Free Zoom Meetings
+                </div>
+                <div className="flex items-center gap-1.5 px-2 py-1 rounded-full bg-cyan-600/10 border border-cyan-600/20 text-xs text-cyan-400">
+                  <Users className="w-3 h-3" />
+                  Family Coaching
+                </div>
+              </div>
+              
+              <Button 
+                size="sm"
+                className="w-full bg-cyan-600 hover:bg-cyan-700 text-white shadow-md shadow-cyan-600/20"
+                asChild
               >
-                Register for Free
-                <ExternalLink className="w-4 h-4" />
-              </a>
-            </Button>
+                <a
+                  href="https://interventiononcall.com/live-family-friends-zoom/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Register for Free
+                  <ExternalLink className="w-3.5 h-3.5 ml-1.5" />
+                </a>
+              </Button>
+            </div>
           </div>
 
-          {/* Sober Helpline CTA */}
-          <div className="bg-background border border-border rounded-xl p-8 text-center">
-            <img 
-              src={soberHelplineLogo} 
-              alt="Sober Helpline" 
-              className="w-48 mx-auto mb-4"
-            />
-            <h3 className="font-script text-3xl text-burgundy mb-3">Sober Helpline</h3>
-            <p className="text-muted-foreground mb-4">
-              Find treatment resources, educational materials, and connect with a strong 
-              community of families supporting each other through recovery.
-            </p>
-            <Button asChild>
-              <a
-                href="https://soberhelpline.com"
-                target="_blank"
-                rel="noopener noreferrer"
+          {/* Sober Helpline - Dynamic Card */}
+          <div className="relative bg-gradient-to-br from-emerald-900/20 via-teal-900/10 to-background border border-emerald-600/30 rounded-xl overflow-hidden group">
+            {/* Animated Background */}
+            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+              <div className="absolute -top-10 -right-10 w-32 h-32 bg-emerald-500/10 rounded-full blur-2xl animate-pulse" style={{ animationDelay: "0.5s" }} />
+              <div className="absolute -bottom-10 -left-10 w-28 h-28 bg-teal-500/10 rounded-full blur-2xl animate-pulse" style={{ animationDelay: "1.5s" }} />
+            </div>
+            
+            {/* Badge */}
+            <div className="absolute top-3 right-3 z-10">
+              <span className="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-600 text-emerald-50 text-[10px] font-semibold uppercase tracking-wider">
+                <BookOpen className="w-3 h-3" />
+                Education
+              </span>
+            </div>
+            
+            <div className="relative p-6">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="bg-white rounded-lg p-2 shadow-md flex-shrink-0">
+                  <img 
+                    src={soberHelplineLogo} 
+                    alt="Sober Helpline" 
+                    className="w-16 h-auto"
+                  />
+                </div>
+                <div>
+                  <h3 className="font-script text-2xl text-emerald-400">Sober Helpline</h3>
+                  <p className="text-xs text-muted-foreground">Addiction Education Resources</p>
+                </div>
+              </div>
+              
+              <p className="text-muted-foreground text-sm mb-4">
+                Find treatment resources, assessments, and connect with a community of families supporting each other.
+              </p>
+              
+              {/* Quick features */}
+              <div className="flex flex-wrap gap-2 mb-4">
+                <div className="flex items-center gap-1.5 px-2 py-1 rounded-full bg-emerald-600/10 border border-emerald-600/20 text-xs text-emerald-400">
+                  <Users className="w-3 h-3" />
+                  Family Forum
+                </div>
+                <div className="flex items-center gap-1.5 px-2 py-1 rounded-full bg-emerald-600/10 border border-emerald-600/20 text-xs text-emerald-400">
+                  <Phone className="w-3 h-3" />
+                  (541) 241-5886
+                </div>
+              </div>
+              
+              <Button 
+                size="sm"
+                className="w-full bg-emerald-600 hover:bg-emerald-700 text-white shadow-md shadow-emerald-600/20"
+                asChild
               >
-                Visit Sober Helpline
-                <ExternalLink className="w-4 h-4" />
-              </a>
-            </Button>
+                <a
+                  href="https://soberhelpline.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Visit Sober Helpline
+                  <ExternalLink className="w-3.5 h-3.5 ml-1.5" />
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
       </div>
