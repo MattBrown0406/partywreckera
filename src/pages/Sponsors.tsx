@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Heart, ExternalLink } from "lucide-react";
+import { Heart, ExternalLink, Phone, Users, BookOpen, Shield, CheckCircle, MessageCircle, Headphones } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import soberHelplineLogo from "@/assets/sober-helpline-logo.png";
 import iocLogo from "@/assets/ioc-logo.jpg";
@@ -58,44 +58,132 @@ const Sponsors = () => {
         {/* Sponsors Content */}
         <section className="py-16 sm:py-24">
           <div className="container px-4">
-            <div className="max-w-4xl mx-auto">
-              {/* Sober Helpline Sponsor Card */}
-              <div className="bg-card border border-border rounded-xl p-8 sm:p-12 flex flex-col md:flex-row items-center gap-8">
-                <div className="flex-shrink-0">
-                  <a
-                    href="https://soberhelpline.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img 
-                      src={soberHelplineLogo} 
-                      alt="Sober Helpline" 
-                      className="w-64 h-auto hover:opacity-80 transition-opacity"
-                    />
-                  </a>
+            <div className="max-w-5xl mx-auto">
+              {/* Sober Helpline - Dynamic Featured Sponsor Card */}
+              <div className="relative bg-gradient-to-br from-emerald-900/20 via-teal-900/10 to-background border-2 border-emerald-600/30 rounded-2xl overflow-hidden group">
+                {/* Animated Background Elements */}
+                <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                  <div className="absolute -top-20 -right-20 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl animate-pulse" />
+                  <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-teal-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1s" }} />
                 </div>
-                <div className="flex-1 text-center md:text-left">
-                  <h2 className="font-script text-3xl text-burgundy mb-3">
-                    Sober Helpline
-                  </h2>
-                  <p className="text-muted-foreground mb-4">
-                    Sober Helpline provides families and professionals looking for treatment resources 
-                    with a place to find ethical and responsible providers of recovery support services. 
-                    These providers have been vetted and have a proven track record of success.
-                  </p>
-                  <p className="text-muted-foreground mb-6">
-                    Whether you're seeking help for yourself or a loved one, Sober Helpline is here 
-                    to guide you through the next steps on your recovery journey.
-                  </p>
-                  <a
-                    href="https://soberhelpline.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-primary hover:underline font-medium"
-                  >
-                    Visit Website
-                    <ExternalLink className="w-4 h-4" />
-                  </a>
+                
+                {/* Featured Badge */}
+                <div className="absolute top-4 right-4 z-10">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-600 text-emerald-50 text-xs font-semibold uppercase tracking-wider shadow-lg">
+                    <Shield className="w-3.5 h-3.5" />
+                    Featured Partner
+                  </span>
+                </div>
+                
+                <div className="relative p-8 sm:p-12">
+                  {/* Header Section */}
+                  <div className="flex flex-col lg:flex-row items-center gap-8 mb-10">
+                    <div className="flex-shrink-0">
+                      <a
+                        href="https://soberhelpline.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block transform transition-transform duration-300 hover:scale-105"
+                      >
+                        <div className="bg-white rounded-xl p-4 shadow-xl">
+                          <img 
+                            src={soberHelplineLogo} 
+                            alt="Sober Helpline - Addiction Education Resources" 
+                            className="w-72 h-auto"
+                          />
+                        </div>
+                      </a>
+                    </div>
+                    
+                    <div className="flex-1 text-center lg:text-left">
+                      <h2 className="font-script text-4xl sm:text-5xl text-emerald-400 mb-4">
+                        Sober Helpline
+                      </h2>
+                      <p className="text-xl text-foreground/90 font-medium mb-2">
+                        Addiction Education Resources for Families
+                      </p>
+                      <p className="text-muted-foreground text-lg">
+                        Empowering families with the knowledge and tools they need to navigate addiction and find ethical, proven treatment resources.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  {/* Features Grid */}
+                  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+                    <div className="bg-background/50 backdrop-blur-sm border border-emerald-600/20 rounded-xl p-6 transition-all duration-300 hover:border-emerald-500/40 hover:shadow-lg hover:shadow-emerald-500/10">
+                      <div className="w-12 h-12 rounded-full bg-emerald-600/20 flex items-center justify-center mb-4">
+                        <Users className="w-6 h-6 text-emerald-400" />
+                      </div>
+                      <h3 className="font-semibold text-foreground mb-2">Family Discussion Forum</h3>
+                      <p className="text-sm text-muted-foreground">Connect with other families navigating addiction. Share experiences and find support in a safe community.</p>
+                    </div>
+                    
+                    <div className="bg-background/50 backdrop-blur-sm border border-emerald-600/20 rounded-xl p-6 transition-all duration-300 hover:border-emerald-500/40 hover:shadow-lg hover:shadow-emerald-500/10">
+                      <div className="w-12 h-12 rounded-full bg-teal-600/20 flex items-center justify-center mb-4">
+                        <BookOpen className="w-6 h-6 text-teal-400" />
+                      </div>
+                      <h3 className="font-semibold text-foreground mb-2">DSM-5 Based Assessments</h3>
+                      <p className="text-sm text-muted-foreground">Clinical screening tools to understand if your loved one's substance use meets diagnostic criteria.</p>
+                    </div>
+                    
+                    <div className="bg-background/50 backdrop-blur-sm border border-emerald-600/20 rounded-xl p-6 transition-all duration-300 hover:border-emerald-500/40 hover:shadow-lg hover:shadow-emerald-500/10">
+                      <div className="w-12 h-12 rounded-full bg-cyan-600/20 flex items-center justify-center mb-4">
+                        <Headphones className="w-6 h-6 text-cyan-400" />
+                      </div>
+                      <h3 className="font-semibold text-foreground mb-2">Guided Meditations</h3>
+                      <p className="text-sm text-muted-foreground">Calming resources to help family members find steadiness while navigating difficult times.</p>
+                    </div>
+                    
+                    <div className="bg-background/50 backdrop-blur-sm border border-emerald-600/20 rounded-xl p-6 transition-all duration-300 hover:border-emerald-500/40 hover:shadow-lg hover:shadow-emerald-500/10">
+                      <div className="w-12 h-12 rounded-full bg-emerald-600/20 flex items-center justify-center mb-4">
+                        <CheckCircle className="w-6 h-6 text-emerald-400" />
+                      </div>
+                      <h3 className="font-semibold text-foreground mb-2">Enabling Self-Assessment</h3>
+                      <p className="text-sm text-muted-foreground">Understand how love, fear, and good intentions can sometimes reinforce addiction patterns.</p>
+                    </div>
+                    
+                    <div className="bg-background/50 backdrop-blur-sm border border-emerald-600/20 rounded-xl p-6 transition-all duration-300 hover:border-emerald-500/40 hover:shadow-lg hover:shadow-emerald-500/10">
+                      <div className="w-12 h-12 rounded-full bg-teal-600/20 flex items-center justify-center mb-4">
+                        <Shield className="w-6 h-6 text-teal-400" />
+                      </div>
+                      <h3 className="font-semibold text-foreground mb-2">Vetted Providers</h3>
+                      <p className="text-sm text-muted-foreground">Find ethical, responsible treatment providers with proven track records of success.</p>
+                    </div>
+                    
+                    <div className="bg-background/50 backdrop-blur-sm border border-emerald-600/20 rounded-xl p-6 transition-all duration-300 hover:border-emerald-500/40 hover:shadow-lg hover:shadow-emerald-500/10">
+                      <div className="w-12 h-12 rounded-full bg-cyan-600/20 flex items-center justify-center mb-4">
+                        <MessageCircle className="w-6 h-6 text-cyan-400" />
+                      </div>
+                      <h3 className="font-semibold text-foreground mb-2">60+ Premium Resources</h3>
+                      <p className="text-sm text-muted-foreground">Exercises, videos, and guides designed specifically for families dealing with addiction.</p>
+                    </div>
+                  </div>
+                  
+                  {/* CTA Section */}
+                  <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6 border-t border-emerald-600/20">
+                    <Button 
+                      size="lg" 
+                      className="bg-emerald-600 hover:bg-emerald-700 text-white shadow-lg shadow-emerald-600/25 transition-all duration-300 hover:shadow-emerald-500/40"
+                      asChild
+                    >
+                      <a
+                        href="https://soberhelpline.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Visit SoberHelpline.com
+                        <ExternalLink className="w-4 h-4 ml-2" />
+                      </a>
+                    </Button>
+                    
+                    <a
+                      href="tel:5412415886"
+                      className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-emerald-600/30 text-emerald-400 hover:bg-emerald-600/10 transition-colors font-medium"
+                    >
+                      <Phone className="w-4 h-4" />
+                      (541) 241-5886
+                    </a>
+                  </div>
                 </div>
               </div>
 
