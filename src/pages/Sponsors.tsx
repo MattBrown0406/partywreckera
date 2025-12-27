@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Heart, ExternalLink, Phone, Users, BookOpen, Shield, CheckCircle, MessageCircle, Headphones, Clock, Video, HeartHandshake, Target, Calendar, Zap } from "lucide-react";
+import { Heart, ExternalLink, Phone, Users, BookOpen, Shield, CheckCircle, MessageCircle, Headphones, Clock, Video, HeartHandshake, Target, Calendar, Zap, Smile, MessageSquare, Laptop, UserCheck, BadgePercent, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import soberHelplineLogo from "@/assets/sober-helpline-logo.png";
 import iocLogo from "@/assets/ioc-logo.jpg";
@@ -332,46 +332,150 @@ const Sponsors = () => {
                 </div>
               </div>
 
-              {/* BetterHelp Sponsor Card */}
-              <div className="mt-8 bg-card border border-border rounded-xl p-8 sm:p-12 flex flex-col md:flex-row items-center gap-8">
-                <div className="flex-shrink-0">
-                  <a
-                    href="https://www.betterhelp.com/partywreckers"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img 
-                      src={betterhelpLogo} 
-                      alt="BetterHelp" 
-                      className="w-64 h-auto hover:opacity-80 transition-opacity"
-                    />
-                  </a>
+              {/* BetterHelp - Dynamic Sponsor Card */}
+              <div className="mt-12 relative bg-gradient-to-br from-green-900/20 via-lime-900/10 to-background border-2 border-green-600/30 rounded-2xl overflow-hidden group">
+                {/* Animated Background Elements */}
+                <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                  <div className="absolute -top-20 -right-20 w-72 h-72 bg-green-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "0.5s" }} />
+                  <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-lime-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "2s" }} />
                 </div>
-                <div className="flex-1 text-center md:text-left">
-                  <h2 className="font-script text-3xl text-burgundy mb-3">
-                    BetterHelp
-                  </h2>
-                  <p className="text-muted-foreground mb-4">
-                    Professional therapy, made accessible. BetterHelp connects you with licensed therapists 
-                    from the comfort of your home—on your schedule.
-                  </p>
-                  <p className="text-muted-foreground mb-4">
-                    Whether you're dealing with anxiety, depression, relationship issues, or the stress 
-                    of supporting a loved one through addiction, having a professional to talk to can make 
-                    all the difference.
-                  </p>
-                  <p className="text-muted-foreground mb-6">
-                    Use our link to get started and get 10% off your first month.
-                  </p>
-                  <a
-                    href="https://www.betterhelp.com/partywreckers"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-primary hover:underline font-medium"
-                  >
-                    Get Started with BetterHelp
-                    <ExternalLink className="w-4 h-4" />
-                  </a>
+                
+                {/* Discount Badge */}
+                <div className="absolute top-4 right-4 z-10">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-green-600 text-green-50 text-xs font-semibold uppercase tracking-wider shadow-lg">
+                    <BadgePercent className="w-3.5 h-3.5" />
+                    10% Off First Month
+                  </span>
+                </div>
+                
+                <div className="relative p-8 sm:p-12">
+                  {/* Header Section */}
+                  <div className="flex flex-col lg:flex-row items-center gap-8 mb-10">
+                    <div className="flex-shrink-0">
+                      <a
+                        href="https://betterhelp.com/partywreckers"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block transform transition-transform duration-300 hover:scale-105"
+                      >
+                        <div className="bg-[#3a5a40] rounded-xl p-6 shadow-xl">
+                          <img 
+                            src={betterhelpLogo} 
+                            alt="BetterHelp - You Deserve to Be Happy" 
+                            className="w-64 h-auto"
+                          />
+                        </div>
+                      </a>
+                    </div>
+                    
+                    <div className="flex-1 text-center lg:text-left">
+                      <h2 className="font-script text-4xl sm:text-5xl text-green-400 mb-4">
+                        BetterHelp
+                      </h2>
+                      <p className="text-xl text-foreground/90 font-medium mb-2">
+                        You Deserve to Be Happy
+                      </p>
+                      <p className="text-muted-foreground text-lg">
+                        The world's largest therapy service. 100% online. Professional, licensed, and vetted therapists who you can trust.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  {/* Stats Highlight */}
+                  <div className="grid grid-cols-3 gap-4 mb-10">
+                    <div className="bg-gradient-to-br from-green-600/20 to-green-700/10 border border-green-500/20 rounded-xl p-4 text-center">
+                      <p className="text-green-400 font-bold text-2xl sm:text-3xl">35,000+</p>
+                      <p className="text-muted-foreground text-xs sm:text-sm">Licensed Therapists</p>
+                    </div>
+                    <div className="bg-gradient-to-br from-green-600/20 to-green-700/10 border border-green-500/20 rounded-xl p-4 text-center">
+                      <p className="text-green-400 font-bold text-2xl sm:text-3xl">6M+</p>
+                      <p className="text-muted-foreground text-xs sm:text-sm">People Helped</p>
+                    </div>
+                    <div className="bg-gradient-to-br from-green-600/20 to-green-700/10 border border-green-500/20 rounded-xl p-4 text-center">
+                      <p className="text-green-400 font-bold text-2xl sm:text-3xl">HSA/FSA</p>
+                      <p className="text-muted-foreground text-xs sm:text-sm">Accepted</p>
+                    </div>
+                  </div>
+                  
+                  {/* Features Grid */}
+                  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+                    <div className="bg-background/50 backdrop-blur-sm border border-green-600/20 rounded-xl p-6 transition-all duration-300 hover:border-green-500/40 hover:shadow-lg hover:shadow-green-500/10">
+                      <div className="w-12 h-12 rounded-full bg-green-600/20 flex items-center justify-center mb-4">
+                        <Users className="w-6 h-6 text-green-400" />
+                      </div>
+                      <h3 className="font-semibold text-foreground mb-2">Individual Therapy</h3>
+                      <p className="text-sm text-muted-foreground">Personal one-on-one therapy sessions tailored to your unique needs and goals.</p>
+                    </div>
+                    
+                    <div className="bg-background/50 backdrop-blur-sm border border-green-600/20 rounded-xl p-6 transition-all duration-300 hover:border-green-500/40 hover:shadow-lg hover:shadow-green-500/10">
+                      <div className="w-12 h-12 rounded-full bg-lime-600/20 flex items-center justify-center mb-4">
+                        <HeartHandshake className="w-6 h-6 text-lime-400" />
+                      </div>
+                      <h3 className="font-semibold text-foreground mb-2">Couples Therapy</h3>
+                      <p className="text-sm text-muted-foreground">Strengthen your relationship with professional guidance for you and your partner.</p>
+                    </div>
+                    
+                    <div className="bg-background/50 backdrop-blur-sm border border-green-600/20 rounded-xl p-6 transition-all duration-300 hover:border-green-500/40 hover:shadow-lg hover:shadow-green-500/10">
+                      <div className="w-12 h-12 rounded-full bg-emerald-600/20 flex items-center justify-center mb-4">
+                        <Smile className="w-6 h-6 text-emerald-400" />
+                      </div>
+                      <h3 className="font-semibold text-foreground mb-2">Teen Therapy</h3>
+                      <p className="text-sm text-muted-foreground">Specialized support for teens navigating life's challenges with age-appropriate care.</p>
+                    </div>
+                    
+                    <div className="bg-background/50 backdrop-blur-sm border border-green-600/20 rounded-xl p-6 transition-all duration-300 hover:border-green-500/40 hover:shadow-lg hover:shadow-green-500/10">
+                      <div className="w-12 h-12 rounded-full bg-green-600/20 flex items-center justify-center mb-4">
+                        <MessageSquare className="w-6 h-6 text-green-400" />
+                      </div>
+                      <h3 className="font-semibold text-foreground mb-2">Multiple Formats</h3>
+                      <p className="text-sm text-muted-foreground">Messages, live chat, phone calls, or video sessions—communicate however works for you.</p>
+                    </div>
+                    
+                    <div className="bg-background/50 backdrop-blur-sm border border-green-600/20 rounded-xl p-6 transition-all duration-300 hover:border-green-500/40 hover:shadow-lg hover:shadow-green-500/10">
+                      <div className="w-12 h-12 rounded-full bg-lime-600/20 flex items-center justify-center mb-4">
+                        <UserCheck className="w-6 h-6 text-lime-400" />
+                      </div>
+                      <h3 className="font-semibold text-foreground mb-2">Vetted Therapists</h3>
+                      <p className="text-sm text-muted-foreground">All therapists are licensed, accredited, and experienced professionals you can trust.</p>
+                    </div>
+                    
+                    <div className="bg-background/50 backdrop-blur-sm border border-green-600/20 rounded-xl p-6 transition-all duration-300 hover:border-green-500/40 hover:shadow-lg hover:shadow-green-500/10">
+                      <div className="w-12 h-12 rounded-full bg-emerald-600/20 flex items-center justify-center mb-4">
+                        <Globe className="w-6 h-6 text-emerald-400" />
+                      </div>
+                      <h3 className="font-semibold text-foreground mb-2">100% Online</h3>
+                      <p className="text-sm text-muted-foreground">Access therapy from anywhere, anytime. No commute, no waiting rooms.</p>
+                    </div>
+                  </div>
+                  
+                  {/* Family Support Note */}
+                  <div className="bg-green-600/10 border border-green-500/20 rounded-xl p-6 mb-10 text-center">
+                    <p className="text-foreground/90">
+                      <span className="font-medium">Supporting a loved one through addiction?</span> Having a professional to talk to can make all the difference. Whether you're dealing with anxiety, depression, relationship issues, or caregiver stress—BetterHelp is here for you.
+                    </p>
+                  </div>
+                  
+                  {/* CTA Section */}
+                  <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6 border-t border-green-600/20">
+                    <Button 
+                      size="lg" 
+                      className="bg-green-600 hover:bg-green-700 text-white shadow-lg shadow-green-600/25 transition-all duration-300 hover:shadow-green-500/40"
+                      asChild
+                    >
+                      <a
+                        href="https://betterhelp.com/partywreckers"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Get Started — 10% Off
+                        <ExternalLink className="w-4 h-4 ml-2" />
+                      </a>
+                    </Button>
+                    
+                    <p className="text-sm text-muted-foreground">
+                      Use our partner link for your discount
+                    </p>
+                  </div>
                 </div>
               </div>
 
