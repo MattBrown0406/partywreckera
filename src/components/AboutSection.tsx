@@ -104,11 +104,11 @@ const AboutSection = () => {
             
             <div className="relative p-6">
               <div className="flex items-center gap-4 mb-4">
-                <div className="bg-white rounded-lg p-2 shadow-md flex-shrink-0">
+                <div className="bg-white rounded-lg p-3 shadow-md flex-shrink-0">
                   <img 
                     src={iocLogo} 
                     alt="Intervention on Call" 
-                    className="w-16 h-auto"
+                    className="w-28 h-auto"
                   />
                 </div>
                 <div>
@@ -168,11 +168,11 @@ const AboutSection = () => {
             
             <div className="relative p-6">
               <div className="flex items-center gap-4 mb-4">
-                <div className="bg-white rounded-lg p-2 shadow-md flex-shrink-0">
+                <div className="bg-white rounded-lg p-3 shadow-md flex-shrink-0">
                   <img 
                     src={soberHelplineLogo} 
                     alt="Sober Helpline" 
-                    className="w-16 h-auto"
+                    className="w-28 h-auto"
                   />
                 </div>
                 <div>
