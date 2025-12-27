@@ -34,9 +34,9 @@ const HeroSection = () => {
 
           {/* Subheadline */}
           <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-10">
-            Real conversations about addiction, intervention, and recovery. 
-            Host Matt Brown sits down with industry experts to help families 
-            find hope and practical guidance.
+            When addiction crashes the party, families are left picking up the pieces. 
+            Join host Matt Brown and leading experts as they cut through the chaos with 
+            honest conversations, real strategies, and the hope you need to take the next step.
           </p>
 
           {/* CTA Buttons */}
