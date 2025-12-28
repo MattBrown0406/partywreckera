@@ -15,9 +15,49 @@ import {
   AlertCircle,
   CheckCircle,
   Clock,
-  MapPin
+  MapPin,
+  Lightbulb
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+
+const coreConcepts = [
+  {
+    id: "moral-failure",
+    title: "Addiction Is Not a Moral Failure",
+    content: "Addiction is best understood as a chronic stress-related disorder that affects judgment, impulse control, and emotional regulation. This doesn't excuse harmful behavior, but it does explain why willpower, logic, or consequences alone rarely lead to lasting change."
+  },
+  {
+    id: "family-adapts",
+    title: "Families Adapt to Addiction—Often Without Realizing It",
+    content: "Over time, families reorganize themselves around addiction in an attempt to reduce chaos or prevent harm. These adaptations are usually driven by love and fear, not dysfunction—but they can unintentionally keep unhealthy patterns in place."
+  },
+  {
+    id: "helping-enabling",
+    title: "Helping and Enabling Are Not the Same Thing",
+    content: "Helping supports growth, responsibility, and accountability. Enabling reduces discomfort in the short term while increasing long-term harm. The difference is not intention—it's outcome. Understanding this distinction is critical for families trying to change course."
+  },
+  {
+    id: "boundaries",
+    title: "Boundaries Are About Self-Protection, Not Control",
+    content: "Boundaries are not punishments, threats, or ultimatums. They are clear limits that define what you will and will not participate in. Effective boundaries are calm, consistent, and focused on your behavior—not on forcing someone else to change."
+  },
+  {
+    id: "worse-before-better",
+    title: "Why Things Often Get Worse Before They Get Better",
+    content: "When families begin to change—setting boundaries, stopping rescue behaviors, or speaking more honestly—resistance is common. Escalation does not mean you're doing something wrong; it often means old patterns are being disrupted."
+  },
+  {
+    id: "family-support",
+    title: "Families Need Support Too",
+    content: "Addiction isolates families and quietly drains emotional and physical resources. Support for families is not a luxury or a sign of failure—it's a necessary part of restoring stability, clarity, and health within the system."
+  }
+];
 
 const FamilyResources = () => {
   return (
@@ -48,6 +88,47 @@ const FamilyResources = () => {
               <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
                 If you're here, it likely means someone you love is struggling—and you're carrying more of the weight than you should have to carry alone. Addiction doesn't just affect the person using; it reshapes families, conversations, trust, and daily life, often leaving loved ones confused, exhausted, and unsure of what to do next. This resource page exists to help you understand what's happening without shame or overwhelm, recognize why well-intended efforts can stop working, and find practical, grounded guidance for next steps. You don't need all the answers or a perfect plan—just accurate information, support, and a place to begin.
               </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Core Concepts Accordion */}
+        <section className="py-16 sm:py-20">
+          <div className="container px-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="bg-background border border-border rounded-2xl p-8 sm:p-10">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
+                    <Lightbulb className="w-6 h-6 text-primary" />
+                  </div>
+                  <h2 className="font-script text-3xl sm:text-4xl text-burgundy">Core Concepts for Families</h2>
+                </div>
+                
+                <p className="text-muted-foreground mb-8 leading-relaxed">
+                  Families affected by addiction often search for the right solution—something that will finally make sense of what's happening and fix it. The concepts below are not quick fixes. They are foundational ideas that help families understand addiction more clearly, reduce confusion and conflict, and make better decisions over time. Many of these ideas may feel counterintuitive at first, especially if your family has been operating in crisis mode. That's normal. These concepts are meant to give you a shared language, steady footing, and a framework for change—whether or not your loved one is ready for recovery yet.
+                </p>
+                
+                <Accordion type="single" collapsible className="w-full space-y-3">
+                  {coreConcepts.map((concept) => (
+                    <AccordionItem 
+                      key={concept.id} 
+                      value={concept.id}
+                      className="bg-secondary/30 border border-border rounded-xl px-6 data-[state=open]:bg-secondary/50"
+                    >
+                      <AccordionTrigger className="text-left text-foreground font-semibold hover:no-underline py-5">
+                        {concept.title}
+                      </AccordionTrigger>
+                      <AccordionContent className="text-muted-foreground pb-5 leading-relaxed">
+                        {concept.content}
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
+                
+                <p className="text-sm text-muted-foreground mt-8 italic">
+                  These core concepts appear repeatedly throughout the podcast and resources on this page. You don't need to master them all at once. Revisit them as needed, and allow your understanding to evolve as your situation changes.
+                </p>
+              </div>
             </div>
           </div>
         </section>
