@@ -35,19 +35,18 @@ const FamilyResources = () => {
           <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJhIiB4PSIwIiB5PSIwIj48ZmVUdXJidWxlbmNlIGJhc2VGcmVxdWVuY3k9Ii43NSIgc3RpdGNoVGlsZXM9InN0aXRjaCIgdHlwZT0iZnJhY3RhbE5vaXNlIi8+PGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCIvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNhKSIgb3BhY2l0eT0iMC4wNSIvPjwvc3ZnPg==')] opacity-30" />
           
           <div className="container px-4 relative">
-            <div className="max-w-3xl mx-auto text-center">
+            <div className="max-w-4xl mx-auto text-center">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/50 border border-border mb-6">
                 <Heart className="w-4 h-4 text-primary" />
                 <span className="text-sm text-muted-foreground uppercase tracking-widest">Support for Families</span>
               </div>
               
-              <h1 className="font-script text-5xl sm:text-6xl text-burgundy mb-6">
-                Family Resources
+              <h1 className="font-script text-5xl sm:text-6xl text-burgundy mb-8">
+                A Message to Families and Loved Ones
               </h1>
               
-              <p className="text-lg sm:text-xl text-muted-foreground">
-                You're not alone in this journey. Find the support, education, and guidance 
-                your family needs to navigate addiction together.
+              <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
+                If you're here, it likely means someone you love is struggling—and you're carrying more of the weight than you should have to carry alone. Addiction doesn't just affect the person using; it reshapes families, conversations, trust, and daily life, often leaving loved ones confused, exhausted, and unsure of what to do next. This resource page exists to help you understand what's happening without shame or overwhelm, recognize why well-intended efforts can stop working, and find practical, grounded guidance for next steps. You don't need all the answers or a perfect plan—just accurate information, support, and a place to begin.
               </p>
             </div>
           </div>
