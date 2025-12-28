@@ -11,6 +11,7 @@ import Blog from "./pages/Blog";
 import FamilyResources from "./pages/FamilyResources";
 import FamilyReflection from "./pages/FamilyReflection";
 import FearInventory from "./pages/FearInventory";
+import ConversationStarters from "./pages/ConversationStarters";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -30,6 +31,7 @@ const App = () => (
           <Route path="/family-resources" element={<FamilyResources />} />
           <Route path="/family-reflection" element={<FamilyReflection />} />
           <Route path="/fear-inventory" element={<FearInventory />} />
+          <Route path="/conversation-starters" element={<ConversationStarters />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
