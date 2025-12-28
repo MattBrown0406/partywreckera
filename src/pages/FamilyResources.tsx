@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet";
+import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { 
@@ -133,158 +134,47 @@ const FamilyResources = () => {
           </div>
         </section>
 
-        {/* Family Reflection Guide */}
+        {/* Family Reflection Guide Link */}
         <section className="py-16 sm:py-20 bg-secondary/30">
           <div className="container px-4">
             <div className="max-w-4xl mx-auto">
-              <div className="bg-background border border-border rounded-2xl p-8 sm:p-10">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-12 h-12 rounded-full bg-amber-600/20 flex items-center justify-center">
-                    <FileText className="w-6 h-6 text-amber-400" />
-                  </div>
-                  <h2 className="font-script text-3xl sm:text-4xl text-burgundy">"What Have We Tried Already?" — Family Reflection</h2>
+              <div className="relative bg-gradient-to-br from-amber-900/20 via-orange-900/10 to-background border-2 border-amber-600/30 rounded-2xl overflow-hidden group hover:border-amber-500/50 transition-colors">
+                <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                  <div className="absolute -top-20 -right-20 w-72 h-72 bg-amber-500/10 rounded-full blur-3xl animate-pulse" />
+                  <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-orange-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1s" }} />
                 </div>
                 
-                <p className="text-muted-foreground mb-6 leading-relaxed">
-                  When addiction has been part of a family for any length of time, most loved ones have tried a lot—often more than they realize. This reflection is not about judging past choices or assigning blame. It's about slowing down, taking inventory, and understanding what's already been done so families can make clearer, more intentional decisions moving forward.
-                </p>
-                
-                <p className="text-foreground font-medium mb-8">
-                  Use this exercise individually or with other family members. Write honestly. No one else needs to see this unless you choose to share it.
-                </p>
-                
-                {/* Step 1 */}
-                <div className="mb-10">
-                  <h3 className="text-xl font-semibold text-foreground mb-4 flex items-center gap-2">
-                    <span className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary text-sm font-bold">1</span>
-                    List the Strategies We've Used
-                  </h3>
-                  <p className="text-muted-foreground mb-4">Check any that apply, and add your own.</p>
-                  <div className="grid sm:grid-cols-2 gap-3">
-                    {[
-                      "Talking, reasoning, or pleading",
-                      "Making promises or deals",
-                      "Covering up consequences (lying to others, calling in sick, fixing problems)",
-                      "Providing money, housing, transportation, or bail",
-                      "Threats or ultimatums that weren't enforced",
-                      "Emotional outbursts, anger, or withdrawal",
-                      "Ignoring the problem and hoping it would resolve",
-                      "Researching treatment or recovery options",
-                      "Attending therapy, Al-Anon, or support groups",
-                      "Setting boundaries (briefly or inconsistently)",
-                      "Interventions—formal or informal",
-                      "Waiting for a \"rock bottom\""
-                    ].map((item, index) => (
-                      <div key={index} className="flex items-start gap-3 p-3 bg-secondary/50 rounded-lg">
-                        <div className="w-5 h-5 rounded border-2 border-muted-foreground/30 flex-shrink-0 mt-0.5" />
-                        <span className="text-sm text-foreground/90">{item}</span>
+                <Link to="/family-reflection" className="block relative p-8 sm:p-10">
+                  <div className="flex flex-col lg:flex-row items-center gap-8">
+                    <div className="flex-shrink-0">
+                      <div className="w-20 h-20 rounded-full bg-amber-600/20 flex items-center justify-center">
+                        <FileText className="w-10 h-10 text-amber-400" />
                       </div>
-                    ))}
+                    </div>
+                    
+                    <div className="flex-1 text-center lg:text-left">
+                      <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-amber-600/20 text-amber-400 text-xs font-semibold uppercase tracking-wider mb-4">
+                        Interactive Guide
+                      </span>
+                      <h2 className="font-script text-3xl sm:text-4xl text-amber-400 mb-3">
+                        "What Have We Tried Already?"
+                      </h2>
+                      <p className="text-xl text-foreground/90 font-medium mb-2">
+                        Family Reflection Exercise
+                      </p>
+                      <p className="text-muted-foreground">
+                        An interactive worksheet to help your family take inventory of past strategies, identify patterns, and make clearer decisions moving forward. Printable for offline use.
+                      </p>
+                    </div>
+                    
+                    <div className="flex-shrink-0">
+                      <Button size="lg" className="bg-amber-600 hover:bg-amber-700 text-white shadow-lg shadow-amber-600/25">
+                        Start Reflection
+                        <ExternalLink className="w-4 h-4 ml-2" />
+                      </Button>
+                    </div>
                   </div>
-                </div>
-                
-                {/* Step 2 */}
-                <div className="mb-10">
-                  <h3 className="text-xl font-semibold text-foreground mb-4 flex items-center gap-2">
-                    <span className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary text-sm font-bold">2</span>
-                    What Was the Goal at the Time?
-                  </h3>
-                  <p className="text-muted-foreground mb-4">For each major effort, ask:</p>
-                  <ul className="space-y-2 text-foreground/90">
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary mt-1">•</span>
-                      What were we hoping would happen?
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary mt-1">•</span>
-                      What fear was driving this choice?
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary mt-1">•</span>
-                      Were we trying to help, protect, avoid conflict, or restore peace?
-                    </li>
-                  </ul>
-                </div>
-                
-                {/* Step 3 */}
-                <div className="mb-10">
-                  <h3 className="text-xl font-semibold text-foreground mb-4 flex items-center gap-2">
-                    <span className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary text-sm font-bold">3</span>
-                    What Actually Changed?
-                  </h3>
-                  <p className="text-muted-foreground mb-4">Be as concrete as possible.</p>
-                  <ul className="space-y-2 text-foreground/90">
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary mt-1">•</span>
-                      Did the behavior stop, improve, or escalate?
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary mt-1">•</span>
-                      Did the family feel calmer—or more anxious?
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary mt-1">•</span>
-                      Were changes short-term or sustainable?
-                    </li>
-                  </ul>
-                </div>
-                
-                {/* Step 4 */}
-                <div className="mb-10">
-                  <h3 className="text-xl font-semibold text-foreground mb-4 flex items-center gap-2">
-                    <span className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary text-sm font-bold">4</span>
-                    What Did This Cost the Family?
-                  </h3>
-                  <p className="text-muted-foreground mb-4">Consider emotional, relational, financial, and physical costs.</p>
-                  <div className="grid sm:grid-cols-2 gap-3">
-                    {[
-                      "Increased stress or resentment",
-                      "Conflict between family members",
-                      "Financial strain",
-                      "Loss of trust or safety",
-                      "Exhaustion or burnout"
-                    ].map((item, index) => (
-                      <div key={index} className="flex items-start gap-3 p-3 bg-secondary/50 rounded-lg">
-                        <div className="w-5 h-5 rounded border-2 border-muted-foreground/30 flex-shrink-0 mt-0.5" />
-                        <span className="text-sm text-foreground/90">{item}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                
-                {/* Step 5 */}
-                <div className="mb-10">
-                  <h3 className="text-xl font-semibold text-foreground mb-4 flex items-center gap-2">
-                    <span className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary text-sm font-bold">5</span>
-                    What Patterns Do We See Now?
-                  </h3>
-                  <p className="text-muted-foreground mb-4">Reflect without judgment.</p>
-                  <ul className="space-y-2 text-foreground/90">
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary mt-1">•</span>
-                      Which strategies keep repeating?
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary mt-1">•</span>
-                      What do we do when things get worse?
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary mt-1">•</span>
-                      What are we most afraid to stop doing?
-                    </li>
-                  </ul>
-                </div>
-                
-                {/* Closing Reminder */}
-                <div className="bg-primary/10 border border-primary/20 rounded-xl p-6">
-                  <h3 className="text-lg font-semibold text-foreground mb-3">Closing Reminder</h3>
-                  <p className="text-muted-foreground leading-relaxed mb-4">
-                    If you notice that many of your efforts were driven by fear, urgency, or exhaustion, that doesn't mean you failed—it means you were responding to an impossible situation with the tools you had at the time. This reflection isn't about erasing the past. It's about learning from it so future decisions are calmer, clearer, and more sustainable.
-                  </p>
-                  <p className="text-foreground font-medium italic">
-                    You don't need to know what to do next yet. Awareness comes first.
-                  </p>
-                </div>
+                </Link>
               </div>
             </div>
           </div>
