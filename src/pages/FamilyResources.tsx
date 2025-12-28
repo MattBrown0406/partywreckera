@@ -454,46 +454,6 @@ const FamilyResources = () => {
                     </a>
                   </Button>
                 </div>
-                
-                <div className="bg-background border border-border rounded-2xl p-8 hover:border-primary/30 transition-colors">
-                  <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-6">
-                    <MessageCircle className="w-7 h-7 text-primary" />
-                  </div>
-                  <h3 className="text-2xl font-semibold text-foreground mb-3">SMART Recovery Family & Friends</h3>
-                  <p className="text-muted-foreground mb-6">
-                    Science-based support for family members. Learn skills to help your loved one 
-                    while taking care of your own well-being.
-                  </p>
-                  <div className="flex flex-wrap gap-3 mb-6">
-                    <span className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">Free</span>
-                    <span className="px-3 py-1 bg-secondary text-muted-foreground text-sm rounded-full">Online Available</span>
-                  </div>
-                  <Button variant="outline" className="w-full" asChild>
-                    <a href="https://www.smartrecovery.org/family" target="_blank" rel="noopener noreferrer">
-                      Learn More <ExternalLink className="w-4 h-4 ml-2" />
-                    </a>
-                  </Button>
-                </div>
-                
-                <div className="bg-background border border-border rounded-2xl p-8 hover:border-primary/30 transition-colors">
-                  <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-6">
-                    <Shield className="w-7 h-7 text-primary" />
-                  </div>
-                  <h3 className="text-2xl font-semibold text-foreground mb-3">CRAFT Training</h3>
-                  <p className="text-muted-foreground mb-6">
-                    Community Reinforcement and Family Training teaches families effective strategies 
-                    to help their loved ones enter treatment.
-                  </p>
-                  <div className="flex flex-wrap gap-3 mb-6">
-                    <span className="px-3 py-1 bg-amber-500/20 text-amber-400 text-sm rounded-full">Evidence-Based</span>
-                    <span className="px-3 py-1 bg-secondary text-muted-foreground text-sm rounded-full">Programs Vary</span>
-                  </div>
-                  <Button variant="outline" className="w-full" asChild>
-                    <a href="https://www.centeronaddiction.org/addiction-treatment/craft" target="_blank" rel="noopener noreferrer">
-                      Explore CRAFT <ExternalLink className="w-4 h-4 ml-2" />
-                    </a>
-                  </Button>
-                </div>
               </div>
             </div>
           </div>
