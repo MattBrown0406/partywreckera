@@ -266,6 +266,52 @@ const FamilyResources = () => {
           </div>
         </section>
 
+        {/* Conversation Starters Link */}
+        <section className="pb-8 sm:pb-10 bg-secondary/30">
+          <div className="container px-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="relative bg-gradient-to-br from-blue-900/20 via-indigo-900/10 to-background border-2 border-blue-600/30 rounded-2xl overflow-hidden group hover:border-blue-500/50 transition-colors">
+                <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                  <div className="absolute -top-20 -right-20 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse" />
+                  <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1s" }} />
+                </div>
+                
+                <Link to="/conversation-starters" className="block relative p-8 sm:p-10">
+                  <div className="flex flex-col lg:flex-row items-center gap-8">
+                    <div className="flex-shrink-0">
+                      <div className="w-20 h-20 rounded-full bg-blue-600/20 flex items-center justify-center">
+                        <MessageCircle className="w-10 h-10 text-blue-400" />
+                      </div>
+                    </div>
+                    
+                    <div className="flex-1 text-center lg:text-left">
+                      <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-blue-600/20 text-blue-400 text-xs font-semibold uppercase tracking-wider mb-4">
+                        Printable Guide
+                      </span>
+                      <h2 className="font-script text-3xl sm:text-4xl text-blue-400 mb-3">
+                        Conversation Starters for Families
+                      </h2>
+                      <p className="text-xl text-foreground/90 font-medium mb-2">
+                        Talk Without Escalating
+                      </p>
+                      <p className="text-muted-foreground">
+                        Thoughtful questions to help families slow down, reduce defensiveness, and speak from a calmer place. Printable for offline use.
+                      </p>
+                    </div>
+                    
+                    <div className="flex-shrink-0">
+                      <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white shadow-lg shadow-blue-600/25">
+                        View Guide
+                        <ExternalLink className="w-4 h-4 ml-2" />
+                      </Button>
+                    </div>
+                  </div>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Fear Inventory Link */}
         <section className="pb-16 sm:pb-20 bg-secondary/30">
           <div className="container px-4">
