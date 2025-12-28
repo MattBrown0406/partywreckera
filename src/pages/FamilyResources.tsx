@@ -17,7 +17,10 @@ import {
   CheckCircle,
   Clock,
   MapPin,
-  Lightbulb
+  Lightbulb,
+  UserCheck,
+  AlertTriangle,
+  HandHeart
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -57,6 +60,89 @@ const coreConcepts = [
     id: "family-support",
     title: "Families Need Support Too",
     content: "Addiction isolates families and quietly drains emotional and physical resources. Support for families is not a luxury or a sign of failure—it's a necessary part of restoring stability, clarity, and health within the system."
+  }
+];
+
+const professionalGuidanceTopics = [
+  {
+    id: "signs-stuck",
+    title: "Common Signs Families Are Stuck",
+    content: (
+      <div className="space-y-3">
+        <p className="text-muted-foreground mb-3">You may recognize it's time for outside guidance if:</p>
+        <ul className="space-y-2 text-foreground/90">
+          <li className="flex items-start gap-2"><span className="text-primary mt-1">•</span>The same conversations keep happening with no lasting change</li>
+          <li className="flex items-start gap-2"><span className="text-primary mt-1">•</span>Boundaries are set, then repeatedly broken or walked back</li>
+          <li className="flex items-start gap-2"><span className="text-primary mt-1">•</span>Fear or urgency is driving decisions</li>
+          <li className="flex items-start gap-2"><span className="text-primary mt-1">•</span>Family members are divided or in conflict with one another</li>
+          <li className="flex items-start gap-2"><span className="text-primary mt-1">•</span>Finances, safety, or emotional health are deteriorating</li>
+          <li className="flex items-start gap-2"><span className="text-primary mt-1">•</span>The situation escalates during crises, then returns to "normal"</li>
+          <li className="flex items-start gap-2"><span className="text-primary mt-1">•</span>Everyone is exhausted, but no one knows what to do differently</li>
+        </ul>
+        <p className="text-muted-foreground mt-4 italic">These are not signs of weakness—they're indicators that the system needs support.</p>
+      </div>
+    )
+  },
+  {
+    id: "what-guidance-does",
+    title: "What Professional Guidance Actually Does",
+    content: (
+      <div className="space-y-3">
+        <p className="text-muted-foreground mb-3">Many families hesitate because they misunderstand the role of a professional. Guidance is not about forcing treatment or taking control away from the family. Done well, it helps families:</p>
+        <ul className="space-y-2 text-foreground/90">
+          <li className="flex items-start gap-2"><span className="text-primary mt-1">•</span>Understand what's realistic—and what isn't</li>
+          <li className="flex items-start gap-2"><span className="text-primary mt-1">•</span>Stop reacting to manipulation, threats, or emotional volatility</li>
+          <li className="flex items-start gap-2"><span className="text-primary mt-1">•</span>Align family members around a clear, consistent approach</li>
+          <li className="flex items-start gap-2"><span className="text-primary mt-1">•</span>Set boundaries that can actually be held</li>
+          <li className="flex items-start gap-2"><span className="text-primary mt-1">•</span>Reduce chaos while increasing safety and stability</li>
+          <li className="flex items-start gap-2"><span className="text-primary mt-1">•</span>Make decisions based on strategy rather than fear</li>
+        </ul>
+        <p className="text-foreground font-medium mt-4">Even when a loved one refuses help, family guidance still changes outcomes.</p>
+      </div>
+    )
+  },
+  {
+    id: "waiting-risky",
+    title: "When Waiting Becomes Risky",
+    content: (
+      <div className="space-y-3">
+        <p className="text-muted-foreground mb-3">Delaying support often feels safer than acting, but waiting can quietly increase harm. Professional input is especially important when:</p>
+        <ul className="space-y-2 text-foreground/90">
+          <li className="flex items-start gap-2"><span className="text-primary mt-1">•</span>There is risk of overdose, violence, or self-harm</li>
+          <li className="flex items-start gap-2"><span className="text-primary mt-1">•</span>Legal, medical, or child-safety issues are present</li>
+          <li className="flex items-start gap-2"><span className="text-primary mt-1">•</span>Substance use is escalating or becoming more unpredictable</li>
+          <li className="flex items-start gap-2"><span className="text-primary mt-1">•</span>The family is absorbing consequences to keep peace</li>
+        </ul>
+        <p className="text-foreground font-medium mt-4">Getting guidance early often prevents more extreme measures later.</p>
+      </div>
+    )
+  },
+  {
+    id: "what-it-doesnt-mean",
+    title: "What Reaching Out Does Not Mean",
+    content: (
+      <div className="space-y-3">
+        <p className="text-muted-foreground mb-3">Seeking help does not mean:</p>
+        <ul className="space-y-2 text-foreground/90">
+          <li className="flex items-start gap-2"><span className="text-primary mt-1">•</span>You're committing to an intervention</li>
+          <li className="flex items-start gap-2"><span className="text-primary mt-1">•</span>You're giving up on your loved one</li>
+          <li className="flex items-start gap-2"><span className="text-primary mt-1">•</span>You're being disloyal or punitive</li>
+          <li className="flex items-start gap-2"><span className="text-primary mt-1">•</span>You have to act immediately</li>
+        </ul>
+        <p className="text-foreground font-medium mt-4">It means you're gathering information and support before things get worse.</p>
+      </div>
+    )
+  },
+  {
+    id: "steadier-forward",
+    title: "A Steadier Way Forward",
+    content: (
+      <div className="space-y-4">
+        <p className="text-muted-foreground">Professional guidance offers families something most have been missing: a calm, experienced outside perspective. One that helps you slow down, think clearly, and choose next steps that protect both the family and the possibility of recovery.</p>
+        <p className="text-muted-foreground">If you're unsure whether it's time, that uncertainty itself is often a sign worth paying attention to. You don't need a crisis to justify support—you only need the recognition that what you've tried isn't working anymore.</p>
+        <p className="text-foreground font-medium italic">You're allowed to ask for help too.</p>
+      </div>
+    )
   }
 ];
 
@@ -221,6 +307,47 @@ const FamilyResources = () => {
                     </div>
                   </div>
                 </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Professional Guidance Accordion */}
+        <section className="py-16 sm:py-20">
+          <div className="container px-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="bg-background border border-border rounded-2xl p-8 sm:p-10">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-12 h-12 rounded-full bg-teal-600/20 flex items-center justify-center">
+                    <UserCheck className="w-6 h-6 text-teal-400" />
+                  </div>
+                  <h2 className="font-script text-3xl sm:text-4xl text-burgundy">When It's Time for Professional Guidance</h2>
+                </div>
+                
+                <p className="text-muted-foreground mb-4 leading-relaxed">
+                  Most families try to handle addiction on their own for far longer than they should. Not because they're stubborn—but because they hope love, logic, or persistence will eventually be enough. Seeking professional guidance is not a failure, an overreaction, or a last resort. It's often the point where families stop reacting and start responding with clarity.
+                </p>
+                
+                <p className="text-foreground font-medium mb-8">
+                  Professional support becomes appropriate when effort is high, distress is ongoing, and nothing meaningfully changes.
+                </p>
+                
+                <Accordion type="single" collapsible className="w-full space-y-3">
+                  {professionalGuidanceTopics.map((topic) => (
+                    <AccordionItem 
+                      key={topic.id} 
+                      value={topic.id}
+                      className="bg-secondary/30 border border-border rounded-xl px-6 data-[state=open]:bg-secondary/50"
+                    >
+                      <AccordionTrigger className="text-left text-foreground font-semibold hover:no-underline py-5">
+                        {topic.title}
+                      </AccordionTrigger>
+                      <AccordionContent className="pb-5">
+                        {topic.content}
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
               </div>
             </div>
           </div>
