@@ -600,9 +600,14 @@ const FamilyResources = () => {
                     <MapPin className="w-8 h-8 text-primary" />
                   </div>
                   <h2 className="font-script text-4xl sm:text-5xl text-burgundy mb-4">Find Treatment Options</h2>
-                  <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-8">
+                  <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-4">
                     When your loved one is ready for help, finding the right treatment center is crucial. 
                     Use SAMHSA's treatment locator to find verified programs near you.
+                  </p>
+                  <p className="text-foreground font-medium max-w-2xl mx-auto mb-8">
+                    Cost should never be a barrier to treatment. These resources include free, sliding-scale, and state-funded programs. 
+                    When you call SAMHSA or use the treatment locator, you can filter by payment options including Medicaid, Medicare, 
+                    and programs that offer services regardless of ability to pay.
                   </p>
                   
                   <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
