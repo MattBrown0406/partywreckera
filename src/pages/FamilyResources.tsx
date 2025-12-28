@@ -180,6 +180,52 @@ const FamilyResources = () => {
           </div>
         </section>
 
+        {/* Fear Inventory Link */}
+        <section className="pb-16 sm:pb-20 bg-secondary/30">
+          <div className="container px-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="relative bg-gradient-to-br from-rose-900/20 via-pink-900/10 to-background border-2 border-rose-600/30 rounded-2xl overflow-hidden group hover:border-rose-500/50 transition-colors">
+                <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                  <div className="absolute -top-20 -right-20 w-72 h-72 bg-rose-500/10 rounded-full blur-3xl animate-pulse" />
+                  <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-pink-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1s" }} />
+                </div>
+                
+                <Link to="/fear-inventory" className="block relative p-8 sm:p-10">
+                  <div className="flex flex-col lg:flex-row items-center gap-8">
+                    <div className="flex-shrink-0">
+                      <div className="w-20 h-20 rounded-full bg-rose-600/20 flex items-center justify-center">
+                        <AlertCircle className="w-10 h-10 text-rose-400" />
+                      </div>
+                    </div>
+                    
+                    <div className="flex-1 text-center lg:text-left">
+                      <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-rose-600/20 text-rose-400 text-xs font-semibold uppercase tracking-wider mb-4">
+                        Interactive Guide
+                      </span>
+                      <h2 className="font-script text-3xl sm:text-4xl text-rose-400 mb-3">
+                        "What Are We Afraid Will Happen?"
+                      </h2>
+                      <p className="text-xl text-foreground/90 font-medium mb-2">
+                        Family Fear Inventory
+                      </p>
+                      <p className="text-muted-foreground">
+                        An interactive exercise to identify and examine the fears that quietly drive family decisions around addiction. Understand how fear influences choices and boundaries.
+                      </p>
+                    </div>
+                    
+                    <div className="flex-shrink-0">
+                      <Button size="lg" className="bg-rose-600 hover:bg-rose-700 text-white shadow-lg shadow-rose-600/25">
+                        Start Inventory
+                        <ExternalLink className="w-4 h-4 ml-2" />
+                      </Button>
+                    </div>
+                  </div>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Crisis Resources */}
         <section className="py-16 sm:py-20">
           <div className="container px-4">

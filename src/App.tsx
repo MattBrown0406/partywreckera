@@ -10,6 +10,7 @@ import Host from "./pages/Host";
 import Blog from "./pages/Blog";
 import FamilyResources from "./pages/FamilyResources";
 import FamilyReflection from "./pages/FamilyReflection";
+import FearInventory from "./pages/FearInventory";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/blog" element={<Blog />} />
           <Route path="/family-resources" element={<FamilyResources />} />
           <Route path="/family-reflection" element={<FamilyReflection />} />
+          <Route path="/fear-inventory" element={<FearInventory />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
