@@ -25,6 +25,7 @@ import blogImageJokesAboutDrinking from "@/assets/blog-jokes-about-drinking.jpg"
 import blogImageHumorHidesAddiction from "@/assets/blog-humor-hides-addiction.jpg";
 import blogImageFamilyConstantAlert from "@/assets/blog-family-constant-alert.jpg";
 import blogImageAddictionStopsBeingFunny from "@/assets/blog-addiction-stops-being-funny.jpg";
+import blogImageEnablingSurvival from "@/assets/blog-enabling-survival.jpg";
 
 interface BlogArticle {
   id: string;
@@ -37,6 +38,53 @@ interface BlogArticle {
 }
 
 const articles: BlogArticle[] = [
+  {
+    id: "enabling-survival",
+    title: "Enabling Isn't About Weakness—It's About Survival",
+    date: "December 28, 2025",
+    image: blogImageEnablingSurvival,
+    imageAlt: "Family silhouettes stepping from shadows into warm light, symbolizing liberation from enabling patterns",
+    excerpt: "Many families recoil at the word \"enabling.\" It sounds accusatory, as if someone is choosing to make addiction worse. In reality, enabling behaviors usually emerge as survival strategies, not conscious decisions.",
+    content: (
+      <div className="prose prose-lg max-w-none text-foreground/90 space-y-6">
+        <p>
+          Many families recoil at the word "enabling." It sounds accusatory, as if someone is choosing to make addiction worse. In reality, enabling behaviors usually emerge as survival strategies, not conscious decisions.
+        </p>
+        
+        <p>
+          Families step in because chaos feels unbearable. They cover mistakes because consequences feel too harsh. They smooth things over because conflict feels dangerous. Each action makes sense in isolation.
+        </p>
+        
+        <p>
+          Over time, however, these survival strategies harden into roles. Family members become managers, mediators, financiers, and protectors. Their own needs slowly disappear beneath the constant effort to keep things from unraveling.
+        </p>
+        
+        <p>
+          Enabling persists because it works in the short term. It reduces immediate tension. It prevents blowups. It keeps life moving forward. The long‑term cost, however, is immense.
+        </p>
+        
+        <p>
+          The addicted person loses opportunities to experience responsibility and consequence. The family becomes exhausted, resentful, and disconnected from their own lives. Everyone adapts to a system that revolves around addiction.
+        </p>
+        
+        <p>
+          Breaking enabling patterns is frightening because it feels like stepping into uncertainty. Families worry that things will fall apart if they stop intervening. They fear being blamed if outcomes worsen.
+        </p>
+        
+        <p>
+          What often surprises families is that reducing enabling doesn't necessarily create chaos—it creates clarity. Problems that were previously hidden become visible. Responsibility shifts back where it belongs. Family members regain emotional space.
+        </p>
+        
+        <p>
+          Stopping enabling is not an act of punishment. It is an act of honesty. It allows families to stop sacrificing themselves in an attempt to manage something they cannot control.
+        </p>
+        
+        <p className="text-foreground font-medium">
+          Families are allowed to step out of roles they never agreed to take on. Supporting someone does not require losing yourself in the process.
+        </p>
+      </div>
+    ),
+  },
   {
     id: "addiction-stops-being-funny",
     title: "When Addiction Stops Being Funny and Starts Being Familiar",
