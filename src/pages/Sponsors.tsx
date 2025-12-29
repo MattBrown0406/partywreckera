@@ -587,7 +587,7 @@ const Sponsors = () => {
                     <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
                       <Heart className="w-5 h-5 text-primary animate-pulse" />
                     </div>
-                    <h4 className="font-script text-2xl text-primary">Support directly</h4>
+                    <h4 className="font-script text-2xl text-primary normal-case">Support Directly</h4>
                   </div>
                   
                   <p className="text-muted-foreground mb-6 max-w-md mx-auto">
