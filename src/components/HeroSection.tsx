@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Headphones, Play, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
-import logo from "@/assets/party-wreckers-logo.png";
+import logo from "@/assets/party-wreckers-logo-2026.png";
 import ThemePlayer from "@/components/ThemePlayer";
 
 const HeroSection = () => {
