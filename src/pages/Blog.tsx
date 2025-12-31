@@ -26,6 +26,7 @@ import blogImageHumorHidesAddiction from "@/assets/blog-humor-hides-addiction.jp
 import blogImageFamilyConstantAlert from "@/assets/blog-family-constant-alert.jpg";
 import blogImageAddictionStopsBeingFunny from "@/assets/blog-addiction-stops-being-funny.jpg";
 import blogImageEnablingSurvival from "@/assets/blog-enabling-survival.jpg";
+import blogImageAdviceDoesntHelp from "@/assets/blog-advice-doesnt-help.jpg";
 
 interface BlogArticle {
   id: string;
@@ -38,6 +39,61 @@ interface BlogArticle {
 }
 
 const articles: BlogArticle[] = [
+  {
+    id: "advice-doesnt-help",
+    title: "What Families Are Told About Addiction That Sounds Good—but Doesn't Actually Help",
+    date: "December 31, 2025",
+    image: blogImageAdviceDoesntHelp,
+    imageAlt: "Family sitting together looking confused surrounded by well-meaning but unhelpful advice",
+    excerpt: "After two decades in recovery and intervention work, one thing has become painfully clear: families are surrounded by advice that sounds comforting but rarely holds up in real life.",
+    content: (
+      <div className="prose prose-lg max-w-none text-foreground/90 space-y-6">
+        <p>
+          After two decades in recovery and intervention work, one thing has become painfully clear: families are surrounded by advice that sounds comforting but rarely holds up in real life. Some of it comes from pop psychology. Some from social media. Some from well-meaning friends who have never lived inside addiction.
+        </p>
+        
+        <p>Most of it fails families when they need it most.</p>
+        
+        <p>
+          You've heard the phrases. "They have to want it." "You can't help someone who won't help themselves." "Just love them where they're at." These statements aren't always wrong, but they are dangerously incomplete. They offer simplicity in situations that are anything but simple.
+        </p>
+        
+        <p>
+          Families cling to these ideas because they reduce anxiety. If someone has to want recovery on their own, then families can step back and wait. If love is the answer, then endurance becomes a virtue. If boundaries are framed as ultimatums, then avoiding them feels compassionate.
+        </p>
+        
+        <p className="text-foreground font-medium">What these narratives ignore is how addiction actually functions in families.</p>
+        
+        <p>
+          Addiction does not develop in a vacuum. It reshapes relationships, roles, and communication. Families respond to instability by adapting. They manage emotions, smooth consequences, and carry responsibilities that aren't theirs. Over time, the family becomes part of the system that keeps addiction stable—not because they want to, but because they're trying to survive.
+        </p>
+        
+        <p>
+          Popular advice rarely acknowledges this complexity. It tells families what not to do without explaining what to do instead. It emphasizes detachment without teaching discernment. It praises patience without acknowledging the cost of prolonged uncertainty.
+        </p>
+        
+        <p>
+          As someone who has been on both sides of this equation, I've seen how damaging these oversimplifications can be. Families feel ashamed for being exhausted. They blame themselves for not handling things "correctly." They wait far too long to seek support because they believe action would violate some unspoken rule.
+        </p>
+        
+        <p>
+          What families actually need is permission to respond to reality. Permission to acknowledge patterns instead of promises. Permission to protect themselves without being labeled controlling or unloving.
+        </p>
+        
+        <p>
+          Humor has a place here, because sometimes the advice families receive is so disconnected from lived experience that it borders on absurd. But beneath the humor is a serious point: bad advice keeps families stuck.
+        </p>
+        
+        <p>
+          The Party Wreckers exists to challenge these narratives—not with cynicism, but with honesty. Recovery is rarely linear. Motivation is rarely pure. Change often begins when systems shift, not just individuals.
+        </p>
+        
+        <p className="text-foreground font-medium">
+          Families deserve more than slogans. They deserve guidance that reflects real life, real messiness, and real hope grounded in action rather than fantasy.
+        </p>
+      </div>
+    ),
+  },
   {
     id: "enabling-survival",
     title: "Enabling Isn't About Weakness—It's About Survival",
