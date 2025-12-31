@@ -27,6 +27,7 @@ import blogImageFamilyConstantAlert from "@/assets/blog-family-constant-alert.jp
 import blogImageAddictionStopsBeingFunny from "@/assets/blog-addiction-stops-being-funny.jpg";
 import blogImageEnablingSurvival from "@/assets/blog-enabling-survival.jpg";
 import blogImageAdviceDoesntHelp from "@/assets/blog-advice-doesnt-help.jpg";
+import blogImageSupportingVsCarrying from "@/assets/blog-supporting-vs-carrying.jpg";
 
 interface BlogArticle {
   id: string;
@@ -39,6 +40,49 @@ interface BlogArticle {
 }
 
 const articles: BlogArticle[] = [
+  {
+    id: "supporting-vs-carrying",
+    title: "The Difference Between Supporting Recovery and Carrying the Consequences",
+    date: "December 31, 2025",
+    image: blogImageSupportingVsCarrying,
+    imageAlt: "Two hands - one weighed down by chains, the other extended in support",
+    excerpt: "Families often believe they must absorb consequences to protect their loved one. They fear that letting consequences happen is cruel, unsafe, or irresponsible.",
+    content: (
+      <div className="prose prose-lg max-w-none text-foreground/90 space-y-6">
+        <p>
+          Families often believe they must absorb consequences to protect their loved one. They fear that letting consequences happen is cruel, unsafe, or irresponsible. As a result, they step in—again and again—to manage outcomes.
+        </p>
+        
+        <p>
+          This pattern is rarely intentional. It begins with compassion. A mistake happens, and the family helps. Then it happens again. Slowly, helping becomes expected.
+        </p>
+        
+        <p>
+          Over time, family members take on responsibilities that aren't theirs. They pay bills, make excuses, smooth over conflicts, and fix problems. The addicted person is shielded from the full impact of their choices, while the family carries increasing stress.
+        </p>
+        
+        <p>
+          This imbalance creates resentment and burnout. Family members feel trapped between guilt and anger. They want relief but fear what will happen if they step back.
+        </p>
+        
+        <p className="text-foreground font-medium">
+          Allowing consequences does not mean withdrawing love. It means allowing reality to function as it naturally would. Consequences are not punishments—they are information.
+        </p>
+        
+        <p>
+          When families stop absorbing consequences, several things often happen. The addicted person gains clearer feedback about their behavior. The family regains energy and perspective. The system begins to rebalance.
+        </p>
+        
+        <p>
+          This shift is uncomfortable. Anxiety often spikes before it settles. But discomfort is not the same as danger.
+        </p>
+        
+        <p className="text-foreground font-medium">
+          Supporting recovery means encouraging responsibility, not preventing discomfort. Families are allowed to step out of roles that are harming them.
+        </p>
+      </div>
+    ),
+  },
   {
     id: "advice-doesnt-help",
     title: "What Families Are Told About Addiction That Sounds Good—but Doesn't Actually Help",
