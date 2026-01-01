@@ -28,6 +28,7 @@ import blogImageAddictionStopsBeingFunny from "@/assets/blog-addiction-stops-bei
 import blogImageEnablingSurvival from "@/assets/blog-enabling-survival.jpg";
 import blogImageAdviceDoesntHelp from "@/assets/blog-advice-doesnt-help.jpg";
 import blogImageSupportingVsCarrying from "@/assets/blog-supporting-vs-carrying.jpg";
+import blogImageFamilyRoles from "@/assets/blog-family-roles.jpg";
 
 interface BlogArticle {
   id: string;
@@ -40,6 +41,53 @@ interface BlogArticle {
 }
 
 const articles: BlogArticle[] = [
+  {
+    id: "family-roles",
+    title: "How Substance Use Changes Family Roles Without Anyone Noticing",
+    date: "January 1, 2026",
+    image: blogImageFamilyRoles,
+    imageAlt: "Family members wearing symbolic masks representing their assigned roles",
+    excerpt: "Addiction doesn't just affect the person using substances—it reorganizes the entire family system. This reorganization happens quietly, often without conscious agreement.",
+    content: (
+      <div className="prose prose-lg max-w-none text-foreground/90 space-y-6">
+        <p>
+          Addiction doesn't just affect the person using substances—it reorganizes the entire family system. This reorganization happens quietly, often without conscious agreement. Over time, family members slip into roles that feel necessary but become constricting.
+        </p>
+        
+        <p>
+          One person becomes the fixer, constantly solving problems before they escalate. Another becomes the peacekeeper, smoothing over conflict and minimizing tension. Someone else may become the truth‑teller, voicing concerns others avoid. Children often become emotionally responsible far beyond their years.
+        </p>
+        
+        <p>
+          These roles emerge as coping strategies. They help families function in unpredictable environments. The problem is that roles solidify, even when they are no longer helpful.
+        </p>
+        
+        <p>
+          Once roles are established, family members stop relating naturally. Interactions become scripted. Expectations are rigid. Change feels destabilizing, even when the system is unhealthy.
+        </p>
+        
+        <p className="text-foreground font-medium">
+          The fixer feels indispensable but exhausted. The peacekeeper feels responsible for everyone's emotions. The truth‑teller feels isolated and blamed. Children feel pressure to perform rather than simply exist.
+        </p>
+        
+        <p>
+          Addiction benefits from rigid roles because they keep the system predictable. As long as everyone plays their part, the family continues functioning—albeit painfully.
+        </p>
+        
+        <p>
+          Breaking out of roles often triggers anxiety. When one person changes, others feel unsettled. This discomfort can be mistaken for harm, leading families to revert to familiar patterns.
+        </p>
+        
+        <p className="text-foreground font-medium">
+          Awareness is the first step toward change. When families recognize how roles have shaped their interactions, they can begin to loosen them intentionally.
+        </p>
+        
+        <p>
+          Letting go of a role does not mean abandoning the family. It means reclaiming flexibility, authenticity, and balance. Families heal when people are allowed to be more than their assigned function.
+        </p>
+      </div>
+    ),
+  },
   {
     id: "supporting-vs-carrying",
     title: "The Difference Between Supporting Recovery and Carrying the Consequences",
