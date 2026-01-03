@@ -29,6 +29,7 @@ import blogImageEnablingSurvival from "@/assets/blog-enabling-survival.jpg";
 import blogImageAdviceDoesntHelp from "@/assets/blog-advice-doesnt-help.jpg";
 import blogImageSupportingVsCarrying from "@/assets/blog-supporting-vs-carrying.jpg";
 import blogImageFamilyRoles from "@/assets/blog-family-roles.jpg";
+import blogImageAdviceFailsSpectacularly from "@/assets/blog-advice-fails-spectacularly.jpg";
 
 interface BlogArticle {
   id: string;
@@ -41,6 +42,67 @@ interface BlogArticle {
 }
 
 const articles: BlogArticle[] = [
+  {
+    id: "advice-fails-spectacularly",
+    title: "Why the Advice Families Get About Addiction Sounds Great—and Fails Spectacularly in Real Life",
+    date: "January 2, 2026",
+    image: blogImageAdviceFailsSpectacularly,
+    imageAlt: "Frustrated family at kitchen table surrounded by hollow advice speech bubbles",
+    excerpt: "After years in recovery and working with families, I've noticed something almost comical if it weren't so damaging: the advice families get about addiction is usually delivered with absolute confidence and almost no usefulness.",
+    content: (
+      <div className="prose prose-lg max-w-none text-foreground/90 space-y-6">
+        <p>
+          After years in recovery and working with families, I've noticed something almost comical if it weren't so damaging: the advice families get about addiction is usually delivered with absolute confidence and almost no usefulness.
+        </p>
+        
+        <p>
+          It's the kind of advice that works beautifully in theory and collapses immediately in practice.
+        </p>
+        
+        <p className="text-foreground font-medium italic">
+          "You can't want it more than they do."<br />
+          "They have to hit their own bottom."<br />
+          "Just detach with love."
+        </p>
+        
+        <p>
+          These phrases sound wise. They feel clean. They give people something simple to say when a situation is painfully complex. Unfortunately, they also leave families stranded without a roadmap.
+        </p>
+        
+        <p>
+          Families cling to these ideas because they reduce anxiety. If someone has to want recovery on their own, then waiting becomes the plan. If detachment is the goal, then emotional withdrawal can be framed as healthy. If love is the answer, then endurance becomes the measure of success.
+        </p>
+        
+        <p className="text-foreground font-medium">
+          The problem is that addiction doesn't operate on slogans.
+        </p>
+        
+        <p>
+          Addiction operates in systems. Families adapt. Roles form. Consequences get redistributed. Over time, everyone adjusts around the addiction, not because they're weak, but because they're trying to survive.
+        </p>
+        
+        <p>
+          Bad advice ignores this reality. It tells families what not to do without explaining what to do instead. It praises patience without acknowledging the cost of prolonged uncertainty. It frames boundaries as ultimatums and leaves families terrified of setting them.
+        </p>
+        
+        <p>
+          From lived experience, I can tell you that most families aren't trying to control anyone. They're trying to stop the bleeding.
+        </p>
+        
+        <p>
+          Humor helps expose how absurd some of this advice really is. Telling a terrified parent to "just detach" without offering structure is like telling someone in a burning house to "stay calm." It's not wrong—it's incomplete.
+        </p>
+        
+        <p>
+          The Party Wreckers exists to challenge these narratives with honesty and a little irreverence. Recovery is rarely clean. Motivation is rarely pure. Change often begins not with insight, but with pressure and support applied thoughtfully.
+        </p>
+        
+        <p className="text-foreground font-medium">
+          Families deserve better than catchphrases. They deserve guidance grounded in reality, compassion, and lived experience—not just things that sound good on social media.
+        </p>
+      </div>
+    ),
+  },
   {
     id: "family-roles",
     title: "How Substance Use Changes Family Roles Without Anyone Noticing",
