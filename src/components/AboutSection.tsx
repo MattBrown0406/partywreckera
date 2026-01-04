@@ -1,5 +1,5 @@
 import { Check, ExternalLink, Video, Users, BookOpen, Phone, Zap } from "lucide-react";
-import FamilyCarousel from "@/components/FamilyCarousel";
+import BlogCarousel from "@/components/BlogCarousel";
 import iocLogo from "@/assets/ioc-logo.jpg";
 import soberHelplineLogo from "@/assets/sober-helpline-logo.png";
 import { Button } from "@/components/ui/button";
@@ -67,7 +67,7 @@ const AboutSection = () => {
 
           {/* Visual */}
           <div className="relative">
-            <FamilyCarousel />
+            <BlogCarousel />
             
             {/* Floating badges */}
             <div className="absolute -top-4 -right-4 bg-primary text-primary-foreground px-4 py-2 rounded-lg font-semibold text-sm uppercase tracking-wider shadow-lg glow-primary z-10">

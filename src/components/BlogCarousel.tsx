@@ -1,0 +1,157 @@
+import { useCallback, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import useEmblaCarousel from "embla-carousel-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+
+import blogImageEnablingFearHousehold from "@/assets/blog-enabling-fear-household.jpg";
+import blogImageAdviceFailsSpectacularly from "@/assets/blog-advice-fails-spectacularly.jpg";
+import blogImageFamilyRoles from "@/assets/blog-family-roles.jpg";
+import blogImageSupportingVsCarrying from "@/assets/blog-supporting-vs-carrying.jpg";
+import blogImageAdviceDoesntHelp from "@/assets/blog-advice-doesnt-help.jpg";
+
+const recentArticles = [
+  {
+    id: "enabling-fear-household",
+    title: "Enabling Isn't Weakness — It's What Happens When Fear Runs the Household",
+    date: "January 3, 2026",
+    image: blogImageEnablingFearHousehold,
+    imageAlt: "Family in living room walking on eggshells with storm clouds visible through window",
+  },
+  {
+    id: "advice-fails-spectacularly",
+    title: "Why the Advice Families Get About Addiction Sounds Great—and Fails Spectacularly in Real Life",
+    date: "January 2, 2026",
+    image: blogImageAdviceFailsSpectacularly,
+    imageAlt: "Frustrated family at kitchen table surrounded by hollow advice speech bubbles",
+  },
+  {
+    id: "family-roles",
+    title: "How Substance Use Changes Family Roles Without Anyone Noticing",
+    date: "January 1, 2026",
+    image: blogImageFamilyRoles,
+    imageAlt: "Family members wearing symbolic masks representing their assigned roles",
+  },
+  {
+    id: "supporting-vs-carrying",
+    title: "The Difference Between Supporting Recovery and Carrying the Consequences",
+    date: "December 31, 2025",
+    image: blogImageSupportingVsCarrying,
+    imageAlt: "Person at crossroads choosing between carrying burdens and supporting from alongside",
+  },
+  {
+    id: "advice-doesnt-help",
+    title: "What Families Are Told About Addiction That Sounds Good—but Doesn't Actually Help",
+    date: "December 31, 2025",
+    image: blogImageAdviceDoesntHelp,
+    imageAlt: "Family sitting together looking confused surrounded by well-meaning but unhelpful advice",
+  },
+];
+
+const BlogCarousel = () => {
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
+
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return;
+    setSelectedIndex(emblaApi.selectedScrollSnap());
+  }, [emblaApi]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    onSelect();
+    emblaApi.on("select", onSelect);
+    return () => {
+      emblaApi.off("select", onSelect);
+    };
+  }, [emblaApi, onSelect]);
+
+  // Auto-scroll every 5 seconds
+  useEffect(() => {
+    if (!emblaApi) return;
+    const interval = setInterval(() => {
+      emblaApi.scrollNext();
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [emblaApi]);
+
+  return (
+    <div className="relative aspect-square rounded-2xl overflow-hidden border border-border">
+      {/* Carousel */}
+      <div className="overflow-hidden h-full" ref={emblaRef}>
+        <div className="flex h-full">
+          {recentArticles.map((article, index) => (
+            <Link
+              key={article.id}
+              to="/blog"
+              className="flex-[0_0_100%] min-w-0 h-full relative block"
+            >
+              <img
+                src={article.image}
+                alt={article.imageAlt}
+                className="w-full h-full object-cover"
+              />
+            </Link>
+          ))}
+        </div>
+      </div>
+
+      {/* Dark gradient overlay on bottom */}
+      <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-black/95 via-black/70 to-transparent pointer-events-none" />
+
+      {/* Text overlay */}
+      <div className="absolute inset-x-0 bottom-0 p-6 pointer-events-none">
+        <p className="text-white/70 text-xs uppercase tracking-widest mb-2">
+          {recentArticles[selectedIndex].date}
+        </p>
+        <h3 className="text-white text-lg sm:text-xl font-semibold leading-tight line-clamp-3">
+          {recentArticles[selectedIndex].title}
+        </h3>
+        <p className="text-primary text-sm mt-2 font-medium pointer-events-auto">
+          <Link to="/blog" className="hover:underline">
+            Read on Blog →
+          </Link>
+        </p>
+      </div>
+
+      {/* Navigation arrows */}
+      <button
+        onClick={scrollPrev}
+        className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/30 backdrop-blur-sm flex items-center justify-center text-white hover:bg-black/50 transition-colors"
+        aria-label="Previous article"
+      >
+        <ChevronLeft className="w-6 h-6" />
+      </button>
+      <button
+        onClick={scrollNext}
+        className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/30 backdrop-blur-sm flex items-center justify-center text-white hover:bg-black/50 transition-colors"
+        aria-label="Next article"
+      >
+        <ChevronRight className="w-6 h-6" />
+      </button>
+
+      {/* Dot indicators */}
+      <div className="absolute bottom-24 left-1/2 -translate-x-1/2 flex gap-2">
+        {recentArticles.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => emblaApi?.scrollTo(index)}
+            className={`w-2 h-2 rounded-full transition-colors ${
+              index === selectedIndex ? "bg-white" : "bg-white/40"
+            }`}
+            aria-label={`Go to article ${index + 1}`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default BlogCarousel;
