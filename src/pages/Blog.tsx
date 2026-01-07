@@ -32,6 +32,7 @@ import blogImageFamilyRoles from "@/assets/blog-family-roles.jpg";
 import blogImageAdviceFailsSpectacularly from "@/assets/blog-advice-fails-spectacularly.jpg";
 import blogImageEnablingFearHousehold from "@/assets/blog-enabling-fear-household.jpg";
 import blogImageJustLetGoAdvice from "@/assets/blog-just-let-go-advice.jpg";
+import blogImageAdviceSoundsWiseFails from "@/assets/blog-advice-sounds-wise-fails.jpg";
 
 interface BlogArticle {
   id: string;
@@ -44,6 +45,53 @@ interface BlogArticle {
 }
 
 const articles: BlogArticle[] = [
+  {
+    id: "advice-sounds-wise-fails",
+    title: "Why Families Are Given Advice About Addiction That Sounds Wise but Fails in Real Life",
+    date: "January 7, 2026",
+    image: blogImageAdviceSoundsWiseFails,
+    imageAlt: "Family surrounded by floating fortune cookie papers and social media quote cards looking overwhelmed by hollow advice",
+    excerpt: "If addiction came with an instruction manual, families wouldn't be drowning in bad advice. Unfortunately, most families are handed slogans instead of guidance.",
+    content: (
+      <div className="prose prose-lg max-w-none text-foreground/90 space-y-6">
+        <p>
+          If addiction came with an instruction manual, families wouldn't be drowning in bad advice. Unfortunately, most families are handed slogans instead of guidance. "They have to want it." "Just detach with love." "Stop enabling." These phrases sound wise. They are also wildly insufficient.
+        </p>
+        
+        <p>
+          Families cling to these ideas because they reduce anxiety. If someone has to want recovery on their own, then waiting becomes the plan. If detachment is the answer, then emotional withdrawal feels justified. If enabling is the problem, then guilt fills the gap where clarity should be.
+        </p>
+        
+        <p className="text-foreground font-medium">
+          From lived experience—both personal and professional—I can tell you that addiction doesn't respond to slogans. It responds to structure, consistency, and systems that stop bending around it.
+        </p>
+        
+        <p>
+          Families aren't holding on because they want control. They're holding on because things feel unstable. Bills go unpaid. Emotions swing. Promises evaporate. Telling families to "just let go" without explaining how is like telling someone to relax while their house is on fire.
+        </p>
+        
+        <p>
+          Humor helps here, because some of this advice is absurd when applied to real families. But underneath the humor is a serious problem: families delay action because they believe they're supposed to.
+        </p>
+        
+        <p className="text-foreground font-medium italic">
+          What families actually need is permission to respond to reality instead of ideology. Permission to protect themselves without being labeled cold. Permission to set boundaries without being accused of giving up.
+        </p>
+        
+        <p>
+          The Party Wreckers exists to challenge advice that sounds good on social media but collapses in real life. We're not here to judge families—we're here to tell the truth about what actually works.
+        </p>
+        
+        <p>
+          So if you've been told to "just detach" and wondered why it didn't magically solve everything, you're not failing. You were given incomplete instructions.
+        </p>
+        
+        <p className="text-foreground font-medium italic">
+          This is The Party Wreckers. We don't wreck parties—we wreck bad advice that keeps families stuck.
+        </p>
+      </div>
+    ),
+  },
   {
     id: "just-let-go-advice",
     title: "Why Families Are Told to \"Just Let Go\"—And Why That Advice Rarely Works",
