@@ -33,6 +33,7 @@ import blogImageAdviceFailsSpectacularly from "@/assets/blog-advice-fails-specta
 import blogImageEnablingFearHousehold from "@/assets/blog-enabling-fear-household.jpg";
 import blogImageJustLetGoAdvice from "@/assets/blog-just-let-go-advice.jpg";
 import blogImageAdviceSoundsWiseFails from "@/assets/blog-advice-sounds-wise-fails.jpg";
+import blogImageStopEnablingMeaning from "@/assets/blog-stop-enabling-meaning.jpg";
 
 interface BlogArticle {
   id: string;
@@ -45,6 +46,57 @@ interface BlogArticle {
 }
 
 const articles: BlogArticle[] = [
+  {
+    id: "stop-enabling-meaning",
+    title: "Why Families Are Told to \"Stop Enabling\" Without Being Told What That Actually Means",
+    date: "January 8, 2026",
+    image: blogImageStopEnablingMeaning,
+    imageAlt: "Family standing at crossroads with confusing road signs pointing in different directions showing vague advice phrases",
+    excerpt: "If families were paid for every time they were told to \"stop enabling,\" most of them wouldn't need financial support anymore. It's one of the most overused phrases in the addiction world—and one of the least explained.",
+    content: (
+      <div className="prose prose-lg max-w-none text-foreground/90 space-y-6">
+        <p>
+          If families were paid for every time they were told to "stop enabling," most of them wouldn't need financial support anymore. It's one of the most overused phrases in the addiction world—and one of the least explained.
+        </p>
+        
+        <p className="text-foreground font-medium">
+          From lived experience, I can tell you that most families aren't enabling because they're naïve or weak. They're enabling because things feel unstable and they're trying to prevent disaster. Bills need to be paid. Emotions need to be managed. Someone has to keep the wheels on the bus.
+        </p>
+        
+        <p>
+          So when someone casually says, "You just need to stop enabling," families are left wondering which part they're supposed to drop. The rent? The groceries? The emotional support? The relationship?
+        </p>
+        
+        <p>
+          Without clarity, "stop enabling" turns into emotional withdrawal or guilt-fueled paralysis—neither of which helps anyone.
+        </p>
+        
+        <p className="text-foreground font-medium">
+          Enabling isn't about helping too much. It's about consistently removing consequences that belong to someone else. The problem is that families rarely recognize this while they're in it. They're responding to emergencies, not patterns.
+        </p>
+        
+        <p>
+          Humor helps here, because some of the advice families get sounds like it was written for people who have never actually lived with addiction. Real life doesn't pause while families figure things out.
+        </p>
+        
+        <p className="text-foreground font-medium italic">
+          Healthy change isn't about flipping a switch. It's about learning how to help without managing, care without controlling, and step back without disappearing.
+        </p>
+        
+        <p>
+          The Party Wreckers exists to translate theory into reality. We talk about addiction the way families actually experience it—messy, exhausting, and confusing. And yes, sometimes you have to laugh at yourself just to stay sane.
+        </p>
+        
+        <p>
+          If you've ever thought, "If I stop doing this, everything will fall apart," you're not alone. That fear is common—and often exaggerated by years of instability.
+        </p>
+        
+        <p className="text-foreground font-medium italic">
+          This is The Party Wreckers. We don't wreck parties—we wreck bad advice that leaves families confused and stuck.
+        </p>
+      </div>
+    ),
+  },
   {
     id: "advice-sounds-wise-fails",
     title: "Why Families Are Given Advice About Addiction That Sounds Wise but Fails in Real Life",
