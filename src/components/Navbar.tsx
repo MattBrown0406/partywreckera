@@ -8,7 +8,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import logo from "@/assets/party-wreckers-logo.png";
+import logo from "@/assets/party-wreckers-logo-2026.png";
 
 const SpotifyIcon = () => (
   <svg viewBox="0 0 24 24" className="w-4 h-4" fill="currentColor">
