@@ -36,42 +36,42 @@ const platforms = [
 
 const CTASection = () => {
   return (
-    <section className="py-24 bg-background relative overflow-hidden" id="contact">
+    <section className="py-12 sm:py-24 bg-background relative overflow-hidden" id="contact">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent" />
       
       {/* Animated orbs */}
-      <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-float" />
-      <div className="absolute top-1/2 right-1/4 w-64 h-64 bg-accent/10 rounded-full blur-3xl animate-float" style={{ animationDelay: "-2s" }} />
+      <div className="absolute top-1/2 left-1/4 w-32 sm:w-64 h-32 sm:h-64 bg-primary/10 rounded-full blur-3xl animate-float" />
+      <div className="absolute top-1/2 right-1/4 w-32 sm:w-64 h-32 sm:h-64 bg-accent/10 rounded-full blur-3xl animate-float" style={{ animationDelay: "-2s" }} />
 
       <div className="container px-4 relative">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="font-script text-5xl sm:text-6xl text-burgundy mb-6">
+          <h2 className="font-script text-4xl sm:text-5xl lg:text-6xl text-burgundy mb-4 sm:mb-6">
             Start Listening
           </h2>
           
-          <p className="text-muted-foreground text-lg sm:text-xl max-w-2xl mx-auto mb-10">
+          <p className="text-muted-foreground text-base sm:text-lg lg:text-xl max-w-2xl mx-auto mb-6 sm:mb-10">
             Subscribe wherever you listen to podcasts. New episodes drop weekly 
             with real conversations and practical guidance.
           </p>
 
           {/* Platform buttons */}
-          <div className="flex flex-wrap gap-4 justify-center items-center mb-12">
+          <div className="flex flex-wrap gap-2 sm:gap-4 justify-center items-center mb-8 sm:mb-12">
             {platforms.map((platform) => (
               <a
                 key={platform.name}
                 href={platform.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`inline-flex items-center gap-3 px-6 py-3 rounded-lg bg-secondary border border-border text-foreground font-medium transition-all duration-300 ${platform.color}`}
+                className={`inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3 rounded-lg bg-secondary border border-border text-foreground text-sm sm:text-base font-medium transition-all duration-300 ${platform.color}`}
               >
                 <platform.icon />
-                {platform.name}
+                <span className="hidden sm:inline">{platform.name}</span>
               </a>
             ))}
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 sm:mb-12">
             <Button variant="hero" size="xl" asChild>
               <Link to="/episodes">
                 All Episodes
@@ -81,13 +81,13 @@ const CTASection = () => {
           </div>
 
           {/* Contact info */}
-          <div className="flex flex-col sm:flex-row gap-8 justify-center items-center pt-8 border-t border-border">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 justify-center items-center pt-6 sm:pt-8 border-t border-border">
             <a 
               href="mailto:matt@partywreckers.com" 
-              className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
+              className="flex items-center gap-2 sm:gap-3 text-muted-foreground hover:text-primary transition-colors text-sm sm:text-base"
             >
-              <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center">
-                <Mail className="w-5 h-5" />
+              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-secondary flex items-center justify-center">
+                <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
               </div>
               <span>matt@partywreckers.com</span>
             </a>

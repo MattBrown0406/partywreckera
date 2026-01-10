@@ -2963,13 +2963,13 @@ const Blog = () => {
       </Helmet>
       <Navbar />
       
-      <main className="container px-4 pt-32 pb-16">
-        <h1 className="font-script text-4xl md:text-5xl text-primary mb-12 text-center">
+      <main className="container px-4 pt-24 sm:pt-32 pb-12 sm:pb-16">
+        <h1 className="font-script text-3xl sm:text-4xl md:text-5xl text-primary mb-8 sm:mb-12 text-center">
           Blog
         </h1>
         
         {/* Article Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-6xl mx-auto">
           {articles.map((article) => (
             <Card 
               key={article.id}
@@ -2983,15 +2983,15 @@ const Blog = () => {
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              <CardContent className="p-5">
-                <p className="text-muted-foreground text-xs mb-2">{article.date}</p>
-                <h2 className="text-lg font-semibold text-foreground mb-3 line-clamp-2 group-hover:text-primary transition-colors">
+              <CardContent className="p-4 sm:p-5">
+                <p className="text-muted-foreground text-xs mb-1 sm:mb-2">{article.date}</p>
+                <h2 className="text-base sm:text-lg font-semibold text-foreground mb-2 sm:mb-3 line-clamp-2 group-hover:text-primary transition-colors">
                   {article.title}
                 </h2>
-                <p className="text-muted-foreground text-sm line-clamp-3">
+                <p className="text-muted-foreground text-xs sm:text-sm line-clamp-2 sm:line-clamp-3">
                   {article.excerpt}
                 </p>
-                <span className="inline-block mt-4 text-primary text-sm font-medium group-hover:underline">
+                <span className="inline-block mt-3 sm:mt-4 text-primary text-sm font-medium group-hover:underline">
                   Read more →
                 </span>
               </CardContent>
@@ -3002,30 +3002,32 @@ const Blog = () => {
       
       {/* Article Modal */}
       <Dialog open={!!selectedArticle} onOpenChange={() => setSelectedArticle(null)}>
-        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto p-0">
+        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto p-0 mx-2 sm:mx-4">
           {selectedArticle && (
             <>
               <div className="relative">
                 <img 
                   src={selectedArticle.image} 
                   alt={selectedArticle.imageAlt}
-                  className="w-full h-64 md:h-80 object-cover"
+                  className="w-full h-48 sm:h-64 md:h-80 object-cover"
                 />
                 <button
                   onClick={() => setSelectedArticle(null)}
-                  className="absolute top-4 right-4 bg-background/80 backdrop-blur-sm rounded-full p-2 hover:bg-background transition-colors"
+                  className="absolute top-2 right-2 sm:top-4 sm:right-4 bg-background/80 backdrop-blur-sm rounded-full p-1.5 sm:p-2 hover:bg-background transition-colors"
                 >
-                  <X className="w-5 h-5" />
+                  <X className="w-4 h-4 sm:w-5 sm:h-5" />
                 </button>
               </div>
-              <div className="p-6 md:p-8">
-                <DialogHeader className="mb-6">
-                  <p className="text-muted-foreground text-sm mb-2">{selectedArticle.date}</p>
-                  <DialogTitle className="text-2xl md:text-3xl font-bold text-foreground leading-tight">
+              <div className="p-4 sm:p-6 md:p-8">
+                <DialogHeader className="mb-4 sm:mb-6">
+                  <p className="text-muted-foreground text-xs sm:text-sm mb-2">{selectedArticle.date}</p>
+                  <DialogTitle className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground leading-tight">
                     {selectedArticle.title}
                   </DialogTitle>
                 </DialogHeader>
-                {selectedArticle.content}
+                <div className="prose-sm sm:prose">
+                  {selectedArticle.content}
+                </div>
               </div>
             </>
           )}

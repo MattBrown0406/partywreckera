@@ -41,24 +41,24 @@ const Host = () => {
         <section className="py-16 sm:py-24">
           <div className="container px-4">
             <div className="max-w-4xl mx-auto">
-              <div className="bg-card border border-border rounded-xl p-8 sm:p-12">
-                <div className="flex flex-col md:flex-row gap-8 items-center md:items-start">
-                  <div className="flex-shrink-0 mt-12 sm:mt-16">
+              <div className="bg-card border border-border rounded-xl p-6 sm:p-8 lg:p-12">
+                <div className="flex flex-col md:flex-row gap-6 sm:gap-8 items-center md:items-start">
+                  <div className="flex-shrink-0 mt-0 sm:mt-4 md:mt-12">
                     <img 
                       src={mattHeadshot} 
                       alt="Matt - Host of The Party Wreckers Podcast" 
-                      className="w-48 sm:w-64 rounded-xl object-cover shadow-lg"
+                      className="w-40 sm:w-48 md:w-64 rounded-xl object-cover shadow-lg"
                     />
                     <div className="mt-4 flex justify-center">
                       <SocialLinks size="small" />
                     </div>
                   </div>
                   <div className="flex-1 text-center md:text-left">
-                    <h2 className="font-script text-3xl text-burgundy mb-6">
+                    <h2 className="font-script text-2xl sm:text-3xl text-burgundy mb-4 sm:mb-6">
                       20+ Years of Experience
                     </h2>
                 
-                <div className="space-y-6 text-muted-foreground">
+                <div className="space-y-4 sm:space-y-6 text-sm sm:text-base text-muted-foreground">
                   <p>
                     Matt is a professional interventionist with more than twenty years of frontline experience 
                     working with addiction, recovery, and the families caught in between. Having guided hundreds 

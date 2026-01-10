@@ -21,28 +21,28 @@ const features = [
 
 const AboutSection = () => {
   return (
-    <section className="py-24 bg-card relative overflow-hidden">
+    <section className="py-12 sm:py-24 bg-card relative overflow-hidden">
       {/* Decorative elements */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
+      <div className="absolute top-0 right-0 w-48 sm:w-96 h-48 sm:h-96 bg-primary/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-0 w-48 sm:w-96 h-48 sm:h-96 bg-accent/5 rounded-full blur-3xl" />
 
       <div className="container px-4 relative">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Content */}
           <div>
-            <h2 className="font-script text-6xl sm:text-7xl text-burgundy mb-6 text-center">
+            <h2 className="font-script text-4xl sm:text-5xl lg:text-7xl text-burgundy mb-4 sm:mb-6 text-center lg:text-left">
               About the Show
             </h2>
             
-            <p className="text-muted-foreground text-lg mb-4">
+            <p className="text-muted-foreground text-base sm:text-lg mb-4">
               The Party Wreckers Podcast is a weekly show for families, loved ones, and professionals who are tired of watching addiction destroy lives and relationships. Hosted by an experienced interventionist with more than two decades in the field, the podcast breaks down complex topics like enabling, boundaries, relapse, treatment programs, and recovery planning into clear, practical conversations. Each episode blends real-world intervention experience, storytelling, and education to help listeners understand addiction as a medical disease with a spiritual solution—while also showing them what to do next, not just what to think or feel about it.
             </p>
             
-            <p className="text-muted-foreground text-lg mb-8">
+            <p className="text-muted-foreground text-base sm:text-lg mb-6 sm:mb-8">
               The Party Wreckers Podcast is designed as a reliable guide for anyone who feels stuck between loving someone with a substance use disorder and not knowing how to help. Through solo episodes, interviews with treatment and recovery experts, and case-based insights from hundreds of interventions, the show gives families language, tools, and step-by-step strategies they can use immediately. Listeners come away with a deeper understanding of support versus enabling, how to set and hold healthy boundaries, and how to build a long-term recovery plan that includes the whole family—not just the addicted person.
             </p>
 
-            <div className="grid grid-cols-2 gap-x-6 gap-y-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2">
               {features.map((feature, index) => (
                 <div key={index} className="flex items-start gap-2">
                   <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -66,18 +66,18 @@ const AboutSection = () => {
           </div>
 
           {/* Visual */}
-          <div className="relative">
+          <div className="relative mt-8 lg:mt-0">
             <BlogCarousel />
             
             {/* Floating badges */}
-            <div className="absolute -top-4 -right-4 bg-primary text-primary-foreground px-4 py-2 rounded-lg font-semibold text-sm uppercase tracking-wider shadow-lg glow-primary z-10">
+            <div className="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 bg-primary text-primary-foreground px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg font-semibold text-xs sm:text-sm uppercase tracking-wider shadow-lg glow-primary z-10">
               Top Rated
             </div>
             <a 
               href="https://interventiononcall.com/live-family-friends-zoom/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="absolute -bottom-4 -left-4 bg-accent text-accent-foreground px-4 py-2 rounded-lg font-semibold text-sm uppercase tracking-wider shadow-lg glow-accent z-10 hover:scale-105 transition-transform"
+              className="absolute -bottom-2 -left-2 sm:-bottom-4 sm:-left-4 bg-accent text-accent-foreground px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg font-semibold text-xs sm:text-sm uppercase tracking-wider shadow-lg glow-accent z-10 hover:scale-105 transition-transform"
             >
               Free Support
             </a>
@@ -85,7 +85,7 @@ const AboutSection = () => {
         </div>
 
         {/* Support Resources Grid */}
-        <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto mt-16">
+        <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto mt-10 sm:mt-16">
           {/* Intervention on Call - Dynamic Card */}
           <div className="relative bg-gradient-to-br from-cyan-900/20 via-sky-900/10 to-background border border-cyan-600/30 rounded-xl overflow-hidden group">
             {/* Animated Background */}
