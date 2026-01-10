@@ -49,24 +49,32 @@ export const SocialLinks = ({ size = "default" }: { size?: "default" | "small" }
 
 const Footer = () => {
   return (
-    <footer className="py-12 bg-card border-t border-border">
+    <footer className="py-8 sm:py-12 bg-card border-t border-border">
       <div className="container px-4">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="flex flex-col items-center gap-6 text-center">
           {/* Logo */}
-          <a href="/" className="font-script text-2xl text-foreground">
+          <a href="/" className="font-script text-xl sm:text-2xl text-foreground">
             The Party Wreckers
           </a>
 
-          {/* Blog link */}
-          <a href="/blog" className="text-muted-foreground hover:text-primary transition-colors">
-            Blog
-          </a>
+          {/* Navigation links */}
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
+            <a href="/blog" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+              Blog
+            </a>
+            <a href="/episodes" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+              Episodes
+            </a>
+            <a href="/family-resources" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+              Resources
+            </a>
+          </div>
 
           {/* Social links */}
           <SocialLinks />
 
           {/* Copyright */}
-          <p className="text-muted-foreground text-sm">
+          <p className="text-muted-foreground text-xs sm:text-sm">
             © {new Date().getFullYear()} The Party Wreckers Podcast. All rights reserved.
           </p>
         </div>
