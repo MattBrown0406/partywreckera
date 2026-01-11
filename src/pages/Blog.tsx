@@ -36,6 +36,7 @@ import blogImageAdviceSoundsWiseFails from "@/assets/blog-advice-sounds-wise-fai
 import blogImageStopEnablingMeaning from "@/assets/blog-stop-enabling-meaning.jpg";
 import blogImagePatienceAloneFails from "@/assets/blog-patience-alone-fails.jpg";
 import blogImageGuiltVsResponsibility from "@/assets/blog-guilt-vs-responsibility.jpg";
+import blogImageNegotiatingWithAddiction from "@/assets/blog-negotiating-with-addiction.jpg";
 
 interface BlogArticle {
   id: string;
@@ -48,6 +49,63 @@ interface BlogArticle {
 }
 
 const articles: BlogArticle[] = [
+  {
+    id: "negotiating-with-addiction",
+    title: "Why Families Start Negotiating With Addiction (and Lose Every Time)",
+    date: "January 11, 2026",
+    image: blogImageNegotiatingWithAddiction,
+    imageAlt: "Family at negotiation table across from shadowy addiction figure with chess pieces and scattered papers",
+    excerpt: "At some point, almost every family starts negotiating with addiction. Not formally, of course — it's more subtle than that. Negotiation feels reasonable. It sounds collaborative. The problem is that addiction does not negotiate in good faith.",
+    content: (
+      <div className="prose prose-lg max-w-none text-foreground/90 space-y-6">
+        <p>
+          At some point, almost every family starts negotiating with addiction. Not formally, of course — it's more subtle than that.
+        </p>
+        
+        <p className="text-foreground font-medium italic">
+          "If you just cut back."<br />
+          "If you promise this is the last time."<br />
+          "If we can just get through this week."
+        </p>
+        
+        <p>
+          Negotiation feels reasonable. It sounds collaborative. It gives everyone hope that compromise will lead to stability. The problem is that addiction does not negotiate in good faith.
+        </p>
+        
+        <p className="text-foreground font-medium">
+          Families don't start negotiating because they're naïve. They do it because the alternative feels harsh. Negotiation feels like love with boundaries. In reality, it's often fear dressed up as flexibility.
+        </p>
+        
+        <p>
+          From lived experience, I can tell you that addiction loves negotiations. Every concession becomes precedent. Every exception becomes expectation. The rules change constantly — always in addiction's favor.
+        </p>
+        
+        <p>
+          Negotiation also keeps families emotionally invested in outcomes they cannot control. They replay conversations, track compliance, and reset expectations after each disappointment. Exhaustion becomes the norm.
+        </p>
+        
+        <p className="text-foreground font-medium italic">
+          Humor helps here, because if families didn't laugh about these negotiations, they'd cry. People joke about being lawyers, diplomats, or hostage negotiators in their own homes. The joke lands because it's painfully accurate.
+        </p>
+        
+        <p>
+          What families eventually discover is that clarity works better than compromise. Clear expectations. Clear boundaries. Clear responses. Not emotional bargaining.
+        </p>
+        
+        <p className="text-foreground font-medium">
+          The Party Wreckers exists to call out the patterns that sound reasonable but keep families stuck. Negotiation is one of the biggest.
+        </p>
+        
+        <p>
+          If you've been negotiating and nothing has changed, it's not because you did it wrong. It's because negotiation was never the solution.
+        </p>
+        
+        <p className="text-foreground font-medium italic">
+          This is The Party Wreckers. We don't wreck parties — we wreck the deals addiction tricks families into making.
+        </p>
+      </div>
+    ),
+  },
   {
     id: "guilt-vs-responsibility",
     title: "Why Families Confuse Guilt With Responsibility—and How That Keeps Them Stuck",
