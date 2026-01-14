@@ -1,7 +1,8 @@
-import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
+import { FAQJsonLd, BreadcrumbJsonLd } from "@/components/JsonLd";
 import { 
   Heart, 
   BookOpen, 
@@ -147,12 +148,25 @@ const professionalGuidanceTopics = [
 ];
 
 const FamilyResources = () => {
+  const faqItems = [
+    { question: "Is addiction a moral failure?", answer: "Addiction is best understood as a chronic stress-related disorder that affects judgment, impulse control, and emotional regulation. This doesn't excuse harmful behavior, but it does explain why willpower, logic, or consequences alone rarely lead to lasting change." },
+    { question: "What is the difference between helping and enabling?", answer: "Helping supports growth, responsibility, and accountability. Enabling reduces discomfort in the short term while increasing long-term harm. The difference is not intention—it's outcome." },
+    { question: "What are boundaries in addiction recovery?", answer: "Boundaries are not punishments, threats, or ultimatums. They are clear limits that define what you will and will not participate in. Effective boundaries are calm, consistent, and focused on your behavior—not on forcing someone else to change." },
+    { question: "Why do things get worse before they get better?", answer: "When families begin to change—setting boundaries, stopping rescue behaviors, or speaking more honestly—resistance is common. Escalation does not mean you're doing something wrong; it often means old patterns are being disrupted." }
+  ];
+
   return (
     <>
-      <Helmet>
-        <title>Family Resources | The Party Wreckers Podcast</title>
-        <meta name="description" content="Resources for families dealing with addiction. Find support groups, educational materials, crisis hotlines, and guidance for helping your loved one." />
-      </Helmet>
+      <SEOHead
+        title="Family Resources | The Party Wreckers Podcast"
+        description="Resources for families dealing with addiction. Find support groups, educational materials, crisis hotlines, and guidance for helping your loved one."
+        canonical="/family-resources"
+      />
+      <FAQJsonLd faqs={faqItems} />
+      <BreadcrumbJsonLd items={[
+        { name: "Home", url: "/" },
+        { name: "Family Resources", url: "/family-resources" }
+      ]} />
       
       <Navbar />
       

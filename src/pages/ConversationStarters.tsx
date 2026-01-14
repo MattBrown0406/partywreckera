@@ -1,4 +1,3 @@
-import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -13,6 +12,8 @@ import {
   Printer
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import SEOHead from "@/components/SEOHead";
+import { BreadcrumbJsonLd } from "@/components/JsonLd";
 
 const ConversationStarters = () => {
   const handlePrint = () => {
@@ -21,10 +22,16 @@ const ConversationStarters = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Conversation Starters for Families | The Party Wreckers Podcast</title>
-        <meta name="description" content="Thoughtful conversation starters to help families talk about addiction with less defensiveness and more clarity. Printable guide for families." />
-      </Helmet>
+      <SEOHead
+        title="Conversation Starters for Families | The Party Wreckers Podcast"
+        description="Thoughtful conversation starters to help families talk about addiction with less defensiveness and more clarity. Printable guide for families."
+        canonical="/conversation-starters"
+      />
+      <BreadcrumbJsonLd items={[
+        { name: "Home", url: "/" },
+        { name: "Family Resources", url: "/family-resources" },
+        { name: "Conversation Starters", url: "/conversation-starters" }
+      ]} />
       
       <Navbar />
       

@@ -23,11 +23,12 @@ const HeroSection = () => {
             <ThemePlayer />
           </div>
 
-          {/* Logo */}
+          {/* Logo with H1 for SEO */}
           <div className="mb-8">
+            <h1 className="sr-only">The Party Wreckers Podcast - Addiction, Intervention & Recovery</h1>
             <img 
               src={logo} 
-              alt="The Party Wreckers Podcast" 
+              alt="The Party Wreckers Podcast logo featuring bold typography" 
               className="w-full max-w-md mx-auto h-auto"
             />
           </div>

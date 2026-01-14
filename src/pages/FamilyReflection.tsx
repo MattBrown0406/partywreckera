@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -13,6 +12,8 @@ import {
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Textarea } from "@/components/ui/textarea";
+import SEOHead from "@/components/SEOHead";
+import { BreadcrumbJsonLd } from "@/components/JsonLd";
 
 const strategiesUsed = [
   "Talking, reasoning, or pleading",
@@ -80,10 +81,16 @@ const FamilyReflection = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Family Reflection Guide | The Party Wreckers Podcast</title>
-        <meta name="description" content="An interactive reflection exercise for families affected by addiction. Take inventory of what you've tried and identify patterns to make clearer decisions." />
-      </Helmet>
+      <SEOHead
+        title="Family Reflection Guide | The Party Wreckers Podcast"
+        description="An interactive reflection exercise for families affected by addiction. Take inventory of what you've tried and identify patterns to make clearer decisions."
+        canonical="/family-reflection"
+      />
+      <BreadcrumbJsonLd items={[
+        { name: "Home", url: "/" },
+        { name: "Family Resources", url: "/family-resources" },
+        { name: "Family Reflection Guide", url: "/family-reflection" }
+      ]} />
       
       {/* Print styles */}
       <style>
