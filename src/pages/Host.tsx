@@ -1,16 +1,23 @@
-import { Helmet } from "react-helmet";
 import Navbar from "@/components/Navbar";
 import Footer, { SocialLinks } from "@/components/Footer";
 import { Mic, Heart, Users, Clock } from "lucide-react";
 import mattHeadshot from "@/assets/matt-headshot.jpg";
+import SEOHead from "@/components/SEOHead";
+import { PersonJsonLd, BreadcrumbJsonLd } from "@/components/JsonLd";
 
 const Host = () => {
   return (
     <>
-      <Helmet>
-        <title>Meet the Host | The Party Wreckers Podcast</title>
-        <meta name="description" content="Meet Matt, the host of The Party Wreckers Podcast. An experienced interventionist with over 20 years helping families navigate addiction and recovery." />
-      </Helmet>
+      <SEOHead
+        title="Meet Matt Brown | The Party Wreckers Podcast Host"
+        description="Meet Matt Brown, host of The Party Wreckers Podcast. A professional interventionist with 20+ years helping families navigate addiction, intervention, and recovery."
+        canonical="/host"
+      />
+      <PersonJsonLd />
+      <BreadcrumbJsonLd items={[
+        { name: "Home", url: "/" },
+        { name: "Meet the Host", url: "/host" }
+      ]} />
       
       <Navbar />
       

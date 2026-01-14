@@ -1,10 +1,11 @@
 import { useState } from "react";
-import { Helmet } from "react-helmet";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Card, CardContent } from "@/components/ui/card";
 import { X } from "lucide-react";
+import SEOHead from "@/components/SEOHead";
+import { BreadcrumbJsonLd } from "@/components/JsonLd";
 import blogImageExerciseNutrition from "@/assets/blog-exercise-nutrition-recovery.jpg";
 import blogImageEnabling from "@/assets/blog-family-support-enabling.jpg";
 import blogImageConversation from "@/assets/blog-right-moment-conversation.jpg";
@@ -3363,10 +3364,15 @@ const Blog = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
-        <title>Blog | The Party Wreckers Podcast</title>
-        <meta name="description" content="Articles and insights on addiction, intervention, recovery, and family support from The Party Wreckers Podcast." />
-      </Helmet>
+      <SEOHead
+        title="Blog | The Party Wreckers Podcast"
+        description="Articles and insights on addiction, intervention, recovery, and family support. Learn about enabling, boundaries, and helping your loved one."
+        canonical="/blog"
+      />
+      <BreadcrumbJsonLd items={[
+        { name: "Home", url: "/" },
+        { name: "Blog", url: "/blog" }
+      ]} />
       <Navbar />
       
       <main className="container px-4 pt-24 sm:pt-32 pb-12 sm:pb-16">

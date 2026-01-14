@@ -5,6 +5,8 @@ import { usePodcastFeed, formatDuration, formatDate, Episode } from "@/hooks/use
 import { Button } from "@/components/ui/button";
 import { Play, Pause, Clock, Calendar, Loader2, Sparkles } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import SEOHead from "@/components/SEOHead";
+import { BreadcrumbJsonLd } from "@/components/JsonLd";
 
 type Category = "all" | "understanding" | "family" | "intervention" | "recovery";
 
@@ -117,6 +119,16 @@ const Episodes = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="Episodes | The Party Wreckers Podcast"
+        description="Browse all episodes of The Party Wreckers Podcast. Real conversations about addiction, intervention, and recovery with host Matt Brown."
+        canonical="/episodes"
+      />
+      <BreadcrumbJsonLd items={[
+        { name: "Home", url: "/" },
+        { name: "Episodes", url: "/episodes" }
+      ]} />
+      
       <Navbar />
       <main className="pt-20">
         {/* Header */}

@@ -1,4 +1,3 @@
-import { Helmet } from "react-helmet";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Heart, ExternalLink, Phone, Users, BookOpen, Shield, CheckCircle, MessageCircle, Headphones, Clock, Video, HeartHandshake, Target, Calendar, Zap, Smile, MessageSquare, Laptop, UserCheck, BadgePercent, Globe, Mic, Sparkles, DollarSign, Gift, TrendingUp, Radio, Mail } from "lucide-react";
@@ -6,14 +5,21 @@ import { Button } from "@/components/ui/button";
 import soberHelplineLogo from "@/assets/sober-helpline-logo.png";
 import iocLogo from "@/assets/ioc-logo.jpg";
 import betterhelpLogo from "@/assets/betterhelp-logo.png";
+import SEOHead from "@/components/SEOHead";
+import { BreadcrumbJsonLd } from "@/components/JsonLd";
 
 const Sponsors = () => {
   return (
     <>
-      <Helmet>
-        <title>Support Our Sponsors | The Party Wreckers Podcast</title>
-        <meta name="description" content="Support the sponsors who make The Party Wreckers Podcast possible. These partners help us continue providing resources for families dealing with addiction." />
-      </Helmet>
+      <SEOHead
+        title="Support Our Sponsors | The Party Wreckers Podcast"
+        description="Support the sponsors who make The Party Wreckers Podcast possible. These partners help us continue providing resources for families dealing with addiction."
+        canonical="/sponsors"
+      />
+      <BreadcrumbJsonLd items={[
+        { name: "Home", url: "/" },
+        { name: "Sponsors", url: "/sponsors" }
+      ]} />
       
       <Navbar />
       

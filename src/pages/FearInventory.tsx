@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -13,6 +12,8 @@ import {
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Textarea } from "@/components/ui/textarea";
+import SEOHead from "@/components/SEOHead";
+import { BreadcrumbJsonLd } from "@/components/JsonLd";
 
 const commonFears = [
   "They will get worse if we stop helping",
@@ -81,10 +82,16 @@ const FearInventory = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Fear Inventory | The Party Wreckers Podcast</title>
-        <meta name="description" content="An interactive fear inventory for families affected by addiction. Identify and examine the fears that drive family decisions around addiction." />
-      </Helmet>
+      <SEOHead
+        title="Fear Inventory | The Party Wreckers Podcast"
+        description="An interactive fear inventory for families affected by addiction. Identify and examine the fears that drive family decisions around addiction."
+        canonical="/fear-inventory"
+      />
+      <BreadcrumbJsonLd items={[
+        { name: "Home", url: "/" },
+        { name: "Family Resources", url: "/family-resources" },
+        { name: "Fear Inventory", url: "/fear-inventory" }
+      ]} />
       
       {/* Print styles */}
       <style>
