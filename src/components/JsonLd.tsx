@@ -1,5 +1,8 @@
 import { Helmet } from "react-helmet";
 
+const SITE_URL = "https://partywreckers.com";
+const OG_IMAGE = `${SITE_URL}/og-image.jpg`;
+
 // Podcast Schema
 export const PodcastJsonLd = () => {
   const podcastSchema = {
@@ -7,19 +10,19 @@ export const PodcastJsonLd = () => {
     "@type": "PodcastSeries",
     "name": "The Party Wreckers Podcast",
     "description": "Real conversations about addiction, intervention, and recovery. Host Matt Brown helps families find hope and practical guidance.",
-    "url": "https://partywreckers.com",
-    "image": "https://storage.buzzsprout.com/nhzrlxq04pg5ux80ilwi3rcwlv7a?.jpg",
+    "url": SITE_URL,
+    "image": OG_IMAGE,
     "author": {
       "@type": "Person",
       "name": "Matt Brown",
-      "url": "https://partywreckers.com/host"
+      "url": `${SITE_URL}/host`
     },
     "publisher": {
       "@type": "Organization",
       "name": "The Party Wreckers Podcast",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://storage.buzzsprout.com/nhzrlxq04pg5ux80ilwi3rcwlv7a?.jpg"
+        "url": OG_IMAGE
       }
     },
     "genre": ["Health", "Mental Health", "Addiction", "Family", "Recovery"],
@@ -42,8 +45,8 @@ export const OrganizationJsonLd = () => {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "The Party Wreckers Podcast",
-    "url": "https://partywreckers.com",
-    "logo": "https://storage.buzzsprout.com/nhzrlxq04pg5ux80ilwi3rcwlv7a?.jpg",
+    "url": SITE_URL,
+    "logo": OG_IMAGE,
     "description": "A podcast helping families navigate addiction, intervention, and recovery.",
     "email": "matt@partywreckers.com",
     "sameAs": [

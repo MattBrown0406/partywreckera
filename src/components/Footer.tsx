@@ -49,26 +49,43 @@ export const SocialLinks = ({ size = "default" }: { size?: "default" | "small" }
 
 const Footer = () => {
   return (
-    <footer className="py-8 sm:py-12 bg-card border-t border-border">
+    <footer className="py-8 sm:py-12 bg-card border-t border-border" role="contentinfo">
       <div className="container px-4">
         <div className="flex flex-col items-center gap-6 text-center">
           {/* Logo */}
-          <a href="/" className="font-script text-xl sm:text-2xl text-foreground">
+          <a 
+            href="/" 
+            className="font-script text-xl sm:text-2xl text-foreground"
+            aria-label="The Party Wreckers Podcast - Return to homepage"
+          >
             The Party Wreckers
           </a>
 
           {/* Navigation links */}
-          <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
-            <a href="/blog" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-              Blog
-            </a>
-            <a href="/episodes" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-              Episodes
-            </a>
-            <a href="/family-resources" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-              Resources
-            </a>
-          </div>
+          <nav aria-label="Footer navigation">
+            <ul className="flex flex-wrap justify-center gap-4 sm:gap-6 list-none p-0 m-0">
+              <li>
+                <a href="/blog" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Blog
+                </a>
+              </li>
+              <li>
+                <a href="/episodes" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Episodes
+                </a>
+              </li>
+              <li>
+                <a href="/family-resources" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Resources
+                </a>
+              </li>
+              <li>
+                <a href="/host" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  About Matt Brown
+                </a>
+              </li>
+            </ul>
+          </nav>
 
           {/* Social links */}
           <SocialLinks />
