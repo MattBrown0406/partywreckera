@@ -8,7 +8,13 @@ import family3 from "@/assets/hopeful-family-3.jpg";
 import family4 from "@/assets/hopeful-family-4.jpg";
 import family5 from "@/assets/hopeful-family-5.jpg";
 
-const images = [family1, family2, family3, family4, family5];
+const images = [
+  { src: family1, alt: "Family embracing during addiction recovery journey, showing hope and support" },
+  { src: family2, alt: "Parents and children sharing a moment of connection after intervention success" },
+  { src: family3, alt: "Multi-generational family united in supporting loved one through recovery" },
+  { src: family4, alt: "Couple holding hands, symbolizing partnership in overcoming addiction together" },
+  { src: family5, alt: "Family celebrating sobriety milestone with genuine smiles and togetherness" },
+];
 
 const FamilyCarousel = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
@@ -50,12 +56,13 @@ const FamilyCarousel = () => {
       {/* Carousel */}
       <div className="overflow-hidden h-full" ref={emblaRef}>
         <div className="flex h-full">
-          {images.map((src, index) => (
+          {images.map((image, index) => (
             <div key={index} className="flex-[0_0_100%] min-w-0 h-full relative">
               <img
-                src={src}
-                alt={`Hopeful family ${index + 1}`}
+                src={image.src}
+                alt={image.alt}
                 className="w-full h-full object-cover"
+                loading={index === 0 ? "eager" : "lazy"}
               />
             </div>
           ))}
