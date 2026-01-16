@@ -3,13 +3,27 @@ import { Link } from "react-router-dom";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
+import blogImageGamblingAddiction from "@/assets/blog-gambling-addiction.jpg";
+import blogImageFamilyQuestionsAddiction from "@/assets/blog-family-questions-addiction.jpg";
 import blogImageEnablingFearHousehold from "@/assets/blog-enabling-fear-household.jpg";
 import blogImageAdviceFailsSpectacularly from "@/assets/blog-advice-fails-spectacularly.jpg";
 import blogImageFamilyRoles from "@/assets/blog-family-roles.jpg";
-import blogImageSupportingVsCarrying from "@/assets/blog-supporting-vs-carrying.jpg";
-import blogImageAdviceDoesntHelp from "@/assets/blog-advice-doesnt-help.jpg";
 
 const recentArticles = [
+  {
+    id: "gambling-addiction-hidden-damage",
+    title: "Gambling Addiction Doesn't Look Like Addiction—Until the Damage Is Already Done",
+    date: "January 17, 2026",
+    image: blogImageGamblingAddiction,
+    imageAlt: "Person at kitchen table late at night with laptop and phone showing gambling apps, surrounded by bills",
+  },
+  {
+    id: "family-questions-addiction",
+    title: "The Questions Families Are Really Asking About Addiction (And Honest Answers)",
+    date: "January 16, 2026",
+    image: blogImageFamilyQuestionsAddiction,
+    imageAlt: "Family gathered at kitchen table researching treatment options with laptop and papers",
+  },
   {
     id: "enabling-fear-household",
     title: "Enabling Isn't Weakness — It's What Happens When Fear Runs the Household",
@@ -30,20 +44,6 @@ const recentArticles = [
     date: "January 1, 2026",
     image: blogImageFamilyRoles,
     imageAlt: "Family members wearing symbolic masks representing their assigned roles",
-  },
-  {
-    id: "supporting-vs-carrying",
-    title: "The Difference Between Supporting Recovery and Carrying the Consequences",
-    date: "December 31, 2025",
-    image: blogImageSupportingVsCarrying,
-    imageAlt: "Person at crossroads choosing between carrying burdens and supporting from alongside",
-  },
-  {
-    id: "advice-doesnt-help",
-    title: "What Families Are Told About Addiction That Sounds Good—but Doesn't Actually Help",
-    date: "December 31, 2025",
-    image: blogImageAdviceDoesntHelp,
-    imageAlt: "Family sitting together looking confused surrounded by well-meaning but unhelpful advice",
   },
 ];
 
