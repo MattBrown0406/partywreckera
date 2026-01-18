@@ -3,13 +3,20 @@ import { Link } from "react-router-dom";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
+import blogImageMinimizingAddiction from "@/assets/blog-minimizing-addiction.jpg";
 import blogImageGamblingAddiction from "@/assets/blog-gambling-addiction.jpg";
 import blogImageFamilyQuestionsAddiction from "@/assets/blog-family-questions-addiction.jpg";
 import blogImageEnablingFearHousehold from "@/assets/blog-enabling-fear-household.jpg";
 import blogImageAdviceFailsSpectacularly from "@/assets/blog-advice-fails-spectacularly.jpg";
-import blogImageFamilyRoles from "@/assets/blog-family-roles.jpg";
 
 const recentArticles = [
+  {
+    id: "minimizing-addiction-families",
+    title: "\"It's Not That Bad\"… Until It Is: How Families Get Stuck Minimizing Addiction",
+    date: "January 18, 2026",
+    image: blogImageMinimizingAddiction,
+    imageAlt: "Family sitting in living room looking tense with elephant shadow in background representing unspoken issues",
+  },
   {
     id: "gambling-addiction-hidden-damage",
     title: "Gambling Addiction Doesn't Look Like Addiction—Until the Damage Is Already Done",
@@ -37,13 +44,6 @@ const recentArticles = [
     date: "January 2, 2026",
     image: blogImageAdviceFailsSpectacularly,
     imageAlt: "Frustrated family at kitchen table surrounded by hollow advice speech bubbles",
-  },
-  {
-    id: "family-roles",
-    title: "How Substance Use Changes Family Roles Without Anyone Noticing",
-    date: "January 1, 2026",
-    image: blogImageFamilyRoles,
-    imageAlt: "Family members wearing symbolic masks representing their assigned roles",
   },
 ];
 
