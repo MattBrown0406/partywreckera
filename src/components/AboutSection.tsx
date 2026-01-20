@@ -1,6 +1,5 @@
-import { Check, ExternalLink, Video, Users, BookOpen, Phone, Zap } from "lucide-react";
+import { Check, ExternalLink, Users, BookOpen, Phone, Brain, Heart } from "lucide-react";
 import BlogCarousel from "@/components/BlogCarousel";
-import iocLogo from "@/assets/ioc-logo.jpg";
 import soberHelplineLogo from "@/assets/sober-helpline-logo.png";
 import { Button } from "@/components/ui/button";
 
@@ -86,64 +85,63 @@ const AboutSection = () => {
 
         {/* Support Resources Grid */}
         <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto mt-10 sm:mt-16">
-          {/* Intervention on Call - Dynamic Card */}
-          <div className="relative bg-gradient-to-br from-cyan-900/20 via-sky-900/10 to-background border border-cyan-600/30 rounded-xl overflow-hidden group">
+          {/* FamilyBridge - Dynamic Card */}
+          <div className="relative bg-gradient-to-br from-violet-900/20 via-pink-900/10 to-background border border-violet-600/30 rounded-xl overflow-hidden group">
             {/* Animated Background */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
-              <div className="absolute -top-10 -left-10 w-32 h-32 bg-cyan-500/10 rounded-full blur-2xl animate-pulse" />
-              <div className="absolute -bottom-10 -right-10 w-28 h-28 bg-sky-500/10 rounded-full blur-2xl animate-pulse" style={{ animationDelay: "1s" }} />
+              <div className="absolute -top-10 -left-10 w-32 h-32 bg-violet-500/10 rounded-full blur-2xl animate-pulse" />
+              <div className="absolute -bottom-10 -right-10 w-28 h-28 bg-pink-500/10 rounded-full blur-2xl animate-pulse" style={{ animationDelay: "1s" }} />
             </div>
             
             {/* Badge */}
             <div className="absolute top-3 right-3 z-10">
-              <span className="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-cyan-600 text-cyan-50 text-[10px] font-semibold uppercase tracking-wider">
-                <Zap className="w-3 h-3" />
-                Free Support
+              <span className="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-violet-600 text-violet-50 text-[10px] font-semibold uppercase tracking-wider">
+                <Brain className="w-3 h-3" />
+                AI-Powered
               </span>
             </div>
             
             <div className="relative p-6">
               <div className="flex items-center gap-4 mb-4">
-                <div className="bg-white rounded-lg p-3 shadow-md flex-shrink-0">
-                  <img 
-                    src={iocLogo} 
-                    alt="Intervention on Call" 
-                    className="w-28 h-auto"
-                  />
+                <div className="bg-gradient-to-br from-violet-600 to-pink-600 rounded-lg p-3 shadow-md flex-shrink-0">
+                  <div className="relative w-12 h-12 flex items-center justify-center">
+                    <Heart className="w-10 h-10 text-white" />
+                    <Brain className="w-5 h-5 text-white/90 absolute bottom-0 right-0" />
+                  </div>
                 </div>
                 <div>
-                  <h3 className="font-script text-2xl text-cyan-400">Intervention on Call</h3>
-                  <p className="text-xs text-muted-foreground">On-Demand Support • $150/hr</p>
+                  <h3 className="font-script text-2xl text-violet-400">FamilyBridge</h3>
+                  <p className="text-xs text-muted-foreground">Healing Starts with Connection</p>
                 </div>
               </div>
               
               <p className="text-muted-foreground text-sm mb-4">
-                Join free nightly Zoom support groups. Connect with families navigating the same journey.
+                A safe space for families affected by addiction to communicate, set boundaries, and support loved ones on the path to recovery.
               </p>
               
               {/* Quick features */}
               <div className="flex flex-wrap gap-2 mb-4">
-                <div className="flex items-center gap-1.5 px-2 py-1 rounded-full bg-cyan-600/10 border border-cyan-600/20 text-xs text-cyan-400">
-                  <Video className="w-3 h-3" />
-                  Free Zoom Meetings
+                <div className="flex items-center gap-1.5 px-2 py-1 rounded-full bg-violet-600/10 border border-violet-600/20 text-xs text-violet-400">
+                  <Brain className="w-3 h-3" />
+                  AI Pattern Detection
                 </div>
-                <div className="flex items-center gap-1.5 px-2 py-1 rounded-full bg-cyan-600/10 border border-cyan-600/20 text-xs text-cyan-400">
-                  <Users className="w-3 h-3" />
-                  Family Coaching
+                <div className="flex items-center gap-1.5 px-2 py-1 rounded-full bg-violet-600/10 border border-violet-600/20 text-xs text-violet-400">
+                  <Heart className="w-3 h-3" />
+                  Family Connection
                 </div>
               </div>
               
               <Button 
                 size="sm"
-                className="w-full bg-cyan-600 hover:bg-cyan-700 text-white shadow-md shadow-cyan-600/20"
+                className="w-full bg-gradient-to-r from-violet-600 to-pink-600 hover:from-violet-700 hover:to-pink-700 text-white shadow-md shadow-violet-600/20"
                 asChild
               >
                 <a
-                  href="https://interventiononcall.com/live-family-friends-zoom/"
+                  href="https://familybridgeapp.com"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Register for Free
+                  Start Your Journey
                   <ExternalLink className="w-3.5 h-3.5 ml-1.5" />
                 </a>
               </Button>
