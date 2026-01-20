@@ -108,7 +108,7 @@ const AboutSection = () => {
                   <img 
                     src={familybridgeLogo} 
                     alt="FamilyBridge" 
-                    className="w-14 h-auto"
+                    className="w-28 h-auto"
                   />
                 </div>
                 <div>
