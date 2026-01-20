@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
+import blogImageComparisonTrapAddiction from "@/assets/blog-comparison-trap-addiction.jpg";
 import blogImageMinimizingAddiction from "@/assets/blog-minimizing-addiction.jpg";
 import blogImageGamblingAddiction from "@/assets/blog-gambling-addiction.jpg";
 import blogImageFamilyQuestionsAddiction from "@/assets/blog-family-questions-addiction.jpg";
@@ -10,6 +11,13 @@ import blogImageEnablingFearHousehold from "@/assets/blog-enabling-fear-househol
 import blogImageAdviceFailsSpectacularly from "@/assets/blog-advice-fails-spectacularly.jpg";
 
 const recentArticles = [
+  {
+    id: "comparison-trap-addiction",
+    title: "\"At Least It's Not as Bad as It Used to Be\": The Most Dangerous Sentence Families Say",
+    date: "January 19, 2026",
+    image: blogImageComparisonTrapAddiction,
+    imageAlt: "Family sitting around kitchen table with grading scale in background, one person shrugging while others look conflicted",
+  },
   {
     id: "minimizing-addiction-families",
     title: "\"It's Not That Bad\"… Until It Is: How Families Get Stuck Minimizing Addiction",
