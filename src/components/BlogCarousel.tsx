@@ -3,14 +3,21 @@ import { Link } from "react-router-dom";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
+import blogImageJustAPhaseMyths from "@/assets/blog-just-a-phase-myths.jpg";
 import blogImageComparisonTrapAddiction from "@/assets/blog-comparison-trap-addiction.jpg";
 import blogImageMinimizingAddiction from "@/assets/blog-minimizing-addiction.jpg";
 import blogImageGamblingAddiction from "@/assets/blog-gambling-addiction.jpg";
 import blogImageFamilyQuestionsAddiction from "@/assets/blog-family-questions-addiction.jpg";
 import blogImageEnablingFearHousehold from "@/assets/blog-enabling-fear-household.jpg";
-import blogImageAdviceFailsSpectacularly from "@/assets/blog-advice-fails-spectacularly.jpg";
 
 const recentArticles = [
+  {
+    id: "just-a-phase-addiction-myths",
+    title: "\"It's Just a Phase\"… and Other Lies Addiction Loves to Hear",
+    date: "January 20, 2026",
+    image: blogImageJustAPhaseMyths,
+    imageAlt: "Family sitting on couch with thought bubbles showing 'just a phase' while tension fills the room",
+  },
   {
     id: "comparison-trap-addiction",
     title: "\"At Least It's Not as Bad as It Used to Be\": The Most Dangerous Sentence Families Say",
@@ -45,13 +52,6 @@ const recentArticles = [
     date: "January 3, 2026",
     image: blogImageEnablingFearHousehold,
     imageAlt: "Family in living room walking on eggshells with storm clouds visible through window",
-  },
-  {
-    id: "advice-fails-spectacularly",
-    title: "Why the Advice Families Get About Addiction Sounds Great—and Fails Spectacularly in Real Life",
-    date: "January 2, 2026",
-    image: blogImageAdviceFailsSpectacularly,
-    imageAlt: "Frustrated family at kitchen table surrounded by hollow advice speech bubbles",
   },
 ];
 
