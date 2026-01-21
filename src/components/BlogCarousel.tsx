@@ -3,14 +3,21 @@ import { Link } from "react-router-dom";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
+import blogImageFunctionalAddictionHiding from "@/assets/blog-functional-addiction-hiding.jpg";
 import blogImageJustAPhaseMyths from "@/assets/blog-just-a-phase-myths.jpg";
 import blogImageComparisonTrapAddiction from "@/assets/blog-comparison-trap-addiction.jpg";
 import blogImageMinimizingAddiction from "@/assets/blog-minimizing-addiction.jpg";
 import blogImageGamblingAddiction from "@/assets/blog-gambling-addiction.jpg";
 import blogImageFamilyQuestionsAddiction from "@/assets/blog-family-questions-addiction.jpg";
-import blogImageEnablingFearHousehold from "@/assets/blog-enabling-fear-household.jpg";
 
 const recentArticles = [
+  {
+    id: "functional-addiction-hiding",
+    title: "\"They've Got It Under Control\"… Until They Don't: How Addiction Hides in Plain Sight",
+    date: "January 21, 2026",
+    image: blogImageFunctionalAddictionHiding,
+    imageAlt: "Professional person at desk appearing composed with family in background looking uncertain",
+  },
   {
     id: "just-a-phase-addiction-myths",
     title: "\"It's Just a Phase\"… and Other Lies Addiction Loves to Hear",
@@ -45,13 +52,6 @@ const recentArticles = [
     date: "January 16, 2026",
     image: blogImageFamilyQuestionsAddiction,
     imageAlt: "Family gathered at kitchen table researching treatment options with laptop and papers",
-  },
-  {
-    id: "enabling-fear-household",
-    title: "Enabling Isn't Weakness — It's What Happens When Fear Runs the Household",
-    date: "January 3, 2026",
-    image: blogImageEnablingFearHousehold,
-    imageAlt: "Family in living room walking on eggshells with storm clouds visible through window",
   },
 ];
 
