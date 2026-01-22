@@ -3,7 +3,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { usePodcastFeed, formatDuration, formatDate, Episode } from "@/hooks/usePodcastFeed";
 import { Button } from "@/components/ui/button";
-import { Play, Pause, Clock, Calendar, Loader2, Sparkles, FileText } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Play, Pause, Clock, Calendar, Loader2, Sparkles, FileText, Search, X } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import SEOHead from "@/components/SEOHead";
 import { BreadcrumbJsonLd } from "@/components/JsonLd";
@@ -83,6 +84,7 @@ const Episodes = () => {
   const [audioElement, setAudioElement] = useState<HTMLAudioElement | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<Category>("all");
   const [transcriptEpisode, setTranscriptEpisode] = useState<(Episode & { category: Category }) | null>(null);
+  const [searchQuery, setSearchQuery] = useState("");
 
   const categorizedEpisodes = useMemo(() => {
     if (!data?.episodes) return [];
@@ -93,12 +95,30 @@ const Episodes = () => {
   }, [data?.episodes]);
 
   const filteredEpisodes = useMemo(() => {
-    if (selectedCategory === "all") return categorizedEpisodes;
-    return categorizedEpisodes.filter(ep => ep.category === selectedCategory);
-  }, [categorizedEpisodes, selectedCategory]);
+    let episodes = categorizedEpisodes;
+    
+    // Filter by search query
+    if (searchQuery.trim()) {
+      const query = searchQuery.toLowerCase();
+      episodes = episodes.filter(ep => 
+        ep.title.toLowerCase().includes(query) ||
+        ep.description.toLowerCase().includes(query)
+      );
+    }
+    
+    // Filter by category
+    if (selectedCategory !== "all") {
+      episodes = episodes.filter(ep => ep.category === selectedCategory);
+    }
+    
+    return episodes;
+  }, [categorizedEpisodes, selectedCategory, searchQuery]);
 
+  const isSearching = searchQuery.trim().length > 0;
   const latestEpisode = categorizedEpisodes[0];
-  const remainingEpisodes = filteredEpisodes.slice(selectedCategory === "all" ? 1 : 0);
+  const remainingEpisodes = isSearching 
+    ? filteredEpisodes 
+    : filteredEpisodes.slice(selectedCategory === "all" ? 1 : 0);
 
   const handlePlay = (episodeId: string, audioUrl: string) => {
     if (playingId === episodeId) {
@@ -237,6 +257,33 @@ const Episodes = () => {
                   </article>
                 </div>
 
+                {/* Search Bar */}
+                <div className="mb-8">
+                  <div className="relative">
+                    <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
+                    <Input
+                      type="text"
+                      placeholder="Search episodes by title or topic..."
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                      className="pl-10 pr-10 h-12 text-base"
+                    />
+                    {searchQuery && (
+                      <button
+                        onClick={() => setSearchQuery("")}
+                        className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
+                      >
+                        <X className="w-5 h-5" />
+                      </button>
+                    )}
+                  </div>
+                  {isSearching && (
+                    <p className="mt-2 text-sm text-muted-foreground">
+                      Found {filteredEpisodes.length} episode{filteredEpisodes.length !== 1 ? 's' : ''} matching "{searchQuery}"
+                    </p>
+                  )}
+                </div>
+
                 {/* Category Filters */}
                 <div className="mb-8">
                   <h2 className="text-lg font-semibold text-foreground mb-4">Browse by Topic</h2>
@@ -257,9 +304,23 @@ const Episodes = () => {
 
                 {/* Episodes List */}
                 <div className="space-y-4">
-                  {remainingEpisodes.length === 0 && selectedCategory !== "all" && (
+                  {remainingEpisodes.length === 0 && (
                     <div className="text-center py-12">
-                      <p className="text-muted-foreground">No episodes found in this category.</p>
+                      <p className="text-muted-foreground">
+                        {isSearching 
+                          ? `No episodes found matching "${searchQuery}"` 
+                          : "No episodes found in this category."}
+                      </p>
+                      {isSearching && (
+                        <Button 
+                          variant="outline" 
+                          size="sm" 
+                          className="mt-4"
+                          onClick={() => setSearchQuery("")}
+                        >
+                          Clear search
+                        </Button>
+                      )}
                     </div>
                   )}
                   
