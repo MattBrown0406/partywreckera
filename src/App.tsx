@@ -12,6 +12,7 @@ import FamilyResources from "./pages/FamilyResources";
 import FamilyReflection from "./pages/FamilyReflection";
 import FearInventory from "./pages/FearInventory";
 import ConversationStarters from "./pages/ConversationStarters";
+import Press from "./pages/Press";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -34,6 +35,7 @@ const App = () => (
           <Route path="/family-reflection" element={<FamilyReflection />} />
           <Route path="/fear-inventory" element={<FearInventory />} />
           <Route path="/conversation-starters" element={<ConversationStarters />} />
+          <Route path="/press" element={<Press />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
