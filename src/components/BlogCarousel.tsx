@@ -3,14 +3,21 @@ import { Link } from "react-router-dom";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
+import blogImageModerationLoophole from "@/assets/blog-moderation-loophole.jpg";
 import blogImageFunctionalAddictionHiding from "@/assets/blog-functional-addiction-hiding.jpg";
 import blogImageJustAPhaseMyths from "@/assets/blog-just-a-phase-myths.jpg";
 import blogImageComparisonTrapAddiction from "@/assets/blog-comparison-trap-addiction.jpg";
 import blogImageMinimizingAddiction from "@/assets/blog-minimizing-addiction.jpg";
 import blogImageGamblingAddiction from "@/assets/blog-gambling-addiction.jpg";
-import blogImageFamilyQuestionsAddiction from "@/assets/blog-family-questions-addiction.jpg";
 
 const recentArticles = [
+  {
+    id: "moderation-addiction-loophole",
+    title: "\"They're Cutting Back\"… Why Moderation Becomes Addiction's Favorite Loophole",
+    date: "January 22, 2026",
+    image: blogImageModerationLoophole,
+    imageAlt: "Family at kitchen table with measuring device, one person adjusting it while others look concerned",
+  },
   {
     id: "functional-addiction-hiding",
     title: "\"They've Got It Under Control\"… Until They Don't: How Addiction Hides in Plain Sight",
@@ -45,13 +52,6 @@ const recentArticles = [
     date: "January 17, 2026",
     image: blogImageGamblingAddiction,
     imageAlt: "Person at kitchen table late at night with laptop and phone showing gambling apps, surrounded by bills",
-  },
-  {
-    id: "family-questions-addiction",
-    title: "The Questions Families Are Really Asking About Addiction (And Honest Answers)",
-    date: "January 16, 2026",
-    image: blogImageFamilyQuestionsAddiction,
-    imageAlt: "Family gathered at kitchen table researching treatment options with laptop and papers",
   },
 ];
 
