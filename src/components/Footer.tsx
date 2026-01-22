@@ -84,6 +84,11 @@ const Footer = () => {
                   About Matt Brown
                 </a>
               </li>
+              <li>
+                <a href="/press" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Press
+                </a>
+              </li>
             </ul>
           </nav>
 
