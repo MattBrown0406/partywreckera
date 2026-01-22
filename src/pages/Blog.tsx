@@ -5,7 +5,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 import { Card, CardContent } from "@/components/ui/card";
 import { X } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
-import { BreadcrumbJsonLd } from "@/components/JsonLd";
+import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
 import blogImageExerciseNutrition from "@/assets/blog-exercise-nutrition-recovery.jpg";
 import blogImageEnabling from "@/assets/blog-family-support-enabling.jpg";
 import blogImageConversation from "@/assets/blog-right-moment-conversation.jpg";
@@ -4607,16 +4607,42 @@ const articles: BlogArticle[] = [
   },
 ];
 
+// AEO-optimized FAQs for blog content
+const blogFAQs = [
+  {
+    question: "What is the difference between enabling and supporting someone with addiction?",
+    answer: "Enabling removes natural consequences and allows addiction to continue, such as paying bills they should cover themselves or making excuses. Supporting means providing emotional presence while maintaining healthy boundaries, allowing natural consequences to occur, and encouraging treatment without controlling outcomes."
+  },
+  {
+    question: "How do I set boundaries with an addicted family member?",
+    answer: "Effective boundaries focus on your own behavior, not controlling theirs. Be specific about what you will and won't do (e.g., 'I won't give you money, but I will help you find treatment'). Communicate calmly, follow through consistently, and remember that boundaries protect your wellbeing, not punish theirs."
+  },
+  {
+    question: "Why does my addicted loved one's personality seem to change?",
+    answer: "Addiction fundamentally alters brain chemistry, affecting mood regulation, impulse control, and decision-making. The person may seem like someone else because substances hijack the brain's reward system, prioritizing drugs or alcohol over relationships, responsibilities, and values they once held dear."
+  },
+  {
+    question: "What is the 'rock bottom' myth in addiction?",
+    answer: "The myth suggests people must hit rock bottom before seeking help. In reality, waiting for rock bottom is dangerous and unnecessary. Early intervention often leads to better outcomes. Families can create 'raised bottoms' through boundaries and support that encourage treatment sooner rather than later."
+  },
+  {
+    question: "How can families cope while a loved one struggles with addiction?",
+    answer: "Families should prioritize their own mental health through therapy, support groups like Al-Anon or Nar-Anon, and self-care practices. Education about addiction as a disease reduces guilt and blame. Setting boundaries protects family wellbeing while still offering support for recovery."
+  }
+];
+
 const Blog = () => {
   const [selectedArticle, setSelectedArticle] = useState<BlogArticle | null>(null);
 
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Blog | The Party Wreckers Podcast"
-        description="Articles and insights on addiction, intervention, recovery, and family support. Learn about enabling, boundaries, and helping your loved one."
+        title="Addiction & Recovery Blog | The Party Wreckers Podcast"
+        description="Expert articles on addiction, intervention, and family recovery. Learn about enabling vs. supporting, setting boundaries, and helping loved ones with substance use disorder."
         canonical="/blog"
+        keywords="addiction blog, family recovery articles, enabling vs supporting, setting boundaries addiction, intervention advice, addiction education, substance use disorder family"
       />
+      <FAQJsonLd faqs={blogFAQs} />
       <BreadcrumbJsonLd items={[
         { name: "Home", url: "/" },
         { name: "Blog", url: "/blog" }

@@ -3,7 +3,27 @@ import Footer, { SocialLinks } from "@/components/Footer";
 import { Mic, Heart, Users, Clock } from "lucide-react";
 import mattHeadshot from "@/assets/matt-headshot.jpg";
 import SEOHead from "@/components/SEOHead";
-import { PersonJsonLd, BreadcrumbJsonLd } from "@/components/JsonLd";
+import { PersonJsonLd, BreadcrumbJsonLd, FAQJsonLd, ExpertiseJsonLd } from "@/components/JsonLd";
+
+// AEO-optimized FAQs about Matt Brown
+const hostFAQs = [
+  {
+    question: "Who is Matt Brown from The Party Wreckers Podcast?",
+    answer: "Matt Brown is a professional interventionist with over 20 years of experience helping families navigate addiction crises. He hosts The Party Wreckers Podcast, where he provides practical guidance on intervention, enabling vs. supporting, setting boundaries, and family recovery."
+  },
+  {
+    question: "What is Matt Brown's experience with addiction intervention?",
+    answer: "Matt Brown has more than 20 years of frontline experience working with addiction, recovery, and families. He has guided hundreds of families through substance use disorder crises, combining clinical expertise with compassion and real-world practicality."
+  },
+  {
+    question: "How can I book Matt Brown for an intervention consultation?",
+    answer: "You can book a coaching session with Matt Brown through Intervention on Call. Visit his profile page or contact him directly at matt@partywreckers.com for media inquiries, speaking engagements, or consultation requests."
+  },
+  {
+    question: "What is Matt Brown's approach to addiction treatment?",
+    answer: "Matt approaches addiction as a medical disease that demands accountability, structure, and compassion. He recognizes that lasting recovery often includes a spiritual component defined by meaning, connection, and responsibility rather than rigid ideology."
+  }
+];
 
 const Host = () => {
   return (
@@ -12,8 +32,11 @@ const Host = () => {
         title="Meet Matt Brown | The Party Wreckers Podcast Host"
         description="Meet Matt Brown, host of The Party Wreckers Podcast. A professional interventionist with 20+ years helping families navigate addiction, intervention, and recovery."
         canonical="/host"
+        keywords="Matt Brown interventionist, addiction intervention specialist, family recovery expert, The Party Wreckers host, professional interventionist"
       />
       <PersonJsonLd />
+      <ExpertiseJsonLd />
+      <FAQJsonLd faqs={hostFAQs} />
       <BreadcrumbJsonLd items={[
         { name: "Home", url: "/" },
         { name: "Meet the Host", url: "/host" }

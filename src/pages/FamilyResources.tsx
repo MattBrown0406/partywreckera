@@ -149,18 +149,21 @@ const professionalGuidanceTopics = [
 
 const FamilyResources = () => {
   const faqItems = [
-    { question: "Is addiction a moral failure?", answer: "Addiction is best understood as a chronic stress-related disorder that affects judgment, impulse control, and emotional regulation. This doesn't excuse harmful behavior, but it does explain why willpower, logic, or consequences alone rarely lead to lasting change." },
-    { question: "What is the difference between helping and enabling?", answer: "Helping supports growth, responsibility, and accountability. Enabling reduces discomfort in the short term while increasing long-term harm. The difference is not intention—it's outcome." },
-    { question: "What are boundaries in addiction recovery?", answer: "Boundaries are not punishments, threats, or ultimatums. They are clear limits that define what you will and will not participate in. Effective boundaries are calm, consistent, and focused on your behavior—not on forcing someone else to change." },
-    { question: "Why do things get worse before they get better?", answer: "When families begin to change—setting boundaries, stopping rescue behaviors, or speaking more honestly—resistance is common. Escalation does not mean you're doing something wrong; it often means old patterns are being disrupted." }
+    { question: "Is addiction a moral failure?", answer: "No, addiction is best understood as a chronic stress-related disorder that affects judgment, impulse control, and emotional regulation. This doesn't excuse harmful behavior, but it explains why willpower, logic, or consequences alone rarely lead to lasting change." },
+    { question: "What is the difference between helping and enabling someone with addiction?", answer: "Helping supports growth, responsibility, and accountability. Enabling reduces discomfort in the short term while increasing long-term harm. The difference is not intention—it's outcome. For example, covering someone's rent while they continue using without consequences is likely enabling." },
+    { question: "What are healthy boundaries with an addicted family member?", answer: "Boundaries are clear limits that define what you will and will not participate in. They are not punishments, threats, or ultimatums. Effective boundaries are calm, consistent, and focused on your behavior—not on forcing someone else to change." },
+    { question: "Why do things often get worse when families start setting boundaries?", answer: "When families begin setting boundaries, stopping rescue behaviors, or speaking more honestly, resistance is common. Escalation does not mean you're doing something wrong; it often means old patterns are being disrupted and the system is adjusting." },
+    { question: "When should a family seek professional help for addiction?", answer: "Consider professional guidance when: the same conversations keep happening without lasting change, boundaries are repeatedly broken, fear is driving decisions, family members are divided, finances or safety are deteriorating, or everyone is exhausted but no one knows what to do differently." },
+    { question: "Do families need support too when dealing with addiction?", answer: "Yes, addiction isolates families and drains emotional and physical resources. Support for families is not a luxury or a sign of failure—it's a necessary part of restoring stability, clarity, and health. Options include Al-Anon, Nar-Anon, family therapy, and support groups." }
   ];
 
   return (
     <>
       <SEOHead
-        title="Family Resources | The Party Wreckers Podcast"
-        description="Resources for families dealing with addiction. Find support groups, educational materials, crisis hotlines, and guidance for helping your loved one."
+        title="Family Resources for Addiction Support | The Party Wreckers Podcast"
+        description="Free resources for families dealing with addiction. Find support groups, crisis hotlines, educational materials, and guidance for setting boundaries and helping your loved one."
         canonical="/family-resources"
+        keywords="family addiction resources, addiction support for families, enabling vs helping, family boundaries addiction, Al-Anon resources, family intervention help"
       />
       <FAQJsonLd faqs={faqItems} />
       <BreadcrumbJsonLd items={[

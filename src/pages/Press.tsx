@@ -56,6 +56,7 @@ const Press = () => {
         title="Press & Media Kit | The Party Wreckers Podcast"
         description="Media resources for The Party Wreckers Podcast. Download logos, get host information, and book Matt Brown for interviews, speaking engagements, or expert commentary on addiction and family recovery."
         canonical="/press"
+        keywords="The Party Wreckers press kit, Matt Brown media, addiction podcast press, interventionist speaker, addiction expert interview"
       />
       <BreadcrumbJsonLd items={[
         { name: "Home", url: "/" },
