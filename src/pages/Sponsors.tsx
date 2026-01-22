@@ -1,9 +1,9 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Heart, ExternalLink, Phone, Users, BookOpen, Shield, CheckCircle, MessageCircle, Headphones, Clock, Video, HeartHandshake, Target, Calendar, Zap, Smile, MessageSquare, Laptop, UserCheck, BadgePercent, Globe, Mic, Sparkles, DollarSign, Gift, TrendingUp, Radio, Mail } from "lucide-react";
+import { Heart, ExternalLink, Phone, Users, BookOpen, Shield, CheckCircle, MessageCircle, Headphones, Clock, Video, HeartHandshake, Target, Calendar, Zap, Smile, MessageSquare, Laptop, UserCheck, BadgePercent, Globe, Mic, Sparkles, DollarSign, Gift, TrendingUp, Radio, Mail, Brain, Eye, MapPin, Vote } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import soberHelplineLogo from "@/assets/sober-helpline-logo.png";
-import iocLogo from "@/assets/ioc-logo.jpg";
+import familybridgeLogo from "@/assets/familybridge-logo.png";
 import betterhelpLogo from "@/assets/betterhelp-logo.png";
 import SEOHead from "@/components/SEOHead";
 import { BreadcrumbJsonLd } from "@/components/JsonLd";
@@ -213,19 +213,19 @@ const Sponsors = () => {
                 </div>
               </div>
 
-              {/* Intervention on Call - Dynamic Sponsor Card */}
-              <div className="mt-12 relative bg-gradient-to-br from-cyan-900/20 via-sky-900/10 to-background border-2 border-cyan-600/30 rounded-2xl overflow-hidden group">
+              {/* FamilyBridge - Dynamic Sponsor Card */}
+              <div className="mt-12 relative bg-gradient-to-br from-teal-900/20 via-cyan-900/10 to-background border-2 border-teal-600/30 rounded-2xl overflow-hidden group">
                 {/* Animated Background Elements */}
                 <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                  <div className="absolute -top-20 -left-20 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse" />
-                  <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-sky-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1.5s" }} />
+                  <div className="absolute -top-20 -left-20 w-72 h-72 bg-teal-500/10 rounded-full blur-3xl animate-pulse" />
+                  <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1.5s" }} />
                 </div>
                 
-                {/* On-Demand Badge */}
+                {/* AI-Powered Badge */}
                 <div className="absolute top-4 right-4 z-10">
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-cyan-600 text-cyan-50 text-xs font-semibold uppercase tracking-wider shadow-lg">
-                    <Zap className="w-3.5 h-3.5" />
-                    On-Demand Support
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-teal-600 text-teal-50 text-xs font-semibold uppercase tracking-wider shadow-lg">
+                    <Brain className="w-3.5 h-3.5" />
+                    AI-Powered
                   </span>
                 </div>
                 
@@ -234,107 +234,106 @@ const Sponsors = () => {
                   <div className="flex flex-col lg:flex-row items-center gap-8 mb-10">
                     <div className="flex-shrink-0">
                       <a
-                        href="https://interventiononcall.com"
+                        href="https://familybridgeapp.com"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="block transform transition-transform duration-300 hover:scale-105"
                       >
                         <div className="bg-white rounded-xl p-4 shadow-xl">
                           <img 
-                            src={iocLogo} 
-                            alt="Intervention on Call - Helping You Help Your Loved One" 
-                            className="w-72 h-auto"
+                            src={familybridgeLogo} 
+                            alt="FamilyBridge - Healing Starts with Connection" 
+                            className="w-48 h-auto"
                           />
                         </div>
                       </a>
                     </div>
                     
                     <div className="flex-1 text-center lg:text-left">
-                      <h2 className="font-script text-4xl sm:text-5xl text-cyan-400 mb-4">
-                        Intervention on Call
+                      <h2 className="font-script text-4xl sm:text-5xl text-teal-400 mb-4">
+                        FamilyBridge
                       </h2>
                       <p className="text-xl text-foreground/90 font-medium mb-2">
-                        Helping You Help Your Loved One
+                        Healing Starts with Connection
                       </p>
                       <p className="text-muted-foreground text-lg">
-                        A new way to do interventions. Real-time solutions from trained interventionists to ease your anxiety and inspire your loved one to seek treatment.
+                        An AI-powered platform that helps families affected by addiction communicate safely, rebuild trust, and support their loved ones on the path to recovery.
                       </p>
                     </div>
                   </div>
                   
-                  {/* Pricing Highlight */}
-                  <div className="bg-gradient-to-r from-cyan-600/20 to-sky-600/20 border border-cyan-500/30 rounded-xl p-6 mb-10 text-center">
+                  {/* Value Proposition Highlight */}
+                  <div className="bg-gradient-to-r from-teal-600/20 to-cyan-600/20 border border-teal-500/30 rounded-xl p-6 mb-10 text-center">
                     <p className="text-lg text-foreground/90 mb-2">
-                      <span className="text-cyan-400 font-bold text-3xl">$150</span>
-                      <span className="text-muted-foreground"> per hour</span>
+                      <span className="text-teal-400 font-bold">Rebuild Trust Through Transparency</span>
                     </p>
-                    <p className="text-muted-foreground">On-demand access to professional interventionists. No waiting, no long-term commitments.</p>
+                    <p className="text-muted-foreground">A secure space for families to stay connected, set healthy boundaries, and support recovery—without enabling.</p>
                   </div>
                   
                   {/* Features Grid */}
                   <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
-                    <div className="bg-background/50 backdrop-blur-sm border border-cyan-600/20 rounded-xl p-6 transition-all duration-300 hover:border-cyan-500/40 hover:shadow-lg hover:shadow-cyan-500/10">
-                      <div className="w-12 h-12 rounded-full bg-cyan-600/20 flex items-center justify-center mb-4">
-                        <HeartHandshake className="w-6 h-6 text-cyan-400" />
-                      </div>
-                      <h3 className="font-semibold text-foreground mb-2">Family & Recovery Coaching</h3>
-                      <p className="text-sm text-muted-foreground">Personalized guidance to help your entire family navigate the journey toward recovery together.</p>
-                    </div>
-                    
-                    <div className="bg-background/50 backdrop-blur-sm border border-cyan-600/20 rounded-xl p-6 transition-all duration-300 hover:border-cyan-500/40 hover:shadow-lg hover:shadow-cyan-500/10">
-                      <div className="w-12 h-12 rounded-full bg-sky-600/20 flex items-center justify-center mb-4">
-                        <Target className="w-6 h-6 text-sky-400" />
-                      </div>
-                      <h3 className="font-semibold text-foreground mb-2">Intervention Planning</h3>
-                      <p className="text-sm text-muted-foreground">Expert support for planning and executing effective interventions with compassion and strategy.</p>
-                    </div>
-                    
-                    <div className="bg-background/50 backdrop-blur-sm border border-cyan-600/20 rounded-xl p-6 transition-all duration-300 hover:border-cyan-500/40 hover:shadow-lg hover:shadow-cyan-500/10">
+                    <div className="bg-background/50 backdrop-blur-sm border border-teal-600/20 rounded-xl p-6 transition-all duration-300 hover:border-teal-500/40 hover:shadow-lg hover:shadow-teal-500/10">
                       <div className="w-12 h-12 rounded-full bg-teal-600/20 flex items-center justify-center mb-4">
-                        <BookOpen className="w-6 h-6 text-teal-400" />
+                        <Eye className="w-6 h-6 text-teal-400" />
                       </div>
-                      <h3 className="font-semibold text-foreground mb-2">Treatment Recommendations</h3>
-                      <p className="text-sm text-muted-foreground">Guidance on finding the right treatment options tailored to your loved one's specific needs.</p>
+                      <h3 className="font-semibold text-foreground mb-2">AI Pattern Intelligence</h3>
+                      <p className="text-sm text-muted-foreground">Analyzes interactions to identify concerning patterns early, allowing for proactive intervention before crises occur.</p>
                     </div>
                     
-                    <div className="bg-background/50 backdrop-blur-sm border border-cyan-600/20 rounded-xl p-6 transition-all duration-300 hover:border-cyan-500/40 hover:shadow-lg hover:shadow-cyan-500/10">
+                    <div className="bg-background/50 backdrop-blur-sm border border-teal-600/20 rounded-xl p-6 transition-all duration-300 hover:border-teal-500/40 hover:shadow-lg hover:shadow-teal-500/10">
                       <div className="w-12 h-12 rounded-full bg-cyan-600/20 flex items-center justify-center mb-4">
-                        <Clock className="w-6 h-6 text-cyan-400" />
+                        <MessageSquare className="w-6 h-6 text-cyan-400" />
                       </div>
-                      <h3 className="font-semibold text-foreground mb-2">Immediate Sessions</h3>
-                      <p className="text-sm text-muted-foreground">Hour-long sessions providing strategies and solutions to get you and your loved one unstuck.</p>
+                      <h3 className="font-semibold text-foreground mb-2">AI Chat Moderation</h3>
+                      <p className="text-sm text-muted-foreground">Real-time filtering of harmful or toxic language keeps family communication constructive and safe.</p>
                     </div>
                     
-                    <div className="bg-background/50 backdrop-blur-sm border border-cyan-600/20 rounded-xl p-6 transition-all duration-300 hover:border-cyan-500/40 hover:shadow-lg hover:shadow-cyan-500/10">
-                      <div className="w-12 h-12 rounded-full bg-sky-600/20 flex items-center justify-center mb-4">
-                        <Video className="w-6 h-6 text-sky-400" />
-                      </div>
-                      <h3 className="font-semibold text-foreground mb-2">Remote Consultations</h3>
-                      <p className="text-sm text-muted-foreground">Get help from anywhere with online video sessions. No need to wait for in-person availability.</p>
-                    </div>
-                    
-                    <div className="bg-background/50 backdrop-blur-sm border border-cyan-600/20 rounded-xl p-6 transition-all duration-300 hover:border-cyan-500/40 hover:shadow-lg hover:shadow-cyan-500/10">
+                    <div className="bg-background/50 backdrop-blur-sm border border-teal-600/20 rounded-xl p-6 transition-all duration-300 hover:border-teal-500/40 hover:shadow-lg hover:shadow-teal-500/10">
                       <div className="w-12 h-12 rounded-full bg-teal-600/20 flex items-center justify-center mb-4">
-                        <Calendar className="w-6 h-6 text-teal-400" />
+                        <DollarSign className="w-6 h-6 text-teal-400" />
                       </div>
-                      <h3 className="font-semibold text-foreground mb-2">Free Zoom Meetings</h3>
-                      <p className="text-sm text-muted-foreground">Join Family & Friends Zoom support meetings to connect with others on similar journeys.</p>
+                      <h3 className="font-semibold text-foreground mb-2">Transparent Financial Requests</h3>
+                      <p className="text-sm text-muted-foreground">AI-monitored money requests with family voting for accountability—no more enabling through hidden transactions.</p>
+                    </div>
+                    
+                    <div className="bg-background/50 backdrop-blur-sm border border-teal-600/20 rounded-xl p-6 transition-all duration-300 hover:border-teal-500/40 hover:shadow-lg hover:shadow-teal-500/10">
+                      <div className="w-12 h-12 rounded-full bg-cyan-600/20 flex items-center justify-center mb-4">
+                        <MapPin className="w-6 h-6 text-cyan-400" />
+                      </div>
+                      <h3 className="font-semibold text-foreground mb-2">Verified Meeting Check-Ins</h3>
+                      <p className="text-sm text-muted-foreground">Location verification for recovery meeting attendance builds trust through consistency and accountability.</p>
+                    </div>
+                    
+                    <div className="bg-background/50 backdrop-blur-sm border border-teal-600/20 rounded-xl p-6 transition-all duration-300 hover:border-teal-500/40 hover:shadow-lg hover:shadow-teal-500/10">
+                      <div className="w-12 h-12 rounded-full bg-teal-600/20 flex items-center justify-center mb-4">
+                        <Users className="w-6 h-6 text-teal-400" />
+                      </div>
+                      <h3 className="font-semibold text-foreground mb-2">Family Groups</h3>
+                      <p className="text-sm text-muted-foreground">Create private family groups where everyone stays connected and informed throughout the recovery journey.</p>
+                    </div>
+                    
+                    <div className="bg-background/50 backdrop-blur-sm border border-teal-600/20 rounded-xl p-6 transition-all duration-300 hover:border-teal-500/40 hover:shadow-lg hover:shadow-teal-500/10">
+                      <div className="w-12 h-12 rounded-full bg-cyan-600/20 flex items-center justify-center mb-4">
+                        <Shield className="w-6 h-6 text-cyan-400" />
+                      </div>
+                      <h3 className="font-semibold text-foreground mb-2">Professional Oversight</h3>
+                      <p className="text-sm text-muted-foreground">AI-generated insights for treatment centers and private practitioners to facilitate better family guidance.</p>
                     </div>
                   </div>
                   
                   {/* CTA Section */}
-                  <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6 border-t border-cyan-600/20">
+                  <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6 border-t border-teal-600/20">
                     <Button 
                       size="lg" 
-                      className="bg-cyan-600 hover:bg-cyan-700 text-white shadow-lg shadow-cyan-600/25 transition-all duration-300 hover:shadow-cyan-500/40"
+                      className="bg-teal-600 hover:bg-teal-700 text-white shadow-lg shadow-teal-600/25 transition-all duration-300 hover:shadow-teal-500/40"
                       asChild
                     >
                       <a
-                        href="https://interventiononcall.com"
+                        href="https://familybridgeapp.com"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        Make an Appointment
+                        Start Your Family's Journey
                         <ExternalLink className="w-4 h-4 ml-2" />
                       </a>
                     </Button>
@@ -342,16 +341,16 @@ const Sponsors = () => {
                     <Button 
                       variant="outline"
                       size="lg" 
-                      className="border-cyan-600/30 text-cyan-400 hover:bg-cyan-600/10"
+                      className="border-teal-600/30 text-teal-400 hover:bg-teal-600/10"
                       asChild
                     >
                       <a
-                        href="https://interventiononcall.com/live-family-friends-zoom/"
+                        href="https://familybridgeapp.com"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <Video className="w-4 h-4 mr-2" />
-                        Join Free Zoom Meeting
+                        <Users className="w-4 h-4 mr-2" />
+                        Create Your Family Group
                       </a>
                     </Button>
                   </div>
