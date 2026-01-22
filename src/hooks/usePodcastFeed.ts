@@ -1,5 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
 
+export interface TranscriptInfo {
+  url: string;
+  type: string; // 'text/html', 'application/json', 'application/x-subrip'
+}
+
 export interface Episode {
   id: string;
   title: string;
@@ -8,6 +13,7 @@ export interface Episode {
   duration: number;
   episodeNumber: number;
   audioUrl: string;
+  transcripts: TranscriptInfo[];
 }
 
 export interface PodcastInfo {
@@ -51,6 +57,13 @@ const parseRSSFeed = async (): Promise<PodcastInfo> => {
                item.querySelector("description")?.textContent || "";
     desc = desc.replace(/\<!\[CDATA\[|\]\]>/g, "").replace(/<[^>]*>/g, "").trim();
     
+    // Parse transcript tags (podcast:transcript)
+    const transcriptElements = item.querySelectorAll("podcast\\:transcript, transcript");
+    const transcripts: TranscriptInfo[] = Array.from(transcriptElements).map(el => ({
+      url: el.getAttribute("url") || "",
+      type: el.getAttribute("type") || "text/html",
+    })).filter(t => t.url);
+    
     return {
       id: item.querySelector("guid")?.textContent || `episode-${index}`,
       title: item.querySelector("title")?.textContent || "Untitled Episode",
@@ -59,6 +72,7 @@ const parseRSSFeed = async (): Promise<PodcastInfo> => {
       duration,
       episodeNumber: parseInt(item.querySelector("itunes\\:episode")?.textContent || "0", 10),
       audioUrl: item.querySelector("enclosure")?.getAttribute("url") || "",
+      transcripts,
     };
   });
 
