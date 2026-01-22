@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Play, Pause, Clock, Calendar, Loader2, Sparkles, FileText, Search, X } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import SEOHead from "@/components/SEOHead";
-import { BreadcrumbJsonLd } from "@/components/JsonLd";
+import { BreadcrumbJsonLd, FAQJsonLd, PodcastJsonLd } from "@/components/JsonLd";
 import TranscriptDialog from "@/components/TranscriptDialog";
 
 type Category = "all" | "understanding" | "family" | "intervention" | "recovery";
@@ -139,13 +139,32 @@ const Episodes = () => {
     }
   };
 
+  // AEO-optimized FAQs for episodes page
+  const episodeFAQs = [
+    {
+      question: "Where can I listen to The Party Wreckers Podcast?",
+      answer: "The Party Wreckers Podcast is available on all major podcast platforms including Apple Podcasts, Spotify, Amazon Music, YouTube, and directly on our website. New episodes are released weekly."
+    },
+    {
+      question: "What topics does The Party Wreckers Podcast cover?",
+      answer: "The podcast covers addiction education, family intervention strategies, enabling vs. supporting, setting boundaries, recovery planning, treatment options, and practical guidance for families dealing with substance use disorder."
+    },
+    {
+      question: "How often are new episodes released?",
+      answer: "New episodes of The Party Wreckers Podcast are released weekly. Subscribe on your favorite podcast platform to get notified when new episodes are available."
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Episodes | The Party Wreckers Podcast"
-        description="Browse all episodes of The Party Wreckers Podcast. Real conversations about addiction, intervention, and recovery with host Matt Brown."
+        title="Podcast Episodes | The Party Wreckers - Addiction & Recovery"
+        description="Browse 65+ episodes of The Party Wreckers Podcast. Real conversations about addiction, intervention, and family recovery with interventionist Matt Brown."
         canonical="/episodes"
+        keywords="addiction podcast episodes, intervention podcast, family recovery podcast, Matt Brown podcast, substance abuse podcast episodes"
       />
+      <PodcastJsonLd />
+      <FAQJsonLd faqs={episodeFAQs} />
       <BreadcrumbJsonLd items={[
         { name: "Home", url: "/" },
         { name: "Episodes", url: "/episodes" }
