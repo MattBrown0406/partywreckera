@@ -42,11 +42,15 @@ const PodChaserIcon = () => (
 
 const navLinks = [
   { label: "Episodes", href: "/episodes" },
-  { label: "Meet the Host", href: "/host" },
   { label: "Family Resources", href: "/family-resources" },
   { label: "Support Our Sponsors", href: "/sponsors" },
   { label: "Blog", href: "/blog" },
   { label: "About", href: "/#about" },
+];
+
+const mattLinks = [
+  { label: "Meet the Host", href: "/host" },
+  { label: "Press & Media Kit", href: "/press" },
 ];
 
 const podcastLinks = [
@@ -74,7 +78,7 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop nav */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6">
             {navLinks.map((link) => (
               link.href.startsWith("/") && !link.href.includes("#") ? (
                 <Link
@@ -94,6 +98,29 @@ const Navbar = () => {
                 </a>
               )
             ))}
+            
+            {/* Matt Dropdown */}
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <button className="text-muted-foreground hover:text-foreground transition-colors font-medium flex items-center gap-1">
+                  Matt <ChevronDown className="h-4 w-4" />
+                </button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end" className="bg-background border-border">
+                {mattLinks.map((link) => (
+                  <DropdownMenuItem key={link.label} asChild>
+                    <Link
+                      to={link.href}
+                      className="cursor-pointer"
+                    >
+                      {link.label}
+                    </Link>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+            
+            {/* Subscribe Dropdown */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant="default" size="sm">
@@ -153,9 +180,25 @@ const Navbar = () => {
                   </a>
                 )
               ))}
+              
+              {/* Matt links in mobile */}
+              <div className="border-t border-border pt-4 mt-2">
+                <p className="text-xs uppercase tracking-wider text-muted-foreground mb-2">About Matt</p>
+                {mattLinks.map((link) => (
+                  <Link
+                    key={link.label}
+                    to={link.href}
+                    className="text-muted-foreground hover:text-foreground transition-colors font-medium py-2 block"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+              
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <Button variant="default" size="sm" className="w-full mt-2">
+                  <Button variant="default" size="sm" className="w-full mt-4">
                     Subscribe <ChevronDown className="ml-1 h-4 w-4" />
                   </Button>
                 </DropdownMenuTrigger>
