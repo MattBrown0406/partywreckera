@@ -3,10 +3,11 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { usePodcastFeed, formatDuration, formatDate, Episode } from "@/hooks/usePodcastFeed";
 import { Button } from "@/components/ui/button";
-import { Play, Pause, Clock, Calendar, Loader2, Sparkles } from "lucide-react";
+import { Play, Pause, Clock, Calendar, Loader2, Sparkles, FileText } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import SEOHead from "@/components/SEOHead";
 import { BreadcrumbJsonLd } from "@/components/JsonLd";
+import TranscriptDialog from "@/components/TranscriptDialog";
 
 type Category = "all" | "understanding" | "family" | "intervention" | "recovery";
 
@@ -81,6 +82,7 @@ const Episodes = () => {
   const [playingId, setPlayingId] = useState<string | null>(null);
   const [audioElement, setAudioElement] = useState<HTMLAudioElement | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<Category>("all");
+  const [transcriptEpisode, setTranscriptEpisode] = useState<(Episode & { category: Category }) | null>(null);
 
   const categorizedEpisodes = useMemo(() => {
     if (!data?.episodes) return [];
@@ -217,6 +219,18 @@ const Episodes = () => {
                           <p className="text-muted-foreground text-sm leading-relaxed">
                             {latestEpisode.description}
                           </p>
+                          
+                          {latestEpisode.transcripts.length > 0 && (
+                            <Button
+                              variant="ghost"
+                              size="sm"
+                              className="mt-3 text-primary hover:text-primary/80"
+                              onClick={() => setTranscriptEpisode(latestEpisode)}
+                            >
+                              <FileText className="w-4 h-4 mr-1" />
+                              View Transcript
+                            </Button>
+                          )}
                         </div>
                       </div>
                     </div>
@@ -297,6 +311,18 @@ const Episodes = () => {
                           <p className="text-muted-foreground text-sm leading-relaxed line-clamp-2">
                             {episode.description}
                           </p>
+                          
+                          {episode.transcripts.length > 0 && (
+                            <Button
+                              variant="ghost"
+                              size="sm"
+                              className="mt-2 text-primary hover:text-primary/80 -ml-2"
+                              onClick={() => setTranscriptEpisode(episode)}
+                            >
+                              <FileText className="w-4 h-4 mr-1" />
+                              View Transcript
+                            </Button>
+                          )}
                         </div>
                       </div>
                     </article>
@@ -306,6 +332,14 @@ const Episodes = () => {
             )}
           </div>
         </section>
+        
+        {/* Transcript Dialog */}
+        <TranscriptDialog
+          isOpen={!!transcriptEpisode}
+          onClose={() => setTranscriptEpisode(null)}
+          episodeTitle={transcriptEpisode?.title || ""}
+          transcripts={transcriptEpisode?.transcripts || []}
+        />
       </main>
       <Footer />
     </div>
