@@ -3,14 +3,21 @@ import { Link } from "react-router-dom";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
+import blogImageRockBottomMyth from "@/assets/blog-rock-bottom-myth.jpg";
 import blogImageModerationLoophole from "@/assets/blog-moderation-loophole.jpg";
 import blogImageFunctionalAddictionHiding from "@/assets/blog-functional-addiction-hiding.jpg";
 import blogImageJustAPhaseMyths from "@/assets/blog-just-a-phase-myths.jpg";
 import blogImageComparisonTrapAddiction from "@/assets/blog-comparison-trap-addiction.jpg";
 import blogImageMinimizingAddiction from "@/assets/blog-minimizing-addiction.jpg";
-import blogImageGamblingAddiction from "@/assets/blog-gambling-addiction.jpg";
 
 const recentArticles = [
+  {
+    id: "rock-bottom-addiction-myth",
+    title: "Why \"Rock Bottom\" Stories Are Mostly Myth—and What Actually Forces Change",
+    date: "January 23, 2026",
+    image: blogImageRockBottomMyth,
+    imageAlt: "Family having calm, intentional conversation in living room, gathered supportively rather than in crisis",
+  },
   {
     id: "moderation-addiction-loophole",
     title: "\"They're Cutting Back\"… Why Moderation Becomes Addiction's Favorite Loophole",
@@ -45,13 +52,6 @@ const recentArticles = [
     date: "January 18, 2026",
     image: blogImageMinimizingAddiction,
     imageAlt: "Family sitting in living room looking tense with elephant shadow in background representing unspoken issues",
-  },
-  {
-    id: "gambling-addiction-hidden-damage",
-    title: "Gambling Addiction Doesn't Look Like Addiction—Until the Damage Is Already Done",
-    date: "January 17, 2026",
-    image: blogImageGamblingAddiction,
-    imageAlt: "Person at kitchen table late at night with laptop and phone showing gambling apps, surrounded by bills",
   },
 ];
 
