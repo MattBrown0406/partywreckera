@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
+import blogImageInsightVsRecovery from "@/assets/blog-insight-vs-recovery.jpg";
 import blogImageRockBottomMyth from "@/assets/blog-rock-bottom-myth.jpg";
 import blogImageModerationLoophole from "@/assets/blog-moderation-loophole.jpg";
 import blogImageFunctionalAddictionHiding from "@/assets/blog-functional-addiction-hiding.jpg";
@@ -11,6 +12,13 @@ import blogImageComparisonTrapAddiction from "@/assets/blog-comparison-trap-addi
 import blogImageMinimizingAddiction from "@/assets/blog-minimizing-addiction.jpg";
 
 const recentArticles = [
+  {
+    id: "insight-vs-recovery-addiction",
+    title: "Why Apologies, Insight, and Self-Awareness Don't Equal Recovery (No Matter How Convincing They Sound)",
+    date: "January 24, 2026",
+    image: blogImageInsightVsRecovery,
+    imageAlt: "Person speaking earnestly with expressive gestures while family members listen with hopeful but uncertain expressions, untouched notebook on coffee table",
+  },
   {
     id: "rock-bottom-addiction-myth",
     title: "Why \"Rock Bottom\" Stories Are Mostly Myth—and What Actually Forces Change",
