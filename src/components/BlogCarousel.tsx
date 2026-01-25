@@ -3,15 +3,22 @@ import { Link } from "react-router-dom";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
+import blogImageSlidingBaseline from "@/assets/blog-sliding-baseline-addiction.jpg";
 import blogImageInsightVsRecovery from "@/assets/blog-insight-vs-recovery.jpg";
 import blogImageRockBottomMyth from "@/assets/blog-rock-bottom-myth.jpg";
 import blogImageModerationLoophole from "@/assets/blog-moderation-loophole.jpg";
 import blogImageFunctionalAddictionHiding from "@/assets/blog-functional-addiction-hiding.jpg";
 import blogImageJustAPhaseMyths from "@/assets/blog-just-a-phase-myths.jpg";
 import blogImageComparisonTrapAddiction from "@/assets/blog-comparison-trap-addiction.jpg";
-import blogImageMinimizingAddiction from "@/assets/blog-minimizing-addiction.jpg";
 
 const recentArticles = [
+  {
+    id: "sliding-baseline-addiction",
+    title: "Why \"At Least It's Not As Bad\" Is the Most Dangerous Sentence in Addiction",
+    date: "January 25, 2026",
+    image: blogImageSlidingBaseline,
+    imageAlt: "Family sitting at kitchen table with gauge in background showing standards shifting lower over time, uncertain expressions",
+  },
   {
     id: "insight-vs-recovery-addiction",
     title: "Why Apologies, Insight, and Self-Awareness Don't Equal Recovery (No Matter How Convincing They Sound)",
@@ -53,13 +60,6 @@ const recentArticles = [
     date: "January 19, 2026",
     image: blogImageComparisonTrapAddiction,
     imageAlt: "Family sitting around kitchen table with grading scale in background, one person shrugging while others look conflicted",
-  },
-  {
-    id: "minimizing-addiction-families",
-    title: "\"It's Not That Bad\"… Until It Is: How Families Get Stuck Minimizing Addiction",
-    date: "January 18, 2026",
-    image: blogImageMinimizingAddiction,
-    imageAlt: "Family sitting in living room looking tense with elephant shadow in background representing unspoken issues",
   },
 ];
 
