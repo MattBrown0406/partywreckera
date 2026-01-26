@@ -3,15 +3,22 @@ import { Link } from "react-router-dom";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
+import blogImageAmbiguityClarity from "@/assets/blog-addiction-ambiguity-clarity.jpg";
 import blogImageSlidingBaseline from "@/assets/blog-sliding-baseline-addiction.jpg";
 import blogImageInsightVsRecovery from "@/assets/blog-insight-vs-recovery.jpg";
 import blogImageRockBottomMyth from "@/assets/blog-rock-bottom-myth.jpg";
 import blogImageModerationLoophole from "@/assets/blog-moderation-loophole.jpg";
 import blogImageFunctionalAddictionHiding from "@/assets/blog-functional-addiction-hiding.jpg";
 import blogImageJustAPhaseMyths from "@/assets/blog-just-a-phase-myths.jpg";
-import blogImageComparisonTrapAddiction from "@/assets/blog-comparison-trap-addiction.jpg";
 
 const recentArticles = [
+  {
+    id: "addiction-ambiguity-clarity",
+    title: "Why Addiction Thrives on Ambiguity—and Why Clear Rules Make Everyone Uncomfortable",
+    date: "January 26, 2026",
+    image: blogImageAmbiguityClarity,
+    imageAlt: "Family standing at crossroads in fog, one path clearly marked with signposts, the other fading into gray mist, warm light breaking through on the clear path",
+  },
   {
     id: "sliding-baseline-addiction",
     title: "Why \"At Least It's Not As Bad\" Is the Most Dangerous Sentence in Addiction",
@@ -53,13 +60,6 @@ const recentArticles = [
     date: "January 20, 2026",
     image: blogImageJustAPhaseMyths,
     imageAlt: "Family sitting on couch with thought bubbles showing 'just a phase' while tension fills the room",
-  },
-  {
-    id: "comparison-trap-addiction",
-    title: "\"At Least It's Not as Bad as It Used to Be\": The Most Dangerous Sentence Families Say",
-    date: "January 19, 2026",
-    image: blogImageComparisonTrapAddiction,
-    imageAlt: "Family sitting around kitchen table with grading scale in background, one person shrugging while others look conflicted",
   },
 ];
 
