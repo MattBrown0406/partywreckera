@@ -3,15 +3,22 @@ import { Link } from "react-router-dom";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
+import blogImageAddictionLoopholes from "@/assets/blog-addiction-loopholes.jpg";
 import blogImageAmbiguityClarity from "@/assets/blog-addiction-ambiguity-clarity.jpg";
 import blogImageSlidingBaseline from "@/assets/blog-sliding-baseline-addiction.jpg";
 import blogImageInsightVsRecovery from "@/assets/blog-insight-vs-recovery.jpg";
 import blogImageRockBottomMyth from "@/assets/blog-rock-bottom-myth.jpg";
 import blogImageModerationLoophole from "@/assets/blog-moderation-loophole.jpg";
 import blogImageFunctionalAddictionHiding from "@/assets/blog-functional-addiction-hiding.jpg";
-import blogImageJustAPhaseMyths from "@/assets/blog-just-a-phase-myths.jpg";
 
 const recentArticles = [
+  {
+    id: "addiction-loopholes",
+    title: "Why Addiction Loves Loopholes—and How Families Accidentally Create Them",
+    date: "January 27, 2026",
+    image: blogImageAddictionLoopholes,
+    imageAlt: "Family sitting near a wooden fence with visible gaps and broken slats, metaphor for loopholes in boundaries, warm afternoon light filtering through",
+  },
   {
     id: "addiction-ambiguity-clarity",
     title: "Why Addiction Thrives on Ambiguity—and Why Clear Rules Make Everyone Uncomfortable",
@@ -53,13 +60,6 @@ const recentArticles = [
     date: "January 21, 2026",
     image: blogImageFunctionalAddictionHiding,
     imageAlt: "Professional person at desk appearing composed with family in background looking uncertain",
-  },
-  {
-    id: "just-a-phase-addiction-myths",
-    title: "\"It's Just a Phase\"… and Other Lies Addiction Loves to Hear",
-    date: "January 20, 2026",
-    image: blogImageJustAPhaseMyths,
-    imageAlt: "Family sitting on couch with thought bubbles showing 'just a phase' while tension fills the room",
   },
 ];
 
