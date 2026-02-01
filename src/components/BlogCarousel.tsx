@@ -3,15 +3,22 @@ import { Link } from "react-router-dom";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
+import blogImageAddictionControlIllusion from "@/assets/blog-addiction-control-illusion.jpg";
 import blogImageAddictionLoopholes from "@/assets/blog-addiction-loopholes.jpg";
 import blogImageAmbiguityClarity from "@/assets/blog-addiction-ambiguity-clarity.jpg";
 import blogImageSlidingBaseline from "@/assets/blog-sliding-baseline-addiction.jpg";
 import blogImageInsightVsRecovery from "@/assets/blog-insight-vs-recovery.jpg";
 import blogImageRockBottomMyth from "@/assets/blog-rock-bottom-myth.jpg";
 import blogImageModerationLoophole from "@/assets/blog-moderation-loophole.jpg";
-import blogImageFunctionalAddictionHiding from "@/assets/blog-functional-addiction-hiding.jpg";
 
 const recentArticles = [
+  {
+    id: "addiction-control-illusion",
+    title: "Why \"I've Got It Under Control\" Is the Most Misunderstood Sentence in Addiction",
+    date: "January 28, 2026",
+    image: blogImageAddictionControlIllusion,
+    imageAlt: "Young adult male sitting calmly in chair appearing confident, with chaotic shadow imagery behind him representing hidden instability",
+  },
   {
     id: "addiction-loopholes",
     title: "Why Addiction Loves Loopholes—and How Families Accidentally Create Them",
@@ -53,13 +60,6 @@ const recentArticles = [
     date: "January 22, 2026",
     image: blogImageModerationLoophole,
     imageAlt: "Family at kitchen table with measuring device, one person adjusting it while others look concerned",
-  },
-  {
-    id: "functional-addiction-hiding",
-    title: "\"They've Got It Under Control\"… Until They Don't: How Addiction Hides in Plain Sight",
-    date: "January 21, 2026",
-    image: blogImageFunctionalAddictionHiding,
-    imageAlt: "Professional person at desk appearing composed with family in background looking uncertain",
   },
 ];
 
