@@ -3,15 +3,22 @@ import { Link } from "react-router-dom";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
+import blogImageFearAvoidanceParalysis from "@/assets/blog-fear-avoidance-paralysis.jpg";
 import blogImageAddictionControlIllusion from "@/assets/blog-addiction-control-illusion.jpg";
 import blogImageAddictionLoopholes from "@/assets/blog-addiction-loopholes.jpg";
 import blogImageAmbiguityClarity from "@/assets/blog-addiction-ambiguity-clarity.jpg";
 import blogImageSlidingBaseline from "@/assets/blog-sliding-baseline-addiction.jpg";
 import blogImageInsightVsRecovery from "@/assets/blog-insight-vs-recovery.jpg";
 import blogImageRockBottomMyth from "@/assets/blog-rock-bottom-myth.jpg";
-import blogImageModerationLoophole from "@/assets/blog-moderation-loophole.jpg";
 
 const recentArticles = [
+  {
+    id: "fear-avoidance-paralysis",
+    title: "Why \"Let's Not Make It Worse\" Is Often the Reason Nothing Gets Better",
+    date: "January 29, 2026",
+    image: blogImageFearAvoidanceParalysis,
+    imageAlt: "Middle-aged couple sitting stiffly on couch while young adult male stands looking out window, tense stagnant atmosphere representing family paralysis",
+  },
   {
     id: "addiction-control-illusion",
     title: "Why \"I've Got It Under Control\" Is the Most Misunderstood Sentence in Addiction",
@@ -53,13 +60,6 @@ const recentArticles = [
     date: "January 23, 2026",
     image: blogImageRockBottomMyth,
     imageAlt: "Family having calm, intentional conversation in living room, gathered supportively rather than in crisis",
-  },
-  {
-    id: "moderation-addiction-loophole",
-    title: "\"They're Cutting Back\"… Why Moderation Becomes Addiction's Favorite Loophole",
-    date: "January 22, 2026",
-    image: blogImageModerationLoophole,
-    imageAlt: "Family at kitchen table with measuring device, one person adjusting it while others look concerned",
   },
 ];
 
