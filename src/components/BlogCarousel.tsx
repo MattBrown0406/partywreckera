@@ -3,15 +3,22 @@ import { Link } from "react-router-dom";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
+import blogImageFunctionalAddictionHiding from "@/assets/blog-functional-addiction-hiding.jpg";
 import blogImageFearAvoidanceParalysis from "@/assets/blog-fear-avoidance-paralysis.jpg";
 import blogImageAddictionControlIllusion from "@/assets/blog-addiction-control-illusion.jpg";
 import blogImageAddictionLoopholes from "@/assets/blog-addiction-loopholes.jpg";
 import blogImageAmbiguityClarity from "@/assets/blog-addiction-ambiguity-clarity.jpg";
 import blogImageSlidingBaseline from "@/assets/blog-sliding-baseline-addiction.jpg";
 import blogImageInsightVsRecovery from "@/assets/blog-insight-vs-recovery.jpg";
-import blogImageRockBottomMyth from "@/assets/blog-rock-bottom-myth.jpg";
 
 const recentArticles = [
+  {
+    id: "functioning-addiction-myths",
+    title: "Why \"They're Functioning\" Is One of the Most Misleading Labels in Addiction",
+    date: "January 30, 2026",
+    image: blogImageFunctionalAddictionHiding,
+    imageAlt: "Young adult male in business attire at office desk appearing composed and professional, with cracked mirror reflection showing hidden strain and exhaustion",
+  },
   {
     id: "fear-avoidance-paralysis",
     title: "Why \"Let's Not Make It Worse\" Is Often the Reason Nothing Gets Better",
@@ -53,13 +60,6 @@ const recentArticles = [
     date: "January 24, 2026",
     image: blogImageInsightVsRecovery,
     imageAlt: "Person speaking earnestly with expressive gestures while family members listen with hopeful but uncertain expressions, untouched notebook on coffee table",
-  },
-  {
-    id: "rock-bottom-addiction-myth",
-    title: "Why \"Rock Bottom\" Stories Are Mostly Myth—and What Actually Forces Change",
-    date: "January 23, 2026",
-    image: blogImageRockBottomMyth,
-    imageAlt: "Family having calm, intentional conversation in living room, gathered supportively rather than in crisis",
   },
 ];
 
