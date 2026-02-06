@@ -3,15 +3,22 @@ import { Link } from "react-router-dom";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
+import blogImageKnowledgeVsBehavior from "@/assets/blog-knowledge-vs-behavior-addiction.jpg";
 import blogImageFunctionalAddictionHiding from "@/assets/blog-functional-addiction-hiding.jpg";
 import blogImageFearAvoidanceParalysis from "@/assets/blog-fear-avoidance-paralysis.jpg";
 import blogImageAddictionControlIllusion from "@/assets/blog-addiction-control-illusion.jpg";
 import blogImageAddictionLoopholes from "@/assets/blog-addiction-loopholes.jpg";
 import blogImageAmbiguityClarity from "@/assets/blog-addiction-ambiguity-clarity.jpg";
 import blogImageSlidingBaseline from "@/assets/blog-sliding-baseline-addiction.jpg";
-import blogImageInsightVsRecovery from "@/assets/blog-insight-vs-recovery.jpg";
 
 const recentArticles = [
+  {
+    id: "knowledge-vs-behavior-addiction",
+    title: "Why \"They Know Better\" Is a Dangerous Assumption in Addiction",
+    date: "January 31, 2026",
+    image: blogImageKnowledgeVsBehavior,
+    imageAlt: "Young adult male sitting at table with open books and educational materials, with a glowing bottle on shelf behind him representing disconnect between knowledge and behavior",
+  },
   {
     id: "functioning-addiction-myths",
     title: "Why \"They're Functioning\" Is One of the Most Misleading Labels in Addiction",
@@ -53,13 +60,6 @@ const recentArticles = [
     date: "January 25, 2026",
     image: blogImageSlidingBaseline,
     imageAlt: "Family sitting at kitchen table with gauge in background showing standards shifting lower over time, uncertain expressions",
-  },
-  {
-    id: "insight-vs-recovery-addiction",
-    title: "Why Apologies, Insight, and Self-Awareness Don't Equal Recovery (No Matter How Convincing They Sound)",
-    date: "January 24, 2026",
-    image: blogImageInsightVsRecovery,
-    imageAlt: "Person speaking earnestly with expressive gestures while family members listen with hopeful but uncertain expressions, untouched notebook on coffee table",
   },
 ];
 
