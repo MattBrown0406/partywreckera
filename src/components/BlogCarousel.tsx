@@ -3,15 +3,22 @@ import { Link } from "react-router-dom";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
+import blogImageApologiesDontEqualChange from "@/assets/blog-apologies-dont-equal-change.jpg";
 import blogImageKnowledgeVsBehavior from "@/assets/blog-knowledge-vs-behavior-addiction.jpg";
 import blogImageFunctionalAddictionHiding from "@/assets/blog-functional-addiction-hiding.jpg";
 import blogImageFearAvoidanceParalysis from "@/assets/blog-fear-avoidance-paralysis.jpg";
 import blogImageAddictionControlIllusion from "@/assets/blog-addiction-control-illusion.jpg";
 import blogImageAddictionLoopholes from "@/assets/blog-addiction-loopholes.jpg";
 import blogImageAmbiguityClarity from "@/assets/blog-addiction-ambiguity-clarity.jpg";
-import blogImageSlidingBaseline from "@/assets/blog-sliding-baseline-addiction.jpg";
 
 const recentArticles = [
+  {
+    id: "apologies-dont-equal-change",
+    title: "Why Apologies Don't Equal Change—and Why Families Keep Falling for Them",
+    date: "February 1, 2026",
+    image: blogImageApologiesDontEqualChange,
+    imageAlt: "Young adult male standing before family on couch in apologetic gesture, large clock on wall behind him, muted warm tones representing the cycle of remorse without repair",
+  },
   {
     id: "knowledge-vs-behavior-addiction",
     title: "Why \"They Know Better\" Is a Dangerous Assumption in Addiction",
@@ -53,13 +60,6 @@ const recentArticles = [
     date: "January 26, 2026",
     image: blogImageAmbiguityClarity,
     imageAlt: "Family standing at crossroads in fog, one path clearly marked with signposts, the other fading into gray mist, warm light breaking through on the clear path",
-  },
-  {
-    id: "sliding-baseline-addiction",
-    title: "Why \"At Least It's Not As Bad\" Is the Most Dangerous Sentence in Addiction",
-    date: "January 25, 2026",
-    image: blogImageSlidingBaseline,
-    imageAlt: "Family sitting at kitchen table with gauge in background showing standards shifting lower over time, uncertain expressions",
   },
 ];
 
