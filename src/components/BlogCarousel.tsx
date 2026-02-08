@@ -3,15 +3,22 @@ import { Link } from "react-router-dom";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
+import blogImageFalseStabilityRebound from "@/assets/blog-false-stability-rebound.jpg";
 import blogImageApologiesDontEqualChange from "@/assets/blog-apologies-dont-equal-change.jpg";
 import blogImageKnowledgeVsBehavior from "@/assets/blog-knowledge-vs-behavior-addiction.jpg";
 import blogImageFunctionalAddictionHiding from "@/assets/blog-functional-addiction-hiding.jpg";
 import blogImageFearAvoidanceParalysis from "@/assets/blog-fear-avoidance-paralysis.jpg";
 import blogImageAddictionControlIllusion from "@/assets/blog-addiction-control-illusion.jpg";
 import blogImageAddictionLoopholes from "@/assets/blog-addiction-loopholes.jpg";
-import blogImageAmbiguityClarity from "@/assets/blog-addiction-ambiguity-clarity.jpg";
 
 const recentArticles = [
+  {
+    id: "false-stability-rebound",
+    title: "Why \"They Seem More Like Themselves Again\" Can Be a False Signal",
+    date: "February 2, 2026",
+    image: blogImageFalseStabilityRebound,
+    imageAlt: "Young adult male sitting on couch smiling warmly with family around him looking hopeful, while cracked wall behind represents hidden fragility beneath surface calm",
+  },
   {
     id: "apologies-dont-equal-change",
     title: "Why Apologies Don't Equal Change—and Why Families Keep Falling for Them",
@@ -53,13 +60,6 @@ const recentArticles = [
     date: "January 27, 2026",
     image: blogImageAddictionLoopholes,
     imageAlt: "Family sitting near a wooden fence with visible gaps and broken slats, metaphor for loopholes in boundaries, warm afternoon light filtering through",
-  },
-  {
-    id: "addiction-ambiguity-clarity",
-    title: "Why Addiction Thrives on Ambiguity—and Why Clear Rules Make Everyone Uncomfortable",
-    date: "January 26, 2026",
-    image: blogImageAmbiguityClarity,
-    imageAlt: "Family standing at crossroads in fog, one path clearly marked with signposts, the other fading into gray mist, warm light breaking through on the clear path",
   },
 ];
 
