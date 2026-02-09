@@ -3,15 +3,22 @@ import { Link } from "react-router-dom";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
+import blogImageEffortVsChange from "@/assets/blog-effort-vs-change-addiction.jpg";
 import blogImageFalseStabilityRebound from "@/assets/blog-false-stability-rebound.jpg";
 import blogImageApologiesDontEqualChange from "@/assets/blog-apologies-dont-equal-change.jpg";
 import blogImageKnowledgeVsBehavior from "@/assets/blog-knowledge-vs-behavior-addiction.jpg";
 import blogImageFunctionalAddictionHiding from "@/assets/blog-functional-addiction-hiding.jpg";
 import blogImageFearAvoidanceParalysis from "@/assets/blog-fear-avoidance-paralysis.jpg";
 import blogImageAddictionControlIllusion from "@/assets/blog-addiction-control-illusion.jpg";
-import blogImageAddictionLoopholes from "@/assets/blog-addiction-loopholes.jpg";
 
 const recentArticles = [
+  {
+    id: "effort-vs-change-addiction",
+    title: "Why \"They're Trying\" Becomes the Most Dangerous Sentence in Addiction",
+    date: "February 3, 2026",
+    image: blogImageEffortVsChange,
+    imageAlt: "Young adult male sitting at desk surrounded by scattered papers and open books appearing busy, with a hamster wheel shadow on the wall representing effort without progress",
+  },
   {
     id: "false-stability-rebound",
     title: "Why \"They Seem More Like Themselves Again\" Can Be a False Signal",
@@ -53,13 +60,6 @@ const recentArticles = [
     date: "January 28, 2026",
     image: blogImageAddictionControlIllusion,
     imageAlt: "Young adult male sitting calmly in chair appearing confident, with chaotic shadow imagery behind him representing hidden instability",
-  },
-  {
-    id: "addiction-loopholes",
-    title: "Why Addiction Loves Loopholes—and How Families Accidentally Create Them",
-    date: "January 27, 2026",
-    image: blogImageAddictionLoopholes,
-    imageAlt: "Family sitting near a wooden fence with visible gaps and broken slats, metaphor for loopholes in boundaries, warm afternoon light filtering through",
   },
 ];
 
