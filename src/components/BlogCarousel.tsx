@@ -3,15 +3,22 @@ import { Link } from "react-router-dom";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
+import blogImageCommunicationAddiction from "@/assets/blog-communication-addiction-families.jpg";
 import blogImageEffortVsChange from "@/assets/blog-effort-vs-change-addiction.jpg";
 import blogImageFalseStabilityRebound from "@/assets/blog-false-stability-rebound.jpg";
 import blogImageApologiesDontEqualChange from "@/assets/blog-apologies-dont-equal-change.jpg";
 import blogImageKnowledgeVsBehavior from "@/assets/blog-knowledge-vs-behavior-addiction.jpg";
 import blogImageFunctionalAddictionHiding from "@/assets/blog-functional-addiction-hiding.jpg";
 import blogImageFearAvoidanceParalysis from "@/assets/blog-fear-avoidance-paralysis.jpg";
-import blogImageAddictionControlIllusion from "@/assets/blog-addiction-control-illusion.jpg";
 
 const recentArticles = [
+  {
+    id: "communication-addiction-families",
+    title: "Why \"We Just Need Better Communication\" Misses the Point in Addiction",
+    date: "February 4, 2026",
+    image: blogImageCommunicationAddiction,
+    imageAlt: "Middle-aged couple sitting across kitchen table from young adult male with scattered crumpled notes between them representing exhausted words and futile communication",
+  },
   {
     id: "effort-vs-change-addiction",
     title: "Why \"They're Trying\" Becomes the Most Dangerous Sentence in Addiction",
@@ -53,13 +60,6 @@ const recentArticles = [
     date: "January 29, 2026",
     image: blogImageFearAvoidanceParalysis,
     imageAlt: "Middle-aged couple sitting stiffly on couch while young adult male stands looking out window, tense stagnant atmosphere representing family paralysis",
-  },
-  {
-    id: "addiction-control-illusion",
-    title: "Why \"I've Got It Under Control\" Is the Most Misunderstood Sentence in Addiction",
-    date: "January 28, 2026",
-    image: blogImageAddictionControlIllusion,
-    imageAlt: "Young adult male sitting calmly in chair appearing confident, with chaotic shadow imagery behind him representing hidden instability",
   },
 ];
 
