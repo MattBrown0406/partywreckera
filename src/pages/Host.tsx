@@ -118,14 +118,6 @@ const Host = () => {
                     ready to understand what actually works.
                   </p>
                     
-                    <a
-                      href="https://interventiononcall.com/drug-intervention-specialist/matt-brown-2/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center gap-2 mt-4 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors"
-                    >
-                      Book a Coaching Session With Matt
-                    </a>
                   </div>
                 </div>
               </div>
