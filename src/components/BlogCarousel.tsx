@@ -3,15 +3,22 @@ import { Link } from "react-router-dom";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
+import blogImageHighFunctioningCocaine from "@/assets/blog-high-functioning-cocaine.jpg";
 import blogImageCommunicationAddiction from "@/assets/blog-communication-addiction-families.jpg";
 import blogImageEffortVsChange from "@/assets/blog-effort-vs-change-addiction.jpg";
 import blogImageFalseStabilityRebound from "@/assets/blog-false-stability-rebound.jpg";
 import blogImageApologiesDontEqualChange from "@/assets/blog-apologies-dont-equal-change.jpg";
 import blogImageKnowledgeVsBehavior from "@/assets/blog-knowledge-vs-behavior-addiction.jpg";
 import blogImageFunctionalAddictionHiding from "@/assets/blog-functional-addiction-hiding.jpg";
-import blogImageFearAvoidanceParalysis from "@/assets/blog-fear-avoidance-paralysis.jpg";
 
 const recentArticles = [
+  {
+    id: "high-functioning-cocaine-use",
+    title: "High-Functioning Cocaine Use: Why It Looks Controlled—Until It Isn't",
+    date: "February 5, 2026",
+    image: blogImageHighFunctioningCocaine,
+    imageAlt: "Young adult male in business suit working at office desk late at night with cracked coffee mug and scattered documents representing the facade of high-functioning stimulant addiction",
+  },
   {
     id: "communication-addiction-families",
     title: "Why \"We Just Need Better Communication\" Misses the Point in Addiction",
@@ -53,13 +60,6 @@ const recentArticles = [
     date: "January 30, 2026",
     image: blogImageFunctionalAddictionHiding,
     imageAlt: "Young adult male in business attire at office desk appearing composed and professional, with cracked mirror reflection showing hidden strain and exhaustion",
-  },
-  {
-    id: "fear-avoidance-paralysis",
-    title: "Why \"Let's Not Make It Worse\" Is Often the Reason Nothing Gets Better",
-    date: "January 29, 2026",
-    image: blogImageFearAvoidanceParalysis,
-    imageAlt: "Middle-aged couple sitting stiffly on couch while young adult male stands looking out window, tense stagnant atmosphere representing family paralysis",
   },
 ];
 
