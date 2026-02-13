@@ -3,15 +3,22 @@ import { Link } from "react-router-dom";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
+import blogImageThisTimeFeelsDifferent from "@/assets/blog-this-time-feels-different.jpg";
 import blogImageHighFunctioningCocaine from "@/assets/blog-high-functioning-cocaine.jpg";
 import blogImageCommunicationAddiction from "@/assets/blog-communication-addiction-families.jpg";
 import blogImageEffortVsChange from "@/assets/blog-effort-vs-change-addiction.jpg";
 import blogImageFalseStabilityRebound from "@/assets/blog-false-stability-rebound.jpg";
 import blogImageApologiesDontEqualChange from "@/assets/blog-apologies-dont-equal-change.jpg";
 import blogImageKnowledgeVsBehavior from "@/assets/blog-knowledge-vs-behavior-addiction.jpg";
-import blogImageFunctionalAddictionHiding from "@/assets/blog-functional-addiction-hiding.jpg";
 
 const recentArticles = [
+  {
+    id: "this-time-feels-different",
+    title: "Why \"This Time Feels Different\" Keeps Families Stuck in the Same Cycle",
+    date: "February 6, 2026",
+    image: blogImageThisTimeFeelsDifferent,
+    imageAlt: "Young adult male sitting on couch with tears in eyes looking sincere while older parents watch cautiously, with a circular clock and crossed-out calendar dates symbolizing repetitive cycles",
+  },
   {
     id: "high-functioning-cocaine-use",
     title: "High-Functioning Cocaine Use: Why It Looks Controlled—Until It Isn't",
@@ -53,13 +60,6 @@ const recentArticles = [
     date: "January 31, 2026",
     image: blogImageKnowledgeVsBehavior,
     imageAlt: "Young adult male sitting at table with open books and educational materials, with a glowing bottle on shelf behind him representing disconnect between knowledge and behavior",
-  },
-  {
-    id: "functioning-addiction-myths",
-    title: "Why \"They're Functioning\" Is One of the Most Misleading Labels in Addiction",
-    date: "January 30, 2026",
-    image: blogImageFunctionalAddictionHiding,
-    imageAlt: "Young adult male in business attire at office desk appearing composed and professional, with cracked mirror reflection showing hidden strain and exhaustion",
   },
 ];
 
