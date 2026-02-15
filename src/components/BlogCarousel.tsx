@@ -3,15 +3,22 @@ import { Link } from "react-router-dom";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
+import blogImageBusyNotRecovery from "@/assets/blog-busy-not-recovery.jpg";
 import blogImageThisTimeFeelsDifferent from "@/assets/blog-this-time-feels-different.jpg";
 import blogImageHighFunctioningCocaine from "@/assets/blog-high-functioning-cocaine.jpg";
 import blogImageCommunicationAddiction from "@/assets/blog-communication-addiction-families.jpg";
 import blogImageEffortVsChange from "@/assets/blog-effort-vs-change-addiction.jpg";
 import blogImageFalseStabilityRebound from "@/assets/blog-false-stability-rebound.jpg";
 import blogImageApologiesDontEqualChange from "@/assets/blog-apologies-dont-equal-change.jpg";
-import blogImageKnowledgeVsBehavior from "@/assets/blog-knowledge-vs-behavior-addiction.jpg";
 
 const recentArticles = [
+  {
+    id: "busy-not-recovery",
+    title: "Why Being \"Busy\" Is Not the Same as Being in Recovery",
+    date: "February 7, 2026",
+    image: blogImageBusyNotRecovery,
+    imageAlt: "Young adult male sitting at cluttered desk late at night surrounded by to-do lists and laptop looking exhausted, with a treadmill shadow on the wall symbolizing endless motion without real progress",
+  },
   {
     id: "this-time-feels-different",
     title: "Why \"This Time Feels Different\" Keeps Families Stuck in the Same Cycle",
@@ -53,13 +60,6 @@ const recentArticles = [
     date: "February 1, 2026",
     image: blogImageApologiesDontEqualChange,
     imageAlt: "Young adult male standing before family on couch in apologetic gesture, large clock on wall behind him, muted warm tones representing the cycle of remorse without repair",
-  },
-  {
-    id: "knowledge-vs-behavior-addiction",
-    title: "Why \"They Know Better\" Is a Dangerous Assumption in Addiction",
-    date: "January 31, 2026",
-    image: blogImageKnowledgeVsBehavior,
-    imageAlt: "Young adult male sitting at table with open books and educational materials, with a glowing bottle on shelf behind him representing disconnect between knowledge and behavior",
   },
 ];
 
