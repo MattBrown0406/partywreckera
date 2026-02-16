@@ -3,15 +3,22 @@ import { Link } from "react-router-dom";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
+import blogImageStressAddictionExcuse from "@/assets/blog-stress-addiction-excuse.jpg";
 import blogImageBusyNotRecovery from "@/assets/blog-busy-not-recovery.jpg";
 import blogImageThisTimeFeelsDifferent from "@/assets/blog-this-time-feels-different.jpg";
 import blogImageHighFunctioningCocaine from "@/assets/blog-high-functioning-cocaine.jpg";
 import blogImageCommunicationAddiction from "@/assets/blog-communication-addiction-families.jpg";
 import blogImageEffortVsChange from "@/assets/blog-effort-vs-change-addiction.jpg";
 import blogImageFalseStabilityRebound from "@/assets/blog-false-stability-rebound.jpg";
-import blogImageApologiesDontEqualChange from "@/assets/blog-apologies-dont-equal-change.jpg";
 
 const recentArticles = [
+  {
+    id: "stress-addiction-excuse",
+    title: "Why \"They're Just Stressed\" Becomes the Go-To Excuse for Everything",
+    date: "February 8, 2026",
+    image: blogImageStressAddictionExcuse,
+    imageAlt: "Young adult male sitting alone at a bar counter with his head in his hands next to a glass of whiskey, with the word STRESS as a shadow on the wall behind him",
+  },
   {
     id: "busy-not-recovery",
     title: "Why Being \"Busy\" Is Not the Same as Being in Recovery",
@@ -53,13 +60,6 @@ const recentArticles = [
     date: "February 2, 2026",
     image: blogImageFalseStabilityRebound,
     imageAlt: "Young adult male sitting on couch smiling warmly with family around him looking hopeful, while cracked wall behind represents hidden fragility beneath surface calm",
-  },
-  {
-    id: "apologies-dont-equal-change",
-    title: "Why Apologies Don't Equal Change—and Why Families Keep Falling for Them",
-    date: "February 1, 2026",
-    image: blogImageApologiesDontEqualChange,
-    imageAlt: "Young adult male standing before family on couch in apologetic gesture, large clock on wall behind him, muted warm tones representing the cycle of remorse without repair",
   },
 ];
 
