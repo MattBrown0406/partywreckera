@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 const features = [
   { text: "New episodes every week", link: null },
   { text: "Available on all major platforms", link: null },
-  { text: "Free family support groups via Zoom", link: "https://interventiononcall.com/live-family-friends-zoom/" },
+  { text: "Free family support groups via Zoom", link: null },
   { text: "Professional intervention guidance", link: null },
   { text: "Expert guests from recovery industry", link: null },
   { text: "Real stories, real hope", link: null },
@@ -73,14 +73,9 @@ const AboutSection = () => {
             <div className="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 bg-primary text-primary-foreground px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg font-semibold text-xs sm:text-sm uppercase tracking-wider shadow-lg glow-primary z-10">
               Top Rated
             </div>
-            <a 
-              href="https://interventiononcall.com/live-family-friends-zoom/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="absolute -bottom-2 -left-2 sm:-bottom-4 sm:-left-4 bg-accent text-accent-foreground px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg font-semibold text-xs sm:text-sm uppercase tracking-wider shadow-lg glow-accent z-10 hover:scale-105 transition-transform"
-            >
+            <div className="absolute -bottom-2 -left-2 sm:-bottom-4 sm:-left-4 bg-accent text-accent-foreground px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg font-semibold text-xs sm:text-sm uppercase tracking-wider shadow-lg glow-accent z-10">
               Free Support
-            </a>
+            </div>
           </div>
         </div>
 

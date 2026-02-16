@@ -17,7 +17,7 @@ const hostFAQs = [
   },
   {
     question: "How can I book Matt Brown for an intervention consultation?",
-    answer: "You can book a coaching session with Matt Brown through Intervention on Call. Visit his profile page or contact him directly at matt@partywreckers.com for media inquiries, speaking engagements, or consultation requests."
+    answer: "You can book a coaching session with Matt Brown by contacting him directly at matt@partywreckers.com for media inquiries, speaking engagements, or consultation requests."
   },
   {
     question: "What is Matt Brown's approach to addiction treatment?",
