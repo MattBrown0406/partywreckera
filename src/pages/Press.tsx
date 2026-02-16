@@ -300,16 +300,6 @@ const Press = () => {
                   </a>
                 </Button>
                 
-                <Button size="lg" variant="outline" asChild>
-                  <a
-                    href="https://interventiononcall.com/drug-intervention-specialist/matt-brown-2/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    View Full Bio
-                    <ExternalLink className="w-4 h-4 ml-2" />
-                  </a>
-                </Button>
               </div>
             </div>
           </div>

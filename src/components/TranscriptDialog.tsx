@@ -10,6 +10,11 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { Loader2, FileText, Copy, Check } from "lucide-react";
 import { TranscriptInfo } from "@/hooks/usePodcastFeed";
 
+const redactContent = (text: string): string => {
+  return text.replace(/intervention\s*on\s*call/gi, "[redacted]")
+             .replace(/interventiononcall\.com/gi, "[redacted]");
+};
+
 interface TranscriptDialogProps {
   isOpen: boolean;
   onClose: () => void;
@@ -71,7 +76,7 @@ const TranscriptDialog = ({
         const parser = new DOMParser();
         const doc = parser.parseFromString(text, "text/html");
         const cleanText = doc.body.textContent || text;
-        setContent(cleanText);
+        setContent(redactContent(cleanText));
       } else if (transcript.type === "application/x-subrip") {
         // Parse SRT format - remove timestamps and numbers
         const cleanedSrt = text
@@ -86,7 +91,7 @@ const TranscriptDialog = ({
           .join(" ")
           .replace(/\s+/g, " ")
           .trim();
-        setContent(cleanedSrt);
+        setContent(redactContent(cleanedSrt));
       } else if (transcript.type === "application/json") {
         // Parse JSON transcript format
         const json = JSON.parse(text);
@@ -94,14 +99,14 @@ const TranscriptDialog = ({
           const transcriptText = json
             .map((segment: { text?: string; body?: string }) => segment.text || segment.body || "")
             .join(" ");
-          setContent(transcriptText);
+          setContent(redactContent(transcriptText));
         } else if (json.text) {
-          setContent(json.text);
+          setContent(redactContent(json.text));
         } else {
           setContent(JSON.stringify(json, null, 2));
         }
       } else {
-        setContent(text);
+        setContent(redactContent(text));
       }
     } catch (err) {
       console.error("Error fetching transcript:", err);
