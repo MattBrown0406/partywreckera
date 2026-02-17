@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
+import blogImageComparisonTrapAddiction from "@/assets/blog-comparison-trap-addiction.jpg";
 import blogImageStressAddictionExcuse from "@/assets/blog-stress-addiction-excuse.jpg";
 import blogImageBusyNotRecovery from "@/assets/blog-busy-not-recovery.jpg";
 import blogImageThisTimeFeelsDifferent from "@/assets/blog-this-time-feels-different.jpg";
@@ -12,6 +13,13 @@ import blogImageEffortVsChange from "@/assets/blog-effort-vs-change-addiction.jp
 import blogImageFalseStabilityRebound from "@/assets/blog-false-stability-rebound.jpg";
 
 const recentArticles = [
+  {
+    id: "comparison-trap-minimizing-addiction",
+    title: "Why \"At Least It's Not As Bad As Before\" Is a Dangerous Comparison",
+    date: "February 9, 2026",
+    image: blogImageComparisonTrapAddiction,
+    imageAlt: "Young adult male on couch looking calm but hollow-eyed with family cautiously relieved, thermometer on wall showing scale from not as bad to healthy",
+  },
   {
     id: "stress-addiction-excuse",
     title: "Why \"They're Just Stressed\" Becomes the Go-To Excuse for Everything",
@@ -61,7 +69,7 @@ const recentArticles = [
     image: blogImageFalseStabilityRebound,
     imageAlt: "Young adult male sitting on couch smiling warmly with family around him looking hopeful, while cracked wall behind represents hidden fragility beneath surface calm",
   },
-];
+].slice(0, 7);
 
 const BlogCarousel = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
