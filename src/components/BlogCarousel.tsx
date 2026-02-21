@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
+import blogImagePromisesCycle from "@/assets/blog-addiction-promises-cycle.jpg";
 import blogImagePersonalityChanges from "@/assets/blog-addiction-personality-changes.jpg";
 import blogImageComparisonTrapAddiction from "@/assets/blog-comparison-trap-addiction.jpg";
 import blogImageStressAddictionExcuse from "@/assets/blog-stress-addiction-excuse.jpg";
@@ -14,6 +15,13 @@ import blogImageEffortVsChange from "@/assets/blog-effort-vs-change-addiction.jp
 import blogImageFalseStabilityRebound from "@/assets/blog-false-stability-rebound.jpg";
 
 const recentArticles = [
+  {
+    id: "addiction-promises-cycle",
+    title: "Why \"They Promise It Won't Happen Again\" Keeps Working on Families",
+    date: "February 11, 2026",
+    image: blogImagePromisesCycle,
+    imageAlt: "Young adult male sitting on couch with hands clasped together looking sincere while older mother watches cautiously, crumpled note saying I promise on coffee table",
+  },
   {
     id: "addiction-personality-changes",
     title: "Why \"They've Always Been This Way\" Is Often Not True",
