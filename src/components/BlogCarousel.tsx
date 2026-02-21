@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
+import blogImagePersonalityChanges from "@/assets/blog-addiction-personality-changes.jpg";
 import blogImageComparisonTrapAddiction from "@/assets/blog-comparison-trap-addiction.jpg";
 import blogImageStressAddictionExcuse from "@/assets/blog-stress-addiction-excuse.jpg";
 import blogImageBusyNotRecovery from "@/assets/blog-busy-not-recovery.jpg";
@@ -13,6 +14,13 @@ import blogImageEffortVsChange from "@/assets/blog-effort-vs-change-addiction.jp
 import blogImageFalseStabilityRebound from "@/assets/blog-false-stability-rebound.jpg";
 
 const recentArticles = [
+  {
+    id: "addiction-personality-changes",
+    title: "Why \"They've Always Been This Way\" Is Often Not True",
+    date: "February 10, 2026",
+    image: blogImagePersonalityChanges,
+    imageAlt: "Young adult male at kitchen table looking emotionally flat with ghostly overlay of his younger happier self behind him, family photos fading from vibrant to muted",
+  },
   {
     id: "comparison-trap-minimizing-addiction",
     title: "Why \"At Least It's Not As Bad As Before\" Is a Dangerous Comparison",
