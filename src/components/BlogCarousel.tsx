@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
+import blogImageBlameShifting from "@/assets/blog-blame-shifting-addiction.jpg";
 import blogImagePromisesCycle from "@/assets/blog-addiction-promises-cycle.jpg";
 import blogImagePersonalityChanges from "@/assets/blog-addiction-personality-changes.jpg";
 import blogImageComparisonTrapAddiction from "@/assets/blog-comparison-trap-addiction.jpg";
@@ -15,6 +16,13 @@ import blogImageEffortVsChange from "@/assets/blog-effort-vs-change-addiction.jp
 import blogImageFalseStabilityRebound from "@/assets/blog-false-stability-rebound.jpg";
 
 const recentArticles = [
+  {
+    id: "blame-shifting-addiction",
+    title: "Why Every Conversation About Drinking Somehow Turns Into Your Fault",
+    date: "February 12, 2026",
+    image: blogImageBlameShifting,
+    imageAlt: "Young adult male sitting at kitchen table with arms crossed looking defensive while middle-aged mother gestures calmly trying to talk",
+  },
   {
     id: "addiction-promises-cycle",
     title: "Why \"They Promise It Won't Happen Again\" Keeps Working on Families",
