@@ -6,6 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { X } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
+import NewsletterSignup from "@/components/NewsletterSignup";
 import blogImageExerciseNutrition from "@/assets/blog-exercise-nutrition-recovery.jpg";
 import blogImageEnabling from "@/assets/blog-family-support-enabling.jpg";
 import blogImageConversation from "@/assets/blog-right-moment-conversation.jpg";
@@ -9910,6 +9911,16 @@ const Blog = () => {
                 </DialogHeader>
                 <div className="prose-sm sm:prose">
                   {selectedArticle.content}
+                </div>
+                
+                {/* Newsletter signup after blog content */}
+                <div className="border-t border-border mt-8 pt-8">
+                  <NewsletterSignup
+                    variant="card"
+                    title="Want more like this?"
+                    description="Subscribe to our newsletter for weekly insights on addiction and recovery"
+                    className="max-w-md mx-auto"
+                  />
                 </div>
               </div>
             </>

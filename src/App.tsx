@@ -15,6 +15,7 @@ import ConversationStarters from "./pages/ConversationStarters";
 import Press from "./pages/Press";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
+import NewsletterPopup from "./components/NewsletterPopup";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +24,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
+      <NewsletterPopup />
       <BrowserRouter>
         <ScrollToTop />
         <Routes>

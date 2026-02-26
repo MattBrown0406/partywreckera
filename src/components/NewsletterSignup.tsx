@@ -1,0 +1,152 @@
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Mail, CheckCircle, AlertCircle } from "lucide-react";
+
+interface NewsletterSignupProps {
+  title?: string;
+  description?: string;
+  variant?: "inline" | "card" | "popup";
+  className?: string;
+}
+
+const NewsletterSignup = ({ 
+  title = "Get weekly recovery insights",
+  description,
+  variant = "inline",
+  className = ""
+}: NewsletterSignupProps) => {
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!email.trim()) {
+      setStatus("error");
+      setMessage("Please enter your email address");
+      return;
+    }
+
+    if (!/\S+@\S+\.\S+/.test(email)) {
+      setStatus("error");
+      setMessage("Please enter a valid email address");
+      return;
+    }
+
+    setStatus("loading");
+    
+    try {
+      // Placeholder API call - will be replaced with Mailchimp later
+      const response = await fetch('/api/newsletter-signup', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      if (response.ok) {
+        setStatus("success");
+        setMessage("Thanks! Check your email for confirmation.");
+        setEmail("");
+      } else {
+        throw new Error("Subscription failed");
+      }
+    } catch (error) {
+      setStatus("error");
+      setMessage("Something went wrong. Please try again.");
+    }
+  };
+
+  if (status === "success") {
+    return (
+      <div className={`flex items-center gap-2 text-sm text-green-600 ${className}`}>
+        <CheckCircle className="w-4 h-4" />
+        <span>{message}</span>
+      </div>
+    );
+  }
+
+  const formContent = (
+    <form onSubmit={handleSubmit} className="space-y-3">
+      <div className="flex flex-col sm:flex-row gap-2">
+        <Input
+          type="email"
+          placeholder="Enter your email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          disabled={status === "loading"}
+          className={`flex-1 ${status === "error" ? "border-destructive" : ""}`}
+        />
+        <Button 
+          type="submit" 
+          disabled={status === "loading"}
+          className="shrink-0"
+        >
+          {status === "loading" ? (
+            <>
+              <div className="w-4 h-4 border-2 border-current border-t-transparent animate-spin rounded-full" />
+              <span className="ml-2 hidden sm:inline">Subscribing...</span>
+            </>
+          ) : (
+            <>
+              <Mail className="w-4 h-4" />
+              <span className="ml-2 hidden sm:inline">Subscribe</span>
+            </>
+          )}
+        </Button>
+      </div>
+      {status === "error" && (
+        <div className="flex items-center gap-2 text-sm text-destructive">
+          <AlertCircle className="w-4 h-4" />
+          <span>{message}</span>
+        </div>
+      )}
+    </form>
+  );
+
+  if (variant === "card") {
+    return (
+      <div className={`bg-card border border-border rounded-lg p-6 ${className}`}>
+        <div className="text-center mb-4">
+          <h3 className="font-script text-xl text-burgundy mb-2">{title}</h3>
+          {description && (
+            <p className="text-sm text-muted-foreground">{description}</p>
+          )}
+        </div>
+        {formContent}
+      </div>
+    );
+  }
+
+  if (variant === "popup") {
+    return (
+      <div className={`text-center ${className}`}>
+        <div className="mb-4">
+          <h3 className="font-script text-2xl text-burgundy mb-2">{title}</h3>
+          {description && (
+            <p className="text-muted-foreground">{description}</p>
+          )}
+        </div>
+        {formContent}
+      </div>
+    );
+  }
+
+  // Inline variant (default)
+  return (
+    <div className={`${className}`}>
+      {(title || description) && (
+        <div className="mb-3">
+          {title && <h4 className="font-medium text-foreground mb-1">{title}</h4>}
+          {description && <p className="text-sm text-muted-foreground">{description}</p>}
+        </div>
+      )}
+      {formContent}
+    </div>
+  );
+};
+
+export default NewsletterSignup;

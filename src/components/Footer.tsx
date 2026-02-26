@@ -1,4 +1,5 @@
 import { Instagram, Youtube, Facebook } from "lucide-react";
+import NewsletterSignup from "./NewsletterSignup";
 
 const TikTokIcon = ({ className }: { className?: string }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor">
@@ -51,7 +52,16 @@ const Footer = () => {
   return (
     <footer className="py-8 sm:py-12 bg-card border-t border-border" role="contentinfo">
       <div className="container px-4">
-        <div className="flex flex-col items-center gap-6 text-center">
+        <div className="flex flex-col items-center gap-8 text-center">
+          {/* Newsletter Signup */}
+          <div className="w-full max-w-md">
+            <NewsletterSignup 
+              title="Get weekly recovery insights"
+              description="Join families finding hope and practical guidance in recovery"
+              variant="inline"
+            />
+          </div>
+
           {/* Logo */}
           <a 
             href="/" 
