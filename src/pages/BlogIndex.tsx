@@ -19,13 +19,13 @@ const BlogIndex = () => {
       
       <BreadcrumbJsonLd
         items={[
-          { name: "Home", item: "https://partywreckers.com" },
-          { name: "Blog", item: "https://partywreckers.com/blog" }
+          { name: "Home", url: "/" },
+          { name: "Blog", url: "/blog" }
         ]}
       />
 
       <FAQJsonLd
-        items={[
+        faqs={[
           {
             question: "What topics does the Party Wreckers blog cover?",
             answer: "Our blog covers addiction, family dynamics, enabling vs. supporting, boundaries, intervention strategies, recovery resources, and practical advice for families affected by substance use."
