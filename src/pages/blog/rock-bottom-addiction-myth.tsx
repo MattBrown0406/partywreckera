@@ -9,7 +9,7 @@ const RockBottomAddictionMyth = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Why "Rock Bottom" Stories Are Mostly Myth—and What Actually Forces Change - Party Wreckers Podcast"
+        title="Why &quot;Rock Bottom&quot; Stories Are Mostly Myth—and What Actually Forces Change - Party Wreckers Podcast"
         description="Families are often told to wait for their loved one to hit rock bottom before anything can change. It's one of the most persistent myths in addiction..."
         canonical="/blog/rock-bottom-addiction-myth"
         ogType="article"

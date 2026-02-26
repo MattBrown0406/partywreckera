@@ -9,7 +9,7 @@ const JustAPhaseAddictionMyths = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title=""It's Just a Phase"… and Other Lies Addiction Loves to Hear - Party Wreckers Podcast"
+        title="&quot;It's Just a Phase&quot;… and Other Lies Addiction Loves to Hear - Party Wreckers Podcast"
         description="Most families don't deny addiction outright—they soften it. 'It's just a phase,' 'Everyone does this,' or 'They'll grow out of it' become comforting..."
         canonical="/blog/just-a-phase-addiction-myths"
         ogType="article"

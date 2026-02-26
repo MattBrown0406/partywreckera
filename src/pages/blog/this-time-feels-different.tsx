@@ -9,7 +9,7 @@ const ThisTimeFeelsDifferent = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Why "This Time Feels Different" Keeps Families Stuck in the Same Cycle - Party Wreckers Podcast"
+        title="Why &quot;This Time Feels Different&quot; Keeps Families Stuck in the Same Cycle - Party Wreckers Podcast"
         description="If you've lived with addiction long enough, you've probably said it—or thought it—at least once: 'This time feels different.' The apology sounded..."
         canonical="/blog/this-time-feels-different"
         ogType="article"

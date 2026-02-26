@@ -9,7 +9,7 @@ const FalseStabilityRebound = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Why "They Seem More Like Themselves Again" Can Be a False Signal - Party Wreckers Podcast"
+        title="Why &quot;They Seem More Like Themselves Again&quot; Can Be a False Signal - Party Wreckers Podcast"
         description="Families often breathe a sigh of relief when their loved one starts acting 'like themselves again.' They're more present. Kinder. Engaged. Maybe even..."
         canonical="/blog/false-stability-rebound"
         ogType="article"

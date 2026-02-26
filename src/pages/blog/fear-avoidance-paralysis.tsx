@@ -9,7 +9,7 @@ const FearAvoidanceParalysis = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Why "Let's Not Make It Worse" Is Often the Reason Nothing Gets Better - Party Wreckers Podcast"
+        title="Why &quot;Let's Not Make It Worse&quot; Is Often the Reason Nothing Gets Better - Party Wreckers Podcast"
         description="'Let's not make it worse' sounds reasonable. Calm. Mature. And in families dealing with addiction, it often becomes the guiding principle. The..."
         canonical="/blog/fear-avoidance-paralysis"
         ogType="article"

@@ -9,7 +9,7 @@ const KnowledgeVsBehaviorAddiction = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Why "They Know Better" Is a Dangerous Assumption in Addiction - Party Wreckers Podcast"
+        title="Why &quot;They Know Better&quot; Is a Dangerous Assumption in Addiction - Party Wreckers Podcast"
         description="Families often reach a breaking point and say, 'They know better.' They've been educated. They've heard the warnings. They've seen the consequences...."
         canonical="/blog/knowledge-vs-behavior-addiction"
         ogType="article"

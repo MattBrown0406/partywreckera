@@ -9,7 +9,7 @@ const StopEnablingMeaning = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Why Families Are Told to "Stop Enabling" Without Being Told What That Actually Means - Party Wreckers Podcast"
+        title="Why Families Are Told to &quot;Stop Enabling&quot; Without Being Told What That Actually Means - Party Wreckers Podcast"
         description="If families were paid for every time they were told to 'stop enabling,' most of them wouldn't need financial support anymore. It's one of the most..."
         canonical="/blog/stop-enabling-meaning"
         ogType="article"

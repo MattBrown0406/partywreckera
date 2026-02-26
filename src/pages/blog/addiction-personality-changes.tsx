@@ -9,7 +9,7 @@ const AddictionPersonalityChanges = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Why "They've Always Been This Way" Is Often Not True - Party Wreckers Podcast"
+        title="Why &quot;They've Always Been This Way&quot; Is Often Not True - Party Wreckers Podcast"
         description="When addiction drags on long enough, families start rewriting history. 'They've always had a temper.' 'They've never been responsible.' 'They were..."
         canonical="/blog/addiction-personality-changes"
         ogType="article"

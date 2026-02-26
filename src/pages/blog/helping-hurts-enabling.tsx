@@ -9,7 +9,7 @@ const HelpingHurtsEnabling = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="When "Helping" Actually Hurts: How Families Unknowingly Enable Addiction - Party Wreckers Podcast"
+        title="When &quot;Helping&quot; Actually Hurts: How Families Unknowingly Enable Addiction - Party Wreckers Podcast"
         description="It's one of the most painful contradictions in addiction: the people who love an addict the most often end up doing things that keep the addiction..."
         canonical="/blog/helping-hurts-enabling"
         ogType="article"

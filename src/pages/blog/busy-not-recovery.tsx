@@ -9,7 +9,7 @@ const BusyNotRecovery = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Why Being "Busy" Is Not the Same as Being in Recovery - Party Wreckers Podcast"
+        title="Why Being &quot;Busy&quot; Is Not the Same as Being in Recovery - Party Wreckers Podcast"
         description="Families love seeing momentum. A new job. A packed calendar. Early mornings. Late nights. Productivity feels like progress. When someone in early..."
         canonical="/blog/busy-not-recovery"
         ogType="article"

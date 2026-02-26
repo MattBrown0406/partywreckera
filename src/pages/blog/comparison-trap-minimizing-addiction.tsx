@@ -9,7 +9,7 @@ const ComparisonTrapMinimizingAddiction = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Why "At Least It's Not As Bad As Before" Is a Dangerous Comparison - Party Wreckers Podcast"
+        title="Why &quot;At Least It's Not As Bad As Before&quot; Is a Dangerous Comparison - Party Wreckers Podcast"
         description="When addiction slightly improves, families often breathe a sigh of relief. Fewer blowups. Fewer missed days. Less visible chaos. And then comes the..."
         canonical="/blog/comparison-trap-minimizing-addiction"
         ogType="article"

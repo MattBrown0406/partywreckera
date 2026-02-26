@@ -9,7 +9,7 @@ const CommunicationAddictionFamilies = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Why "We Just Need Better Communication" Misses the Point in Addiction - Party Wreckers Podcast"
+        title="Why &quot;We Just Need Better Communication&quot; Misses the Point in Addiction - Party Wreckers Podcast"
         description="When addiction takes over a family system, communication becomes the go-to solution. Talk more. Explain better. Use calmer words. Say it differently..."
         canonical="/blog/communication-addiction-families"
         ogType="article"

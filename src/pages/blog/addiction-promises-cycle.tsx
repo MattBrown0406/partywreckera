@@ -9,7 +9,7 @@ const AddictionPromisesCycle = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Why "They Promise It Won't Happen Again" Keeps Working on Families - Party Wreckers Podcast"
+        title="Why &quot;They Promise It Won't Happen Again&quot; Keeps Working on Families - Party Wreckers Podcast"
         description="If you've lived through addiction long enough, you've heard it more than once: 'I swear this is the last time.' The apology feels sincere. The eye..."
         canonical="/blog/addiction-promises-cycle"
         ogType="article"

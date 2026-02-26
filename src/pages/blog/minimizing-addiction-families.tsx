@@ -9,7 +9,7 @@ const MinimizingAddictionFamilies = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title=""It's Not That Bad"… Until It Is: How Families Get Stuck Minimizing Addiction - Party Wreckers Podcast"
+        title="&quot;It's Not That Bad&quot;… Until It Is: How Families Get Stuck Minimizing Addiction - Party Wreckers Podcast"
         description="Most families don't ignore addiction—they minimize it. 'It's not that bad' becomes the phrase that buys temporary peace while addiction quietly..."
         canonical="/blog/minimizing-addiction-families"
         ogType="article"

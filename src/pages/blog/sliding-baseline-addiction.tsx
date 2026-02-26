@@ -9,7 +9,7 @@ const SlidingBaselineAddiction = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Why "At Least It's Not As Bad" Is the Most Dangerous Sentence in Addiction - Party Wreckers Podcast"
+        title="Why &quot;At Least It's Not As Bad&quot; Is the Most Dangerous Sentence in Addiction - Party Wreckers Podcast"
         description="Families dealing with addiction often comfort themselves with a familiar phrase: 'At least it's not as bad as it used to be.' Fewer crises. Fewer..."
         canonical="/blog/sliding-baseline-addiction"
         ogType="article"

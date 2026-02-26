@@ -9,7 +9,7 @@ const EffortVsChangeAddiction = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Why "They're Trying" Becomes the Most Dangerous Sentence in Addiction - Party Wreckers Podcast"
+        title="Why &quot;They're Trying&quot; Becomes the Most Dangerous Sentence in Addiction - Party Wreckers Podcast"
         description="'They're trying.' Families say it with hope, relief, and a little exhaustion. Trying sounds like progress. It feels unfair to question effort when..."
         canonical="/blog/effort-vs-change-addiction"
         ogType="article"

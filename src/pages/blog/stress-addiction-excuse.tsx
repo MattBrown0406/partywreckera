@@ -9,7 +9,7 @@ const StressAddictionExcuse = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Why "They're Just Stressed" Becomes the Go-To Excuse for Everything - Party Wreckers Podcast"
+        title="Why &quot;They're Just Stressed&quot; Becomes the Go-To Excuse for Everything - Party Wreckers Podcast"
         description="If you've lived around addiction long enough, you've probably heard it: 'They're just stressed.' Work stress. Financial stress. Relationship stress...."
         canonical="/blog/stress-addiction-excuse"
         ogType="article"

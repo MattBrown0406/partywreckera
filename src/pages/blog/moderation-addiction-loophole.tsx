@@ -9,7 +9,7 @@ const ModerationAddictionLoophole = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title=""They're Cutting Back"… Why Moderation Becomes Addiction's Favorite Loophole - Party Wreckers Podcast"
+        title="&quot;They're Cutting Back&quot;… Why Moderation Becomes Addiction's Favorite Loophole - Party Wreckers Podcast"
         description="Families often feel relieved when a loved one says they're 'cutting back.' Fewer blowups. Fewer arguments. Less chaos. It sounds like progress. This..."
         canonical="/blog/moderation-addiction-loophole"
         ogType="article"

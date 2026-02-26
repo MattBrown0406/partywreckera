@@ -9,7 +9,7 @@ const EveryoneDrinksLikeThis = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="When "Everyone Drinks Like This" Stops Being Funny - Party Wreckers Podcast"
+        title="When &quot;Everyone Drinks Like This&quot; Stops Being Funny - Party Wreckers Podcast"
         description="There's a moment in a lot of families where the jokes stop landing. What used to be funny—stories, memes, eye-rolling—starts feeling uncomfortable...."
         canonical="/blog/everyone-drinks-like-this"
         ogType="article"

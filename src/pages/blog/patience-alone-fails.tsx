@@ -9,7 +9,7 @@ const PatienceAloneFails = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Why Families Are Told to "Just Be Patient"—and Why Patience Alone Rarely Fixes Addiction - Party Wreckers Podcast"
+        title="Why Families Are Told to &quot;Just Be Patient&quot;—and Why Patience Alone Rarely Fixes Addiction - Party Wreckers Podcast"
         description="If patience were enough to fix addiction, most families wouldn't need podcasts, therapists, or interventionists. They'd just need a really good..."
         canonical="/blog/patience-alone-fails"
         ogType="article"

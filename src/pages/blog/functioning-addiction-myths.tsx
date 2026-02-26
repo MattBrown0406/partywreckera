@@ -9,7 +9,7 @@ const FunctioningAddictionMyths = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Why "They're Functioning" Is One of the Most Misleading Labels in Addiction - Party Wreckers Podcast"
+        title="Why &quot;They're Functioning&quot; Is One of the Most Misleading Labels in Addiction - Party Wreckers Podcast"
         description="'They're still working.' 'They haven't hit bottom.' 'They're functioning.' These statements calm families—but they also quietly delay action...."
         canonical="/blog/functioning-addiction-myths"
         ogType="article"

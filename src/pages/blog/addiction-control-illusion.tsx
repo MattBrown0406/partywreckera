@@ -9,7 +9,7 @@ const AddictionControlIllusion = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Why "I've Got It Under Control" Is the Most Misunderstood Sentence in Addiction - Party Wreckers Podcast"
+        title="Why &quot;I've Got It Under Control&quot; Is the Most Misunderstood Sentence in Addiction - Party Wreckers Podcast"
         description="Few sentences calm families faster—or mislead them more—than 'I've got it under control.' It sounds confident. Responsible. Adult. And in addiction,..."
         canonical="/blog/addiction-control-illusion"
         ogType="article"

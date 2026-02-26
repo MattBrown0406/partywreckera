@@ -9,7 +9,7 @@ const ComparisonTrapAddiction = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title=""At Least It's Not as Bad as It Used to Be": The Most Dangerous Sentence Families Say - Party Wreckers Podcast"
+        title="&quot;At Least It's Not as Bad as It Used to Be&quot;: The Most Dangerous Sentence Families Say - Party Wreckers Podcast"
         description="'At least it's not as bad as it used to be' sounds hopeful—but in families affected by addiction, it's often the sentence that keeps everyone stuck...."
         canonical="/blog/comparison-trap-addiction"
         ogType="article"

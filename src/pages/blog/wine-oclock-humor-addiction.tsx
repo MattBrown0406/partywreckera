@@ -9,7 +9,7 @@ const WineOclockHumorAddiction = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title=""It's Just Wine O'Clock"…Until It's Not: How We Joke About Addiction Right Up Until We Can't - Party Wreckers Podcast"
+        title="&quot;It's Just Wine O'Clock&quot;…Until It's Not: How We Joke About Addiction Right Up Until We Can't - Party Wreckers Podcast"
         description="Addiction has a strange relationship with humor. We laugh about it, normalize it, and minimize it right up until someone crosses an invisible..."
         canonical="/blog/wine-oclock-humor-addiction"
         ogType="article"

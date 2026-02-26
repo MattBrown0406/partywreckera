@@ -9,7 +9,7 @@ const DryDrunkSyndromeFamily = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Why Sobriety Alone Isn't Enough: Understanding "Dry Drunk" Behavior in Early Recovery - Party Wreckers Podcast"
+        title="Why Sobriety Alone Isn't Enough: Understanding &quot;Dry Drunk&quot; Behavior in Early Recovery - Party Wreckers Podcast"
         description="Sobriety doesn't automatically heal addiction behaviors. Learn what 'dry drunk' behavior looks like, why it happens, and how families can respond."
         canonical="/blog/dry-drunk-syndrome-family"
         ogType="article"

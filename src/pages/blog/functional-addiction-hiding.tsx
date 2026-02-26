@@ -9,7 +9,7 @@ const FunctionalAddictionHiding = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title=""They've Got It Under Control"… Until They Don't: How Addiction Hides in Plain Sight - Party Wreckers Podcast"
+        title="&quot;They've Got It Under Control&quot;… Until They Don't: How Addiction Hides in Plain Sight - Party Wreckers Podcast"
         description="One of the most common reasons families miss addiction is because things still look mostly fine. Jobs are kept. Responsibilities are handled...."
         canonical="/blog/functional-addiction-hiding"
         ogType="article"

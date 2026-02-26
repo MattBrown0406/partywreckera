@@ -9,7 +9,7 @@ const JustLetGoAdvice = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Why Families Are Told to "Just Let Go"—And Why That Advice Rarely Works - Party Wreckers Podcast"
+        title="Why Families Are Told to &quot;Just Let Go&quot;—And Why That Advice Rarely Works - Party Wreckers Podcast"
         description="If I had a dollar for every time a family was told to 'just let go,' I could probably retire and record the podcast from a beach somewhere. It's one..."
         canonical="/blog/just-let-go-advice"
         ogType="article"
