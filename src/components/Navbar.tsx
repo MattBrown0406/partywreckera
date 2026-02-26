@@ -40,7 +40,14 @@ const PodChaserIcon = () => (
   </svg>
 );
 
-const navLinks = [
+interface NavLink {
+  label: string;
+  href: string;
+  featured?: boolean;
+}
+
+const navLinks: NavLink[] = [
+  { label: "Start Here", href: "/start-here", featured: true },
   { label: "Episodes", href: "/episodes" },
   { label: "Family Resources", href: "/family-resources" },
   { label: "Support Our Sponsors", href: "/sponsors" },
@@ -84,7 +91,11 @@ const Navbar = () => {
                 <Link
                   key={link.label}
                   to={link.href}
-                  className="text-muted-foreground hover:text-foreground transition-colors font-medium"
+                  className={`transition-colors font-medium ${
+                    link.featured 
+                      ? "text-burgundy hover:text-burgundy/80 font-semibold"
+                      : "text-muted-foreground hover:text-foreground"
+                  }`}
                 >
                   {link.label}
                 </Link>
@@ -92,7 +103,11 @@ const Navbar = () => {
                 <a
                   key={link.label}
                   href={link.href}
-                  className="text-muted-foreground hover:text-foreground transition-colors font-medium"
+                  className={`transition-colors font-medium ${
+                    link.featured 
+                      ? "text-burgundy hover:text-burgundy/80 font-semibold"
+                      : "text-muted-foreground hover:text-foreground"
+                  }`}
                 >
                   {link.label}
                 </a>
@@ -164,7 +179,11 @@ const Navbar = () => {
                   <Link
                     key={link.label}
                     to={link.href}
-                    className="text-muted-foreground hover:text-foreground transition-colors font-medium py-2"
+                    className={`transition-colors font-medium py-2 ${
+                      link.featured 
+                        ? "text-burgundy hover:text-burgundy/80 font-semibold"
+                        : "text-muted-foreground hover:text-foreground"
+                    }`}
                     onClick={() => setIsOpen(false)}
                   >
                     {link.label}
@@ -173,7 +192,11 @@ const Navbar = () => {
                   <a
                     key={link.label}
                     href={link.href}
-                    className="text-muted-foreground hover:text-foreground transition-colors font-medium py-2"
+                    className={`transition-colors font-medium py-2 ${
+                      link.featured 
+                        ? "text-burgundy hover:text-burgundy/80 font-semibold"
+                        : "text-muted-foreground hover:text-foreground"
+                    }`}
                     onClick={() => setIsOpen(false)}
                   >
                     {link.label}

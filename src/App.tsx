@@ -13,6 +13,7 @@ import FamilyReflection from "./pages/FamilyReflection";
 import FearInventory from "./pages/FearInventory";
 import ConversationStarters from "./pages/ConversationStarters";
 import Press from "./pages/Press";
+import StartHere from "./pages/StartHere";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
 import NewsletterPopup from "./components/NewsletterPopup";
@@ -29,6 +30,7 @@ const App = () => (
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/start-here" element={<StartHere />} />
           <Route path="/episodes" element={<Episodes />} />
           <Route path="/sponsors" element={<Sponsors />} />
           <Route path="/host" element={<Host />} />
