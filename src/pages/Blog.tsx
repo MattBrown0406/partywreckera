@@ -7,6 +7,7 @@ import { X } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
 import NewsletterSignup from "@/components/NewsletterSignup";
+import SocialShareButtons from "@/components/SocialShareButtons";
 import blogImageExerciseNutrition from "@/assets/blog-exercise-nutrition-recovery.jpg";
 import blogImageEnabling from "@/assets/blog-family-support-enabling.jpg";
 import blogImageConversation from "@/assets/blog-right-moment-conversation.jpg";
@@ -9909,8 +9910,24 @@ const Blog = () => {
                     {selectedArticle.title}
                   </DialogTitle>
                 </DialogHeader>
+                
+                {/* Social share buttons - top */}
+                <div className="mb-6 pb-4 border-b border-border">
+                  <SocialShareButtons 
+                    title={selectedArticle.title}
+                    size="sm"
+                  />
+                </div>
+                
                 <div className="prose-sm sm:prose">
                   {selectedArticle.content}
+                </div>
+                
+                {/* Social share buttons - bottom */}
+                <div className="mt-8 pt-6 border-t border-border">
+                  <SocialShareButtons 
+                    title={selectedArticle.title}
+                  />
                 </div>
                 
                 {/* Newsletter signup after blog content */}
