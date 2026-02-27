@@ -39,16 +39,7 @@ const NewsletterPopup = () => {
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogContent className="max-w-md mx-auto bg-card border-border">
-        <DialogHeader className="relative">
-          <Button
-            variant="ghost"
-            size="sm"
-            className="absolute -top-2 -right-2 h-6 w-6 rounded-full p-0"
-            onClick={handleClose}
-          >
-            <X className="h-4 w-4" />
-            <span className="sr-only">Close</span>
-          </Button>
+      <DialogHeader>
           <DialogTitle className="sr-only">Newsletter Signup</DialogTitle>
         </DialogHeader>
         
