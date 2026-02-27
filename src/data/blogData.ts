@@ -55,6 +55,7 @@ import blogImageBusyNotRecovery from "@/assets/blog-busy-not-recovery.jpg";
 import blogImageStressAddictionExcuse from "@/assets/blog-stress-addiction-excuse.jpg";
 import blogImagePromisesCycle from "@/assets/blog-addiction-promises-cycle.jpg";
 import blogImageBlameShifting from "@/assets/blog-blame-shifting-addiction.jpg";
+import blogImageAddictionFamilyExhaustion from "@/assets/blog-addiction-family-exhaustion.jpg";
 
 export interface BlogArticle {
   id: string;
@@ -67,6 +68,14 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "addiction-family-exhaustion",
+    title: "Why You're Exhausted — And It's Not Just the Drinking",
+    date: "February 13, 2026",
+    image: blogImageAddictionFamilyExhaustion,
+    imageAlt: "Exhausted middle-aged woman sitting at kitchen table early morning with cold coffee, eyes unfocused, showing chronic emotional depletion from living with addiction",
+    excerpt: "You tell yourself it's the late nights. The arguments. The chaos. But the exhaustion runs deeper than that. Loving someone with addiction creates a kind of fatigue that sleep doesn't fix. It's mental. Emotional. Physiological. You are not just tired from their drinking. You're tired from living in constant anticipation. Understanding addiction-related family exhaustion is the first step toward reclaiming your energy."
+  },
   {
     id: "blame-shifting-addiction",
     title: "Why Every Conversation About Drinking Somehow Turns Into Your Fault",
