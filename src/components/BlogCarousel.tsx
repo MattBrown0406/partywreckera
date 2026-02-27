@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
+import blogImageAddictionFamilyExhaustion from "@/assets/blog-addiction-family-exhaustion.jpg";
 import blogImageBlameShifting from "@/assets/blog-blame-shifting-addiction.jpg";
 import blogImagePromisesCycle from "@/assets/blog-addiction-promises-cycle.jpg";
 import blogImagePersonalityChanges from "@/assets/blog-addiction-personality-changes.jpg";
@@ -16,6 +17,13 @@ import blogImageEffortVsChange from "@/assets/blog-effort-vs-change-addiction.jp
 import blogImageFalseStabilityRebound from "@/assets/blog-false-stability-rebound.jpg";
 
 const recentArticles = [
+  {
+    id: "addiction-family-exhaustion",
+    title: "Why You're Exhausted — And It's Not Just the Drinking",
+    date: "February 13, 2026",
+    image: blogImageAddictionFamilyExhaustion,
+    imageAlt: "Exhausted middle-aged woman sitting at kitchen table early morning with cold coffee showing chronic emotional depletion",
+  },
   {
     id: "blame-shifting-addiction",
     title: "Why Every Conversation About Drinking Somehow Turns Into Your Fault",

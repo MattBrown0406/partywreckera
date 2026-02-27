@@ -4,6 +4,7 @@ import { findArticleBySlug } from "@/data/blogData";
 
 // Dynamically import all blog post components
 const components = {
+  "addiction-family-exhaustion": lazy(() => import("./blog/addiction-family-exhaustion")),
   "addiction-ambiguity-clarity": lazy(() => import("./blog/addiction-ambiguity-clarity")),
   "addiction-control-illusion": lazy(() => import("./blog/addiction-control-illusion")),
   "addiction-loopholes": lazy(() => import("./blog/addiction-loopholes")),
