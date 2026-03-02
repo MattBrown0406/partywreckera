@@ -56,6 +56,7 @@ import blogImageStressAddictionExcuse from "@/assets/blog-stress-addiction-excus
 import blogImagePromisesCycle from "@/assets/blog-addiction-promises-cycle.jpg";
 import blogImageBlameShifting from "@/assets/blog-blame-shifting-addiction.jpg";
 import blogImageAddictionFamilyExhaustion from "@/assets/blog-addiction-family-exhaustion.jpg";
+import blogImageLivingInTheStorm from "@/assets/blog-living-in-the-storm.jpg";
 
 export interface BlogArticle {
   id: string;
@@ -68,6 +69,14 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "living-in-the-storm",
+    title: "Living in the Storm: What Families Experience When a Loved One Is in Active Addiction",
+    date: "February 27, 2026",
+    image: blogImageLivingInTheStorm,
+    imageAlt: "Middle-aged woman sitting alone in dimly lit kitchen at night holding phone with untouched coffee mug showing chronic emotional weight of loving someone in active addiction",
+    excerpt: "The call comes at 2 a.m. again. Active addiction grinds families down through enabling, hypervigilance, compassion fatigue, and repeated relapse cycles. This is what it truly looks like from inside a family."
+  },
   {
     id: "addiction-family-exhaustion",
     title: "Why You're Exhausted — And It's Not Just the Drinking",

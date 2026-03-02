@@ -4,6 +4,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 import blogImageAddictionFamilyExhaustion from "@/assets/blog-addiction-family-exhaustion.jpg";
+import blogImageLivingInTheStorm from "@/assets/blog-living-in-the-storm.jpg";
 import blogImageBlameShifting from "@/assets/blog-blame-shifting-addiction.jpg";
 import blogImagePromisesCycle from "@/assets/blog-addiction-promises-cycle.jpg";
 import blogImagePersonalityChanges from "@/assets/blog-addiction-personality-changes.jpg";
@@ -17,6 +18,13 @@ import blogImageEffortVsChange from "@/assets/blog-effort-vs-change-addiction.jp
 import blogImageFalseStabilityRebound from "@/assets/blog-false-stability-rebound.jpg";
 
 const recentArticles = [
+  {
+    id: "living-in-the-storm",
+    title: "Living in the Storm: What Families Experience When a Loved One Is in Active Addiction",
+    date: "February 27, 2026",
+    image: blogImageLivingInTheStorm,
+    imageAlt: "Middle-aged woman sitting alone in dimly lit kitchen at night holding phone showing chronic emotional weight of active addiction on families",
+  },
   {
     id: "addiction-family-exhaustion",
     title: "Why You're Exhausted — And It's Not Just the Drinking",
