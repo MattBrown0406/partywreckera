@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Headphones, Play, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "@/assets/party-wreckers-logo-2026.png";
+import soberHelplineLogo from "@/assets/sober-helpline-logo.png";
 import ThemePlayer from "@/components/ThemePlayer";
 
 const HeroSection = () => {
@@ -18,6 +19,17 @@ const HeroSection = () => {
 
       <div className="container relative z-10 px-4 py-20">
         <div className="max-w-4xl mx-auto text-center">
+          {/* Sober Helpline Banner */}
+          <a
+            href="https://soberhelpline.com/monday-zoom-registration"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 sm:gap-4 px-5 py-2.5 rounded-full bg-secondary/80 border border-border backdrop-blur-sm hover:bg-secondary transition-colors duration-200 mb-6"
+          >
+            <img src={soberHelplineLogo} alt="Sober Helpline logo" className="h-8 sm:h-10 w-auto" />
+            <span className="text-sm sm:text-base font-semibold text-foreground tracking-wide">Free Weekly Family Support Meetings</span>
+          </a>
+
           {/* Theme Player */}
           <div className="mb-6">
             <ThemePlayer />
