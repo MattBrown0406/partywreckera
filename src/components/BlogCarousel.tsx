@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
+import blogImageBadNightMyth from "@/assets/blog-bad-night-myth.jpg";
 import blogImageAddictionFamilyExhaustion from "@/assets/blog-addiction-family-exhaustion.jpg";
 import blogImageLivingInTheStorm from "@/assets/blog-living-in-the-storm.jpg";
 import blogImageBlameShifting from "@/assets/blog-blame-shifting-addiction.jpg";
@@ -18,6 +19,13 @@ import blogImageEffortVsChange from "@/assets/blog-effort-vs-change-addiction.jp
 import blogImageFalseStabilityRebound from "@/assets/blog-false-stability-rebound.jpg";
 
 const recentArticles = [
+  {
+    id: "bad-night-myth",
+    title: "The \"It Was Just a Bad Night\" Myth",
+    date: "March 4, 2026",
+    image: blogImageBadNightMyth,
+    imageAlt: "Young adult male sitting alone at dimly lit kitchen table late at night with empty glass while woman watches from doorway representing addiction denial patterns",
+  },
   {
     id: "living-in-the-storm",
     title: "Living in the Storm: What Families Experience When a Loved One Is in Active Addiction",

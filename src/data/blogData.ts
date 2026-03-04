@@ -57,6 +57,7 @@ import blogImagePromisesCycle from "@/assets/blog-addiction-promises-cycle.jpg";
 import blogImageBlameShifting from "@/assets/blog-blame-shifting-addiction.jpg";
 import blogImageAddictionFamilyExhaustion from "@/assets/blog-addiction-family-exhaustion.jpg";
 import blogImageLivingInTheStorm from "@/assets/blog-living-in-the-storm.jpg";
+import blogImageBadNightMyth from "@/assets/blog-bad-night-myth.jpg";
 
 export interface BlogArticle {
   id: string;
@@ -69,6 +70,14 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "bad-night-myth",
+    title: "The \"It Was Just a Bad Night\" Myth",
+    date: "March 4, 2026",
+    image: blogImageBadNightMyth,
+    imageAlt: "Young adult male sitting alone at dimly lit kitchen table late at night with empty glass while woman watches from doorway representing addiction denial patterns",
+    excerpt: "Why 'it was just a bad night' is one of the most dangerous phrases in addiction. Learn how families get trapped evaluating isolated events instead of recognizing escalating patterns of substance use."
+  },
   {
     id: "living-in-the-storm",
     title: "Living in the Storm: What Families Experience When a Loved One Is in Active Addiction",
