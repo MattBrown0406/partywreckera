@@ -58,6 +58,7 @@ import blogImageBlameShifting from "@/assets/blog-blame-shifting-addiction.jpg";
 import blogImageAddictionFamilyExhaustion from "@/assets/blog-addiction-family-exhaustion.jpg";
 import blogImageLivingInTheStorm from "@/assets/blog-living-in-the-storm.jpg";
 import blogImageBadNightMyth from "@/assets/blog-bad-night-myth.jpg";
+import blogImageRecoveryRoadmap from "@/assets/blog-recovery-roadmap.jpg";
 
 export interface BlogArticle {
   id: string;
@@ -70,6 +71,14 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "recovery-roadmap",
+    title: "Why I Built the Recovery Roadmap",
+    date: "March 5, 2026",
+    image: blogImageRecoveryRoadmap,
+    imageAlt: "Hand-drawn recovery roadmap on wooden desk with coffee cup and phone showing family photo representing a structured guide for families navigating addiction",
+    excerpt: "Matt Brown explains why he created the Recovery Roadmap on SoberHelpline.com — a free, stage-based action plan for families navigating addiction. No marketing. No generic advice. Just 20 years of real intervention experience."
+  },
   {
     id: "bad-night-myth",
     title: "The \"It Was Just a Bad Night\" Myth",
