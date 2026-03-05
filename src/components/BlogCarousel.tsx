@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
+import blogImageRecoveryRoadmap from "@/assets/blog-recovery-roadmap.jpg";
 import blogImageBadNightMyth from "@/assets/blog-bad-night-myth.jpg";
 import blogImageAddictionFamilyExhaustion from "@/assets/blog-addiction-family-exhaustion.jpg";
 import blogImageLivingInTheStorm from "@/assets/blog-living-in-the-storm.jpg";
@@ -19,6 +20,13 @@ import blogImageEffortVsChange from "@/assets/blog-effort-vs-change-addiction.jp
 import blogImageFalseStabilityRebound from "@/assets/blog-false-stability-rebound.jpg";
 
 const recentArticles = [
+  {
+    id: "recovery-roadmap",
+    title: "Why I Built the Recovery Roadmap",
+    date: "March 5, 2026",
+    image: blogImageRecoveryRoadmap,
+    imageAlt: "Hand-drawn recovery roadmap on wooden desk with coffee and phone representing structured family addiction guide",
+  },
   {
     id: "bad-night-myth",
     title: "The \"It Was Just a Bad Night\" Myth",
