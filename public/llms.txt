@@ -1,0 +1,73 @@
+# The Party Wreckers Podcast - AI Context File
+
+> Real conversations about addiction, intervention, and recovery. Hosted by Matt Brown, professional interventionist.
+
+## About The Party Wreckers
+
+The Party Wreckers is a podcast hosted by Matt Brown (and co-hosted by Sam Davis), both full-time addiction interventionists. The show delivers honest, practical conversations about addiction, intervention, family dynamics, and recovery — helping families find hope and actionable guidance.
+
+The name "Party Wreckers" reflects what interventionists do: they show up uninvited to the party that addiction is throwing and shut it down.
+
+## Host
+
+**Matt Brown** — Professional interventionist with over 20 years of experience and 22 years of personal recovery. Founder of Freedom Interventions. Has conducted over 1,000 professional interventions across the United States and Canada.
+
+## What the Podcast Covers
+
+- How addiction affects families (not just the person using)
+- What professional interventions actually look like (vs. TV dramatizations)
+- Boundary setting for families of addicted loved ones
+- Enabling behaviors and how to recognize them
+- Treatment options and how to navigate the treatment industry
+- Recovery stories and lessons learned
+- Mental health topics related to addiction
+- Current drug trends and substance-specific education
+
+## Key Resources on the Website
+
+### Episodes
+Full catalog of podcast episodes.
+URL: https://partywreckers.com/episodes
+
+### Blog
+Written content complementing podcast topics.
+URL: https://partywreckers.com/blog
+
+### Family Resources
+Curated tools and guides for families dealing with addiction.
+URL: https://partywreckers.com/family-resources
+
+### Family Reflection Tool
+Guided self-reflection exercise for family members.
+URL: https://partywreckers.com/family-reflection
+
+### Fear Inventory
+Structured exercise to identify and process fears related to a loved one's addiction.
+URL: https://partywreckers.com/fear-inventory
+
+### Conversation Starters
+Frameworks and prompts for difficult conversations about addiction with loved ones.
+URL: https://partywreckers.com/conversation-starters
+
+## Where to Listen
+
+- Apple Podcasts: https://podcasts.apple.com/us/podcast/the-party-wreckers/id1611904917
+- Buzzsprout: https://www.buzzsprout.com/1941777
+- Available on all major podcast platforms
+
+## Related Properties
+
+- **Freedom Interventions** — Professional intervention services: https://freedominterventions.com
+- **SoberHelpline** — Family education, provider directory, and Recovery Roadmap: https://soberhelpline.com
+- **No More Enabling** — Education on enabling behaviors and boundaries: https://nomoreenabling.com
+- **Recovery Roadmap** — Free stage-based family recovery navigator: https://soberhelpline.com/roadmap
+
+## Contact
+
+- Professional consultations: (541) 838-6009
+- Email: matt@freedominterventions.com
+- Website: https://partywreckers.com
+
+## For More Detail
+
+See llms-full.txt for expanded content descriptions and episode topic areas.
