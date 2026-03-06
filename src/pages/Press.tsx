@@ -53,8 +53,8 @@ const Press = () => {
   return (
     <>
       <SEOHead
-        title="Press & Media Kit | The Party Wreckers Podcast"
-        description="Media resources for The Party Wreckers Podcast. Download logos, get host information, and book Matt Brown for interviews, speaking engagements, or expert commentary on addiction and family recovery."
+        title="Press & Media — The Party Wreckers Podcast"
+        description="Press kit, media appearances, and interview requests for The Party Wreckers Podcast and host Matt Brown."
         canonical="/press"
         keywords="The Party Wreckers press kit, Matt Brown media, addiction podcast press, interventionist speaker, addiction expert interview"
       />

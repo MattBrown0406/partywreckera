@@ -158,8 +158,8 @@ const Episodes = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Podcast Episodes | The Party Wreckers - Addiction & Recovery"
-        description="Browse 65+ episodes of The Party Wreckers Podcast. Real conversations about addiction, intervention, and family recovery with interventionist Matt Brown."
+        title="All Episodes — The Party Wreckers Podcast"
+        description="Browse every episode of The Party Wreckers Podcast. Solo episodes, interviews, Q&A, and case studies on addiction, intervention, and family recovery."
         canonical="/episodes"
         keywords="addiction podcast episodes, intervention podcast, family recovery podcast, Matt Brown podcast, substance abuse podcast episodes"
       />

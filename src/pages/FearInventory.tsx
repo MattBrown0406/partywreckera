@@ -83,8 +83,8 @@ const FearInventory = () => {
   return (
     <>
       <SEOHead
-        title="Fear Inventory | The Party Wreckers Podcast"
-        description="An interactive fear inventory for families affected by addiction. Identify and examine the fears that drive family decisions around addiction."
+        title="Fear Inventory Exercise — Identify What's Holding You Back | Party Wreckers"
+        description="Fear keeps families stuck. This exercise helps you name your fears, examine them honestly, and start moving toward action instead of paralysis."
         canonical="/fear-inventory"
       />
       <BreadcrumbJsonLd items={[

@@ -160,8 +160,8 @@ const FamilyResources = () => {
   return (
     <>
       <SEOHead
-        title="Family Resources for Addiction Support | The Party Wreckers Podcast"
-        description="Free resources for families dealing with addiction. Find support groups, crisis hotlines, educational materials, and guidance for setting boundaries and helping your loved one."
+        title="Family Resources — Free Addiction Support Tools | Party Wreckers"
+        description="Free resources for families dealing with a loved one's addiction: reflection exercises, fear inventories, conversation guides, and more."
         canonical="/family-resources"
         keywords="family addiction resources, addiction support for families, enabling vs helping, family boundaries addiction, Al-Anon resources, family intervention help"
       />

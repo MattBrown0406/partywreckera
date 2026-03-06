@@ -82,8 +82,8 @@ const FamilyReflection = () => {
   return (
     <>
       <SEOHead
-        title="Family Reflection Guide | The Party Wreckers Podcast"
-        description="An interactive reflection exercise for families affected by addiction. Take inventory of what you've tried and identify patterns to make clearer decisions."
+        title="Family Reflection Exercise — Free Tool | Party Wreckers"
+        description="A guided reflection exercise for families affected by addiction. Take a step back, assess your situation, and identify what you can change today."
         canonical="/family-reflection"
       />
       <BreadcrumbJsonLd items={[

@@ -11,8 +11,8 @@ const BlogIndex = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Blog - Party Wreckers Podcast"
-        description="Expert insights on addiction, family support, boundaries, and recovery. Practical advice for families navigating substance use challenges with compassion and clarity."
+        title="Blog — Addiction, Families & Recovery | Party Wreckers"
+        description="Articles on addiction, intervention, family recovery, and the stories behind the podcast. Written by Matt Brown, professional interventionist."
         canonical="/blog"
         keywords="addiction blog, family support, enabling vs helping, boundaries, recovery resources, intervention"
       />
