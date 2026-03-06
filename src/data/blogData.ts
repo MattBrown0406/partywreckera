@@ -59,6 +59,7 @@ import blogImageAddictionFamilyExhaustion from "@/assets/blog-addiction-family-e
 import blogImageLivingInTheStorm from "@/assets/blog-living-in-the-storm.jpg";
 import blogImageBadNightMyth from "@/assets/blog-bad-night-myth.jpg";
 import blogImageRecoveryRoadmap from "@/assets/blog-recovery-roadmap.jpg";
+import blogImageAlcoholAddictionRecovery from "@/assets/blog-alcohol-addiction-recovery.jpg";
 
 export interface BlogArticle {
   id: string;
