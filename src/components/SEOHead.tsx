@@ -27,7 +27,7 @@ const ROUTE_DESCRIPTIONS: Record<string, string> = {
   "/family-resources": "Free resources for families dealing with a loved one's addiction: reflection exercises, fear inventories, conversation guides, and more.",
   "/host": "Matt Brown is a professional interventionist with 20+ years experience and 22 years of personal recovery. He created The Party Wreckers to help families.",
   "/press": "Press kit, media appearances, and interview requests for The Party Wreckers Podcast and host Matt Brown.",
-  "/sponsors": "Partner with The Party Wreckers Podcast to reach families navigating addiction and recovery. Ethical sponsorship opportunities available.",
+  "/sponsors": "Partner with The Party Wreckers Podcast to reach families navigating addiction and recovery. Ethical sponsorship opportunities.",
   "/family-reflection": "A guided reflection exercise for families affected by addiction. Step back, assess your situation, and identify what you can change today.",
   "/fear-inventory": "Fear keeps families stuck. This exercise helps you name your fears, examine them honestly, and move from paralysis to action.",
   "/conversation-starters": "Not sure how to bring it up? Conversation starters to help families begin the hardest — and most important — talk about addiction.",
