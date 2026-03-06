@@ -73,6 +73,14 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    id: "alcohol-addiction-recovery",
+    title: "Alcohol Addiction Recovery: Signs, Stages & How to Get Help",
+    date: "March 6, 2026",
+    image: blogImageAlcoholAddictionRecovery,
+    imageAlt: "Person walking along a sunlit winding path at dawn symbolizing the journey of alcohol addiction recovery",
+    excerpt: "Alcohol use disorder affects more than 29 million Americans. Recovery is possible at any stage — with the right support, treatment, and understanding of what to expect along the way."
+  },
+  {
     id: "recovery-roadmap",
     title: "Why I Built the Recovery Roadmap",
     date: "March 5, 2026",
