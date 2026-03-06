@@ -10,7 +10,7 @@ const StartHere = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Start Here - New to The Party Wreckers Podcast"
+        title="Start Here — New to The Party Wreckers Podcast"
         description="If someone you love is struggling with addiction, start here. Essential resources, foundational content, and guidance for families in crisis."
         canonical="/start-here"
         keywords="addiction help, family support, where to start addiction, intervention help, addiction resources for families"

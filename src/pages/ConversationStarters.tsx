@@ -23,8 +23,8 @@ const ConversationStarters = () => {
   return (
     <>
       <SEOHead
-        title="Conversation Starters for Families | The Party Wreckers Podcast"
-        description="Thoughtful conversation starters to help families talk about addiction with less defensiveness and more clarity. Printable guide for families."
+        title="How to Talk About Addiction — Conversation Starters | Party Wreckers"
+        description="Not sure how to bring it up? These conversation starters help families begin the hardest — and most important — conversation about addiction."
         canonical="/conversation-starters"
       />
       <BreadcrumbJsonLd items={[

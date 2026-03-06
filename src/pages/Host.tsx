@@ -29,8 +29,8 @@ const Host = () => {
   return (
     <>
       <SEOHead
-        title="Meet Matt Brown | The Party Wreckers Podcast Host"
-        description="Meet Matt Brown, host of The Party Wreckers Podcast. A professional interventionist with 20+ years helping families navigate addiction, intervention, and recovery."
+        title="About Matt Brown — Host of The Party Wreckers Podcast"
+        description="Matt Brown is a professional interventionist with 20+ years experience and 22 years of personal recovery. He created The Party Wreckers to help families."
         canonical="/host"
         keywords="Matt Brown interventionist, addiction intervention specialist, family recovery expert, The Party Wreckers host, professional interventionist"
       />

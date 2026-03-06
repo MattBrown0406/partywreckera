@@ -12,8 +12,8 @@ const Sponsors = () => {
   return (
     <>
       <SEOHead
-        title="Support Our Sponsors | The Party Wreckers Podcast"
-        description="Support the sponsors who make The Party Wreckers Podcast possible. These partners help us continue providing resources for families dealing with addiction."
+        title="Sponsor The Party Wreckers Podcast | Partnership Opportunities"
+        description="Partner with The Party Wreckers Podcast to reach families navigating addiction and recovery. Ethical sponsorship opportunities available."
         canonical="/sponsors"
       />
       <BreadcrumbJsonLd items={[
