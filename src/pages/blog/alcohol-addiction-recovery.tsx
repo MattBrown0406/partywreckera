@@ -29,11 +29,11 @@ const AlcoholAddictionRecovery = () => {
       />
 
       <ArticleJsonLd
-        headline="Alcohol Addiction Recovery: Signs, Stages & How to Get Help"
+        title="Alcohol Addiction Recovery: Signs, Stages & How to Get Help"
         description="Alcohol use disorder affects 29+ million Americans. Learn the warning signs, the 5 stages of recovery, evidence-based treatments, and how families can help."
         datePublished="2026-03-06"
         dateModified="2026-03-06"
-        url="/blog/alcohol-addiction-recovery"
+        slug="alcohol-addiction-recovery"
         image={blogImageAlcoholAddictionRecovery}
       />
 
