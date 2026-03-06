@@ -59,6 +59,7 @@ import blogImageAddictionFamilyExhaustion from "@/assets/blog-addiction-family-e
 import blogImageLivingInTheStorm from "@/assets/blog-living-in-the-storm.jpg";
 import blogImageBadNightMyth from "@/assets/blog-bad-night-myth.jpg";
 import blogImageRecoveryRoadmap from "@/assets/blog-recovery-roadmap.jpg";
+import blogImageAlcoholAddictionRecovery from "@/assets/blog-alcohol-addiction-recovery.jpg";
 
 export interface BlogArticle {
   id: string;
@@ -71,6 +72,14 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "alcohol-addiction-recovery",
+    title: "Alcohol Addiction Recovery: Signs, Stages & How to Get Help",
+    date: "March 6, 2026",
+    image: blogImageAlcoholAddictionRecovery,
+    imageAlt: "Person walking along a sunlit winding path at dawn symbolizing the journey of alcohol addiction recovery",
+    excerpt: "Alcohol use disorder affects more than 29 million Americans. Recovery is possible at any stage — with the right support, treatment, and understanding of what to expect along the way."
+  },
   {
     id: "recovery-roadmap",
     title: "Why I Built the Recovery Roadmap",
