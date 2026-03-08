@@ -74,6 +74,15 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    id: "what-to-say-at-an-intervention",
+    title: "What to Say at an Intervention: Scripts & Steps That Actually Work",
+    date: "March 8, 2026",
+    image: blogImageInterventionWhatToSay,
+    imageAlt: "Family gathered in a warm living room preparing for an addiction intervention conversation with notes on a table",
+    excerpt: "A professional interventionist explains exactly what to say at an intervention — including word-for-word script examples, what NOT to say, and step-by-step preparation tips for families.",
+    category: "Intervention"
+  },
+  {
     id: "alcohol-addiction-recovery",
     title: "Alcohol Addiction Recovery: Signs, Stages & How to Get Help",
     date: "March 6, 2026",
