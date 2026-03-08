@@ -71,6 +71,7 @@ const components = {
   "this-time-feels-different": lazy(() => import("./blog/this-time-feels-different")),
   "understanding-addiction-education": lazy(() => import("./blog/understanding-addiction-education")),
   "wine-oclock-humor-addiction": lazy(() => import("./blog/wine-oclock-humor-addiction")),
+  "what-to-say-at-an-intervention": lazy(() => import("./blog/what-to-say-at-an-intervention")),
 };
 
 const BlogPost = () => {
