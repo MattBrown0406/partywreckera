@@ -21,11 +21,11 @@ const WhatToSayAtAnIntervention = () => {
       />
 
       <ArticleJsonLd
-        headline="What to Say at an Intervention: Scripts & Steps That Actually Work"
+        title="What to Say at an Intervention: Scripts & Steps That Actually Work"
         image={blogImage}
         datePublished="2026-03-08"
         dateModified="2026-03-08"
-        authorName="Matt Brown"
+        slug="what-to-say-at-an-intervention"
         description="A professional interventionist explains exactly what to say at an intervention — including word-for-word script examples, what NOT to say, and step-by-step preparation tips for families."
       />
 
