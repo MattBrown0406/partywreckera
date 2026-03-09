@@ -61,6 +61,7 @@ import blogImageBadNightMyth from "@/assets/blog-bad-night-myth.jpg";
 import blogImageRecoveryRoadmap from "@/assets/blog-recovery-roadmap.jpg";
 import blogImageAlcoholAddictionRecovery from "@/assets/blog-alcohol-addiction-recovery.jpg";
 import blogImageInterventionWhatToSay from "@/assets/blog-intervention-what-to-say.jpg";
+import blogImageSignsLovedOneNeedsHelp from "@/assets/blog-signs-loved-one-needs-help.jpg";
 
 export interface BlogArticle {
   id: string;
