@@ -75,6 +75,15 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    id: "signs-loved-one-needs-help-with-alcohol",
+    title: "11 Signs Your Loved One Needs Help With Drinking (And What To Do Next)",
+    date: "March 9, 2026",
+    image: blogImageSignsLovedOneNeedsHelp,
+    imageAlt: "Concerned family member worrying about a loved one's drinking late at night",
+    excerpt: "Is your family member's drinking starting to feel less funny and more scary? Here are the real signs someone needs help — explained with honesty, a little humor, and zero judgment.",
+    category: "Family & Addiction"
+  },
+  {
     id: "what-to-say-at-an-intervention",
     title: "What to Say at an Intervention: Scripts & Steps That Actually Work",
     date: "March 8, 2026",
