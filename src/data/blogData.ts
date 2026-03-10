@@ -62,6 +62,7 @@ import blogImageRecoveryRoadmap from "@/assets/blog-recovery-roadmap.jpg";
 import blogImageAlcoholAddictionRecovery from "@/assets/blog-alcohol-addiction-recovery.jpg";
 import blogImageInterventionWhatToSay from "@/assets/blog-intervention-what-to-say.jpg";
 import blogImageSignsLovedOneNeedsHelp from "@/assets/blog-signs-loved-one-needs-help.jpg";
+import blogImageAddictionFromInside from "@/assets/blog-addiction-from-inside.jpg";
 
 export interface BlogArticle {
   id: string;
@@ -74,6 +75,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "what-addiction-looks-like-from-inside",
+    title: "What Addiction Really Looks Like From the Inside",
+    date: "March 10, 2026",
+    image: blogImageAddictionFromInside,
+    imageAlt: "Young man sitting alone in a dimly lit room reflecting on addiction and moments of clarity",
+    excerpt: "A first-person account of addiction's internal experience: the rationalizations, shame spirals, failed attempts to quit, and moments of clarity that eventually lead to recovery.",
+    category: "Personal Stories"
+  },
   {
     id: "signs-loved-one-needs-help-with-alcohol",
     title: "11 Signs Your Loved One Needs Help With Drinking (And What To Do Next)",
