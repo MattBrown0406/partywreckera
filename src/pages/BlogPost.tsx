@@ -74,6 +74,7 @@ const components = {
   "wine-oclock-humor-addiction": lazy(() => import("./blog/wine-oclock-humor-addiction")),
   "what-to-say-at-an-intervention": lazy(() => import("./blog/what-to-say-at-an-intervention")),
   "what-addiction-looks-like-from-inside": lazy(() => import("./blog/what-addiction-looks-like-from-inside")),
+  "trauma-and-addiction-families": lazy(() => import("./blog/trauma-and-addiction-families")),
 };
 
 const BlogPost = () => {

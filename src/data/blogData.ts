@@ -77,6 +77,15 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    id: "trauma-and-addiction-families",
+    title: "The Trauma Connection: Why Your Loved One's Addiction Isn't the Whole Story",
+    date: "March 11, 2026",
+    image: blogImageTraumaAddiction,
+    imageAlt: "Young adult holding a cracked mirror in a dimly lit room, symbolizing unresolved trauma beneath addiction",
+    excerpt: "Most addiction isn't just about substances—it's about unhealed pain. Learn how trauma drives addiction and what families need to know to actually help their loved one.",
+    category: "Understanding Addiction"
+  },
+  {
     id: "what-addiction-looks-like-from-inside",
     title: "What Addiction Really Looks Like From the Inside",
     date: "March 10, 2026",
