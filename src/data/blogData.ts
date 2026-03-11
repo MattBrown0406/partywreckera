@@ -63,6 +63,7 @@ import blogImageAlcoholAddictionRecovery from "@/assets/blog-alcohol-addiction-r
 import blogImageInterventionWhatToSay from "@/assets/blog-intervention-what-to-say.jpg";
 import blogImageSignsLovedOneNeedsHelp from "@/assets/blog-signs-loved-one-needs-help.jpg";
 import blogImageAddictionFromInside from "@/assets/blog-addiction-from-inside.jpg";
+import blogImageTraumaAddiction from "@/assets/blog-trauma-addiction-families.jpg";
 
 export interface BlogArticle {
   id: string;
@@ -75,6 +76,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "trauma-and-addiction-families",
+    title: "The Trauma Connection: Why Your Loved One's Addiction Isn't the Whole Story",
+    date: "March 11, 2026",
+    image: blogImageTraumaAddiction,
+    imageAlt: "Young adult holding a cracked mirror in a dimly lit room, symbolizing unresolved trauma beneath addiction",
+    excerpt: "Most addiction isn't just about substances—it's about unhealed pain. Learn how trauma drives addiction and what families need to know to actually help their loved one.",
+    category: "Understanding Addiction"
+  },
   {
     id: "what-addiction-looks-like-from-inside",
     title: "What Addiction Really Looks Like From the Inside",
