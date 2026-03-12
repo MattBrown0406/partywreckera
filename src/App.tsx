@@ -17,6 +17,7 @@ import StartHere from "./pages/StartHere";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
 import NewsletterPopup from "./components/NewsletterPopup";
+import StickyContactForm from "./components/StickyContactForm";
 
 // Lazy load blog components
 const BlogIndex = lazy(() => import("./pages/BlogIndex"));
