@@ -75,6 +75,7 @@ const components = {
   "what-to-say-at-an-intervention": lazy(() => import("./blog/what-to-say-at-an-intervention")),
   "what-addiction-looks-like-from-inside": lazy(() => import("./blog/what-addiction-looks-like-from-inside")),
   "trauma-and-addiction-families": lazy(() => import("./blog/trauma-and-addiction-families")),
+  "anxiety-addiction-loop-families": lazy(() => import("./blog/anxiety-addiction-loop-families")),
 };
 
 const BlogPost = () => {
