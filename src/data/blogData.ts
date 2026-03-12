@@ -64,6 +64,7 @@ import blogImageInterventionWhatToSay from "@/assets/blog-intervention-what-to-s
 import blogImageSignsLovedOneNeedsHelp from "@/assets/blog-signs-loved-one-needs-help.jpg";
 import blogImageAddictionFromInside from "@/assets/blog-addiction-from-inside.jpg";
 import blogImageTraumaAddiction from "@/assets/blog-trauma-addiction-families.jpg";
+import blogImageAnxietyAddictionLoop from "@/assets/blog-anxiety-addiction-loop.jpg";
 
 export interface BlogArticle {
   id: string;
