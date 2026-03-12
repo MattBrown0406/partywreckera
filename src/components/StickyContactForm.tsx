@@ -44,7 +44,7 @@ const StickyContactForm = () => {
 
           {status === "success" ? (
             <div className="p-6 text-center">
-              <CheckCircle className="w-10 h-10 text-green-500 mx-auto mb-2" />
+              <CheckCircle className="w-10 h-10 text-accent mx-auto mb-2" />
               <p className="text-sm text-foreground font-medium">Message ready to send!</p>
               <p className="text-xs text-muted-foreground mt-1">Your email client should open shortly.</p>
             </div>
