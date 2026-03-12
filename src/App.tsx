@@ -40,6 +40,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <NewsletterPopup />
+      <StickyContactForm />
       <BrowserRouter>
         <ScrollToTop />
         <Routes>
