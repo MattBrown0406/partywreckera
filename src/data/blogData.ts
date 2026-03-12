@@ -78,6 +78,15 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    id: "anxiety-addiction-loop-families",
+    title: "The Anxiety-Addiction Loop: Why Your Loved One Can't Just \"Calm Down and Stop\"",
+    date: "March 12, 2026",
+    image: blogImageAnxietyAddictionLoop,
+    imageAlt: "A silhouetted figure sitting alone on a couch in dim warm light, representing the cycle of anxiety and addiction",
+    excerpt: "Anxiety and addiction feed each other in a vicious cycle. Learn how the anxiety-addiction loop works, why 'just stop' misses the point, and what families can actually do.",
+    category: "Family Education"
+  },
+  {
     id: "trauma-and-addiction-families",
     title: "The Trauma Connection: Why Your Loved One's Addiction Isn't the Whole Story",
     date: "March 11, 2026",
