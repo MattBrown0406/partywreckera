@@ -79,6 +79,15 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    id: "shame-and-addiction",
+    title: "Why Shame Doesn't Sober Up an Addict — It Just Drives the Using Underground",
+    date: "March 13, 2026",
+    image: blogImageShameAddiction,
+    imageAlt: "A young man sitting alone on the edge of a bed with head bowed, representing the weight of shame in addiction",
+    excerpt: "Shame is one of the most powerful emotional drivers of continued substance use — and yet it's one of the first tools families reach for. Learn why shaming backfires and what actually works instead.",
+    category: "Family Education"
+  },
+  {
     id: "anxiety-addiction-loop-families",
     title: "The Anxiety-Addiction Loop: Why Your Loved One Can't Just \"Calm Down and Stop\"",
     date: "March 12, 2026",
