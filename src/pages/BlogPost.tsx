@@ -76,6 +76,7 @@ const components = {
   "what-addiction-looks-like-from-inside": lazy(() => import("./blog/what-addiction-looks-like-from-inside")),
   "trauma-and-addiction-families": lazy(() => import("./blog/trauma-and-addiction-families")),
   "anxiety-addiction-loop-families": lazy(() => import("./blog/anxiety-addiction-loop-families")),
+  "shame-and-addiction": lazy(() => import("./blog/shame-and-addiction")),
 };
 
 const BlogPost = () => {
