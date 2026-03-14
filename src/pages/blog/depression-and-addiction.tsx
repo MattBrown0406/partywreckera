@@ -22,11 +22,11 @@ const DepressionAndAddiction = () => {
       />
 
       <ArticleJsonLd
-        headline="When Getting Out of Bed Feels Like Climbing Everest: Depression, Addiction, and What Families Need to Know"
+        title="When Getting Out of Bed Feels Like Climbing Everest: Depression, Addiction, and What Families Need to Know"
         description="Depression and addiction feed each other in a loop that's hard to break. Learn what co-occurring depression and addiction looks like, why standard treatment can fall short, and what families can actually do."
         image={blogImageDepressionAddiction}
         datePublished="2026-03-14"
-        author="Matt Brown"
+        slug="depression-and-addiction"
       />
 
       <BreadcrumbJsonLd
