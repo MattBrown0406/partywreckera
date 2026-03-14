@@ -128,8 +128,11 @@ const Sponsors = () => {
                       <p className="text-xl text-foreground/90 font-medium mb-2">
                         Addiction Education Resources for Families
                       </p>
-                      <p className="text-muted-foreground text-lg">
+                      <p className="text-muted-foreground text-lg mb-2">
                         Empowering families with the knowledge and tools they need to navigate addiction and find ethical, proven treatment resources.
+                      </p>
+                      <p className="text-emerald-400 font-semibold">
+                        🟢 Free Weekly Family Support Zoom Calls — Every Monday
                       </p>
                     </div>
                   </div>
