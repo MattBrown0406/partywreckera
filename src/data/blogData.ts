@@ -550,11 +550,11 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     id: "depression-and-addiction",
-    title: "The Complicated Relationship Between Depression and Addiction",
-    date: "December 27, 2025",
+    title: "When Getting Out of Bed Feels Like Climbing Everest: Depression, Addiction, and What Families Need to Know",
+    date: "March 14, 2026",
     image: blogImageDepressionAddiction,
-    imageAlt: "Dark cloud of depression intersecting with bottles representing addiction, showing dual diagnosis complexity",
-    excerpt: "\"I drink because I'm depressed.\" \"The drugs help with my anxiety.\" Mental health and addiction often intertwine in complex ways. Sometimes depression leads to substance use. Sometimes substance use causes depression. Usually, both conditions need treatment simultaneously. Understanding dual diagnosis helps families support comprehensive treatment rather than addressing just one issue."
+    imageAlt: "Young adult sitting on the edge of an unmade bed in dim morning light, conveying the weight of depression and addiction",
+    excerpt: "Depression and addiction are one of the most common — and most misunderstood — combinations families face. If someone you love is both depressed and using substances, you are not imagining that they seem 'worse than the average addict.' It's a double diagnosis, and it changes almost everything about how recovery has to work."
   },
   {
     id: "medical-detox-matters",
