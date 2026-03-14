@@ -128,8 +128,11 @@ const Sponsors = () => {
                       <p className="text-xl text-foreground/90 font-medium mb-2">
                         Addiction Education Resources for Families
                       </p>
-                      <p className="text-muted-foreground text-lg">
+                      <p className="text-muted-foreground text-lg mb-2">
                         Empowering families with the knowledge and tools they need to navigate addiction and find ethical, proven treatment resources.
+                      </p>
+                      <p className="text-emerald-400 font-semibold">
+                        🟢 Free Weekly Family Support Zoom Calls — Every Monday
                       </p>
                     </div>
                   </div>
@@ -199,6 +202,22 @@ const Sponsors = () => {
                       >
                         Visit SoberHelpline.com
                         <ExternalLink className="w-4 h-4 ml-2" />
+                      </a>
+                    </Button>
+
+                    <Button 
+                      size="lg" 
+                      variant="outline"
+                      className="border-emerald-600/40 text-emerald-400 hover:bg-emerald-600/10"
+                      asChild
+                    >
+                      <a
+                        href="https://soberhelpline.com/monday-zoom-registration"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Video className="w-4 h-4 mr-2" />
+                        Join Free Monday Zoom Call
                       </a>
                     </Button>
                     

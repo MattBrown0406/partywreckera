@@ -176,8 +176,11 @@ const AboutSection = () => {
                 </div>
               </div>
               
-              <p className="text-muted-foreground text-sm mb-4">
+              <p className="text-muted-foreground text-sm mb-2">
                 Find treatment resources, assessments, and connect with a community of families supporting each other.
+              </p>
+              <p className="text-emerald-400 text-sm font-semibold mb-4">
+                🟢 Free Weekly Family Support Zoom Calls — Every Monday
               </p>
               
               {/* Quick features */}
