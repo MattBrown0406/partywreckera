@@ -66,6 +66,7 @@ import blogImageAddictionFromInside from "@/assets/blog-addiction-from-inside.jp
 import blogImageTraumaAddiction from "@/assets/blog-trauma-addiction-families.jpg";
 import blogImageAnxietyAddictionLoop from "@/assets/blog-anxiety-addiction-loop.jpg";
 import blogImageShameAddiction from "@/assets/blog-shame-addiction.jpg";
+import blogImageSelfMedicationTrap from "@/assets/blog-self-medication-trap.jpg";
 
 export interface BlogArticle {
   id: string;
@@ -78,6 +79,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "self-medication-trap",
+    title: "When Drinking Wasn't the Real Problem: The Self-Medication Trap Families Miss",
+    date: "March 15, 2026",
+    image: blogImageSelfMedicationTrap,
+    imageAlt: "A young man at a dimly lit kitchen table holding a glass of whiskey surrounded by prescription pill bottles, representing the self-medication trap",
+    excerpt: "Self-medication happens when someone uses substances to manage untreated anxiety, depression, PTSD, or trauma. Learn why families miss this pattern and how dual diagnosis treatment changes everything.",
+    category: "Family Education"
+  },
   {
     id: "shame-and-addiction",
     title: "Why Shame Doesn't Sober Up an Addict — It Just Drives the Using Underground",
