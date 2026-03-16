@@ -81,6 +81,15 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    id: "enabling-addiction-families",
+    title: "Are You Helping or Enabling? How Families Accidentally Fuel Addiction",
+    date: "March 16, 2026",
+    image: blogImageEnablingAddictionFamilies,
+    imageAlt: "Hands passing money through a chain-link fence, representing the painful dynamic of enabling addiction in families",
+    excerpt: "Think you're helping your addicted loved one? Learn how enabling addiction actually fuels it — and what families can do differently, from someone who's been on both sides.",
+    category: "Family Education"
+  },
+  {
     id: "self-medication-trap",
     title: "When Drinking Wasn't the Real Problem: The Self-Medication Trap Families Miss",
     date: "March 15, 2026",
