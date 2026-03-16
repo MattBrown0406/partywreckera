@@ -67,6 +67,7 @@ import blogImageTraumaAddiction from "@/assets/blog-trauma-addiction-families.jp
 import blogImageAnxietyAddictionLoop from "@/assets/blog-anxiety-addiction-loop.jpg";
 import blogImageShameAddiction from "@/assets/blog-shame-addiction.jpg";
 import blogImageSelfMedicationTrap from "@/assets/blog-self-medication-trap.jpg";
+import blogImageEnablingAddictionFamilies from "@/assets/blog-enabling-addiction-families.jpg";
 
 export interface BlogArticle {
   id: string;

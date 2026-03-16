@@ -78,6 +78,7 @@ const components = {
   "anxiety-addiction-loop-families": lazy(() => import("./blog/anxiety-addiction-loop-families")),
   "shame-and-addiction": lazy(() => import("./blog/shame-and-addiction")),
   "self-medication-trap": lazy(() => import("./blog/self-medication-trap")),
+  "enabling-addiction-families": lazy(() => import("./blog/enabling-addiction-families")),
 };
 
 const BlogPost = () => {
