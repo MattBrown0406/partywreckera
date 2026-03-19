@@ -68,6 +68,7 @@ import blogImageAnxietyAddictionLoop from "@/assets/blog-anxiety-addiction-loop.
 import blogImageShameAddiction from "@/assets/blog-shame-addiction.jpg";
 import blogImageSelfMedicationTrap from "@/assets/blog-self-medication-trap.jpg";
 import blogImageEnablingAddictionFamilies from "@/assets/blog-enabling-addiction-families.jpg";
+import blogImageToughLoveAddiction from "@/assets/blog-tough-love-addiction.jpg";
 
 export interface BlogArticle {
   id: string;
@@ -80,6 +81,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "tough-love-addiction-families",
+    title: "Tough Love Isn't What You Think — And I've Got the Bruises to Prove It",
+    date: "March 18, 2026",
+    image: blogImageToughLoveAddiction,
+    imageAlt: "A mother sitting alone at a kitchen table at night with hands clasped, representing the painful strength of tough love boundaries",
+    excerpt: "Tough love for addiction families isn't about punishment — it's about holding compassionate boundaries. Matt Brown shares what works, what doesn't, and the line between firmness and cruelty.",
+    category: "Family Education"
+  },
   {
     id: "enabling-addiction-families",
     title: "Are You Helping or Enabling? How Families Accidentally Fuel Addiction",
