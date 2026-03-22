@@ -80,6 +80,7 @@ const components = {
   "self-medication-trap": lazy(() => import("./blog/self-medication-trap")),
   "enabling-addiction-families": lazy(() => import("./blog/enabling-addiction-families")),
   "tough-love-addiction-families": lazy(() => import("./blog/tough-love-addiction-families")),
+  "when-to-consider-intervention": lazy(() => import("./blog/when-to-consider-intervention")),
 };
 
 const BlogPost = () => {
