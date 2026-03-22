@@ -69,6 +69,7 @@ import blogImageShameAddiction from "@/assets/blog-shame-addiction.jpg";
 import blogImageSelfMedicationTrap from "@/assets/blog-self-medication-trap.jpg";
 import blogImageEnablingAddictionFamilies from "@/assets/blog-enabling-addiction-families.jpg";
 import blogImageToughLoveAddiction from "@/assets/blog-tough-love-addiction.jpg";
+import blogImageWhenToConsiderIntervention from "@/assets/blog-when-to-consider-intervention.jpg";
 
 export interface BlogArticle {
   id: string;
@@ -81,6 +82,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "when-to-consider-intervention",
+    title: "When to Stop Waiting and Consider an Intervention",
+    date: "March 22, 2026",
+    image: blogImageWhenToConsiderIntervention,
+    imageAlt: "A family having a serious, emotional conversation in their living room about addiction intervention",
+    excerpt: "Seven clear signs it's time to stop waiting and consider an addiction intervention — and what intervention actually looks like when done right. By Matt Brown, professional interventionist.",
+    category: "Intervention"
+  },
   {
     id: "tough-love-addiction-families",
     title: "Tough Love Isn't What You Think — And I've Got the Bruises to Prove It",
