@@ -23,11 +23,10 @@ const MakingAmendsInRecovery = () => {
       <ArticleJsonLd
         title="Why Making Amends Changed My Life More Than Getting Sober Did"
         description="Making amends in recovery is more than saying sorry. Interventionist Matt Brown shares what Step 9 really means—and why it changes lives on both sides."
-        url="/blog/making-amends-in-recovery"
-        imageUrl={blogImageMakingAmends}
+        image={blogImageMakingAmends}
         datePublished="2026-03-24"
         dateModified="2026-03-24"
-        authorName="Matt Brown"
+        slug="making-amends-in-recovery"
       />
 
       <BreadcrumbJsonLd
