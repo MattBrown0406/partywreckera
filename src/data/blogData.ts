@@ -70,6 +70,7 @@ import blogImageSelfMedicationTrap from "@/assets/blog-self-medication-trap.jpg"
 import blogImageEnablingAddictionFamilies from "@/assets/blog-enabling-addiction-families.jpg";
 import blogImageToughLoveAddiction from "@/assets/blog-tough-love-addiction.jpg";
 import blogImageWhenToConsiderIntervention from "@/assets/blog-when-to-consider-intervention.jpg";
+import blogImageMakingAmendsRecovery from "@/assets/blog-making-amends-recovery.jpg";
 
 export interface BlogArticle {
   id: string;
@@ -82,6 +83,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "making-amends-in-recovery",
+    title: "Why Making Amends Changed My Life More Than Getting Sober Did",
+    date: "March 24, 2026",
+    image: blogImageMakingAmendsRecovery,
+    imageAlt: "A man sitting on a sunlit porch reflecting on making amends in recovery",
+    excerpt: "Making amends in recovery is more than saying sorry. Interventionist Matt Brown shares what Step 9 really means—and why it changes lives on both sides.",
+    category: "Recovery"
+  },
   {
     id: "when-to-consider-intervention",
     title: "When to Stop Waiting and Consider an Intervention",
