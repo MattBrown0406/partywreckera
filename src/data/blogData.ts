@@ -71,6 +71,7 @@ import blogImageEnablingAddictionFamilies from "@/assets/blog-enabling-addiction
 import blogImageToughLoveAddiction from "@/assets/blog-tough-love-addiction.jpg";
 import blogImageWhenToConsiderIntervention from "@/assets/blog-when-to-consider-intervention.jpg";
 import blogImageMakingAmendsRecovery from "@/assets/blog-making-amends-recovery.jpg";
+import blogImageStopWaitingRockBottom from "@/assets/blog-stop-waiting-rock-bottom.jpg";
 
 export interface BlogArticle {
   id: string;
@@ -83,6 +84,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "stop-waiting-for-rock-bottom",
+    title: "Stop Waiting for Rock Bottom: What You Can Do Right Now to Help a Loved One with Addiction",
+    date: "March 27, 2026",
+    image: blogImageStopWaitingRockBottom,
+    imageAlt: "A young man standing at a foggy crossroads at dawn, choosing between darkness and light — representing the urgency of helping a loved one with addiction",
+    excerpt: "Rock bottom is not a place you wait for — it's a place people die at. Interventionist Matt Brown shares what families can do right now to help a loved one with addiction.",
+    category: "Intervention"
+  },
   {
     id: "making-amends-in-recovery",
     title: "Why Making Amends Changed My Life More Than Getting Sober Did",
