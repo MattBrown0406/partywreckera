@@ -72,6 +72,7 @@ import blogImageToughLoveAddiction from "@/assets/blog-tough-love-addiction.jpg"
 import blogImageWhenToConsiderIntervention from "@/assets/blog-when-to-consider-intervention.jpg";
 import blogImageMakingAmendsRecovery from "@/assets/blog-making-amends-recovery.jpg";
 import blogImageStopWaitingRockBottom from "@/assets/blog-stop-waiting-rock-bottom.jpg";
+import blogImageFamiliesCanDoRightNow from "@/assets/blog-families-can-do-right-now.jpg";
 
 export interface BlogArticle {
   id: string;
@@ -84,6 +85,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "families-can-do-right-now",
+    title: "You're Not Powerless: What Families Can Do RIGHT NOW When a Loved One Is Addicted",
+    date: "March 28, 2026",
+    image: blogImageFamiliesCanDoRightNow,
+    imageAlt: "A young woman sitting at a kitchen table late at night taking notes with determination — representing a family member taking action against addiction",
+    excerpt: "Feeling helpless watching addiction destroy someone you love? You're not powerless. Matt Brown shares real, actionable steps families can take right now — no perfect plan required.",
+    category: "Family Support"
+  },
   {
     id: "stop-waiting-for-rock-bottom",
     title: "Stop Waiting for Rock Bottom: What You Can Do Right Now to Help a Loved One with Addiction",
