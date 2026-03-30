@@ -84,6 +84,7 @@ const components = {
   "making-amends-in-recovery": lazy(() => import("./blog/making-amends-in-recovery")),
   "stop-waiting-for-rock-bottom": lazy(() => import("./blog/stop-waiting-for-rock-bottom")),
   "families-can-do-right-now": lazy(() => import("./blog/families-can-do-right-now")),
+  "addiction-treatment-options-guide": lazy(() => import("./blog/addiction-treatment-options-guide")),
 };
 
 const BlogPost = () => {

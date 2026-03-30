@@ -73,6 +73,7 @@ import blogImageWhenToConsiderIntervention from "@/assets/blog-when-to-consider-
 import blogImageMakingAmendsRecovery from "@/assets/blog-making-amends-recovery.jpg";
 import blogImageStopWaitingRockBottom from "@/assets/blog-stop-waiting-rock-bottom.jpg";
 import blogImageFamiliesCanDoRightNow from "@/assets/blog-families-can-do-right-now.jpg";
+import blogImageTreatmentOptionsGuide from "@/assets/blog-treatment-options-guide.jpg";
 
 export interface BlogArticle {
   id: string;
@@ -85,6 +86,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "addiction-treatment-options-guide",
+    title: "Understanding Addiction Treatment Options: A Family's Guide to Choosing the Right Level of Care",
+    date: "March 30, 2026",
+    image: blogImageTreatmentOptionsGuide,
+    imageAlt: "A family sitting together at a kitchen table researching addiction treatment options",
+    excerpt: "Overwhelmed by addiction treatment options? Interventionist Matt Brown breaks down detox, residential, IOP, sober living, and how to choose the right level of care for your loved one.",
+    category: "Treatment"
+  },
   {
     id: "families-can-do-right-now",
     title: "You're Not Powerless: What Families Can Do RIGHT NOW When a Loved One Is Addicted",
