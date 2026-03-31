@@ -74,6 +74,7 @@ import blogImageMakingAmendsRecovery from "@/assets/blog-making-amends-recovery.
 import blogImageStopWaitingRockBottom from "@/assets/blog-stop-waiting-rock-bottom.jpg";
 import blogImageFamiliesCanDoRightNow from "@/assets/blog-families-can-do-right-now.jpg";
 import blogImageTreatmentOptionsGuide from "@/assets/blog-treatment-options-guide.jpg";
+import blogImageYouSaidYesIntervention from "@/assets/blog-you-said-yes-intervention.jpg";
 
 export interface BlogArticle {
   id: string;
