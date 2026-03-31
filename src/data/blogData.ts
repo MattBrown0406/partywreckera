@@ -74,6 +74,7 @@ import blogImageMakingAmendsRecovery from "@/assets/blog-making-amends-recovery.
 import blogImageStopWaitingRockBottom from "@/assets/blog-stop-waiting-rock-bottom.jpg";
 import blogImageFamiliesCanDoRightNow from "@/assets/blog-families-can-do-right-now.jpg";
 import blogImageTreatmentOptionsGuide from "@/assets/blog-treatment-options-guide.jpg";
+import blogImageYouSaidYesIntervention from "@/assets/blog-you-said-yes-intervention.jpg";
 
 export interface BlogArticle {
   id: string;
@@ -86,6 +87,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "you-said-yes-intervention",
+    title: "You Said Yes to Getting Help — Here's What Happens Next",
+    date: "March 31, 2026",
+    image: blogImageYouSaidYesIntervention,
+    imageAlt: "Young adult man sitting in a warm living room with family nearby and a packed bag by the door, conveying a pivotal moment of decision",
+    excerpt: "Wondering what happens after you finally decide to call a professional interventionist? Here's a step-by-step look at how the process works — from the first phone call to treatment day — so you know exactly what to expect.",
+    category: "Intervention"
+  },
   {
     id: "addiction-treatment-options-guide",
     title: "Understanding Addiction Treatment Options: A Family's Guide to Choosing the Right Level of Care",
