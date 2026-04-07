@@ -75,6 +75,7 @@ import blogImageStopWaitingRockBottom from "@/assets/blog-stop-waiting-rock-bott
 import blogImageFamiliesCanDoRightNow from "@/assets/blog-families-can-do-right-now.jpg";
 import blogImageTreatmentOptionsGuide from "@/assets/blog-treatment-options-guide.jpg";
 import blogImageYouSaidYesIntervention from "@/assets/blog-you-said-yes-intervention.jpg";
+import blogImageInterventionMyths from "@/assets/blog-intervention-myths.jpg";
 
 export interface BlogArticle {
   id: string;
@@ -87,6 +88,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "intervention-myths-families",
+    title: "7 Intervention Myths That Keep Families Stuck (And What's Actually True)",
+    date: "April 7, 2026",
+    image: blogImageInterventionMyths,
+    imageAlt: "A young adult man sitting alone at a dimly lit kitchen table while a concerned family member watches from a doorway",
+    excerpt: "Think interventions are ambushes or last resorts? Interventionist Matt Brown busts the 7 most common myths families believe — and what's actually true.",
+    category: "Intervention"
+  },
   {
     id: "you-said-yes-intervention",
     title: "You Said Yes to Getting Help — Here's What Happens Next",
