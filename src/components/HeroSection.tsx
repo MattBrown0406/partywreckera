@@ -75,7 +75,7 @@ const HeroSection = () => {
           {/* Stats */}
           <div className="grid grid-cols-3 gap-4 sm:gap-8 mt-16 pt-16 border-t border-border/50">
             <div className="text-center">
-              <div className="font-script text-3xl sm:text-5xl text-burgundy">65+</div>
+              <div className="font-script text-3xl sm:text-5xl text-burgundy">{episodeCount}+</div>
               <div className="text-xs sm:text-sm text-muted-foreground mt-2 uppercase tracking-wider">Episodes</div>
             </div>
             <div className="text-center">
