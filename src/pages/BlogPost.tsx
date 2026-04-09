@@ -87,6 +87,7 @@ const components = {
   "addiction-treatment-options-guide": lazy(() => import("./blog/addiction-treatment-options-guide")),
   "you-said-yes-intervention": lazy(() => import("./blog/you-said-yes-intervention")),
   "intervention-myths-families": lazy(() => import("./blog/intervention-myths-families")),
+  "when-someone-says-no-intervention": lazy(() => import("./blog/when-someone-says-no-intervention")),
 };
 
 const BlogPost = () => {

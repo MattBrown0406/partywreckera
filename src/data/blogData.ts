@@ -76,6 +76,7 @@ import blogImageFamiliesCanDoRightNow from "@/assets/blog-families-can-do-right-
 import blogImageTreatmentOptionsGuide from "@/assets/blog-treatment-options-guide.jpg";
 import blogImageYouSaidYesIntervention from "@/assets/blog-you-said-yes-intervention.jpg";
 import blogImageInterventionMyths from "@/assets/blog-intervention-myths.jpg";
+import blogImageWhenSomeoneSaysNo from "@/assets/blog-when-someone-says-no-intervention.jpg";
 
 export interface BlogArticle {
   id: string;
@@ -88,6 +89,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "when-someone-says-no-intervention",
+    title: "When They Say No: What Happens After an Intervention Doesn't Go as Planned",
+    date: "April 9, 2026",
+    image: blogImageWhenSomeoneSaysNo,
+    imageAlt: "A young adult man sitting alone on the front steps of a house at dusk while family is visible through a warmly lit window",
+    excerpt: "When a loved one refuses treatment during an intervention, it isn't the end. Interventionist Matt Brown explains what really happens next and what families should do.",
+    category: "Intervention"
+  },
   {
     id: "intervention-myths-families",
     title: "7 Intervention Myths That Keep Families Stuck (And What's Actually True)",
