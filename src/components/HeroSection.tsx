@@ -4,8 +4,12 @@ import { Link } from "react-router-dom";
 import logo from "@/assets/party-wreckers-logo-2026.png";
 import soberHelplineLogo from "@/assets/sober-helpline-logo.png";
 import ThemePlayer from "@/components/ThemePlayer";
+import { usePodcastFeed } from "@/hooks/usePodcastFeed";
 
 const HeroSection = () => {
+  const { data: podcastInfo } = usePodcastFeed();
+  const episodeCount = podcastInfo?.episodes?.length || 71;
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
       {/* Subtle grain texture overlay */}
@@ -71,7 +75,7 @@ const HeroSection = () => {
           {/* Stats */}
           <div className="grid grid-cols-3 gap-4 sm:gap-8 mt-16 pt-16 border-t border-border/50">
             <div className="text-center">
-              <div className="font-script text-3xl sm:text-5xl text-burgundy">65+</div>
+              <div className="font-script text-3xl sm:text-5xl text-burgundy">{episodeCount}+</div>
               <div className="text-xs sm:text-sm text-muted-foreground mt-2 uppercase tracking-wider">Episodes</div>
             </div>
             <div className="text-center">
