@@ -7,6 +7,9 @@ import ThemePlayer from "@/components/ThemePlayer";
 import { usePodcastFeed } from "@/hooks/usePodcastFeed";
 
 const HeroSection = () => {
+  const { data: podcastInfo } = usePodcastFeed();
+  const episodeCount = podcastInfo?.episodes?.length || 71;
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
       {/* Subtle grain texture overlay */}
