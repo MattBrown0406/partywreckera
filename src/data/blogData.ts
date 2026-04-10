@@ -90,6 +90,15 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    id: "what-happens-before-intervention",
+    title: "The Work No One Sees: What Happens Before a Professional Intervention",
+    date: "April 8, 2026",
+    image: blogImageWhatHappensBeforeIntervention,
+    imageAlt: "A professional interventionist sitting at a kitchen table preparing notes for an upcoming family intervention in warm morning light",
+    excerpt: "Before the intervention room, there's weeks of preparation most families never see. Matt Brown explains what really goes into getting ready for an intervention.",
+    category: "Intervention"
+  },
+  {
     id: "when-someone-says-no-intervention",
     title: "When They Say No: What Happens After an Intervention Doesn't Go as Planned",
     date: "April 9, 2026",
