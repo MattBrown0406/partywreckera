@@ -77,6 +77,7 @@ import blogImageTreatmentOptionsGuide from "@/assets/blog-treatment-options-guid
 import blogImageYouSaidYesIntervention from "@/assets/blog-you-said-yes-intervention.jpg";
 import blogImageInterventionMyths from "@/assets/blog-intervention-myths.jpg";
 import blogImageWhenSomeoneSaysNo from "@/assets/blog-when-someone-says-no-intervention.jpg";
+import blogImageWhatHappensBeforeIntervention from "@/assets/blog-what-happens-before-intervention.jpg";
 
 export interface BlogArticle {
   id: string;
@@ -89,6 +90,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "what-happens-before-intervention",
+    title: "The Work No One Sees: What Happens Before a Professional Intervention",
+    date: "April 8, 2026",
+    image: blogImageWhatHappensBeforeIntervention,
+    imageAlt: "A professional interventionist sitting at a kitchen table preparing notes for an upcoming family intervention in warm morning light",
+    excerpt: "Before the intervention room, there's weeks of preparation most families never see. Matt Brown explains what really goes into getting ready for an intervention.",
+    category: "Intervention"
+  },
   {
     id: "when-someone-says-no-intervention",
     title: "When They Say No: What Happens After an Intervention Doesn't Go as Planned",

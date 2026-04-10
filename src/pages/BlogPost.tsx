@@ -88,6 +88,7 @@ const components = {
   "you-said-yes-intervention": lazy(() => import("./blog/you-said-yes-intervention")),
   "intervention-myths-families": lazy(() => import("./blog/intervention-myths-families")),
   "when-someone-says-no-intervention": lazy(() => import("./blog/when-someone-says-no-intervention")),
+  "what-happens-before-intervention": lazy(() => import("./blog/what-happens-before-intervention")),
 };
 
 const BlogPost = () => {
