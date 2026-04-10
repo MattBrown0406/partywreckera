@@ -77,6 +77,7 @@ import blogImageTreatmentOptionsGuide from "@/assets/blog-treatment-options-guid
 import blogImageYouSaidYesIntervention from "@/assets/blog-you-said-yes-intervention.jpg";
 import blogImageInterventionMyths from "@/assets/blog-intervention-myths.jpg";
 import blogImageWhenSomeoneSaysNo from "@/assets/blog-when-someone-says-no-intervention.jpg";
+import blogImageWhatHappensBeforeIntervention from "@/assets/blog-what-happens-before-intervention.jpg";
 
 export interface BlogArticle {
   id: string;
