@@ -49,6 +49,11 @@ const HeroSection = () => {
             />
           </div>
 
+          {/* Subtitle */}
+          <p className="text-xl sm:text-2xl font-semibold text-foreground max-w-2xl mx-auto mb-6">
+            This is the Podcast for People Who Are Done Pretending Everything is OK.
+          </p>
+
           {/* Subheadline */}
           <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-10">
             When addiction crashes the party, families are left picking up the pieces. 
