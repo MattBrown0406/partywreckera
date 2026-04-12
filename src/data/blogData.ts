@@ -78,6 +78,7 @@ import blogImageYouSaidYesIntervention from "@/assets/blog-you-said-yes-interven
 import blogImageInterventionMyths from "@/assets/blog-intervention-myths.jpg";
 import blogImageWhenSomeoneSaysNo from "@/assets/blog-when-someone-says-no-intervention.jpg";
 import blogImageWhatHappensBeforeIntervention from "@/assets/blog-what-happens-before-intervention.jpg";
+import blogImageSiblingAddictionFamily from "@/assets/blog-sibling-addiction-family.jpg";
 
 export interface BlogArticle {
   id: string;
@@ -90,6 +91,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "sibling-addiction-affects-family",
+    title: "The Forgotten Ones: How a Sibling's Addiction Quietly Breaks the Rest of the Family",
+    date: "April 12, 2026",
+    image: blogImageSiblingAddictionFamily,
+    imageAlt: "A young woman sitting alone on the stairs of a family home while her parents talk with another sibling in the background",
+    excerpt: "When addiction enters a family, siblings often suffer in silence. Matt Brown explains what brothers and sisters experience — and what families can do about it.",
+    category: "Family"
+  },
   {
     id: "what-happens-before-intervention",
     title: "The Work No One Sees: What Happens Before a Professional Intervention",
