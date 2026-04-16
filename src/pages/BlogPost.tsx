@@ -90,6 +90,7 @@ const components = {
   "when-someone-says-no-intervention": lazy(() => import("./blog/when-someone-says-no-intervention")),
   "what-happens-before-intervention": lazy(() => import("./blog/what-happens-before-intervention")),
   "sibling-addiction-affects-family": lazy(() => import("./blog/sibling-addiction-affects-family")),
+  "enmeshment-addiction-family-patterns": lazy(() => import("./blog/enmeshment-addiction-family-patterns")),
 };
 
 const BlogPost = () => {
