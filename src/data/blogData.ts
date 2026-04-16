@@ -79,6 +79,7 @@ import blogImageInterventionMyths from "@/assets/blog-intervention-myths.jpg";
 import blogImageWhenSomeoneSaysNo from "@/assets/blog-when-someone-says-no-intervention.jpg";
 import blogImageWhatHappensBeforeIntervention from "@/assets/blog-what-happens-before-intervention.jpg";
 import blogImageSiblingAddictionFamily from "@/assets/blog-sibling-addiction-family.jpg";
+import blogImageEnmeshmentAddictionFamily from "@/assets/blog-enmeshment-addiction-family.jpg";
 
 export interface BlogArticle {
   id: string;
@@ -91,6 +92,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "enmeshment-addiction-family-patterns",
+    title: "When You Don't Know Where You End and They Begin: Enmeshment, Addiction, and the Family Trap",
+    date: "April 16, 2026",
+    image: blogImageEnmeshmentAddictionFamily,
+    imageAlt: "A worried mother sitting alone in a dimly lit kitchen at night, holding her phone and looking toward a closed basement door",
+    excerpt: "Enmeshment in families dealing with addiction blurs boundaries and keeps everyone stuck. Interventionist Matt Brown explains what it looks like and how to break free.",
+    category: "Family"
+  },
   {
     id: "sibling-addiction-affects-family",
     title: "The Forgotten Ones: How a Sibling's Addiction Quietly Breaks the Rest of the Family",
