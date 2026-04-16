@@ -1,35 +1,30 @@
 import { useState, useEffect } from "react";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { X } from "lucide-react";
-import NewsletterSignup from "./NewsletterSignup";
+import { Video, Calendar, Users } from "lucide-react";
 
 const NewsletterPopup = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isDismissed, setIsDismissed] = useState(false);
 
   useEffect(() => {
-    // Check if user has already dismissed the popup
-    const dismissed = localStorage.getItem('newsletter-popup-dismissed');
+    const dismissed = localStorage.getItem('family-squares-popup-dismissed');
     if (dismissed) {
       setIsDismissed(true);
       return;
     }
 
-    // Show popup after 60 seconds
     const timer = setTimeout(() => {
-      if (!isDismissed) {
-        setIsOpen(true);
-      }
+      setIsOpen(true);
     }, 60000);
 
     return () => clearTimeout(timer);
-  }, [isDismissed]);
+  }, []);
 
   const handleClose = () => {
     setIsOpen(false);
     setIsDismissed(true);
-    localStorage.setItem('newsletter-popup-dismissed', 'true');
+    localStorage.setItem('family-squares-popup-dismissed', 'true');
   };
 
   if (isDismissed) {
@@ -37,19 +32,50 @@ const NewsletterPopup = () => {
   }
 
   return (
-    <Dialog open={isOpen} onOpenChange={setIsOpen}>
+    <Dialog open={isOpen} onOpenChange={(open) => { if (!open) handleClose(); }}>
       <DialogContent className="max-w-md mx-auto bg-card border-border">
-      <DialogHeader>
-          <DialogTitle className="sr-only">Newsletter Signup</DialogTitle>
+        <DialogHeader>
+          <div className="mx-auto w-14 h-14 rounded-full bg-emerald-600/15 border border-emerald-600/30 flex items-center justify-center mb-3">
+            <Users className="w-7 h-7 text-emerald-500" />
+          </div>
+          <DialogTitle className="text-center font-script text-3xl text-burgundy">
+            Join The Family Squares
+          </DialogTitle>
+          <DialogDescription className="text-center text-base text-muted-foreground pt-2">
+            A free weekly Zoom call for families affected by addiction — no matter where you are in the journey.
+          </DialogDescription>
         </DialogHeader>
-        
-        <NewsletterSignup
-          variant="popup"
-          title="Get our free Family Recovery Guide"
-          description="Join thousands of families finding hope and practical guidance in their recovery journey."
-          className="py-4"
-        />
-        
+
+        <div className="space-y-3 py-2">
+          <div className="flex items-center gap-3 p-3 rounded-lg bg-emerald-600/10 border border-emerald-600/20">
+            <Calendar className="w-5 h-5 text-emerald-500 flex-shrink-0" />
+            <div className="text-sm">
+              <div className="font-semibold text-foreground">Every Monday at 7:00 PM Pacific</div>
+              <div className="text-muted-foreground text-xs">Free — open to all families</div>
+            </div>
+          </div>
+
+          <p className="text-sm text-muted-foreground leading-relaxed">
+            You're welcome to attend regardless of where your loved one is in their recovery. There's <span className="font-semibold text-foreground">no requirement to participate</span> — many people just listen with their cameras off until they feel ready to share.
+          </p>
+        </div>
+
+        <Button
+          size="lg"
+          className="w-full bg-emerald-600 hover:bg-emerald-700 text-white shadow-md shadow-emerald-600/20"
+          asChild
+        >
+          <a
+            href="https://soberhelpline.com/monday-zoom-registration"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={handleClose}
+          >
+            <Video className="w-4 h-4 mr-2" />
+            Register for Monday's Call
+          </a>
+        </Button>
+
         <div className="text-center">
           <button
             onClick={handleClose}
