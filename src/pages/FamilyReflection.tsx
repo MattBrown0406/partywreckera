@@ -151,7 +151,7 @@ const FamilyReflection = () => {
               </div>
               
               <p className="text-lg text-muted-foreground mb-6">
-                "What Have We Tried Already?" — An interactive exercise for families
+                "What Have We Tried Already?" — a guided exercise for families who need a clearer read on reality
               </p>
               
               <div className="flex flex-wrap gap-3">
@@ -181,11 +181,11 @@ const FamilyReflection = () => {
               {/* Introduction */}
               <div className="bg-background border border-border rounded-2xl p-8 sm:p-10 mb-8 print-section print:border print:rounded-none">
                 <p className="text-muted-foreground mb-6 leading-relaxed print:text-black">
-                  When addiction has been part of a family for any length of time, most loved ones have tried a lot—often more than they realize. This reflection is not about judging past choices or assigning blame. It's about slowing down, taking inventory, and understanding what's already been done so families can make clearer, more intentional decisions moving forward.
+                  When addiction has been in a family for any length of time, most people have tried more than they can even remember. They have talked, pleaded, covered, threatened, forgiven, adjusted, researched, waited, and hoped. This reflection is not about blame. It is about slowing the whole thing down long enough to look honestly at what has already been tried, what drove those choices, and what actually happened next.
                 </p>
                 
                 <p className="text-foreground font-medium print:text-black">
-                  Use this exercise individually or with other family members. Write honestly. No one else needs to see this unless you choose to share it.
+                  Use this on your own or with other family members. Write honestly. You are not trying to look good here, you are trying to get clear.
                 </p>
               </div>
               
@@ -195,7 +195,7 @@ const FamilyReflection = () => {
                   <span className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold print:bg-gray-200 print:text-black">1</span>
                   List the Strategies We've Used
                 </h2>
-                <p className="text-muted-foreground mb-6 print:text-gray-600">Check any that apply, and add your own below.</p>
+                <p className="text-muted-foreground mb-6 print:text-gray-600">Check any that fit. Most families will recognize more of these than they expect.</p>
                 
                 <div className="grid sm:grid-cols-2 gap-4 mb-6">
                   {strategiesUsed.map((strategy, index) => (
@@ -232,7 +232,7 @@ const FamilyReflection = () => {
                   <span className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold print:bg-gray-200 print:text-black">2</span>
                   What Was the Goal at the Time?
                 </h2>
-                <p className="text-muted-foreground mb-4 print:text-gray-600">For each major effort, consider:</p>
+                <p className="text-muted-foreground mb-4 print:text-gray-600">For the biggest things your family has tried, ask:</p>
                 
                 <ul className="space-y-2 text-foreground/90 mb-6 print:text-black">
                   <li className="flex items-start gap-2">
@@ -263,7 +263,7 @@ const FamilyReflection = () => {
                   <span className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold print:bg-gray-200 print:text-black">3</span>
                   What Actually Changed?
                 </h2>
-                <p className="text-muted-foreground mb-4 print:text-gray-600">Be as concrete as possible:</p>
+                <p className="text-muted-foreground mb-4 print:text-gray-600">Be concrete, not hopeful:</p>
                 
                 <ul className="space-y-2 text-foreground/90 mb-6 print:text-black">
                   <li className="flex items-start gap-2">
@@ -294,7 +294,7 @@ const FamilyReflection = () => {
                   <span className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold print:bg-gray-200 print:text-black">4</span>
                   What Did This Cost the Family?
                 </h2>
-                <p className="text-muted-foreground mb-6 print:text-gray-600">Consider emotional, relational, financial, and physical costs.</p>
+                <p className="text-muted-foreground mb-6 print:text-gray-600">Look at the real cost, emotional, relational, financial, and physical.</p>
                 
                 <div className="grid sm:grid-cols-2 gap-4 mb-6">
                   {familyCosts.map((cost, index) => (
@@ -331,7 +331,7 @@ const FamilyReflection = () => {
                   <span className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold print:bg-gray-200 print:text-black">5</span>
                   What Patterns Do We See Now?
                 </h2>
-                <p className="text-muted-foreground mb-4 print:text-gray-600">Reflect without judgment:</p>
+                <p className="text-muted-foreground mb-4 print:text-gray-600">Look at the patterns without defending them:</p>
                 
                 <ul className="space-y-2 text-foreground/90 mb-6 print:text-black">
                   <li className="flex items-start gap-2">
@@ -363,10 +363,10 @@ const FamilyReflection = () => {
                   <h2 className="text-xl font-semibold text-foreground print:text-black">Closing Reminder</h2>
                 </div>
                 <p className="text-muted-foreground leading-relaxed mb-4 print:text-gray-700">
-                  If you notice that many of your efforts were driven by fear, urgency, or exhaustion, that doesn't mean you failed—it means you were responding to an impossible situation with the tools you had at the time. This reflection isn't about erasing the past. It's about learning from it so future decisions are calmer, clearer, and more sustainable.
+                  If you see that a lot of your family’s choices were driven by fear, urgency, guilt, or exhaustion, that does not mean you failed. It means you were trying to survive something painful with the tools you had. The point now is not to rewrite the past. It is to learn from it so the next decisions are clearer, calmer, and less reactive.
                 </p>
                 <p className="text-foreground font-medium italic print:text-black">
-                  You don't need to know what to do next yet. Awareness comes first.
+                  You do not need the whole plan today. Clarity comes before strategy.
                 </p>
               </div>
               

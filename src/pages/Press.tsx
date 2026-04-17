@@ -82,8 +82,7 @@ const Press = () => {
               </h1>
               
               <p className="text-lg sm:text-xl text-muted-foreground mb-8">
-                Everything you need to feature The Party Wreckers Podcast or book Matt Brown 
-                for interviews, speaking engagements, or expert commentary on addiction and family recovery.
+                Everything you need to feature The Party Wreckers Podcast or book Matt Brown for interviews, speaking engagements, and straight talk about addiction, intervention, and what families actually go through.
               </p>
               
               <Button size="lg" className="bg-primary hover:bg-primary/90" asChild>
@@ -122,21 +121,16 @@ const Press = () => {
                   <h2 className="font-script text-4xl text-burgundy mb-6">About the Show</h2>
                   <div className="space-y-4 text-muted-foreground">
                     <p>
-                      <strong className="text-foreground">The Party Wreckers</strong> is a weekly podcast for families, 
-                      loved ones, and professionals navigating the complexities of substance use disorders.
+                      <strong className="text-foreground">The Party Wreckers</strong> is a weekly podcast for families, loved ones, and professionals who are tired of watching addiction damage relationships while everybody keeps pretending the next conversation will somehow fix it.
                     </p>
                     <p>
-                      Hosted by Matt Brown, an experienced interventionist with over 20 years in the field, 
-                      the show breaks down complex topics—enabling, boundaries, relapse, treatment, and recovery 
-                      planning—into practical, actionable conversations.
+                      Hosted by Matt Brown, a professional interventionist with more than 20 years in the field, the show tackles enabling, boundaries, relapse, treatment, intervention, and family recovery in plain language that people can actually use.
                     </p>
                     <p>
-                      Each episode blends real-world intervention experience with education and storytelling, 
-                      helping listeners understand not just what to think or feel, but <em>what to do next</em>.
+                      Each episode is built to do more than raise awareness. It helps listeners get clearer, calmer, and more honest about what is happening, so they can stop reacting to chaos and start making better decisions.
                     </p>
                     <p>
-                      The podcast positions addiction as a medical disease with a spiritual solution, offering 
-                      hope and clarity for families who often feel lost, overwhelmed, or alone.
+                      The voice is direct, compassionate, and practical, rooted in the belief that addiction is a medical disease with a spiritual solution, and that families need truth and guidance, not more empty reassurance.
                     </p>
                   </div>
                 </div>
@@ -185,21 +179,16 @@ const Press = () => {
                   <h2 className="font-script text-4xl text-burgundy mb-6">About the Host</h2>
                   <div className="space-y-4 text-muted-foreground">
                     <p>
-                      <strong className="text-foreground">Matt Brown</strong> is a professional interventionist 
-                      with over 20 years of experience helping families navigate addiction crises and find paths to recovery.
+                      <strong className="text-foreground">Matt Brown</strong> is a professional interventionist with over 20 years of experience helping families navigate addiction crises, treatment decisions, and the fallout that happens when fear starts running the home.
                     </p>
                     <p>
-                      As the founder of Freedom Interventions, Matt has guided hundreds of families through 
-                      some of their most difficult moments, combining clinical expertise with compassion and 
-                      real-world practicality.
+                      As the founder of Freedom Interventions, Matt has guided hundreds of families through some of the most painful and confusing moments of their lives. His work combines hard-earned field experience, recovery insight, and a practical understanding of what families can and cannot control.
                     </p>
                     <p>
-                      His approach emphasizes education over confrontation, helping families understand 
-                      addiction as a disease while equipping them with the tools to support—not enable—their loved ones.
+                      He is known for telling the truth clearly, helping people understand the difference between helping and enabling, and giving families language they can actually use when emotions are high and the stakes are real.
                     </p>
                     <p>
-                      Matt is available for podcast interviews, speaking engagements, expert commentary, 
-                      and panel discussions on topics related to addiction, intervention, and family recovery.
+                      Matt is available for interviews, speaking engagements, expert commentary, and panel conversations on addiction, intervention, family systems, and recovery.
                     </p>
                   </div>
                 </div>
@@ -214,7 +203,7 @@ const Press = () => {
             <div className="max-w-4xl mx-auto">
               <h2 className="font-script text-4xl text-burgundy mb-4 text-center">Topics & Expertise</h2>
               <p className="text-muted-foreground text-center mb-10 max-w-2xl mx-auto">
-                Matt Brown and The Party Wreckers cover a wide range of topics related to addiction and family recovery.
+                These are the conversations Matt is best known for, especially when the goal is to help families and audiences understand what addiction is really doing inside a home.
               </p>
               
               <div className="grid sm:grid-cols-2 gap-4">
@@ -240,7 +229,7 @@ const Press = () => {
             <div className="max-w-4xl mx-auto">
               <h2 className="font-script text-4xl text-burgundy mb-4 text-center">Sample Interview Questions</h2>
               <p className="text-muted-foreground text-center mb-10 max-w-2xl mx-auto">
-                Need inspiration for your interview? Here are some questions that spark meaningful conversations.
+                If you want to get past surface-level talking points, these are the kinds of questions that usually lead to the strongest conversations.
               </p>
               
               <div className="space-y-4">

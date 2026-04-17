@@ -152,7 +152,7 @@ const FearInventory = () => {
               </div>
               
               <p className="text-lg text-muted-foreground mb-6">
-                "What Are We Afraid Will Happen?" — An interactive exercise for families
+                "What Are We Afraid Will Happen?" — a guided exercise for families living under pressure
               </p>
               
               <div className="flex flex-wrap gap-3">
@@ -182,11 +182,11 @@ const FearInventory = () => {
               {/* Introduction */}
               <div className="bg-background border border-border rounded-2xl p-8 sm:p-10 mb-8 print-section print:border print:rounded-none">
                 <p className="text-muted-foreground mb-6 leading-relaxed print:text-black">
-                  Fear quietly drives many of the decisions families make around addiction. It often operates in the background—unspoken, unexamined, and powerful. This inventory is designed to bring those fears into the open, not to judge them, but to understand how they influence choices, boundaries, and family dynamics.
+                  Fear drives more family decisions around addiction than most people want to admit. It sits underneath the rescuing, the overexplaining, the second chances, the inconsistent boundaries, and the constant urge to keep everything from falling apart. This inventory is here to bring those fears into the open so your family can see how much influence they have really had.
                 </p>
                 
                 <p className="text-foreground font-medium print:text-black">
-                  You can complete this on your own or with other family members. Answer honestly. There are no right or wrong responses.
+                  Do this on your own or with other family members. Be honest. You are not grading yourself here, you are naming what has been running the system.
                 </p>
               </div>
               
@@ -196,7 +196,7 @@ const FearInventory = () => {
                   <span className="w-10 h-10 rounded-full bg-rose-600/20 flex items-center justify-center text-rose-500 font-bold print:bg-gray-200 print:text-black">1</span>
                   Identify the Fears That Feel Most Real
                 </h2>
-                <p className="text-muted-foreground mb-6 print:text-gray-600">Check any that resonate, even if they feel contradictory.</p>
+                <p className="text-muted-foreground mb-6 print:text-gray-600">Check any that feel true, even if they seem to contradict each other. Families usually carry several fears at once.</p>
                 
                 <div className="grid sm:grid-cols-2 gap-4 mb-6">
                   {commonFears.map((fear, index) => (
@@ -233,7 +233,7 @@ const FearInventory = () => {
                   <span className="w-10 h-10 rounded-full bg-rose-600/20 flex items-center justify-center text-rose-500 font-bold print:bg-gray-200 print:text-black">2</span>
                   What Does This Fear Push Us to Do?
                 </h2>
-                <p className="text-muted-foreground mb-4 print:text-gray-600">For each major fear, consider:</p>
+                <p className="text-muted-foreground mb-4 print:text-gray-600">For the fears that feel biggest, ask:</p>
                 
                 <ul className="space-y-2 text-foreground/90 mb-6 print:text-black">
                   <li className="flex items-start gap-2">
@@ -264,7 +264,7 @@ const FearInventory = () => {
                   <span className="w-10 h-10 rounded-full bg-rose-600/20 flex items-center justify-center text-rose-500 font-bold print:bg-gray-200 print:text-black">3</span>
                   What Has This Fear Cost Us So Far?
                 </h2>
-                <p className="text-muted-foreground mb-6 print:text-gray-600">Consider the impact of fear-based decisions:</p>
+                <p className="text-muted-foreground mb-6 print:text-gray-600">Look at what fear-based decisions have already cost your family:</p>
                 
                 <div className="grid sm:grid-cols-2 gap-4 mb-6">
                   {fearCosts.map((cost, index) => (
@@ -301,7 +301,7 @@ const FearInventory = () => {
                   <span className="w-10 h-10 rounded-full bg-rose-600/20 flex items-center justify-center text-rose-500 font-bold print:bg-gray-200 print:text-black">4</span>
                   Separate Fear from Responsibility
                 </h2>
-                <p className="text-muted-foreground mb-4 print:text-gray-600">Reflect on the following:</p>
+                <p className="text-muted-foreground mb-4 print:text-gray-600">Get honest about the line between responsibility and control:</p>
                 
                 <ul className="space-y-2 text-foreground/90 mb-6 print:text-black">
                   <li className="flex items-start gap-2">
@@ -332,7 +332,7 @@ const FearInventory = () => {
                   <span className="w-10 h-10 rounded-full bg-rose-600/20 flex items-center justify-center text-rose-500 font-bold print:bg-gray-200 print:text-black">5</span>
                   What Might Change If Fear Wasn't in Charge?
                 </h2>
-                <p className="text-muted-foreground mb-4 print:text-gray-600">You're not being asked to eliminate fear—only to imagine:</p>
+                <p className="text-muted-foreground mb-4 print:text-gray-600">You are not being asked to eliminate fear. Just imagine what changes if fear is no longer driving every decision:</p>
                 
                 <ul className="space-y-2 text-foreground/90 mb-6 print:text-black">
                   <li className="flex items-start gap-2">
@@ -364,10 +364,10 @@ const FearInventory = () => {
                   <h2 className="text-xl font-semibold text-foreground print:text-black">Closing Reminder</h2>
                 </div>
                 <p className="text-muted-foreground leading-relaxed mb-4 print:text-gray-700">
-                  Fear is not a sign of weakness—it's a sign that something matters deeply. But when fear runs the system, families stay stuck. Bringing fear into the open reduces its power and creates space for clearer, steadier choices.
+                  Fear is not weakness. It is what shows up when people love someone and feel out of control. But when fear is running the house, families stay trapped in the same cycle. Naming it takes away some of its power and makes room for clearer decisions.
                 </p>
                 <p className="text-foreground font-medium italic print:text-black">
-                  You don't have to act on this inventory today. Simply seeing fear for what it is can be the first step toward change.
+                  You do not have to fix everything today. Seeing fear clearly is already a real step forward.
                 </p>
               </div>
               

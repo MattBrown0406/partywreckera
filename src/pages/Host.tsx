@@ -61,7 +61,7 @@ const Host = () => {
               </h1>
               
               <p className="text-lg sm:text-xl text-muted-foreground">
-                An experienced interventionist dedicated to helping families find hope and healing.
+                A professional interventionist who helps families stop reacting to chaos and start making clearer, steadier decisions.
               </p>
             </div>
           </div>
@@ -90,32 +90,19 @@ const Host = () => {
                 
                 <div className="space-y-4 sm:space-y-6 text-sm sm:text-base text-muted-foreground">
                   <p>
-                    Matt is a professional interventionist with more than twenty years of frontline experience 
-                    working with addiction, recovery, and the families caught in between. Having guided hundreds 
-                    of families through the chaos, fear, and uncertainty that surround substance use disorder, 
-                    he understands both the clinical realities of addiction and the emotional toll it takes on 
-                    the people who love someone struggling.
+                    Matt Brown is a professional interventionist with more than twenty years of frontline experience working with addiction, recovery, and the families stuck in the middle of it. He has spent years helping people make decisions in the middle of fear, denial, broken trust, and the kind of family exhaustion that builds when everyone keeps trying and nothing really changes.
                   </p>
                   
                   <p>
-                    On The Party Wreckers Podcast, Matt pulls back the curtain on addiction and intervention—cutting 
-                    through stigma, misinformation, and false hope. He translates complex subjects like enabling, 
-                    boundaries, relapse, treatment selection, and recovery planning into clear, practical conversations 
-                    families can actually use. Each episode blends real-world intervention experience, hard-earned 
-                    insight, and honest storytelling to help listeners move from paralysis to purposeful action.
+                    What makes Matt different is not polished theory. It is real-world experience. He has sat with families in chaos, watched good intentions turn into enabling, and helped people separate love from fear so they can stop making crisis-driven decisions. His work is built around clarity, accountability, and practical next steps families can actually follow.
                   </p>
                   
                   <p>
-                    Matt approaches addiction as a medical disease that demands accountability, structure, and 
-                    compassion—and recognizes that lasting recovery often includes a spiritual component defined 
-                    by meaning, connection, and responsibility rather than rigid ideology. His work helps families 
-                    learn the difference between helping and enabling, how to set boundaries they can hold, and 
-                    how to build sustainable, family-centered recovery plans that support long-term change.
+                    On The Party Wreckers Podcast, Matt talks the same way he works: direct, compassionate, and clear-eyed. He breaks down addiction, intervention, boundaries, relapse, treatment, and family recovery without sugar-coating the problem or shaming the people living through it. The goal is simple, help families understand what is happening and what to do next.
                   </p>
                   
                   <p className="text-foreground font-medium">
-                    The Party Wreckers Podcast exists for families who are done pretending, done waiting, and 
-                    ready to understand what actually works.
+                    If your family is tired of waiting, tired of guessing, and tired of pretending things are under control, this is the work Matt has spent his life doing.
                   </p>
                     
                   </div>
@@ -156,9 +143,7 @@ const Host = () => {
                   Philosophy
                 </h3>
                 <blockquote className="text-lg text-muted-foreground italic max-w-2xl mx-auto">
-                  "Addiction is a family disease, and recovery must be a family solution. 
-                  My goal is to equip families with the knowledge and tools they need to 
-                  stop the chaos and start the healing process."
+                  "Addiction throws whole families into reaction mode. My job is to help people slow down, tell the truth about what is happening, and take steps that actually move things forward."
                 </blockquote>
                 <p className="mt-4 text-foreground font-medium">— Matt</p>
               </div>
@@ -169,7 +154,7 @@ const Host = () => {
                   Get in Touch
                 </h3>
                 <p className="text-muted-foreground mb-6">
-                  Have questions or want to share your story? Matt would love to hear from you.
+                  If your family is stuck, if the situation is getting worse, or if you just need a clearer read on what comes next, reach out.
                 </p>
                 <a
                   href="mailto:matt@partywreckers.com"

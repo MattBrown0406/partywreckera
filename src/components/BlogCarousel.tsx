@@ -196,7 +196,7 @@ const BlogCarousel = () => {
         </h3>
         <p className="text-primary text-sm mt-2 font-medium pointer-events-auto">
           <Link to="/blog" className="hover:underline">
-            Read on Blog →
+            Read the full article →
           </Link>
         </p>
       </div>

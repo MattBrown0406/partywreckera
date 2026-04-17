@@ -47,12 +47,11 @@ const CTASection = () => {
       <div className="container px-4 relative">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="font-script text-4xl sm:text-5xl lg:text-6xl text-burgundy mb-4 sm:mb-6">
-            Start Listening
+            Stop Guessing. Start Getting Clear.
           </h2>
           
-          <p className="text-muted-foreground text-base sm:text-lg lg:text-xl max-w-2xl mx-auto mb-6 sm:mb-10">
-            Subscribe wherever you listen to podcasts. New episodes drop weekly 
-            with real conversations and practical guidance.
+          <p className="text-muted-foreground text-base sm:text-lg lg:text-xl max-w-3xl mx-auto mb-6 sm:mb-10">
+            If addiction has your family stuck in fear, confusion, or constant damage control, start with the podcast, the family resources, or a direct conversation with Matt. Just do not keep telling yourself this will sort itself out.
           </p>
 
           {/* Platform buttons */}
@@ -73,6 +72,12 @@ const CTASection = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 sm:mb-12">
             <Button variant="hero" size="xl" asChild>
+              <Link to="/start-here">
+                Start Here
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </Button>
+            <Button variant="heroOutline" size="xl" asChild>
               <Link to="/episodes">
                 All Episodes
                 <ArrowRight className="w-5 h-5" />
@@ -83,13 +88,13 @@ const CTASection = () => {
           {/* Contact info */}
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 justify-center items-center pt-6 sm:pt-8 border-t border-border">
             <a 
-              href="mailto:matt@partywreckers.com" 
+              href="mailto:matt@partywreckers.com?subject=Family%20Support%20Request"
               className="flex items-center gap-2 sm:gap-3 text-muted-foreground hover:text-primary transition-colors text-sm sm:text-base"
             >
               <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-secondary flex items-center justify-center">
                 <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
               </div>
-              <span>matt@partywreckers.com</span>
+              <span>Need help with your family situation? Email Matt</span>
             </a>
           </div>
         </div>

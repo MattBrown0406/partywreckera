@@ -11,7 +11,7 @@ interface NewsletterSignupProps {
 }
 
 const NewsletterSignup = ({ 
-  title = "Get weekly recovery insights",
+  title = "Get weekly guidance for families dealing with addiction",
   description,
   variant = "inline",
   className = ""
@@ -49,14 +49,14 @@ const NewsletterSignup = ({
 
       if (response.ok) {
         setStatus("success");
-        setMessage("Thanks! Check your email for confirmation.");
+        setMessage("You’re in. Check your email for the next step.");
         setEmail("");
       } else {
         throw new Error("Subscription failed");
       }
     } catch (error) {
       setStatus("error");
-      setMessage("Something went wrong. Please try again.");
+      setMessage("Something went wrong. Try again in a minute.");
     }
   };
 
@@ -74,7 +74,7 @@ const NewsletterSignup = ({
       <div className="flex flex-col sm:flex-row gap-2">
         <Input
           type="email"
-          placeholder="Enter your email"
+          placeholder="Enter your email address"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           disabled={status === "loading"}
@@ -93,7 +93,7 @@ const NewsletterSignup = ({
           ) : (
             <>
               <Mail className="w-4 h-4" />
-              <span className="ml-2 hidden sm:inline">Subscribe</span>
+              <span className="ml-2 hidden sm:inline">Get Updates</span>
             </>
           )}
         </Button>

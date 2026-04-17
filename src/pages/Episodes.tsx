@@ -180,8 +180,7 @@ const Episodes = () => {
                 Episodes
               </h1>
               <p className="text-muted-foreground text-lg">
-                Real conversations about addiction, intervention, and the path to recovery. 
-                New episodes every week.
+                Real conversations about addiction, intervention, family chaos, and what actually helps when the same patterns keep repeating.
               </p>
             </div>
           </div>
@@ -282,7 +281,7 @@ const Episodes = () => {
                     <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
                     <Input
                       type="text"
-                      placeholder="Search episodes by title or topic..."
+                      placeholder="Search episodes by topic, fear, family pattern, or question..."
                       value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)}
                       className="pl-10 pr-10 h-12 text-base"
@@ -298,14 +297,14 @@ const Episodes = () => {
                   </div>
                   {isSearching && (
                     <p className="mt-2 text-sm text-muted-foreground">
-                      Found {filteredEpisodes.length} episode{filteredEpisodes.length !== 1 ? 's' : ''} matching "{searchQuery}"
+                      Found {filteredEpisodes.length} episode{filteredEpisodes.length !== 1 ? 's' : ''} touching on "{searchQuery}"
                     </p>
                   )}
                 </div>
 
                 {/* Category Filters */}
                 <div className="mb-8">
-                  <h2 className="text-lg font-semibold text-foreground mb-4">Browse by Topic</h2>
+                  <h2 className="text-lg font-semibold text-foreground mb-4">Browse by What Your Family Is Dealing With</h2>
                   <div className="flex flex-wrap gap-2">
                     {categories.map((cat) => (
                       <Button
@@ -327,8 +326,8 @@ const Episodes = () => {
                     <div className="text-center py-12">
                       <p className="text-muted-foreground">
                         {isSearching 
-                          ? `No episodes found matching "${searchQuery}"` 
-                          : "No episodes found in this category."}
+                          ? `No episodes found matching "${searchQuery}" yet.` 
+                          : "No episodes found in this category yet."}
                       </p>
                       {isSearching && (
                         <Button 

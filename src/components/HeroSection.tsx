@@ -50,23 +50,27 @@ const HeroSection = () => {
           </div>
 
           {/* Subtitle */}
-          <p className="text-xl sm:text-2xl font-semibold text-foreground max-w-2xl mx-auto mb-6">
-            This is the Podcast for People Who Are Done Pretending Everything is OK.
+          <p className="text-xl sm:text-2xl font-semibold text-foreground max-w-3xl mx-auto mb-6">
+            Real talk for families who are done minimizing, done waiting, and done pretending this is going to fix itself.
           </p>
 
           {/* Subheadline */}
-          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-10">
-            When addiction crashes the party, families are left picking up the pieces. 
-            Join host Matt Brown and leading experts as they cut through the chaos with 
-            honest conversations, real strategies, and the hope you need to take the next step.
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto mb-10">
+            Hosted by interventionist Matt Brown, The Party Wreckers Podcast helps families make sense of addiction, understand the difference between helping and enabling, and figure out what to do next when the same conversations are getting them nowhere.
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
             <Button variant="hero" size="xl" asChild>
+              <Link to="/start-here">
+                <Headphones className="w-5 h-5" />
+                Start Here
+              </Link>
+            </Button>
+            <Button variant="heroOutline" size="xl" asChild>
               <Link to="/episodes">
                 <Play className="w-5 h-5" />
-                Listen Now
+                Listen to the Podcast
               </Link>
             </Button>
             <Button variant="heroOutline" size="xl" asChild>

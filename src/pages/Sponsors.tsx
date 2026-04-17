@@ -40,8 +40,7 @@ const Sponsors = () => {
               </h1>
               
               <p className="text-lg sm:text-xl text-muted-foreground mb-6">
-                These amazing partners help make The Party Wreckers Podcast possible. 
-                By supporting them, you're helping us continue our mission to help families.
+                These are resources and partners we believe can genuinely help families, listeners, and the larger mission behind The Party Wreckers. This page is here to connect you with things that are actually useful, not random sponsorship noise.
               </p>
               
               {/* Direct Support CTA - Top */}
@@ -59,7 +58,7 @@ const Sponsors = () => {
                     </div>
                     <div className="text-center sm:text-left">
                       <p className="text-foreground font-semibold text-lg">Support the Podcast Directly</p>
-                      <p className="text-muted-foreground text-sm">Every $1, $5, or $10 helps us reach more families</p>
+                      <p className="text-muted-foreground text-sm">Small monthly support helps us keep making honest resources for families who need them</p>
                     </div>
                   </div>
                   
@@ -129,7 +128,7 @@ const Sponsors = () => {
                         Addiction Education Resources for Families
                       </p>
                       <p className="text-muted-foreground text-lg mb-2">
-                        Empowering families with the knowledge and tools they need to navigate addiction and find ethical, proven treatment resources.
+                        Built to help families understand addiction more clearly, find steadier footing, and make better decisions about treatment and support.
                       </p>
                       <p className="text-emerald-400 font-semibold">
                         🟢 Free Weekly Family Support Zoom Calls — Every Monday
@@ -144,7 +143,7 @@ const Sponsors = () => {
                         <Users className="w-6 h-6 text-emerald-400" />
                       </div>
                       <h3 className="font-semibold text-foreground mb-2">Family Discussion Forum</h3>
-                      <p className="text-sm text-muted-foreground">Connect with other families navigating addiction. Share experiences and find support in a safe community.</p>
+                      <p className="text-sm text-muted-foreground">A place for families to stop feeling isolated, hear from other people living it, and get grounded in something more useful than panic.</p>
                     </div>
                     
                     <div className="bg-background/50 backdrop-blur-sm border border-emerald-600/20 rounded-xl p-6 transition-all duration-300 hover:border-emerald-500/40 hover:shadow-lg hover:shadow-emerald-500/10">
@@ -152,7 +151,7 @@ const Sponsors = () => {
                         <BookOpen className="w-6 h-6 text-teal-400" />
                       </div>
                       <h3 className="font-semibold text-foreground mb-2">DSM-5 Based Assessments</h3>
-                      <p className="text-sm text-muted-foreground">Clinical screening tools to understand if your loved one's substance use meets diagnostic criteria.</p>
+                      <p className="text-sm text-muted-foreground">Structured screening tools that help families understand whether what they are seeing rises to the level of a real substance use disorder.</p>
                     </div>
                     
                     <div className="bg-background/50 backdrop-blur-sm border border-emerald-600/20 rounded-xl p-6 transition-all duration-300 hover:border-emerald-500/40 hover:shadow-lg hover:shadow-emerald-500/10">
@@ -160,7 +159,7 @@ const Sponsors = () => {
                         <Headphones className="w-6 h-6 text-cyan-400" />
                       </div>
                       <h3 className="font-semibold text-foreground mb-2">Guided Meditations</h3>
-                      <p className="text-sm text-muted-foreground">Calming resources to help family members find steadiness while navigating difficult times.</p>
+                      <p className="text-sm text-muted-foreground">Resources to help family members slow down, regulate, and stop letting fear call every shot.</p>
                     </div>
                     
                     <div className="bg-background/50 backdrop-blur-sm border border-emerald-600/20 rounded-xl p-6 transition-all duration-300 hover:border-emerald-500/40 hover:shadow-lg hover:shadow-emerald-500/10">
@@ -168,7 +167,7 @@ const Sponsors = () => {
                         <CheckCircle className="w-6 h-6 text-emerald-400" />
                       </div>
                       <h3 className="font-semibold text-foreground mb-2">Enabling Self-Assessment</h3>
-                      <p className="text-sm text-muted-foreground">Understand how love, fear, and good intentions can sometimes reinforce addiction patterns.</p>
+                      <p className="text-sm text-muted-foreground">A clearer look at how love, fear, and good intentions can accidentally keep the cycle going.</p>
                     </div>
                     
                     <div className="bg-background/50 backdrop-blur-sm border border-emerald-600/20 rounded-xl p-6 transition-all duration-300 hover:border-emerald-500/40 hover:shadow-lg hover:shadow-emerald-500/10">
@@ -176,7 +175,7 @@ const Sponsors = () => {
                         <Shield className="w-6 h-6 text-teal-400" />
                       </div>
                       <h3 className="font-semibold text-foreground mb-2">Vetted Providers</h3>
-                      <p className="text-sm text-muted-foreground">Find ethical, responsible treatment providers with proven track records of success.</p>
+                      <p className="text-sm text-muted-foreground">Find treatment providers and resources through a more thoughtful, family-centered lens.</p>
                     </div>
                     
                     <div className="bg-background/50 backdrop-blur-sm border border-emerald-600/20 rounded-xl p-6 transition-all duration-300 hover:border-emerald-500/40 hover:shadow-lg hover:shadow-emerald-500/10">
@@ -184,7 +183,7 @@ const Sponsors = () => {
                         <MessageCircle className="w-6 h-6 text-cyan-400" />
                       </div>
                       <h3 className="font-semibold text-foreground mb-2">60+ Premium Resources</h3>
-                      <p className="text-sm text-muted-foreground">Exercises, videos, and guides designed specifically for families dealing with addiction.</p>
+                      <p className="text-sm text-muted-foreground">Exercises, videos, and practical tools built for families who need more than generic advice.</p>
                     </div>
                   </div>
                   

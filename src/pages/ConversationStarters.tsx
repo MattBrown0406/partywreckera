@@ -89,13 +89,13 @@ const ConversationStarters = () => {
               {/* Introduction */}
               <div className="prose prose-lg max-w-none mb-12 print:mb-8">
                 <p className="text-lg text-muted-foreground leading-relaxed print:text-gray-700">
-                  Talking about addiction within a family is rarely simple. Emotions run high, trust may be fragile, and many conversations quickly turn into arguments, shutdowns, or silence. Just as important as <em>what</em> you say is the frame of mind you bring into the conversation. Fear and anxiety, when left unchecked, quietly give the problem more power before anyone even opens their mouth.
+                  Talking about addiction inside a family is almost never just about the words. By the time most people try to bring it up, fear is already high, trust is already thin, and everyone is walking in carrying old arguments, old resentment, and old panic. That is why so many conversations either explode, shut down, or go nowhere.
                 </p>
                 <p className="text-lg text-muted-foreground leading-relaxed mt-4 print:text-gray-700">
-                  These conversation starters are not designed to convince, confront, or control anyone. They are meant to help families slow things down, reduce defensiveness, and speak from a calmer, steadier place.
+                  These conversation starters are not here to help you corner someone, win an argument, or force a breakthrough. They are here to help families slow the moment down, lower defensiveness, and speak from a place that is steadier and more honest.
                 </p>
                 <p className="text-foreground font-medium mt-6 italic print:text-gray-900">
-                  You do not need to ask every question. Choose the ones that fit where your family is right now, and return to others later as clarity grows.
+                  You do not need to use every question. Use the ones that fit where your family actually is, not where you wish it was.
                 </p>
               </div>
 
@@ -110,31 +110,31 @@ const ConversationStarters = () => {
                 <ul className="space-y-3 text-muted-foreground print:text-gray-700">
                   <li className="flex items-start gap-3">
                     <span className="text-primary mt-1 print:text-gray-600">•</span>
-                    <span>Check your internal state first; if fear, panic, or urgency are driving the conversation, it will likely escalate</span>
+                    <span>Check your own state first. If fear, panic, or urgency are running you, the conversation will usually go bad fast.</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-primary mt-1 print:text-gray-600">•</span>
-                    <span>Regulate yourself before engaging—pause, breathe, take a walk, or write your thoughts down first</span>
+                    <span>Get grounded before you start. Pause, breathe, take a walk, pray, write, whatever helps you stop reacting.</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-primary mt-1 print:text-gray-600">•</span>
-                    <span>Choose a time when no one is already emotionally activated</span>
+                    <span>Choose a time when nobody is already activated, defensive, or looking for a fight</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-primary mt-1 print:text-gray-600">•</span>
-                    <span>Avoid conversations during or immediately after substance use</span>
+                    <span>Do not try to have this conversation during or right after substance use</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-primary mt-1 print:text-gray-600">•</span>
-                    <span>Focus on understanding, not persuading or controlling the outcome</span>
+                    <span>Go in trying to understand and stay clear, not trying to force an outcome</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-primary mt-1 print:text-gray-600">•</span>
-                    <span>End or pause the conversation if it becomes unsafe or emotionally charged</span>
+                    <span>Pause or end it if things become unsafe, manipulative, or too emotionally charged to be useful</span>
                   </li>
                 </ul>
                 <p className="text-foreground font-semibold mt-6 italic print:text-gray-900">
-                  The calmer and clearer you are, the less power the problem has in the room.
+                  The calmer and clearer you are, the less likely fear is to run the whole conversation.
                 </p>
               </div>
 
@@ -150,7 +150,7 @@ const ConversationStarters = () => {
                     <h2 className="font-script text-2xl sm:text-3xl text-burgundy print:text-gray-900">Understanding What's Really Happening</h2>
                   </div>
                   <p className="text-muted-foreground mb-4 print:text-gray-600">
-                    These questions help families move beyond surface-level arguments and defensiveness.
+                    These questions help people get underneath the usual arguments and talk about what is really happening.
                   </p>
                   <ul className="space-y-3 bg-secondary/30 rounded-xl p-6 print:bg-gray-50 print:border print:border-gray-200">
                     <li className="text-foreground print:text-gray-800">"What feels hardest about this for you right now?"</li>
@@ -169,7 +169,7 @@ const ConversationStarters = () => {
                     <h2 className="font-script text-2xl sm:text-3xl text-burgundy print:text-gray-900">Exploring Impact Without Blame</h2>
                   </div>
                   <p className="text-muted-foreground mb-4 print:text-gray-600">
-                    Use these to acknowledge consequences without turning the conversation into an attack.
+                    Use these when you need to name impact honestly without turning the conversation into blame and counterattack.
                   </p>
                   <ul className="space-y-3 bg-secondary/30 rounded-xl p-6 print:bg-gray-50 print:border print:border-gray-200">
                     <li className="text-foreground print:text-gray-800">"How has this been affecting the family?"</li>
@@ -188,7 +188,7 @@ const ConversationStarters = () => {
                     <h2 className="font-script text-2xl sm:text-3xl text-burgundy print:text-gray-900">Helping vs. Enabling</h2>
                   </div>
                   <p className="text-muted-foreground mb-4 print:text-gray-600">
-                    These questions are useful when families feel stuck between rescuing and resentment.
+                    These questions matter when your family keeps bouncing between rescuing, resentment, and exhaustion.
                   </p>
                   <ul className="space-y-3 bg-secondary/30 rounded-xl p-6 print:bg-gray-50 print:border print:border-gray-200">
                     <li className="text-foreground print:text-gray-800">"What are we doing that helps in the short term but hurts in the long term?"</li>
@@ -206,7 +206,7 @@ const ConversationStarters = () => {
                     <h2 className="font-script text-2xl sm:text-3xl text-burgundy print:text-gray-900">Boundaries and Safety</h2>
                   </div>
                   <p className="text-muted-foreground mb-4 print:text-gray-600">
-                    These questions clarify limits without threats, ultimatums, or control.
+                    These questions help families think about limits clearly, without making empty threats or trying to control someone else.
                   </p>
                   <ul className="space-y-3 bg-secondary/30 rounded-xl p-6 print:bg-gray-50 print:border print:border-gray-200">
                     <li className="text-foreground print:text-gray-800">"What do we need in order to feel safe and stable?"</li>
@@ -224,7 +224,7 @@ const ConversationStarters = () => {
                     <h2 className="font-script text-2xl sm:text-3xl text-burgundy print:text-gray-900">Looking Forward</h2>
                   </div>
                   <p className="text-muted-foreground mb-4 print:text-gray-600">
-                    Use these when the family is ready to think beyond the immediate crisis.
+                    Use these when the family is ready to stop reacting only to the current crisis and think about what has to change long term.
                   </p>
                   <ul className="space-y-3 bg-secondary/30 rounded-xl p-6 print:bg-gray-50 print:border print:border-gray-200">
                     <li className="text-foreground print:text-gray-800">"What would a healthier version of this look like for us?"</li>
@@ -242,7 +242,7 @@ const ConversationStarters = () => {
                     <h2 className="font-script text-2xl sm:text-3xl text-rose-400 print:text-red-800">When to Pause the Conversation</h2>
                   </div>
                   <p className="text-muted-foreground mb-4 print:text-gray-600">
-                    It's appropriate to pause or end the discussion if:
+                    End or pause the conversation if any of this starts happening:
                   </p>
                   <ul className="space-y-2 text-foreground mb-6 print:text-gray-800">
                     <li className="flex items-start gap-3">
@@ -259,7 +259,7 @@ const ConversationStarters = () => {
                     </li>
                   </ul>
                   <p className="text-foreground font-semibold italic print:text-gray-900">
-                    Pausing a conversation is not quitting. It's choosing stability over damage.
+                    Pausing is not weakness. It is choosing clarity over more damage.
                   </p>
                 </div>
 
@@ -269,10 +269,10 @@ const ConversationStarters = () => {
               <div className="mt-12 pt-10 border-t border-border print:mt-8 print:pt-6 print:border-gray-300">
                 <h2 className="font-script text-2xl sm:text-3xl text-burgundy mb-4 print:text-gray-900">Closing Reminder</h2>
                 <p className="text-muted-foreground leading-relaxed mb-4 print:text-gray-700">
-                  These conversations are about changing patterns, not forcing outcomes. You may not see immediate agreement or relief—and that's okay. Calm, honest conversations held consistently often matter more than one dramatic discussion.
+                  These conversations are about changing patterns, not forcing some perfect breakthrough. Do not measure success by whether everyone agrees in the moment. Measure it by whether you stayed grounded, told the truth, and stopped feeding the usual cycle.
                 </p>
                 <p className="text-foreground font-semibold text-lg italic print:text-gray-900">
-                  Progress is measured in clarity and consistency, not instant results.
+                  Real progress usually looks like more clarity, better boundaries, and fewer panic-driven conversations.
                 </p>
               </div>
 

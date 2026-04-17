@@ -70,7 +70,7 @@ const professionalGuidanceTopics = [
     title: "Common Signs Families Are Stuck",
     content: (
       <div className="space-y-3">
-        <p className="text-muted-foreground mb-3">You may recognize it's time for outside guidance if:</p>
+        <p className="text-muted-foreground mb-3">It may be time for outside guidance if:</p>
         <ul className="space-y-2 text-foreground/90">
           <li className="flex items-start gap-2"><span className="text-primary mt-1">•</span>The same conversations keep happening with no lasting change</li>
           <li className="flex items-start gap-2"><span className="text-primary mt-1">•</span>Boundaries are set, then repeatedly broken or walked back</li>
@@ -80,7 +80,7 @@ const professionalGuidanceTopics = [
           <li className="flex items-start gap-2"><span className="text-primary mt-1">•</span>The situation escalates during crises, then returns to "normal"</li>
           <li className="flex items-start gap-2"><span className="text-primary mt-1">•</span>Everyone is exhausted, but no one knows what to do differently</li>
         </ul>
-        <p className="text-muted-foreground mt-4 italic">These are not signs of weakness—they're indicators that the system needs support.</p>
+        <p className="text-muted-foreground mt-4 italic">These are not signs your family has failed. They are signs the current approach is not working.</p>
       </div>
     )
   },
@@ -89,7 +89,7 @@ const professionalGuidanceTopics = [
     title: "What Professional Guidance Actually Does",
     content: (
       <div className="space-y-3">
-        <p className="text-muted-foreground mb-3">Many families hesitate because they misunderstand the role of a professional. Guidance is not about forcing treatment or taking control away from the family. Done well, it helps families:</p>
+        <p className="text-muted-foreground mb-3">A lot of families wait too long because they think outside help means giving up control or forcing treatment. Done well, guidance helps families:</p>
         <ul className="space-y-2 text-foreground/90">
           <li className="flex items-start gap-2"><span className="text-primary mt-1">•</span>Understand what's realistic—and what isn't</li>
           <li className="flex items-start gap-2"><span className="text-primary mt-1">•</span>Stop reacting to manipulation, threats, or emotional volatility</li>
@@ -98,7 +98,7 @@ const professionalGuidanceTopics = [
           <li className="flex items-start gap-2"><span className="text-primary mt-1">•</span>Reduce chaos while increasing safety and stability</li>
           <li className="flex items-start gap-2"><span className="text-primary mt-1">•</span>Make decisions based on strategy rather than fear</li>
         </ul>
-        <p className="text-foreground font-medium mt-4">Even when a loved one refuses help, family guidance still changes outcomes.</p>
+        <p className="text-foreground font-medium mt-4">Even when your loved one is not ready, family guidance can still change the direction of the situation.</p>
       </div>
     )
   },
@@ -107,14 +107,14 @@ const professionalGuidanceTopics = [
     title: "When Waiting Becomes Risky",
     content: (
       <div className="space-y-3">
-        <p className="text-muted-foreground mb-3">Delaying support often feels safer than acting, but waiting can quietly increase harm. Professional input is especially important when:</p>
+        <p className="text-muted-foreground mb-3">Waiting usually feels less risky than acting, but that is often how families drift deeper into the problem. Guidance matters even more when:</p>
         <ul className="space-y-2 text-foreground/90">
           <li className="flex items-start gap-2"><span className="text-primary mt-1">•</span>There is risk of overdose, violence, or self-harm</li>
           <li className="flex items-start gap-2"><span className="text-primary mt-1">•</span>Legal, medical, or child-safety issues are present</li>
           <li className="flex items-start gap-2"><span className="text-primary mt-1">•</span>Substance use is escalating or becoming more unpredictable</li>
           <li className="flex items-start gap-2"><span className="text-primary mt-1">•</span>The family is absorbing consequences to keep peace</li>
         </ul>
-        <p className="text-foreground font-medium mt-4">Getting guidance early often prevents more extreme measures later.</p>
+        <p className="text-foreground font-medium mt-4">The sooner families get clear, the less likely they are to keep making fear-based decisions.</p>
       </div>
     )
   },
@@ -123,14 +123,14 @@ const professionalGuidanceTopics = [
     title: "What Reaching Out Does Not Mean",
     content: (
       <div className="space-y-3">
-        <p className="text-muted-foreground mb-3">Seeking help does not mean:</p>
+        <p className="text-muted-foreground mb-3">Reaching out for help does not mean:</p>
         <ul className="space-y-2 text-foreground/90">
           <li className="flex items-start gap-2"><span className="text-primary mt-1">•</span>You're committing to an intervention</li>
           <li className="flex items-start gap-2"><span className="text-primary mt-1">•</span>You're giving up on your loved one</li>
           <li className="flex items-start gap-2"><span className="text-primary mt-1">•</span>You're being disloyal or punitive</li>
           <li className="flex items-start gap-2"><span className="text-primary mt-1">•</span>You have to act immediately</li>
         </ul>
-        <p className="text-foreground font-medium mt-4">It means you're gathering information and support before things get worse.</p>
+        <p className="text-foreground font-medium mt-4">It means you are getting clear before things get even harder.</p>
       </div>
     )
   },
@@ -139,9 +139,9 @@ const professionalGuidanceTopics = [
     title: "A Steadier Way Forward",
     content: (
       <div className="space-y-4">
-        <p className="text-muted-foreground">Professional guidance offers families something most have been missing: a calm, experienced outside perspective. One that helps you slow down, think clearly, and choose next steps that protect both the family and the possibility of recovery.</p>
-        <p className="text-muted-foreground">If you're unsure whether it's time, that uncertainty itself is often a sign worth paying attention to. You don't need a crisis to justify support—you only need the recognition that what you've tried isn't working anymore.</p>
-        <p className="text-foreground font-medium italic">You're allowed to ask for help too.</p>
+        <p className="text-muted-foreground">Professional guidance gives families something they are usually missing by the time they land here, a calm outside perspective that is not being pushed around by fear, guilt, or exhaustion.</p>
+        <p className="text-muted-foreground">If you are not sure whether it is time, pay attention to that. Families usually do not ask that question when things are working. You do not need a full-blown disaster to justify getting support.</p>
+        <p className="text-foreground font-medium italic">You are allowed to need help before the situation gets worse.</p>
       </div>
     )
   }
@@ -190,7 +190,7 @@ const FamilyResources = () => {
               </h1>
               
               <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
-                If you're here, it likely means someone you love is struggling—and you're carrying more of the weight than you should have to carry alone. Addiction doesn't just affect the person using; it reshapes families, conversations, trust, and daily life, often leaving loved ones confused, exhausted, and unsure of what to do next. This resource page exists to help you understand what's happening without shame or overwhelm, recognize why well-intended efforts can stop working, and find practical, grounded guidance for next steps. You don't need all the answers or a perfect plan—just accurate information, support, and a place to begin.
+                If you are here, chances are someone you love is struggling and your family is paying the price. Addiction does not just affect the person using. It changes the mood in the house, the conversations people avoid, the trust that keeps getting damaged, and the way everybody starts organizing life around the next crisis. This page is here to help you understand what is happening, spot where families get stuck, and find practical next steps that are more useful than panic, guilt, or wishful thinking.
               </p>
             </div>
           </div>
@@ -209,7 +209,7 @@ const FamilyResources = () => {
                 </div>
                 
                 <p className="text-muted-foreground mb-8 leading-relaxed">
-                  Families affected by addiction often search for the right solution—something that will finally make sense of what's happening and fix it. The concepts below are not quick fixes. They are foundational ideas that help families understand addiction more clearly, reduce confusion and conflict, and make better decisions over time. Many of these ideas may feel counterintuitive at first, especially if your family has been operating in crisis mode. That's normal. These concepts are meant to give you a shared language, steady footing, and a framework for change—whether or not your loved one is ready for recovery yet.
+                  Families dealing with addiction are usually looking for the one answer that will finally make everything click. Most of the time, what they actually need first is a better understanding of the patterns they are living in. These ideas are not quick fixes. They are the core truths that help families stop reacting blindly, reduce confusion, and make stronger decisions over time. Some of them may feel uncomfortable at first. That is normal. Growth usually starts there.
                 </p>
                 
                 <Accordion type="single" collapsible className="w-full space-y-3">
@@ -230,7 +230,7 @@ const FamilyResources = () => {
                 </Accordion>
                 
                 <p className="text-sm text-muted-foreground mt-8 italic">
-                  These core concepts appear repeatedly throughout the podcast and resources on this page. You don't need to master them all at once. Revisit them as needed, and allow your understanding to evolve as your situation changes.
+                  You do not need to master all of this at once. Come back to these ideas as often as you need to. Families usually need repetition before clarity starts to stick.
                 </p>
               </div>
             </div>

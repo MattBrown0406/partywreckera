@@ -56,8 +56,8 @@ const Footer = () => {
           {/* Newsletter Signup */}
           <div className="w-full max-w-md">
             <NewsletterSignup 
-              title="Get weekly recovery insights"
-              description="Join families finding hope and practical guidance in recovery"
+              title="Get weekly guidance for families dealing with addiction"
+              description="Practical insight, steadier thinking, and honest help for families who are tired of feeling stuck"
               variant="inline"
             />
           </div>

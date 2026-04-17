@@ -75,10 +75,10 @@ const FamilyCarousel = () => {
       {/* Text overlay */}
       <div className="absolute inset-x-0 bottom-0 p-6 text-center pointer-events-none">
         <p className="font-script text-3xl sm:text-4xl text-white mb-1">
-          Hope Starts Here
+          Your Family Is Not Crazy
         </p>
         <p className="text-white/80 text-sm uppercase tracking-widest">
-          You're Not Alone
+          You Need Clarity, Support, and a Better Plan
         </p>
       </div>
 

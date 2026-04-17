@@ -27,11 +27,10 @@ const StartHere = () => {
                 New here?
               </h1>
               <p className="text-xl sm:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-                If someone you love is struggling with addiction, start here.
+                If addiction is taking over your home, your peace, or your judgment, start here.
               </p>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                You don't have to navigate this alone. These resources will help you understand 
-                what you're dealing with and give you practical steps forward.
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                This page is built for families who are scared, worn out, and tired of guessing. These are the resources that will help you understand what is happening, where families get stuck, and what to do next without making the situation worse.
               </p>
             </div>
           </div>
@@ -60,10 +59,10 @@ const StartHere = () => {
                   </CardHeader>
                   <CardContent>
                     <p className="text-muted-foreground mb-4">
-                      Learn why addiction is a medical disease, not a moral failing, and what this means for your family.
+                      Learn why addiction is not about weakness or bad character, and why families keep getting stuck when they treat it that way.
                     </p>
                     <Button variant="outline" size="sm" asChild>
-                      <Link to="/blog">Read Article</Link>
+                      <Link to="/blog/understanding-addiction-education">Read Article</Link>
                     </Button>
                   </CardContent>
                 </Card>
@@ -77,10 +76,10 @@ const StartHere = () => {
                   </CardHeader>
                   <CardContent>
                     <p className="text-muted-foreground mb-4">
-                      Why waiting for rock bottom is dangerous and what you can do instead.
+                      Why waiting for rock bottom is one of the most damaging myths families still believe, and what to do instead.
                     </p>
                     <Button variant="outline" size="sm" asChild>
-                      <Link to="/blog">Read Article</Link>
+                      <Link to="/blog/stop-waiting-for-rock-bottom">Read Article</Link>
                     </Button>
                   </CardContent>
                 </Card>
@@ -94,10 +93,10 @@ const StartHere = () => {
                   </CardHeader>
                   <CardContent>
                     <p className="text-muted-foreground mb-4">
-                      Understand the crucial difference between helping and accidentally making things worse.
+                      Understand the difference between real support and the kind of helping that quietly keeps the addiction machine running.
                     </p>
                     <Button variant="outline" size="sm" asChild>
-                      <Link to="/blog">Read Article</Link>
+                      <Link to="/blog/enabling-addiction-families">Read Article</Link>
                     </Button>
                   </CardContent>
                 </Card>
@@ -111,10 +110,10 @@ const StartHere = () => {
                   </CardHeader>
                   <CardContent>
                     <p className="text-muted-foreground mb-4">
-                      How to have difficult conversations without making things worse.
+                      How to stop walking into the same blowups and start having conversations that are calmer, clearer, and more useful.
                     </p>
                     <Button variant="outline" size="sm" asChild>
-                      <Link to="/blog">Read Article</Link>
+                      <Link to="/blog/communication-addiction-families">Read Article</Link>
                     </Button>
                   </CardContent>
                 </Card>
@@ -129,7 +128,7 @@ const StartHere = () => {
                 Listen
               </h2>
               <p className="text-lg text-muted-foreground mb-8">
-                Start with this recommended episode to understand the basics
+                Start here if you need the straight version, not the sugar-coated version
               </p>
               
               <Card className="bg-background border-border max-w-2xl mx-auto">
@@ -141,8 +140,7 @@ const StartHere = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground mb-4">
-                    This episode covers the fundamentals every family member needs to know when 
-                    addiction enters their world.
+                    This episode lays out what families need to understand first, before more fear, rescuing, or wishful thinking makes the situation harder.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <Button asChild>
@@ -168,7 +166,7 @@ const StartHere = () => {
                   Try This
                 </h2>
                 <p className="text-lg text-muted-foreground">
-                  Interactive tools to help you gain clarity and prepare for next steps
+                  Use these if your family is stuck, emotionally flooded, or too close to the problem to think clearly
                 </p>
               </div>
               
@@ -179,7 +177,7 @@ const StartHere = () => {
                   </CardHeader>
                   <CardContent>
                     <p className="text-muted-foreground mb-4">
-                      Guided questions to help you assess your family's situation and readiness for change.
+                      Guided questions to help your family stop spinning and look honestly at what has and has not been working.
                     </p>
                     <Button variant="outline" size="sm" asChild>
                       <Link to="/family-reflection">Start Reflection</Link>
@@ -193,7 +191,7 @@ const StartHere = () => {
                   </CardHeader>
                   <CardContent>
                     <p className="text-muted-foreground mb-4">
-                      Identify what's holding you back from taking action and work through those fears.
+                      Name the fears that keep your family frozen so fear stops making decisions for everyone.
                     </p>
                     <Button variant="outline" size="sm" asChild>
                       <Link to="/fear-inventory">Start Inventory</Link>
@@ -207,7 +205,7 @@ const StartHere = () => {
                   </CardHeader>
                   <CardContent>
                     <p className="text-muted-foreground mb-4">
-                      Prepare for difficult conversations with scripts and strategies that work.
+                      Prepare for hard conversations without walking in angry, panicked, or trying to force an outcome.
                     </p>
                     <Button variant="outline" size="sm" asChild>
                       <Link to="/conversation-starters">Get Scripts</Link>
@@ -226,7 +224,7 @@ const StartHere = () => {
                   Get Help
                 </h2>
                 <p className="text-lg text-muted-foreground">
-                  Professional resources and direct access to Matt Brown
+                  If you need more than education, these are your next best steps
                 </p>
               </div>
               
@@ -241,7 +239,7 @@ const StartHere = () => {
                     </CardHeader>
                     <CardContent>
                       <p className="text-muted-foreground mb-4">
-                        Curated directory of vetted addiction treatment providers. No referral fees, no hidden agendas.
+                        Treatment education and vetted resources for families who need a clearer understanding of what kind of help might fit.
                       </p>
                       <Button variant="outline" size="sm" asChild>
                         <a href="https://soberhelpline.com" target="_blank" rel="noopener noreferrer">
@@ -260,7 +258,7 @@ const StartHere = () => {
                     </CardHeader>
                     <CardContent>
                       <p className="text-muted-foreground mb-4">
-                        Support tools specifically designed for families navigating addiction.
+                        Tools designed to help families communicate better, hold boundaries, and stop letting chaos run the household.
                       </p>
                       <Button variant="outline" size="sm" asChild>
                         <a href="https://familybridgeapp.com" target="_blank" rel="noopener noreferrer">
@@ -277,13 +275,13 @@ const StartHere = () => {
                   </CardHeader>
                   <CardContent>
                     <p className="text-muted-foreground mb-6">
-                      Professional interventionist with 20+ years of experience helping families navigate addiction crises.
+                      If your family is stuck, divided, or watching the situation get worse, Matt can help you think clearly about what comes next.
                     </p>
                     
                     <div className="space-y-4">
                       <div className="flex items-center gap-3 text-sm">
                         <PhoneCall className="w-4 h-4 text-burgundy" />
-                        <span className="text-foreground">Schedule a consultation</span>
+                        <span className="text-foreground">Talk through your family situation</span>
                       </div>
                       
                       <div className="flex items-center gap-3 text-sm">

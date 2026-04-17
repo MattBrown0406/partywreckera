@@ -5,18 +5,18 @@ import soberHelplineLogo from "@/assets/sober-helpline-logo.png";
 import { Button } from "@/components/ui/button";
 
 const features = [
+  { text: "Straight talk about addiction and family systems", link: null },
+  { text: "Clear guidance on helping vs. enabling", link: null },
+  { text: "Boundaries that actually hold under pressure", link: null },
+  { text: "Practical intervention and treatment insight", link: null },
+  { text: "Free weekly family support via Zoom", link: null },
+  { text: "Conversations rooted in real intervention work", link: null },
   { text: "New episodes every week", link: null },
-  { text: "Available on all major platforms", link: null },
-  { text: "Free family support groups via Zoom", link: null },
-  { text: "Professional intervention guidance", link: null },
-  { text: "Expert guests from recovery industry", link: null },
-  { text: "Real stories, real hope", link: null },
-  { text: "Enabling vs. supporting explained", link: null },
-  { text: "Boundary-setting strategies", link: null },
-  { text: "Treatment program guidance", link: null },
-  { text: "Relapse prevention insights", link: null },
-  { text: "Family recovery planning", link: null },
-  { text: "Case-based learning", link: null },
+  { text: "Available on major podcast platforms", link: null },
+  { text: "Expert guests without empty jargon", link: null },
+  { text: "Tools families can use right away", link: null },
+  { text: "Treatment guidance without the nonsense", link: null },
+  { text: "Hope with honesty, not false reassurance", link: null },
 ];
 
 const AboutSection = () => {
@@ -35,11 +35,11 @@ const AboutSection = () => {
             </h2>
             
             <p className="text-muted-foreground text-base sm:text-lg mb-4">
-              The Party Wreckers Podcast is a weekly show for families, loved ones, and professionals who are tired of watching addiction destroy lives and relationships. Hosted by an experienced interventionist with more than two decades in the field, the podcast breaks down complex topics like enabling, boundaries, relapse, treatment programs, and recovery planning into clear, practical conversations. Each episode blends real-world intervention experience, storytelling, and education to help listeners understand addiction as a medical disease with a spiritual solution—while also showing them what to do next, not just what to think or feel about it.
+              The Party Wreckers Podcast is for families who are exhausted, confused, and tired of having the same conversation over and over while nothing really changes. Hosted by Matt Brown, a professional interventionist with more than twenty years in the field, the show tackles the stuff families actually need help with: enabling, boundaries, treatment options, relapse, fear, denial, and what to do when love alone is not moving the needle.
             </p>
             
             <p className="text-muted-foreground text-base sm:text-lg mb-6 sm:mb-8">
-              The Party Wreckers Podcast is designed as a reliable guide for anyone who feels stuck between loving someone with a substance use disorder and not knowing how to help. Through solo episodes, interviews with treatment and recovery experts, and case-based insights from hundreds of interventions, the show gives families language, tools, and step-by-step strategies they can use immediately. Listeners come away with a deeper understanding of support versus enabling, how to set and hold healthy boundaries, and how to build a long-term recovery plan that includes the whole family—not just the addicted person.
+              This is not polished recovery fluff. It is honest, practical guidance from someone who has sat in the mess with real families and knows how quickly fear starts running the house. Each episode is built to help people think more clearly, stop reacting to chaos, and take the next right step, whether that means learning, setting firmer boundaries, getting outside support, or finally having the conversation everyone has been avoiding.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2">
@@ -113,7 +113,7 @@ const AboutSection = () => {
               </div>
               
               <p className="text-muted-foreground text-sm mb-4">
-                A safe space for families affected by addiction to communicate, set boundaries, and support loved ones on the path to recovery.
+                Built for families who need better communication, clearer boundaries, and a way to stop living in constant reaction mode.
               </p>
               
               {/* Quick features */}
@@ -138,7 +138,7 @@ const AboutSection = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Start Your Journey
+                  Explore FamilyBridge
                   <ExternalLink className="w-3.5 h-3.5 ml-1.5" />
                 </a>
               </Button>
@@ -177,7 +177,7 @@ const AboutSection = () => {
               </div>
               
               <p className="text-muted-foreground text-sm mb-2">
-                Find treatment resources, assessments, and connect with a community of families supporting each other.
+                Find treatment education, practical family resources, and a steadier place to start when addiction has everybody spinning.
               </p>
               <p className="text-emerald-400 text-sm font-semibold mb-4">
                 🟢 Free Weekly Family Support Zoom Calls — Every Monday

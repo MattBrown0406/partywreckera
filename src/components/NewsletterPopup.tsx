@@ -42,7 +42,7 @@ const NewsletterPopup = () => {
             Join The Family Squares
           </DialogTitle>
           <DialogDescription className="text-center text-base text-muted-foreground pt-2">
-            A free weekly Zoom call for families affected by addiction — no matter where you are in the journey.
+            A free weekly Zoom call for families who are tired of trying to carry this alone.
           </DialogDescription>
         </DialogHeader>
 
@@ -56,7 +56,7 @@ const NewsletterPopup = () => {
           </div>
 
           <p className="text-sm text-muted-foreground leading-relaxed">
-            You're welcome to attend regardless of where your loved one is in their recovery. There's <span className="font-semibold text-foreground">no requirement to participate</span> — many people just listen with their cameras off until they feel ready to share.
+            You do not need to have the right words, a perfect story, or a plan. If your family is overwhelmed, confused, or stuck, you are welcome here. <span className="font-semibold text-foreground">There is no pressure to speak</span>, many people just listen with cameras off until they feel ready.
           </p>
         </div>
 
@@ -72,7 +72,7 @@ const NewsletterPopup = () => {
             onClick={handleClose}
           >
             <Video className="w-4 h-4 mr-2" />
-            Register for Monday's Call
+            Save My Spot for Monday
           </a>
         </Button>
 
