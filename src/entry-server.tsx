@@ -14,7 +14,6 @@ export const render = (url: string) => {
     appHtml,
     headTags: [
       helmet.title?.toString(),
-      helmet.priority?.toString(),
       helmet.meta?.toString(),
       helmet.link?.toString(),
       helmet.script?.toString(),
