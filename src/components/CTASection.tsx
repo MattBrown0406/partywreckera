@@ -51,7 +51,7 @@ const CTASection = () => {
           </h2>
           
           <p className="text-muted-foreground text-base sm:text-lg lg:text-xl max-w-3xl mx-auto mb-6 sm:mb-10">
-            If addiction has your family stuck in fear, confusion, or constant damage control, start with the podcast, the family resources, or a direct conversation with Matt. Just do not keep telling yourself this will sort itself out.
+            If addiction has your family stuck in fear, confusion, or constant damage control, go to Help Now for triage, Start Here for the basics, Next Step for direction, or contact Matt directly. Just do not keep telling yourself this will sort itself out.
           </p>
 
           {/* Platform buttons */}
@@ -70,10 +70,22 @@ const CTASection = () => {
             ))}
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 sm:mb-12">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 sm:mb-12 flex-wrap">
             <Button variant="hero" size="xl" asChild>
+              <Link to="/help-now">
+                Help Now
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </Button>
+            <Button variant="heroOutline" size="xl" asChild>
               <Link to="/start-here">
                 Start Here
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </Button>
+            <Button variant="heroOutline" size="xl" asChild>
+              <Link to="/next-step">
+                Find My Next Step
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </Button>

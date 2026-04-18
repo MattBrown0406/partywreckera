@@ -1,14 +1,14 @@
 import { Helmet } from "react-helmet";
+import { DEFAULT_OG_IMAGE, SITE_NAME, SITE_URL } from "@/lib/site";
 
-const SITE_URL = "https://partywreckers.com";
-const OG_IMAGE = `${SITE_URL}/og-image.jpg`;
+const OG_IMAGE = DEFAULT_OG_IMAGE;
 
 // Podcast Schema
 export const PodcastJsonLd = () => {
   const podcastSchema = {
     "@context": "https://schema.org",
     "@type": "PodcastSeries",
-    "name": "The Party Wreckers Podcast",
+    "name": SITE_NAME,
     "description": "Real conversations about addiction, intervention, and recovery. Host Matt Brown helps families find hope and practical guidance.",
     "url": SITE_URL,
     "image": OG_IMAGE,
@@ -19,7 +19,7 @@ export const PodcastJsonLd = () => {
     },
     "publisher": {
       "@type": "Organization",
-      "name": "The Party Wreckers Podcast",
+      "name": SITE_NAME,
       "logo": {
         "@type": "ImageObject",
         "url": OG_IMAGE
@@ -44,7 +44,7 @@ export const OrganizationJsonLd = () => {
   const orgSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "The Party Wreckers Podcast",
+    "name": SITE_NAME,
     "url": SITE_URL,
     "logo": OG_IMAGE,
     "description": "A podcast helping families navigate addiction, intervention, and recovery.",
@@ -105,7 +105,7 @@ export const PersonJsonLd = () => {
     ],
     "worksFor": {
       "@type": "Organization",
-      "name": "The Party Wreckers Podcast"
+      "name": SITE_NAME
     }
   };
 
@@ -123,18 +123,18 @@ export const WebsiteJsonLd = () => {
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "The Party Wreckers Podcast",
+    "name": SITE_NAME,
     "url": SITE_URL,
     "description": "Real conversations about addiction, intervention, and recovery.",
     "publisher": {
       "@type": "Organization",
-      "name": "The Party Wreckers Podcast"
+      "name": SITE_NAME
     },
     "potentialAction": {
       "@type": "SearchAction",
       "target": {
         "@type": "EntryPoint",
-        "urlTemplate": `${SITE_URL}/episodes?q={search_term_string}`
+        "urlTemplate": `${SITE_URL}/episodes?search={search_term_string}`
       },
       "query-input": "required name=search_term_string"
     }
@@ -226,7 +226,7 @@ export const ArticleJsonLd = ({
     },
     "publisher": {
       "@type": "Organization",
-      "name": "The Party Wreckers Podcast",
+      "name": SITE_NAME,
       "logo": {
         "@type": "ImageObject",
         "url": OG_IMAGE

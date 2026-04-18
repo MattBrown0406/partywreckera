@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet";
 import { useLocation } from "react-router-dom";
 import { blogArticles } from "@/data/blogData";
+import { DEFAULT_OG_IMAGE, SITE_NAME, SITE_URL } from "@/lib/site";
 
 interface SEOHeadProps {
   title: string;
@@ -16,7 +17,6 @@ interface SEOHeadProps {
   children?: React.ReactNode;
 }
 
-const SITE_URL = "https://partywreckers.com";
 const FALLBACK_DESCRIPTION =
   "The Party Wreckers Podcast — real talk about addiction, intervention, and recovery for families. Hosted by Matt Brown, professional interventionist.";
 
@@ -43,7 +43,7 @@ const SEOHead = ({
   title,
   description,
   ogType = "website",
-  ogImage = "https://partywreckers.com/og-image.jpg",
+  ogImage = DEFAULT_OG_IMAGE,
   noIndex = false,
   keywords,
   author = "Matt Brown",
@@ -89,7 +89,7 @@ const SEOHead = ({
       <meta property="og:image" content={ogImage} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
-      <meta property="og:site_name" content="The Party Wreckers Podcast" />
+      <meta property="og:site_name" content={SITE_NAME} />
       <meta property="og:locale" content="en_US" />
 
       {/* Article-specific Open Graph */}

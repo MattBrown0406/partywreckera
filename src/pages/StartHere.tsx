@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Play, BookOpen, ExternalLink, PhoneCall, Mail } from "lucide-react";
+import { Play, BookOpen, ExternalLink, PhoneCall, Mail, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const StartHere = () => {
@@ -29,9 +29,20 @@ const StartHere = () => {
               <p className="text-xl sm:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
                 If addiction is taking over your home, your peace, or your judgment, start here.
               </p>
-              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8">
                 This page is built for families who are scared, worn out, and tired of guessing. These are the resources that will help you understand what is happening, where families get stuck, and what to do next without making the situation worse.
               </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button asChild>
+                  <Link to="/next-step">
+                    Find My Next Step
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </Button>
+                <Button variant="outline" asChild>
+                  <Link to="/help-now">Need Help Right Now?</Link>
+                </Button>
+              </div>
             </div>
           </div>
         </section>

@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Headphones, Play, Mail } from "lucide-react";
+import { Headphones, Play, Mail, ShieldAlert } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "@/assets/party-wreckers-logo-2026.png";
 import soberHelplineLogo from "@/assets/sober-helpline-logo.png";
@@ -62,6 +62,12 @@ const HeroSection = () => {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
             <Button variant="hero" size="xl" asChild>
+              <Link to="/help-now">
+                <ShieldAlert className="w-5 h-5" />
+                Help Now
+              </Link>
+            </Button>
+            <Button variant="heroOutline" size="xl" asChild>
               <Link to="/start-here">
                 <Headphones className="w-5 h-5" />
                 Start Here

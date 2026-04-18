@@ -47,7 +47,8 @@ interface NavLink {
 }
 
 const navLinks: NavLink[] = [
-  { label: "Start Here", href: "/start-here", featured: true },
+  { label: "Help Now", href: "/help-now", featured: true },
+  { label: "Start Here", href: "/start-here" },
   { label: "Episodes", href: "/episodes" },
   { label: "Family Resources", href: "/family-resources" },
   { label: "Support Our Sponsors", href: "/sponsors" },

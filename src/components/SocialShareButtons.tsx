@@ -19,7 +19,7 @@ const SocialShareButtons = ({
   const [copied, setCopied] = useState(false);
   const { toast } = useToast();
   
-  const shareUrl = url || window.location.href;
+  const shareUrl = url || (typeof window !== "undefined" ? window.location.href : "https://partywreckers.com");
   const encodedTitle = encodeURIComponent(title);
   const encodedUrl = encodeURIComponent(shareUrl);
 
@@ -31,6 +31,9 @@ const SocialShareButtons = ({
 
   const copyToClipboard = async () => {
     try {
+      if (typeof navigator === "undefined" || !navigator.clipboard) {
+        throw new Error("Clipboard not available");
+      }
       await navigator.clipboard.writeText(shareUrl);
       setCopied(true);
       toast({

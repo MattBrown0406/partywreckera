@@ -59,5 +59,8 @@ Allow: /
 User-agent: *
 Allow: /
 
+# Keep obvious non-public utility paths out of the index if they ever appear
+Disallow: /404
+
 # Sitemap location
 Sitemap: https://partywreckers.com/sitemap.xml

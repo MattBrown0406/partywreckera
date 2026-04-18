@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { supabase } from "@/integrations/supabase/client";
 import { Mail, CheckCircle, AlertCircle } from "lucide-react";
 
 interface NewsletterSignupProps {
@@ -38,22 +39,20 @@ const NewsletterSignup = ({
     setStatus("loading");
     
     try {
-      // Placeholder API call - will be replaced with Mailchimp later
-      const response = await fetch('/api/newsletter-signup', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
+      const { error } = await supabase.functions.invoke("newsletter-signup", {
+        body: {
+          email: email.trim(),
+          source: variant,
         },
-        body: JSON.stringify({ email }),
       });
 
-      if (response.ok) {
-        setStatus("success");
-        setMessage("You’re in. Check your email for the next step.");
-        setEmail("");
-      } else {
-        throw new Error("Subscription failed");
+      if (error) {
+        throw error;
       }
+
+      setStatus("success");
+      setMessage("You’re in. Matt will get your signup and we can wire this into a full email platform next.");
+      setEmail("");
     } catch (error) {
       setStatus("error");
       setMessage("Something went wrong. Try again in a minute.");

@@ -2,30 +2,42 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { MessageCircle, X, Send, CheckCircle } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
+import { MessageCircle, X, Send, CheckCircle, AlertCircle } from "lucide-react";
 
 const StickyContactForm = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [status, setStatus] = useState<"idle" | "loading" | "success">("idle");
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
   const [form, setForm] = useState({ name: "", email: "", message: "" });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.name.trim() || !form.email.trim() || !form.message.trim()) return;
+
     setStatus("loading");
-    
-    const subject = encodeURIComponent(`Contact from ${form.name}`);
-    const body = encodeURIComponent(`Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`);
-    window.location.href = `mailto:matt@freedominterventions.com?subject=${subject}&body=${body}`;
-    
+    setErrorMessage("");
+
+    const { error } = await supabase.functions.invoke("send-contact-email", {
+      body: {
+        name: form.name.trim(),
+        email: form.email.trim(),
+        message: form.message.trim(),
+      },
+    });
+
+    if (error) {
+      setStatus("error");
+      setErrorMessage("Something went wrong sending your message. Please try again in a minute.");
+      return;
+    }
+
+    setStatus("success");
+    setForm({ name: "", email: "", message: "" });
     setTimeout(() => {
-      setStatus("success");
-      setForm({ name: "", email: "", message: "" });
-      setTimeout(() => {
-        setStatus("idle");
-        setIsOpen(false);
-      }, 2500);
-    }, 500);
+      setStatus("idle");
+      setIsOpen(false);
+    }, 2500);
   };
 
   return (
@@ -45,8 +57,8 @@ const StickyContactForm = () => {
           {status === "success" ? (
             <div className="p-6 text-center">
               <CheckCircle className="w-10 h-10 text-accent mx-auto mb-2" />
-              <p className="text-sm text-foreground font-medium">Message ready to send!</p>
-              <p className="text-xs text-muted-foreground mt-1">Your email client should open shortly.</p>
+              <p className="text-sm text-foreground font-medium">Message sent.</p>
+              <p className="text-xs text-muted-foreground mt-1">Matt will get it directly without relying on your email app.</p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="p-4 space-y-3">
@@ -77,8 +89,14 @@ const StickyContactForm = () => {
               />
               <Button type="submit" className="w-full" size="sm" disabled={status === "loading"}>
                 <Send className="w-3.5 h-3.5 mr-1.5" />
-                Send Message
+                {status === "loading" ? "Sending..." : "Send Message"}
               </Button>
+              {status === "error" && (
+                <div className="flex items-start gap-2 text-xs text-destructive">
+                  <AlertCircle className="w-3.5 h-3.5 mt-0.5 shrink-0" />
+                  <span>{errorMessage}</span>
+                </div>
+              )}
             </form>
           )}
         </div>
