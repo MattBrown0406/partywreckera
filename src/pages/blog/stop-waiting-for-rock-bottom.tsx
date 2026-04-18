@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import BlogConversionPanel from "@/components/BlogConversionPanel";
 import SEOHead from "@/components/SEOHead";
 import SocialShareButtons from "@/components/SocialShareButtons";
 import { ArrowLeft } from "lucide-react";
@@ -268,9 +269,13 @@ const StopWaitingForRockBottom = () => {
             </ul>
           </div>
 
-          <p className="text-foreground font-medium italic mt-8">
-            Want to go deeper? Listen to <Link to="/episodes" className="text-primary hover:text-primary/80">The Party Wreckers podcast</Link> for real conversations about addiction, intervention, and recovery. And if your family is in crisis, reach out at <a href="https://freedominterventions.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80">FreedomInterventions.com</a>.
-          </p>
+          <div className="mt-10">
+            <BlogConversionPanel
+              eyebrow="Rock bottom is not a plan"
+              title="Take the next concrete step before the next crisis makes it for you."
+              description="If this article hit close to home, use Help Now for urgent triage, Next Step for a calmer path, or email Matt while your family is ready to act."
+            />
+          </div>
         </article>
 
         <div className="mt-12 pt-8 border-t">

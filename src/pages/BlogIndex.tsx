@@ -6,6 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
 import { blogArticles } from "@/data/blogData";
 import NewsletterSignup from "@/components/NewsletterSignup";
+import BlogConversionPanel from "@/components/BlogConversionPanel";
 
 const BlogIndex = () => {
   return (
@@ -92,6 +93,14 @@ const BlogIndex = () => {
               </Card>
             </Link>
           ))}
+        </div>
+
+        <div className="max-w-5xl mx-auto mb-12">
+          <BlogConversionPanel
+            eyebrow="Read enough to know this is serious?"
+            title="Use the blog for education, then move to the page built for action."
+            description="If one of these articles sounds uncomfortably familiar, do not just keep reading in circles. Use Help Now for triage or Next Step for direction."
+          />
         </div>
 
         {/* Newsletter Signup */}

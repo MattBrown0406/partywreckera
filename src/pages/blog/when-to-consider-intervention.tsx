@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import SocialShareButtons from "@/components/SocialShareButtons";
+import BlogConversionPanel from "@/components/BlogConversionPanel";
 import { ArrowLeft } from "lucide-react";
 import blogImage from "@/assets/blog-when-to-consider-intervention.jpg";
 
@@ -277,6 +278,14 @@ const WhenToConsiderIntervention = () => {
                   <li><Link to="/blog/tough-love-addiction-families" className="text-primary hover:text-primary/80">Tough Love Isn't What You Think</Link></li>
                   <li><Link to="/blog/fear-avoidance-paralysis" className="text-primary hover:text-primary/80">Fear, Avoidance, and Paralysis in Addiction Families</Link></li>
                 </ul>
+              </div>
+
+              <div className="mt-12">
+                <BlogConversionPanel
+                  eyebrow="If the signs are here, do not go back to waiting"
+                  title="Pick the next move while your family still has leverage."
+                  description="Use Help Now if things feel urgent, Next Step if you need a calmer decision path, or email Matt if intervention needs a real conversation." 
+                />
               </div>
             </div>
           </article>

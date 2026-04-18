@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import BlogConversionPanel from "@/components/BlogConversionPanel";
 import SEOHead from "@/components/SEOHead";
 import { ArticleJsonLd, BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
 import SocialShareButtons from "@/components/SocialShareButtons";
@@ -229,20 +230,12 @@ const SignsLovedOneNeedsHelpWithAlcohol = () => {
             </div>
           ))}
 
-          {/* CTA */}
-          <div className="bg-muted/50 border border-border rounded-xl p-6 sm:p-8 mt-10">
-            <h3 className="text-xl font-bold text-foreground mb-3">You Don't Have to Figure This Out Alone</h3>
-            <p className="mb-4">
-              If you recognized your loved one in this list, we're here. PartyWreckers exists for exactly this moment — when the funny stops and the fear takes over, and you need someone who gets it.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Link to="/family-resources" className="inline-flex items-center px-5 py-2.5 bg-accent text-accent-foreground rounded-lg font-medium hover:opacity-90 transition-opacity">
-                Family Resources
-              </Link>
-              <Link to="/conversation-starters" className="inline-flex items-center px-5 py-2.5 bg-secondary text-secondary-foreground rounded-lg font-medium hover:opacity-90 transition-opacity">
-                Conversation Starters
-              </Link>
-            </div>
+          <div className="mt-10">
+            <BlogConversionPanel
+              eyebrow="When the funny stops and the fear starts"
+              title="Use that clarity to choose a next step, not just reread the signs."
+              description="If this list sounded familiar, move to Help Now for triage, Next Step for direction, or email Matt before the drinking keeps redefining normal."
+            />
           </div>
 
           {/* References */}

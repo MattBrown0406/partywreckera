@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import SocialShareButtons from "@/components/SocialShareButtons";
+import BlogConversionPanel from "@/components/BlogConversionPanel";
 import { ArrowLeft } from "lucide-react";
 import blogImage from "@/assets/blog-enabling-addiction-families.jpg";
 
@@ -258,12 +259,12 @@ const EnablingAddictionFamilies = () => {
             </div>
           </div>
 
-          {/* CTA */}
-          <div className="mt-10 p-6 bg-muted/50 rounded-lg text-center">
-            <p className="text-lg font-semibold text-foreground mb-2">Want to keep talking about this?</p>
-            <p className="text-muted-foreground">
-              Come listen to the <Link to="/" className="text-primary hover:text-primary/80">Party Wreckers podcast</Link> — real conversations for families dealing with a loved one's addiction. No clinical jargon, just real talk from someone who's been there.
-            </p>
+          <div className="mt-10">
+            <BlogConversionPanel
+              eyebrow="You found the pattern"
+              title="Now give your family a path that is stronger than more enabling."
+              description="If this article sounded like your house, use Help Now for triage, Next Step for direction, or email Matt before the same cycle resets again."
+            />
           </div>
         </article>
 
