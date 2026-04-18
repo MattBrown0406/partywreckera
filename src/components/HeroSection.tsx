@@ -51,7 +51,7 @@ const HeroSection = () => {
 
           {/* Subtitle */}
           <p className="text-xl sm:text-2xl font-semibold text-foreground max-w-3xl mx-auto mb-6">
-            Real talk for families who are done minimizing, done waiting, and done pretending this is going to fix itself.
+            This is the podcast for people who are done pretending everything is okay.
           </p>
 
           {/* Subheadline */}
