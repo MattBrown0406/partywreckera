@@ -1,4 +1,5 @@
 import { Instagram, Youtube, Facebook } from "lucide-react";
+import { Link } from "react-router-dom";
 import NewsletterSignup from "./NewsletterSignup";
 
 const TikTokIcon = ({ className }: { className?: string }) => (
@@ -71,33 +72,50 @@ const Footer = () => {
             The Party Wreckers
           </a>
 
+          <div className="flex flex-col items-center gap-3">
+            <p className="text-sm text-muted-foreground">Need a clearer path tonight?</p>
+            <div className="flex flex-wrap justify-center gap-3">
+              <Link to="/help-now" className="rounded-full border border-primary/30 px-4 py-2 text-sm text-foreground hover:border-primary hover:text-primary transition-colors">
+                Help Now
+              </Link>
+              <Link to="/next-step" className="rounded-full border border-primary/30 px-4 py-2 text-sm text-foreground hover:border-primary hover:text-primary transition-colors">
+                Find My Next Step
+              </Link>
+            </div>
+          </div>
+
           {/* Navigation links */}
           <nav aria-label="Footer navigation">
             <ul className="flex flex-wrap justify-center gap-4 sm:gap-6 list-none p-0 m-0">
               <li>
-                <a href="/blog" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  Blog
-                </a>
+                <Link to="/help-now" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Help Now
+                </Link>
               </li>
               <li>
-                <a href="/episodes" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  Episodes
-                </a>
+                <Link to="/start-here" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Start Here
+                </Link>
               </li>
               <li>
-                <a href="/family-resources" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/family-resources" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                   Resources
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/host" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/episodes" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Episodes
+                </Link>
+              </li>
+              <li>
+                <Link to="/blog" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link to="/host" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                   About Matt Brown
-                </a>
-              </li>
-              <li>
-                <a href="/press" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  Press
-                </a>
+                </Link>
               </li>
             </ul>
           </nav>

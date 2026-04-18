@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { 
   ArrowLeft,
+  ArrowRight,
   MessageCircle,
   AlertTriangle,
   Heart,
@@ -276,16 +277,26 @@ const ConversationStarters = () => {
                 </p>
               </div>
 
-              {/* Print Button - hide on print */}
-              <div className="mt-12 text-center print:hidden">
-                <Button 
-                  onClick={handlePrint}
-                  size="lg" 
-                  className="bg-primary hover:bg-primary/90"
-                >
-                  <Printer className="w-4 h-4 mr-2" />
-                  Print This Guide
-                </Button>
+              <div className="mt-12 rounded-2xl border border-border bg-secondary/30 p-8 print:hidden">
+                <h2 className="font-script text-2xl sm:text-3xl text-burgundy mb-4">What should we do after this conversation?</h2>
+                <p className="text-muted-foreground mb-6">
+                  If this guide helped you slow the conversation down, the next move is deciding what your family needs afterward, more education, more structure, or direct support.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                  <Button asChild>
+                    <Link to="/next-step">
+                      Find My Next Step
+                      <ArrowRight className="w-4 h-4" />
+                    </Link>
+                  </Button>
+                  <Button variant="outline" asChild>
+                    <Link to="/help-now">Help Now</Link>
+                  </Button>
+                  <Button onClick={handlePrint} size="lg" className="bg-primary hover:bg-primary/90">
+                    <Printer className="w-4 h-4 mr-2" />
+                    Print This Guide
+                  </Button>
+                </div>
               </div>
 
             </div>

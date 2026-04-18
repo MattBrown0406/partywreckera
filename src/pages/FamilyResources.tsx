@@ -21,7 +21,8 @@ import {
   Lightbulb,
   UserCheck,
   AlertTriangle,
-  HandHeart
+  HandHeart,
+  ArrowRight
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -189,9 +190,20 @@ const FamilyResources = () => {
                 A Message to Families and Loved Ones
               </h1>
               
-              <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
+              <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-8">
                 If you are here, chances are someone you love is struggling and your family is paying the price. Addiction does not just affect the person using. It changes the mood in the house, the conversations people avoid, the trust that keeps getting damaged, and the way everybody starts organizing life around the next crisis. This page is here to help you understand what is happening, spot where families get stuck, and find practical next steps that are more useful than panic, guilt, or wishful thinking.
               </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button asChild>
+                  <Link to="/next-step">
+                    Find My Next Step
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </Button>
+                <Button variant="outline" asChild>
+                  <Link to="/help-now">Need Help Right Now?</Link>
+                </Button>
+              </div>
             </div>
           </div>
         </section>
@@ -648,6 +660,37 @@ const FamilyResources = () => {
                     </Button>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 sm:py-20">
+          <div className="container px-4">
+            <div className="max-w-5xl mx-auto rounded-2xl border border-border bg-gradient-to-br from-primary/10 via-background to-burgundy/10 p-8 sm:p-10 text-center">
+              <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-background/70 px-4 py-2 mb-6">
+                <HandHeart className="w-4 h-4 text-primary" />
+                <span className="text-sm uppercase tracking-widest text-muted-foreground">Choose the next move, not the whole plan</span>
+              </div>
+              <h2 className="font-script text-4xl sm:text-5xl text-burgundy mb-4">Need help turning this into action?</h2>
+              <p className="text-muted-foreground text-lg max-w-3xl mx-auto mb-8">
+                If these tools gave you clarity but not a clear next move, use the funnel pages built for triage. Help Now is for urgency. Next Step is for deciding where your family should go from here.
+              </p>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <Button size="lg" asChild>
+                  <Link to="/help-now">
+                    Help Now
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </Button>
+                <Button variant="outline" size="lg" asChild>
+                  <Link to="/next-step">Find My Next Step</Link>
+                </Button>
+                <Button variant="ghost" size="lg" asChild>
+                  <a href="mailto:matt@partywreckers.com?subject=Need%20Help%20With%20Our%20Family">
+                    Email Matt
+                  </a>
+                </Button>
               </div>
             </div>
           </div>

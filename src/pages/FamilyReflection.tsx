@@ -6,6 +6,7 @@ import {
   FileText, 
   Printer, 
   ArrowLeft,
+  ArrowRight,
   RotateCcw,
   Heart
 } from "lucide-react";
@@ -370,18 +371,32 @@ const FamilyReflection = () => {
                 </p>
               </div>
               
-              {/* Bottom Actions */}
-              <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 no-print">
-                <Button onClick={handlePrint} size="lg" className="gap-2">
-                  <Printer className="w-4 h-4" />
-                  Print Your Reflection
-                </Button>
-                <Button asChild variant="outline" size="lg">
-                  <Link to="/family-resources">
-                    <ArrowLeft className="w-4 h-4 mr-2" />
-                    Back to Resources
-                  </Link>
-                </Button>
+              <div className="mt-10 rounded-2xl border border-border bg-secondary/30 p-8 no-print">
+                <h2 className="font-script text-2xl sm:text-3xl text-burgundy mb-4 text-center">Ready to turn reflection into direction?</h2>
+                <p className="text-muted-foreground text-center mb-6">
+                  Once your family can see what it has already tried, the next job is choosing a steadier path instead of repeating the same cycle.
+                </p>
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                  <Button asChild size="lg">
+                    <Link to="/next-step">
+                      Find My Next Step
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </Link>
+                  </Button>
+                  <Button asChild variant="outline" size="lg">
+                    <Link to="/help-now">Help Now</Link>
+                  </Button>
+                  <Button onClick={handlePrint} size="lg" className="gap-2">
+                    <Printer className="w-4 h-4" />
+                    Print Your Reflection
+                  </Button>
+                  <Button asChild variant="ghost" size="lg">
+                    <Link to="/family-resources">
+                      <ArrowLeft className="w-4 h-4 mr-2" />
+                      Back to Resources
+                    </Link>
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
