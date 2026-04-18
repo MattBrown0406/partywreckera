@@ -30,8 +30,6 @@ const BuzzsproutIcon = () => (
 const platforms = [
   { name: "Spotify", url: "https://open.spotify.com/show/your-show-id", icon: SpotifyIcon, color: "hover:bg-[#1DB954] hover:text-white hover:border-[#1DB954]" },
   { name: "Apple Podcasts", url: "https://podcasts.apple.com/us/podcast/your-show", icon: ApplePodcastsIcon, color: "hover:bg-[#9933CC] hover:text-white hover:border-[#9933CC]" },
-  { name: "YouTube", url: "https://youtube.com/@partywreckers", icon: YouTubeIcon, color: "hover:bg-[#FF0000] hover:text-white hover:border-[#FF0000]" },
-  { name: "Buzzsprout", url: "https://www.buzzsprout.com/1941777", icon: BuzzsproutIcon, color: "hover:bg-[#FFC107] hover:text-black hover:border-[#FFC107]" },
 ];
 
 const CTASection = () => {
