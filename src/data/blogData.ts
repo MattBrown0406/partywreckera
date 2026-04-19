@@ -80,6 +80,7 @@ import blogImageWhenSomeoneSaysNo from "@/assets/blog-when-someone-says-no-inter
 import blogImageWhatHappensBeforeIntervention from "@/assets/blog-what-happens-before-intervention.jpg";
 import blogImageSiblingAddictionFamily from "@/assets/blog-sibling-addiction-family.jpg";
 import blogImageEnmeshmentAddictionFamily from "@/assets/blog-enmeshment-addiction-family.jpg";
+import blogImageCaretakerTrap from "@/assets/blog-caretaker-trap-addiction-family.jpg";
 
 export interface BlogArticle {
   id: string;
@@ -92,6 +93,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "caretaker-trap-losing-yourself-addiction-family",
+    title: "You Can't Save Someone Else by Losing Yourself: The Caretaker Trap in Addiction Families",
+    date: "April 19, 2026",
+    image: blogImageCaretakerTrap,
+    imageAlt: "A weary mother sitting alone at a kitchen table at night, holding a mug and gazing out a dark window — representing a family caretaker exhausted by a loved one's addiction",
+    excerpt: "When you have an addicted loved one, it's easy to lose yourself trying to save them. Matt Brown explains the caretaker trap — and how families find their way back.",
+    category: "Family"
+  },
   {
     id: "enmeshment-addiction-family-patterns",
     title: "When You Don't Know Where You End and They Begin: Enmeshment, Addiction, and the Family Trap",
