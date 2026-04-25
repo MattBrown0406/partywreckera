@@ -81,6 +81,7 @@ import blogImageWhatHappensBeforeIntervention from "@/assets/blog-what-happens-b
 import blogImageSiblingAddictionFamily from "@/assets/blog-sibling-addiction-family.jpg";
 import blogImageEnmeshmentAddictionFamily from "@/assets/blog-enmeshment-addiction-family.jpg";
 import blogImageCaretakerTrap from "@/assets/blog-caretaker-trap-addiction-family.jpg";
+import blogImageRebuildingTrustRecovery from "@/assets/blog-rebuilding-trust-recovery-families.jpg";
 
 export interface BlogArticle {
   id: string;
@@ -93,6 +94,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "rebuilding-trust-in-recovery-families",
+    title: "When Your Loved One Gets Sober — And You Still Can't Breathe",
+    date: "April 24, 2026",
+    image: blogImageRebuildingTrustRecovery,
+    imageAlt: "A sober young adult man and an adult parent sitting across from each other at a warm kitchen table, showing a cautious conversation about rebuilding trust in recovery",
+    excerpt: "When a loved one gets sober, families often wait for the other shoe to drop. Matt Brown explains how rebuilding trust in recovery happens honestly over time.",
+    category: "Recovery"
+  },
   {
     id: "caretaker-trap-losing-yourself-addiction-family",
     title: "You Can't Save Someone Else by Losing Yourself: The Caretaker Trap in Addiction Families",
