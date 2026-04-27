@@ -82,6 +82,7 @@ import blogImageSiblingAddictionFamily from "@/assets/blog-sibling-addiction-fam
 import blogImageEnmeshmentAddictionFamily from "@/assets/blog-enmeshment-addiction-family.jpg";
 import blogImageCaretakerTrap from "@/assets/blog-caretaker-trap-addiction-family.jpg";
 import blogImageRebuildingTrustRecovery from "@/assets/blog-rebuilding-trust-recovery-families.jpg";
+import blogImageHowToTalkAddiction from "@/assets/blog-how-to-talk-about-addiction-conversation.jpg";
 
 export interface BlogArticle {
   id: string;
@@ -94,6 +95,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "how-to-talk-to-someone-about-their-addiction",
+    title: "The Conversation You're Terrified to Have (And How to Actually Have It)",
+    date: "April 27, 2026",
+    image: blogImageHowToTalkAddiction,
+    imageAlt: "A young adult man sitting at a kitchen table in warm light during a serious family conversation about addiction",
+    excerpt: "Afraid to confront your loved one about drinking or drug use? Matt Brown walks families through how to have the conversation clearly and calmly.",
+    category: "Family"
+  },
   {
     id: "rebuilding-trust-in-recovery-families",
     title: "When Your Loved One Gets Sober — And You Still Can't Breathe",
