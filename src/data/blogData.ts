@@ -83,6 +83,7 @@ import blogImageEnmeshmentAddictionFamily from "@/assets/blog-enmeshment-addicti
 import blogImageCaretakerTrap from "@/assets/blog-caretaker-trap-addiction-family.jpg";
 import blogImageRebuildingTrustRecovery from "@/assets/blog-rebuilding-trust-recovery-families.jpg";
 import blogImageHowToTalkAddiction from "@/assets/blog-how-to-talk-about-addiction-conversation.jpg";
+import blogImagePermissionNextStep from "@/assets/blog-permission-family-addiction-next-step.jpg";
 
 export interface BlogArticle {
   id: string;
@@ -95,6 +96,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "the-permission-youve-been-waiting-for-doesnt-exist",
+    title: "The Permission You've Been Waiting For Doesn't Exist",
+    date: "April 29, 2026",
+    image: blogImagePermissionNextStep,
+    imageAlt: "A weary mother sitting alone in a parked car at dusk, holding a quiet moment before asking for help for a loved one's addiction",
+    excerpt: "If you're waiting for the right moment to help your addicted loved one, it's not coming. Matt Brown explains how to stop waiting and take the next right step today.",
+    category: "Family"
+  },
   {
     id: "how-to-talk-to-someone-about-their-addiction",
     title: "The Conversation You're Terrified to Have (And How to Actually Have It)",
