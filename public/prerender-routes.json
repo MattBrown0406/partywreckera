@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-30T02:47:39.170Z",
+  "generatedAt": "2026-04-30T21:10:43.266Z",
   "routes": [
     "/",
     "/blog",
@@ -86,6 +86,7 @@
     "/blog/when-someone-says-no-intervention",
     "/blog/when-to-consider-intervention",
     "/blog/wine-oclock-humor-addiction",
+    "/blog/you-already-know-the-problem-isnt-information",
     "/blog/you-said-yes-intervention",
     "/conversation-starters",
     "/episodes",
