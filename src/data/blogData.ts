@@ -84,6 +84,7 @@ import blogImageCaretakerTrap from "@/assets/blog-caretaker-trap-addiction-famil
 import blogImageRebuildingTrustRecovery from "@/assets/blog-rebuilding-trust-recovery-families.jpg";
 import blogImageHowToTalkAddiction from "@/assets/blog-how-to-talk-about-addiction-conversation.jpg";
 import blogImagePermissionNextStep from "@/assets/blog-permission-family-addiction-next-step.jpg";
+import blogImageWhenToGetHelp from "@/assets/blog-when-to-get-help-addicted-loved-one.jpg";
 
 export interface BlogArticle {
   id: string;
@@ -96,6 +97,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "you-already-know-the-problem-isnt-information",
+    title: "You Already Know. The Problem Isn't Information.",
+    date: "April 30, 2026",
+    image: blogImageWhenToGetHelp,
+    imageAlt: "A young adult woman alone at a desk at night, holding her phone, deciding whether to call for help with a loved one's addiction",
+    excerpt: "You already know something is wrong. Matt Brown explains why families in addiction crises don't have an information problem — they have a courage problem.",
+    category: "Family"
+  },
   {
     id: "the-permission-youve-been-waiting-for-doesnt-exist",
     title: "The Permission You've Been Waiting For Doesn't Exist",
