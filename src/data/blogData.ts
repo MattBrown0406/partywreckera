@@ -85,6 +85,7 @@ import blogImageRebuildingTrustRecovery from "@/assets/blog-rebuilding-trust-rec
 import blogImageHowToTalkAddiction from "@/assets/blog-how-to-talk-about-addiction-conversation.jpg";
 import blogImagePermissionNextStep from "@/assets/blog-permission-family-addiction-next-step.jpg";
 import blogImageWhenToGetHelp from "@/assets/blog-when-to-get-help-addicted-loved-one.jpg";
+import blogImageLongTermSobriety from "@/assets/blog-long-term-sobriety-23-years.jpg";
 
 export interface BlogArticle {
   id: string;
@@ -97,6 +98,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "what-nobody-tells-you-about-long-term-sobriety",
+    title: "What Nobody Tells You About Long-Term Sobriety (23 Years In, Here's the Truth)",
+    date: "May 1, 2026",
+    image: blogImageLongTermSobriety,
+    imageAlt: "A man in his late forties sitting alone on a quiet front porch at golden hour, holding a coffee mug in a moment of reflection on long-term sobriety",
+    excerpt: "Interventionist Matt Brown reflects on 23 years of sobriety—the unexpected truths, real gifts, and hard lessons that long-term recovery actually delivers.",
+    category: "Recovery"
+  },
   {
     id: "you-already-know-the-problem-isnt-information",
     title: "You Already Know. The Problem Isn't Information.",
