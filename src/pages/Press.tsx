@@ -24,7 +24,7 @@ import mattHeadshot from "@/assets/matt-headshot.jpg";
 
 const Press = () => {
   const stats = [
-    { label: "Episodes", value: "65+", icon: Mic },
+    { label: "Episodes", value: "75+", icon: Mic },
     { label: "Families Helped", value: "1000s", icon: Users },
     { label: "Apple Podcasts Rating", value: "4.9★", icon: Star },
     { label: "Years Experience", value: "20+", icon: Calendar },
