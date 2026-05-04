@@ -86,6 +86,7 @@ import blogImageHowToTalkAddiction from "@/assets/blog-how-to-talk-about-addicti
 import blogImagePermissionNextStep from "@/assets/blog-permission-family-addiction-next-step.jpg";
 import blogImageWhenToGetHelp from "@/assets/blog-when-to-get-help-addicted-loved-one.jpg";
 import blogImageLongTermSobriety from "@/assets/blog-long-term-sobriety-23-years.jpg";
+import blogImageStoppedPerforming from "@/assets/blog-stopped-performing-sobriety.jpg";
 
 export interface BlogArticle {
   id: string;
@@ -98,6 +99,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "the-day-i-stopped-performing-sobriety",
+    title: "The Day I Stopped Performing Sobriety and Started Actually Living It",
+    date: "May 4, 2026",
+    image: blogImageStoppedPerforming,
+    imageAlt: "A young adult man sitting alone in an empty meeting room with folding chairs and a styrofoam coffee cup, reflecting on early recovery",
+    excerpt: "After 23 years sober, interventionist Matt Brown reflects on the moment he stopped going through the motions in recovery — and what it took to actually start living it.",
+    category: "Recovery"
+  },
   {
     id: "what-nobody-tells-you-about-long-term-sobriety",
     title: "What Nobody Tells You About Long-Term Sobriety (23 Years In, Here's the Truth)",
