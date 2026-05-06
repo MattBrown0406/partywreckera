@@ -10,14 +10,17 @@ interface TrackedExternalLinkProps extends React.AnchorHTMLAttributes<HTMLAnchor
 
 const TrackedExternalLink = React.forwardRef<HTMLAnchorElement, TrackedExternalLinkProps>(
   ({ eventName, ctaLabel, metadata, href, onClick, children, ...props }, ref) => {
-    const location = useLocation();
-
     const handleClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+      const sourcePath =
+        typeof window !== "undefined"
+          ? `${window.location.pathname}${window.location.search}`
+          : undefined;
+
       trackPartyWreckersEvent({
         eventName,
         ctaLabel,
         destinationUrl: href,
-        sourcePath: `${location.pathname}${location.search}`,
+        sourcePath,
         metadata,
       });
 
