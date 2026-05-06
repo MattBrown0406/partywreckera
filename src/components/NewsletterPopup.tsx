@@ -3,6 +3,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } f
 import { Button } from "@/components/ui/button";
 import { Video, Calendar, Users } from "lucide-react";
 import { funnelLinks } from "@/lib/funnelLinks";
+import TrackedExternalLink from "@/components/TrackedExternalLink";
 
 const NewsletterPopup = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -66,15 +67,17 @@ const NewsletterPopup = () => {
           className="w-full bg-emerald-600 hover:bg-emerald-700 text-white shadow-md shadow-emerald-600/20"
           asChild
         >
-          <a
+          <TrackedExternalLink
             href={funnelLinks.familySquares}
             target="_blank"
             rel="noopener noreferrer"
+            eventName="family_squares_click"
+            ctaLabel="Family Squares popup"
             onClick={handleClose}
           >
             <Video className="w-4 h-4 mr-2" />
             Save My Spot for Monday
-          </a>
+          </TrackedExternalLink>
         </Button>
 
         <div className="text-center">

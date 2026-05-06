@@ -1,6 +1,7 @@
 import { ArrowRight, CalendarCheck, ShieldCheck, TriangleAlert } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import TrackedExternalLink from "@/components/TrackedExternalLink";
 import { funnelLinks } from "@/lib/funnelLinks";
 
 interface BlogConversionPanelProps {
@@ -26,22 +27,22 @@ const BlogConversionPanel = ({
 
       <div className="mt-6 flex flex-col sm:flex-row flex-wrap gap-3">
         <Button asChild>
-          <a href={funnelLinks.familySquares} target="_blank" rel="noopener noreferrer">
+          <TrackedExternalLink href={funnelLinks.familySquares} target="_blank" rel="noopener noreferrer" eventName="family_squares_click" ctaLabel="Blog panel Join Family Squares">
             <CalendarCheck className="w-4 h-4" />
             Join Family Squares
-          </a>
+          </TrackedExternalLink>
         </Button>
         <Button variant="outline" asChild>
-          <a href={funnelLinks.freedomContact} target="_blank" rel="noopener noreferrer">
+          <TrackedExternalLink href={funnelLinks.freedomContact} target="_blank" rel="noopener noreferrer" eventName="get_answers_now_click" ctaLabel="Blog panel Get Answers Now">
             <ShieldCheck className="w-4 h-4" />
             Get Answers Now
-          </a>
+          </TrackedExternalLink>
         </Button>
         <Button variant="ghost" asChild>
-          <a href={funnelLinks.freedomReadiness} target="_blank" rel="noopener noreferrer">
+          <TrackedExternalLink href={funnelLinks.freedomReadiness} target="_blank" rel="noopener noreferrer" eventName="intervention_readiness_click" ctaLabel="Blog panel Intervention Readiness">
             Check Intervention Readiness
             <ArrowRight className="w-4 h-4" />
-          </a>
+          </TrackedExternalLink>
         </Button>
       </div>
     </section>

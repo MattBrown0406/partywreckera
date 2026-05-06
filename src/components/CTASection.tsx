@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, CalendarCheck, Headphones, ShieldCheck } from "lucide-react";
 import { Link } from "react-router-dom";
 import { funnelLinks, podcastLinks } from "@/lib/funnelLinks";
+import TrackedExternalLink from "@/components/TrackedExternalLink";
 
 const SpotifyIcon = () => (
   <svg viewBox="0 0 24 24" className="w-5 h-5" fill="currentColor">
@@ -50,37 +51,39 @@ const CTASection = () => {
           {/* Platform buttons */}
           <div className="flex flex-wrap gap-2 sm:gap-4 justify-center items-center mb-8 sm:mb-12">
             {platforms.map((platform) => (
-              <a
+              <TrackedExternalLink
                 key={platform.name}
                 href={platform.url}
                 target="_blank"
                 rel="noopener noreferrer"
+                eventName="podcast_platform_click"
+                ctaLabel={platform.name}
                 className={`inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3 rounded-lg bg-secondary border border-border text-foreground text-sm sm:text-base font-medium transition-all duration-300 ${platform.color}`}
               >
                 <platform.icon />
                 <span className="hidden sm:inline">{platform.name}</span>
-              </a>
+              </TrackedExternalLink>
             ))}
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 sm:mb-12 flex-wrap">
             <Button variant="hero" size="xl" asChild>
-              <a href={funnelLinks.familySquares} target="_blank" rel="noopener noreferrer">
+              <TrackedExternalLink href={funnelLinks.familySquares} target="_blank" rel="noopener noreferrer" eventName="family_squares_click" ctaLabel="Bottom CTA Join Family Squares">
                 <CalendarCheck className="w-5 h-5" />
                 Join Family Squares
-              </a>
+              </TrackedExternalLink>
             </Button>
             <Button variant="heroOutline" size="xl" asChild>
-              <a href={funnelLinks.freedomContact} target="_blank" rel="noopener noreferrer">
+              <TrackedExternalLink href={funnelLinks.freedomContact} target="_blank" rel="noopener noreferrer" eventName="get_answers_now_click" ctaLabel="Bottom CTA Get Answers Now">
                 <ShieldCheck className="w-5 h-5" />
                 Get Answers Now
-              </a>
+              </TrackedExternalLink>
             </Button>
             <Button variant="heroOutline" size="xl" asChild>
-              <a href={funnelLinks.freedomReadiness} target="_blank" rel="noopener noreferrer">
+              <TrackedExternalLink href={funnelLinks.freedomReadiness} target="_blank" rel="noopener noreferrer" eventName="intervention_readiness_click" ctaLabel="Bottom CTA Intervention Readiness">
                 Check Intervention Readiness
                 <ArrowRight className="w-5 h-5" />
-              </a>
+              </TrackedExternalLink>
             </Button>
             <Button variant="heroOutline" size="xl" asChild>
               <Link to="/episodes">
@@ -92,17 +95,15 @@ const CTASection = () => {
 
           {/* Contact info */}
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 justify-center items-center pt-6 sm:pt-8 border-t border-border">
-            <a 
-              href={funnelLinks.freedomPodcastBridge}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to={funnelLinks.partyWreckersBridge}
               className="flex items-center gap-2 sm:gap-3 text-muted-foreground hover:text-primary transition-colors text-sm sm:text-base"
             >
               <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-secondary flex items-center justify-center">
                 <ShieldCheck className="w-4 h-4 sm:w-5 sm:h-5" />
               </div>
               <span>Need help with your family situation? Start the Party Wreckers path</span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

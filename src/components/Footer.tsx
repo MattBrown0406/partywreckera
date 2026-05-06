@@ -81,6 +81,9 @@ const Footer = () => {
               <Link to="/next-step" className="rounded-full border border-primary/30 px-4 py-2 text-sm text-foreground hover:border-primary hover:text-primary transition-colors">
                 Find My Next Step
               </Link>
+              <Link to="/from-party-wreckers" className="rounded-full border border-primary/30 px-4 py-2 text-sm text-foreground hover:border-primary hover:text-primary transition-colors">
+                Listener Path
+              </Link>
             </div>
           </div>
 
@@ -90,6 +93,11 @@ const Footer = () => {
               <li>
                 <Link to="/help-now" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                   Help Now
+                </Link>
+              </li>
+              <li>
+                <Link to="/from-party-wreckers" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Listener Path
                 </Link>
               </li>
               <li>

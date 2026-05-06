@@ -4,6 +4,7 @@ import SEOHead from "@/components/SEOHead";
 import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import TrackedExternalLink from "@/components/TrackedExternalLink";
 import { AlertTriangle, BookOpen, CalendarCheck, HeartHandshake, PhoneCall } from "lucide-react";
 import { Link } from "react-router-dom";
 import { funnelLinks } from "@/lib/funnelLinks";
@@ -51,16 +52,16 @@ const HelpNow = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="xl" variant="hero" asChild>
-                  <a href={funnelLinks.familySquares} target="_blank" rel="noopener noreferrer">
+                  <TrackedExternalLink href={funnelLinks.familySquares} target="_blank" rel="noopener noreferrer" eventName="family_squares_click" ctaLabel="Help Now hero Family Squares">
                     <CalendarCheck className="w-5 h-5" />
                     Join the Free Family Squares Meeting
-                  </a>
+                  </TrackedExternalLink>
                 </Button>
                 <Button size="xl" variant="heroOutline" asChild>
-                  <a href={funnelLinks.freedomContact} target="_blank" rel="noopener noreferrer">Can't Wait? Get Answers Now</a>
+                  <TrackedExternalLink href={funnelLinks.freedomContact} target="_blank" rel="noopener noreferrer" eventName="get_answers_now_click" ctaLabel="Help Now hero Get Answers Now">Can't Wait? Get Answers Now</TrackedExternalLink>
                 </Button>
                 <Button size="xl" variant="heroOutline" asChild>
-                  <a href={funnelLinks.freedomReadiness} target="_blank" rel="noopener noreferrer">Check Intervention Readiness</a>
+                  <TrackedExternalLink href={funnelLinks.freedomReadiness} target="_blank" rel="noopener noreferrer" eventName="intervention_readiness_click" ctaLabel="Help Now hero Intervention Readiness">Check Intervention Readiness</TrackedExternalLink>
                 </Button>
               </div>
             </div>
@@ -101,7 +102,7 @@ const HelpNow = () => {
                 <CardContent className="space-y-4">
                   <p className="text-muted-foreground">If the situation is escalating, the family is divided, or the same cycle keeps repeating, skip the guessing.</p>
                   <Button className="w-full" asChild>
-                    <a href={funnelLinks.freedomContact} target="_blank" rel="noopener noreferrer">Get Answers Now</a>
+                    <TrackedExternalLink href={funnelLinks.freedomContact} target="_blank" rel="noopener noreferrer" eventName="get_answers_now_click" ctaLabel="Help Now card Get Answers Now">Get Answers Now</TrackedExternalLink>
                   </Button>
                 </CardContent>
               </Card>
@@ -119,8 +120,8 @@ const HelpNow = () => {
                 <li>Pick one path: join Family Squares, get direct guidance now, or check intervention readiness.</li>
               </ol>
               <div className="flex flex-col sm:flex-row gap-3 mt-8">
-                <Button asChild><a href={funnelLinks.familySquares} target="_blank" rel="noopener noreferrer">Join Family Squares</a></Button>
-                <Button variant="outline" asChild><a href={funnelLinks.freedomReadiness} target="_blank" rel="noopener noreferrer">Check Intervention Readiness</a></Button>
+                <Button asChild><TrackedExternalLink href={funnelLinks.familySquares} target="_blank" rel="noopener noreferrer" eventName="family_squares_click" ctaLabel="Help Now 10-minute Family Squares">Join Family Squares</TrackedExternalLink></Button>
+                <Button variant="outline" asChild><TrackedExternalLink href={funnelLinks.freedomReadiness} target="_blank" rel="noopener noreferrer" eventName="intervention_readiness_click" ctaLabel="Help Now 10-minute Intervention Readiness">Check Intervention Readiness</TrackedExternalLink></Button>
                 <Button variant="outline" asChild><Link to="/family-resources">Use Family Resources</Link></Button>
               </div>
             </div>

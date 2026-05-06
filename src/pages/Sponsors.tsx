@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { Link } from "react-router-dom";
 import { Heart, ExternalLink, Phone, Users, BookOpen, Shield, CheckCircle, MessageCircle, Headphones, Clock, Video, HeartHandshake, Target, Calendar, Zap, Smile, MessageSquare, Laptop, UserCheck, BadgePercent, Globe, Mic, Sparkles, DollarSign, Gift, TrendingUp, Radio, Mail, Brain, Eye, MapPin, Vote } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import soberHelplineLogo from "@/assets/sober-helpline-logo.png";
@@ -7,6 +8,7 @@ import familybridgeLogo from "@/assets/familybridge-logo.png";
 import betterhelpLogo from "@/assets/betterhelp-logo.png";
 import SEOHead from "@/components/SEOHead";
 import { BreadcrumbJsonLd } from "@/components/JsonLd";
+import TrackedExternalLink from "@/components/TrackedExternalLink";
 import { funnelLinks } from "@/lib/funnelLinks";
 
 const Sponsors = () => {
@@ -65,14 +67,16 @@ const Sponsors = () => {
                   
                   <div className="flex items-center gap-3">
                     <Button className="bg-primary hover:bg-primary/90 shadow-lg shadow-primary/25" asChild>
-                      <a
+                      <TrackedExternalLink
                         href="https://www.buzzsprout.com/1941777/support"
                         target="_blank"
                         rel="noopener noreferrer"
+                        eventName="sponsor_click"
+                        ctaLabel="Buzzsprout support contribution"
                       >
                         <Gift className="w-4 h-4 mr-2" />
                         Contribute Now
-                      </a>
+                      </TrackedExternalLink>
                     </Button>
                   </div>
                 </div>
@@ -105,10 +109,12 @@ const Sponsors = () => {
                   {/* Header Section */}
                   <div className="flex flex-col lg:flex-row items-center gap-8 mb-10">
                     <div className="flex-shrink-0">
-                      <a
+                      <TrackedExternalLink
                         href={funnelLinks.soberHelpline}
                         target="_blank"
                         rel="noopener noreferrer"
+                        eventName="sponsor_click"
+                        ctaLabel="Sponsor page Sober Helpline logo"
                         className="block transform transition-transform duration-300 hover:scale-105"
                       >
                         <div className="bg-white rounded-xl p-4 shadow-xl">
@@ -118,7 +124,7 @@ const Sponsors = () => {
                             className="w-72 h-auto"
                           />
                         </div>
-                      </a>
+                      </TrackedExternalLink>
                     </div>
                     
                     <div className="flex-1 text-center lg:text-left">
@@ -195,14 +201,16 @@ const Sponsors = () => {
                       className="bg-emerald-600 hover:bg-emerald-700 text-white shadow-lg shadow-emerald-600/25 transition-all duration-300 hover:shadow-emerald-500/40"
                       asChild
                     >
-                      <a
+                      <TrackedExternalLink
                         href={funnelLinks.soberHelpline}
                         target="_blank"
                         rel="noopener noreferrer"
+                        eventName="sponsor_click"
+                        ctaLabel="Sponsor page Sober Helpline"
                       >
                         Visit SoberHelpline.com
                         <ExternalLink className="w-4 h-4 ml-2" />
-                      </a>
+                      </TrackedExternalLink>
                     </Button>
 
                     <Button 
@@ -211,14 +219,16 @@ const Sponsors = () => {
                       className="border-emerald-600/40 text-emerald-400 hover:bg-emerald-600/10"
                       asChild
                     >
-                      <a
+                      <TrackedExternalLink
                         href={funnelLinks.familySquares}
                         target="_blank"
                         rel="noopener noreferrer"
+                        eventName="family_squares_click"
+                        ctaLabel="Sponsor page Monday call"
                       >
                         <Video className="w-4 h-4 mr-2" />
                         Join Free Monday Zoom Call
-                      </a>
+                      </TrackedExternalLink>
                     </Button>
                     
                     <a
@@ -588,10 +598,10 @@ const Sponsors = () => {
                         className="bg-white text-burgundy hover:bg-white/90 shadow-xl shadow-black/20 font-semibold group"
                         asChild
                       >
-                        <a href="mailto:matt@partywreckers.com">
+                        <Link to="/advertise">
                           <Mail className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
                           Become a Sponsor
-                        </a>
+                        </Link>
                       </Button>
                     </div>
                   </div>
@@ -637,14 +647,16 @@ const Sponsors = () => {
                   </div>
                   
                   <Button className="bg-primary hover:bg-primary/90 shadow-lg shadow-primary/25" asChild>
-                    <a
+                    <TrackedExternalLink
                       href="https://www.buzzsprout.com/1941777/support"
                       target="_blank"
                       rel="noopener noreferrer"
+                      eventName="sponsor_click"
+                      ctaLabel="Bottom Buzzsprout support"
                     >
                       <Gift className="w-4 h-4 mr-2" />
                       Support The Party Wreckers
-                    </a>
+                    </TrackedExternalLink>
                   </Button>
                 </div>
               </div>

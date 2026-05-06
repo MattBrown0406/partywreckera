@@ -1,6 +1,7 @@
 import { Check, ExternalLink, Users, BookOpen, Phone, ShieldAlert, MessageCircle } from "lucide-react";
 import BlogCarousel from "@/components/BlogCarousel";
 import soberHelplineLogo from "@/assets/sober-helpline-logo.png";
+import TrackedExternalLink from "@/components/TrackedExternalLink";
 import { Button } from "@/components/ui/button";
 import { funnelLinks } from "@/lib/funnelLinks";
 
@@ -129,14 +130,16 @@ const AboutSection = () => {
                 className="w-full"
                 asChild
               >
-                <a
+                <TrackedExternalLink
                   href={funnelLinks.freedomPodcastBridge}
                   target="_blank"
                   rel="noopener noreferrer"
+                  eventName="freedom_bridge_click"
+                  ctaLabel="About Freedom Interventions card"
                 >
                   Get Intervention Guidance
                   <ExternalLink className="w-3.5 h-3.5 ml-1.5" />
-                </a>
+                </TrackedExternalLink>
               </Button>
             </div>
           </div>
@@ -196,14 +199,16 @@ const AboutSection = () => {
                 className="w-full bg-emerald-600 hover:bg-emerald-700 text-white shadow-md shadow-emerald-600/20"
                 asChild
               >
-                <a
+                <TrackedExternalLink
                   href={funnelLinks.familySquares}
                   target="_blank"
                   rel="noopener noreferrer"
+                  eventName="family_squares_click"
+                  ctaLabel="About Sober Helpline card"
                 >
                   Join Family Squares
                   <ExternalLink className="w-3.5 h-3.5 ml-1.5" />
-                </a>
+                </TrackedExternalLink>
               </Button>
             </div>
           </div>

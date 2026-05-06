@@ -1,1 +1,10 @@
 project_id = "bvqqxopmnuwzeyusnrsi"
+
+[functions.track-party-wreckers-event]
+verify_jwt = false
+
+[functions.party-wreckers-funnel-report]
+verify_jwt = false
+
+[functions.send-advertiser-inquiry]
+verify_jwt = false

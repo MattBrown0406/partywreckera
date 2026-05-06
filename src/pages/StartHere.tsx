@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
+import TrackedExternalLink from "@/components/TrackedExternalLink";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Play, BookOpen, ExternalLink, PhoneCall, Mail, ArrowRight } from "lucide-react";
@@ -254,9 +255,9 @@ const StartHere = () => {
                         Free weekly support for families who need a steadier place to talk, listen, and stop carrying everything alone.
                       </p>
                       <Button variant="outline" size="sm" asChild>
-                        <a href={funnelLinks.familySquares} target="_blank" rel="noopener noreferrer">
+                        <TrackedExternalLink href={funnelLinks.familySquares} target="_blank" rel="noopener noreferrer" eventName="family_squares_click" ctaLabel="Start Here Family Squares">
                           Join Family Squares
-                        </a>
+                        </TrackedExternalLink>
                       </Button>
                     </CardContent>
                   </Card>
@@ -273,9 +274,9 @@ const StartHere = () => {
                         Direct intervention and coaching guidance when the situation is urgent, confusing, or past the point of another family debate.
                       </p>
                       <Button variant="outline" size="sm" asChild>
-                        <a href={funnelLinks.freedomPodcastBridge} target="_blank" rel="noopener noreferrer">
+                        <TrackedExternalLink href={funnelLinks.freedomPodcastBridge} target="_blank" rel="noopener noreferrer" eventName="freedom_bridge_click" ctaLabel="Start Here Freedom guidance">
                           Get Intervention Guidance
-                        </a>
+                        </TrackedExternalLink>
                       </Button>
                     </CardContent>
                   </Card>
@@ -304,12 +305,12 @@ const StartHere = () => {
                     
                     <div className="flex flex-col gap-3 mt-6">
                       <Button asChild>
-                        <a href={funnelLinks.freedomContact} target="_blank" rel="noopener noreferrer">
+                        <TrackedExternalLink href={funnelLinks.freedomContact} target="_blank" rel="noopener noreferrer" eventName="get_answers_now_click" ctaLabel="Start Here Get Answers Now">
                           Get Answers Now
-                        </a>
+                        </TrackedExternalLink>
                       </Button>
                       <Button variant="outline" size="sm" asChild>
-                        <a href={funnelLinks.freedomReadiness} target="_blank" rel="noopener noreferrer">Check Intervention Readiness</a>
+                        <TrackedExternalLink href={funnelLinks.freedomReadiness} target="_blank" rel="noopener noreferrer" eventName="intervention_readiness_click" ctaLabel="Start Here Intervention Readiness">Check Intervention Readiness</TrackedExternalLink>
                       </Button>
                     </div>
                   </CardContent>

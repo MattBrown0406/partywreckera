@@ -4,6 +4,7 @@ import SEOHead from "@/components/SEOHead";
 import { BreadcrumbJsonLd } from "@/components/JsonLd";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import TrackedExternalLink from "@/components/TrackedExternalLink";
 import { ArrowRight, BookOpen, CalendarCheck, FileText, Mic, ShieldAlert } from "lucide-react";
 import { Link } from "react-router-dom";
 import { funnelLinks } from "@/lib/funnelLinks";
@@ -63,13 +64,13 @@ const NextStep = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button variant="hero" size="xl" asChild>
-                  <a href={funnelLinks.familySquares} target="_blank" rel="noopener noreferrer">
+                  <TrackedExternalLink href={funnelLinks.familySquares} target="_blank" rel="noopener noreferrer" eventName="family_squares_click" ctaLabel="Next Step hero Family Squares">
                     <CalendarCheck className="w-5 h-5" />
                     Join Family Squares
-                  </a>
+                  </TrackedExternalLink>
                 </Button>
                 <Button variant="heroOutline" size="xl" asChild>
-                  <a href={funnelLinks.freedomReadiness} target="_blank" rel="noopener noreferrer">Check Intervention Readiness</a>
+                  <TrackedExternalLink href={funnelLinks.freedomReadiness} target="_blank" rel="noopener noreferrer" eventName="intervention_readiness_click" ctaLabel="Next Step hero Intervention Readiness">Check Intervention Readiness</TrackedExternalLink>
                 </Button>
               </div>
             </div>
@@ -93,10 +94,10 @@ const NextStep = () => {
                       <p className="text-muted-foreground">{pathway.body}</p>
                       <Button variant={pathway.external ? "default" : "outline"} asChild>
                         {pathway.external ? (
-                          <a href={pathway.to} target="_blank" rel="noopener noreferrer">
+                          <TrackedExternalLink href={pathway.to} target="_blank" rel="noopener noreferrer" eventName="get_answers_now_click" ctaLabel={`Next Step pathway ${pathway.cta}`}>
                             {pathway.cta}
                             <ArrowRight className="w-4 h-4" />
-                          </a>
+                          </TrackedExternalLink>
                         ) : (
                           <Link to={pathway.to}>
                             {pathway.cta}
@@ -121,10 +122,10 @@ const NextStep = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Button asChild>
-                  <a href={funnelLinks.freedomContact} target="_blank" rel="noopener noreferrer">Get Answers Now</a>
+                  <TrackedExternalLink href={funnelLinks.freedomContact} target="_blank" rel="noopener noreferrer" eventName="get_answers_now_click" ctaLabel="Next Step bottom Get Answers Now">Get Answers Now</TrackedExternalLink>
                 </Button>
                 <Button variant="outline" asChild>
-                  <a href={funnelLinks.familySquares} target="_blank" rel="noopener noreferrer">Join Family Squares</a>
+                  <TrackedExternalLink href={funnelLinks.familySquares} target="_blank" rel="noopener noreferrer" eventName="family_squares_click" ctaLabel="Next Step bottom Family Squares">Join Family Squares</TrackedExternalLink>
                 </Button>
               </div>
             </div>

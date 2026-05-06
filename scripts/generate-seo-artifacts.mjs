@@ -17,10 +17,11 @@ const blogData = fs.readFileSync(blogDataPath, "utf8");
 const appSource = fs.readFileSync(appPath, "utf8");
 
 const blogIds = Array.from(blogData.matchAll(/id:\s*"([^"]+)"/g)).map((match) => match[1]);
+const noIndexRoutes = new Set(["/funnel-report"]);
 
 const staticRoutes = Array.from(appSource.matchAll(/path="([^"]+)"/g))
   .map((match) => match[1])
-  .filter((route) => route !== "*" && !route.includes(":slug"));
+  .filter((route) => route !== "*" && !route.includes(":slug") && !noIndexRoutes.has(route));
 
 const routeEntries = [
   ...new Set([
@@ -33,11 +34,13 @@ const routeEntries = [
 const priorities = new Map([
   ["/", "1.0"],
   ["/start-here", "0.95"],
+  ["/from-party-wreckers", "0.95"],
   ["/family-resources", "0.9"],
   ["/episodes", "0.9"],
   ["/blog", "0.9"],
   ["/host", "0.85"],
   ["/press", "0.7"],
+  ["/advertise", "0.75"],
   ["/sponsors", "0.6"],
   ["/family-reflection", "0.8"],
   ["/fear-inventory", "0.8"],

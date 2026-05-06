@@ -7,6 +7,8 @@ import type { PropsWithChildren, ReactNode } from "react";
 import Index from "./pages/Index";
 import Episodes from "./pages/Episodes";
 import Sponsors from "./pages/Sponsors";
+import Advertise from "./pages/Advertise";
+import FunnelReport from "./pages/FunnelReport";
 import Host from "./pages/Host";
 import FamilyResources from "./pages/FamilyResources";
 import FamilyReflection from "./pages/FamilyReflection";
@@ -16,12 +18,14 @@ import Press from "./pages/Press";
 import StartHere from "./pages/StartHere";
 import HelpNow from "./pages/HelpNow";
 import NextStep from "./pages/NextStep";
+import FromPartyWreckers from "./pages/FromPartyWreckers";
 import BlogIndex from "./pages/BlogIndex";
 import BlogPost from "./pages/BlogPost";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
 import NewsletterPopup from "./components/NewsletterPopup";
 import StickyContactForm from "./components/StickyContactForm";
+import FunnelRouteTracker from "./components/FunnelRouteTracker";
 
 const queryClient = new QueryClient();
 
@@ -41,14 +45,18 @@ export const App = ({ Router = DefaultRouter }: AppProps) => (
       <NewsletterPopup />
       <StickyContactForm />
       <Router>
+        <FunnelRouteTracker />
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/help-now" element={<HelpNow />} />
+          <Route path="/from-party-wreckers" element={<FromPartyWreckers />} />
           <Route path="/start-here" element={<StartHere />} />
           <Route path="/next-step" element={<NextStep />} />
           <Route path="/episodes" element={<Episodes />} />
           <Route path="/sponsors" element={<Sponsors />} />
+          <Route path="/advertise" element={<Advertise />} />
+          <Route path="/funnel-report" element={<FunnelReport />} />
           <Route path="/host" element={<Host />} />
           <Route path="/blog" element={<BlogIndex />} />
           <Route path="/blog/:slug" element={<BlogPost />} />

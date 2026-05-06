@@ -48,6 +48,7 @@ interface NavLink {
 
 const navLinks: NavLink[] = [
   { label: "Help Now", href: "/help-now", featured: true },
+  { label: "For Listeners", href: "/from-party-wreckers" },
   { label: "Start Here", href: "/start-here" },
   { label: "Episodes", href: "/episodes" },
   { label: "Family Resources", href: "/family-resources" },
