@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Mail } from "lucide-react";
+import { ArrowRight, CalendarCheck, Headphones, ShieldCheck } from "lucide-react";
 import { Link } from "react-router-dom";
+import { funnelLinks, podcastLinks } from "@/lib/funnelLinks";
 
 const SpotifyIcon = () => (
   <svg viewBox="0 0 24 24" className="w-5 h-5" fill="currentColor">
@@ -20,16 +21,10 @@ const YouTubeIcon = () => (
   </svg>
 );
 
-const BuzzsproutIcon = () => (
-  <svg viewBox="0 0 24 24" className="w-5 h-5" fill="currentColor">
-    <circle cx="12" cy="12" r="10"/>
-    <circle cx="12" cy="12" r="4" fill="white"/>
-  </svg>
-);
-
 const platforms = [
-  { name: "Spotify", url: "https://open.spotify.com/show/your-show-id", icon: SpotifyIcon, color: "hover:bg-[#1DB954] hover:text-white hover:border-[#1DB954]" },
-  { name: "Apple Podcasts", url: "https://podcasts.apple.com/us/podcast/your-show", icon: ApplePodcastsIcon, color: "hover:bg-[#9933CC] hover:text-white hover:border-[#9933CC]" },
+  { name: "Spotify", url: podcastLinks.spotify, icon: SpotifyIcon, color: "hover:bg-[#1DB954] hover:text-white hover:border-[#1DB954]" },
+  { name: "Apple Podcasts", url: podcastLinks.apple, icon: ApplePodcastsIcon, color: "hover:bg-[#9933CC] hover:text-white hover:border-[#9933CC]" },
+  { name: "YouTube", url: podcastLinks.youtube, icon: YouTubeIcon, color: "hover:bg-[#FF0000] hover:text-white hover:border-[#FF0000]" },
 ];
 
 const CTASection = () => {
@@ -49,7 +44,7 @@ const CTASection = () => {
           </h2>
           
           <p className="text-muted-foreground text-base sm:text-lg lg:text-xl max-w-3xl mx-auto mb-6 sm:mb-10">
-            If addiction has your family stuck in fear, confusion, or constant damage control, go to Help Now for triage, Start Here for the basics, Next Step for direction, or contact Matt directly. Just do not keep telling yourself this will sort itself out.
+            If addiction has your family stuck in fear, confusion, or constant damage control, take the next step that fits the moment: free family support, direct guidance now, or intervention readiness.
           </p>
 
           {/* Platform buttons */}
@@ -70,27 +65,27 @@ const CTASection = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 sm:mb-12 flex-wrap">
             <Button variant="hero" size="xl" asChild>
-              <Link to="/help-now">
-                Help Now
-                <ArrowRight className="w-5 h-5" />
-              </Link>
+              <a href={funnelLinks.familySquares} target="_blank" rel="noopener noreferrer">
+                <CalendarCheck className="w-5 h-5" />
+                Join Family Squares
+              </a>
             </Button>
             <Button variant="heroOutline" size="xl" asChild>
-              <Link to="/start-here">
-                Start Here
-                <ArrowRight className="w-5 h-5" />
-              </Link>
+              <a href={funnelLinks.freedomContact} target="_blank" rel="noopener noreferrer">
+                <ShieldCheck className="w-5 h-5" />
+                Get Answers Now
+              </a>
             </Button>
             <Button variant="heroOutline" size="xl" asChild>
-              <Link to="/next-step">
-                Find My Next Step
+              <a href={funnelLinks.freedomReadiness} target="_blank" rel="noopener noreferrer">
+                Check Intervention Readiness
                 <ArrowRight className="w-5 h-5" />
-              </Link>
+              </a>
             </Button>
             <Button variant="heroOutline" size="xl" asChild>
               <Link to="/episodes">
+                <Headphones className="w-5 h-5" />
                 All Episodes
-                <ArrowRight className="w-5 h-5" />
               </Link>
             </Button>
           </div>
@@ -98,13 +93,15 @@ const CTASection = () => {
           {/* Contact info */}
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 justify-center items-center pt-6 sm:pt-8 border-t border-border">
             <a 
-              href="mailto:matt@partywreckers.com?subject=Family%20Support%20Request"
+              href={funnelLinks.freedomPodcastBridge}
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-2 sm:gap-3 text-muted-foreground hover:text-primary transition-colors text-sm sm:text-base"
             >
               <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-secondary flex items-center justify-center">
-                <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
+                <ShieldCheck className="w-4 h-4 sm:w-5 sm:h-5" />
               </div>
-              <span>Need help with your family situation? Email Matt</span>
+              <span>Need help with your family situation? Start the Party Wreckers path</span>
             </a>
           </div>
         </div>

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Video, Calendar, Users } from "lucide-react";
+import { funnelLinks } from "@/lib/funnelLinks";
 
 const NewsletterPopup = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -66,7 +67,7 @@ const NewsletterPopup = () => {
           asChild
         >
           <a
-            href="https://soberhelpline.com/monday-zoom-registration"
+            href={funnelLinks.familySquares}
             target="_blank"
             rel="noopener noreferrer"
             onClick={handleClose}

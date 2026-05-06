@@ -55,7 +55,7 @@ const parseRSSFeed = async (): Promise<PodcastInfo> => {
     // Clean up description - remove CDATA markers and HTML tags for preview
     let desc = item.querySelector("itunes\\:summary")?.textContent || 
                item.querySelector("description")?.textContent || "";
-    desc = desc.replace(/\<!\[CDATA\[|\]\]>/g, "").replace(/<[^>]*>/g, "").trim();
+    desc = desc.replace(/<!\[CDATA\[|\]\]>/g, "").replace(/<[^>]*>/g, "").trim();
     
     // Parse transcript tags (podcast:transcript)
     const transcriptElements = item.querySelectorAll("podcast\\:transcript, transcript");

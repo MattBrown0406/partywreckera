@@ -1,8 +1,8 @@
 import fs from "node:fs";
 import path from "node:path";
-import { pathToFileURL } from "node:url";
+import { fileURLToPath, pathToFileURL } from "node:url";
 
-const projectRoot = path.resolve(new URL("..", import.meta.url).pathname);
+const projectRoot = path.resolve(fileURLToPath(new URL("..", import.meta.url)));
 const distDir = path.join(projectRoot, "dist");
 const serverEntry = path.join(distDir, "server", "entry-server.js");
 const manifestPath = path.join(distDir, "prerender-routes.json");

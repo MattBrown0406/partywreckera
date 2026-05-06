@@ -7,6 +7,7 @@ import familybridgeLogo from "@/assets/familybridge-logo.png";
 import betterhelpLogo from "@/assets/betterhelp-logo.png";
 import SEOHead from "@/components/SEOHead";
 import { BreadcrumbJsonLd } from "@/components/JsonLd";
+import { funnelLinks } from "@/lib/funnelLinks";
 
 const Sponsors = () => {
   return (
@@ -105,7 +106,7 @@ const Sponsors = () => {
                   <div className="flex flex-col lg:flex-row items-center gap-8 mb-10">
                     <div className="flex-shrink-0">
                       <a
-                        href="https://soberhelpline.com"
+                        href={funnelLinks.soberHelpline}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="block transform transition-transform duration-300 hover:scale-105"
@@ -195,7 +196,7 @@ const Sponsors = () => {
                       asChild
                     >
                       <a
-                        href="https://soberhelpline.com"
+                        href={funnelLinks.soberHelpline}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -211,7 +212,7 @@ const Sponsors = () => {
                       asChild
                     >
                       <a
-                        href="https://soberhelpline.com/monday-zoom-registration"
+                        href={funnelLinks.familySquares}
                         target="_blank"
                         rel="noopener noreferrer"
                       >

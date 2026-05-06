@@ -4,8 +4,9 @@ import SEOHead from "@/components/SEOHead";
 import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { AlertTriangle, ArrowRight, BookOpen, HeartHandshake, Mail, PhoneCall } from "lucide-react";
+import { AlertTriangle, BookOpen, CalendarCheck, HeartHandshake, PhoneCall } from "lucide-react";
 import { Link } from "react-router-dom";
+import { funnelLinks } from "@/lib/funnelLinks";
 
 const faqItems = [
   {
@@ -50,13 +51,16 @@ const HelpNow = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="xl" variant="hero" asChild>
-                  <Link to="/next-step">
-                    Find My Next Step
-                    <ArrowRight className="w-5 h-5" />
-                  </Link>
+                  <a href={funnelLinks.familySquares} target="_blank" rel="noopener noreferrer">
+                    <CalendarCheck className="w-5 h-5" />
+                    Join the Free Family Squares Meeting
+                  </a>
                 </Button>
                 <Button size="xl" variant="heroOutline" asChild>
-                  <Link to="/start-here">Start Here First</Link>
+                  <a href={funnelLinks.freedomContact} target="_blank" rel="noopener noreferrer">Can't Wait? Get Answers Now</a>
+                </Button>
+                <Button size="xl" variant="heroOutline" asChild>
+                  <a href={funnelLinks.freedomReadiness} target="_blank" rel="noopener noreferrer">Check Intervention Readiness</a>
                 </Button>
               </div>
             </div>
@@ -97,7 +101,7 @@ const HelpNow = () => {
                 <CardContent className="space-y-4">
                   <p className="text-muted-foreground">If the situation is escalating, the family is divided, or the same cycle keeps repeating, skip the guessing.</p>
                   <Button className="w-full" asChild>
-                    <a href="mailto:matt@partywreckers.com?subject=Need%20Help%20Now">Email Matt</a>
+                    <a href={funnelLinks.freedomContact} target="_blank" rel="noopener noreferrer">Get Answers Now</a>
                   </Button>
                 </CardContent>
               </Card>
@@ -112,11 +116,12 @@ const HelpNow = () => {
               <ol className="space-y-4 text-muted-foreground list-decimal list-inside">
                 <li>Stop trying to win tonight's argument.</li>
                 <li>Focus on safety, clarity, and what you can control.</li>
-                <li>Pick one path: Start Here, Next Step, or email Matt.</li>
+                <li>Pick one path: join Family Squares, get direct guidance now, or check intervention readiness.</li>
               </ol>
               <div className="flex flex-col sm:flex-row gap-3 mt-8">
-                <Button asChild><Link to="/family-resources">Use Family Resources</Link></Button>
-                <Button variant="outline" asChild><a href="mailto:matt@partywreckers.com?subject=Family%20Support%20Request"><Mail className="w-4 h-4" />Contact Matt</a></Button>
+                <Button asChild><a href={funnelLinks.familySquares} target="_blank" rel="noopener noreferrer">Join Family Squares</a></Button>
+                <Button variant="outline" asChild><a href={funnelLinks.freedomReadiness} target="_blank" rel="noopener noreferrer">Check Intervention Readiness</a></Button>
+                <Button variant="outline" asChild><Link to="/family-resources">Use Family Resources</Link></Button>
               </div>
             </div>
           </div>

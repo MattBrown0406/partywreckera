@@ -1,8 +1,8 @@
-import { Check, ExternalLink, Users, BookOpen, Phone, Brain, Heart } from "lucide-react";
+import { Check, ExternalLink, Users, BookOpen, Phone, ShieldAlert, MessageCircle } from "lucide-react";
 import BlogCarousel from "@/components/BlogCarousel";
-import familybridgeLogo from "@/assets/familybridge-logo.png";
 import soberHelplineLogo from "@/assets/sober-helpline-logo.png";
 import { Button } from "@/components/ui/button";
+import { funnelLinks } from "@/lib/funnelLinks";
 
 const features = [
   { text: "Straight talk about addiction and family systems", link: null },
@@ -81,64 +81,60 @@ const AboutSection = () => {
 
         {/* Support Resources Grid */}
         <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto mt-10 sm:mt-16">
-          {/* FamilyBridge - Dynamic Card */}
-          <div className="relative bg-gradient-to-br from-violet-900/20 via-pink-900/10 to-background border border-violet-600/30 rounded-xl overflow-hidden group">
+          {/* Freedom Interventions Card */}
+          <div className="relative bg-gradient-to-br from-primary/20 via-burgundy/10 to-background border border-primary/30 rounded-xl overflow-hidden group">
             {/* Animated Background */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
-              <div className="absolute -top-10 -left-10 w-32 h-32 bg-violet-500/10 rounded-full blur-2xl animate-pulse" />
-              <div className="absolute -bottom-10 -right-10 w-28 h-28 bg-pink-500/10 rounded-full blur-2xl animate-pulse" style={{ animationDelay: "1s" }} />
+              <div className="absolute -top-10 -left-10 w-32 h-32 bg-primary/10 rounded-full blur-2xl animate-pulse" />
+              <div className="absolute -bottom-10 -right-10 w-28 h-28 bg-burgundy/10 rounded-full blur-2xl animate-pulse" style={{ animationDelay: "1s" }} />
             </div>
             
             {/* Badge */}
             <div className="absolute top-3 right-3 z-10">
-              <span className="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-violet-600 text-violet-50 text-[10px] font-semibold uppercase tracking-wider">
-                <Brain className="w-3 h-3" />
-                AI-Powered
+              <span className="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-primary text-primary-foreground text-[10px] font-semibold uppercase tracking-wider">
+                <ShieldAlert className="w-3 h-3" />
+                Urgent Help
               </span>
             </div>
             
             <div className="relative p-6">
               <div className="flex items-center gap-4 mb-4">
-                <div className="bg-white rounded-lg p-3 shadow-md flex-shrink-0">
-                  <img 
-                    src={familybridgeLogo} 
-                    alt="FamilyBridge" 
-                    className="w-28 h-auto"
-                  />
+                <div className="bg-primary/15 rounded-lg p-3 shadow-md flex-shrink-0">
+                  <ShieldAlert className="w-8 h-8 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-script text-2xl text-violet-400">FamilyBridge</h3>
-                  <p className="text-xs text-muted-foreground">Healing Starts with Connection</p>
+                  <h3 className="font-script text-2xl text-burgundy">Freedom Interventions</h3>
+                  <p className="text-xs text-muted-foreground">Direct guidance when guessing is not enough</p>
                 </div>
               </div>
               
               <p className="text-muted-foreground text-sm mb-4">
-                Built for families who need better communication, clearer boundaries, and a way to stop living in constant reaction mode.
+                For families who need professional intervention guidance, a clearer plan, or a calm outside voice before the situation gets worse.
               </p>
               
               {/* Quick features */}
               <div className="flex flex-wrap gap-2 mb-4">
-                <div className="flex items-center gap-1.5 px-2 py-1 rounded-full bg-violet-600/10 border border-violet-600/20 text-xs text-violet-400">
-                  <Brain className="w-3 h-3" />
-                  AI Pattern Detection
+                <div className="flex items-center gap-1.5 px-2 py-1 rounded-full bg-primary/10 border border-primary/20 text-xs text-primary">
+                  <ShieldAlert className="w-3 h-3" />
+                  Intervention Readiness
                 </div>
-                <div className="flex items-center gap-1.5 px-2 py-1 rounded-full bg-violet-600/10 border border-violet-600/20 text-xs text-violet-400">
-                  <Heart className="w-3 h-3" />
-                  Family Connection
+                <div className="flex items-center gap-1.5 px-2 py-1 rounded-full bg-primary/10 border border-primary/20 text-xs text-primary">
+                  <MessageCircle className="w-3 h-3" />
+                  Coaching Guidance
                 </div>
               </div>
               
               <Button 
                 size="sm"
-                className="w-full bg-gradient-to-r from-violet-600 to-pink-600 hover:from-violet-700 hover:to-pink-700 text-white shadow-md shadow-violet-600/20"
+                className="w-full"
                 asChild
               >
                 <a
-                  href="https://familybridgeapp.com"
+                  href={funnelLinks.freedomPodcastBridge}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Explore FamilyBridge
+                  Get Intervention Guidance
                   <ExternalLink className="w-3.5 h-3.5 ml-1.5" />
                 </a>
               </Button>
@@ -201,11 +197,11 @@ const AboutSection = () => {
                 asChild
               >
                 <a
-                  href="https://soberhelpline.com"
+                  href={funnelLinks.familySquares}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Visit Sober Helpline
+                  Join Family Squares
                   <ExternalLink className="w-3.5 h-3.5 ml-1.5" />
                 </a>
               </Button>

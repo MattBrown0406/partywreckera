@@ -1,7 +1,7 @@
-import { ArrowRight, Mail, TriangleAlert } from "lucide-react";
-import { Link } from "react-router-dom";
+import { ArrowRight, CalendarCheck, ShieldCheck, TriangleAlert } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { funnelLinks } from "@/lib/funnelLinks";
 
 interface BlogConversionPanelProps {
   eyebrow?: string;
@@ -12,7 +12,7 @@ interface BlogConversionPanelProps {
 const BlogConversionPanel = ({
   eyebrow = "Turn insight into a next step",
   title = "Do not leave with more clarity and the same paralysis.",
-  description = "Use Help Now if the house feels urgent, Next Step if you need direction, or email Matt if your family is badly stuck.",
+  description = "If your family needs more than an article, choose the next right step: free support, direct guidance, or an intervention-readiness check.",
 }: BlogConversionPanelProps) => {
   return (
     <section className="rounded-2xl border border-border bg-gradient-to-br from-primary/10 via-background to-burgundy/10 p-6 sm:p-8">
@@ -26,21 +26,21 @@ const BlogConversionPanel = ({
 
       <div className="mt-6 flex flex-col sm:flex-row flex-wrap gap-3">
         <Button asChild>
-          <Link to="/help-now">
-            Help Now
-            <ArrowRight className="w-4 h-4" />
-          </Link>
+          <a href={funnelLinks.familySquares} target="_blank" rel="noopener noreferrer">
+            <CalendarCheck className="w-4 h-4" />
+            Join Family Squares
+          </a>
         </Button>
         <Button variant="outline" asChild>
-          <Link to="/next-step">
-            Find My Next Step
-            <ArrowRight className="w-4 h-4" />
-          </Link>
+          <a href={funnelLinks.freedomContact} target="_blank" rel="noopener noreferrer">
+            <ShieldCheck className="w-4 h-4" />
+            Get Answers Now
+          </a>
         </Button>
         <Button variant="ghost" asChild>
-          <a href="mailto:matt@partywreckers.com?subject=Need%20Help%20With%20Our%20Family">
-            <Mail className="w-4 h-4" />
-            Email Matt
+          <a href={funnelLinks.freedomReadiness} target="_blank" rel="noopener noreferrer">
+            Check Intervention Readiness
+            <ArrowRight className="w-4 h-4" />
           </a>
         </Button>
       </div>

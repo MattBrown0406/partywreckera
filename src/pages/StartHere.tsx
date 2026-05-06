@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Play, BookOpen, ExternalLink, PhoneCall, Mail, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { funnelLinks } from "@/lib/funnelLinks";
 
 const StartHere = () => {
   return (
@@ -250,11 +251,11 @@ const StartHere = () => {
                     </CardHeader>
                     <CardContent>
                       <p className="text-muted-foreground mb-4">
-                        Treatment education and vetted resources for families who need a clearer understanding of what kind of help might fit.
+                        Free weekly support for families who need a steadier place to talk, listen, and stop carrying everything alone.
                       </p>
                       <Button variant="outline" size="sm" asChild>
-                        <a href="https://soberhelpline.com" target="_blank" rel="noopener noreferrer">
-                          Find Treatment
+                        <a href={funnelLinks.familySquares} target="_blank" rel="noopener noreferrer">
+                          Join Family Squares
                         </a>
                       </Button>
                     </CardContent>
@@ -264,16 +265,16 @@ const StartHere = () => {
                     <CardHeader>
                       <CardTitle className="flex items-center gap-2">
                         <ExternalLink className="w-5 h-5 text-burgundy" />
-                        FamilyBridgeApp.com
+                        FreedomInterventions.com
                       </CardTitle>
                     </CardHeader>
                     <CardContent>
                       <p className="text-muted-foreground mb-4">
-                        Tools designed to help families communicate better, hold boundaries, and stop letting chaos run the household.
+                        Direct intervention and coaching guidance when the situation is urgent, confusing, or past the point of another family debate.
                       </p>
                       <Button variant="outline" size="sm" asChild>
-                        <a href="https://familybridgeapp.com" target="_blank" rel="noopener noreferrer">
-                          Get Support
+                        <a href={funnelLinks.freedomPodcastBridge} target="_blank" rel="noopener noreferrer">
+                          Get Intervention Guidance
                         </a>
                       </Button>
                     </CardContent>
@@ -303,12 +304,12 @@ const StartHere = () => {
                     
                     <div className="flex flex-col gap-3 mt-6">
                       <Button asChild>
-                        <a href="mailto:matt@partywreckers.com?subject=Family%20Support%20Request">
-                          Contact Matt
+                        <a href={funnelLinks.freedomContact} target="_blank" rel="noopener noreferrer">
+                          Get Answers Now
                         </a>
                       </Button>
                       <Button variant="outline" size="sm" asChild>
-                        <Link to="/host">Learn More About Matt</Link>
+                        <a href={funnelLinks.freedomReadiness} target="_blank" rel="noopener noreferrer">Check Intervention Readiness</a>
                       </Button>
                     </div>
                   </CardContent>

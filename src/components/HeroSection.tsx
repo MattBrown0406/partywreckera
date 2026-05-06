@@ -5,6 +5,7 @@ import logo from "@/assets/party-wreckers-logo-2026.png";
 import soberHelplineLogo from "@/assets/sober-helpline-logo.png";
 import ThemePlayer from "@/components/ThemePlayer";
 import { usePodcastFeed } from "@/hooks/usePodcastFeed";
+import { funnelLinks } from "@/lib/funnelLinks";
 
 const HeroSection = () => {
   const { data: podcastInfo } = usePodcastFeed();
@@ -25,7 +26,7 @@ const HeroSection = () => {
         <div className="max-w-4xl mx-auto text-center">
           {/* Sober Helpline Banner */}
           <a
-            href="https://soberhelpline.com/monday-zoom-registration"
+            href={funnelLinks.familySquares}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 sm:gap-4 px-5 py-2.5 rounded-full bg-secondary/80 border border-border backdrop-blur-sm hover:bg-secondary transition-colors duration-200 mb-6"

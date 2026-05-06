@@ -4,8 +4,9 @@ import SEOHead from "@/components/SEOHead";
 import { BreadcrumbJsonLd } from "@/components/JsonLd";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowRight, BookOpen, FileText, Mail, Mic, ShieldAlert } from "lucide-react";
+import { ArrowRight, BookOpen, CalendarCheck, FileText, Mic, ShieldAlert } from "lucide-react";
 import { Link } from "react-router-dom";
+import { funnelLinks } from "@/lib/funnelLinks";
 
 const pathways = [
   {
@@ -31,9 +32,9 @@ const pathways = [
   },
   {
     title: "This feels urgent, dangerous, or badly stuck",
-    body: "If the situation is escalating or your family keeps collapsing back into the same cycle, contact Matt directly instead of waiting for clarity to magically appear.",
-    to: "mailto:matt@partywreckers.com?subject=Need%20Help%20With%20Our%20Next%20Step",
-    cta: "Email Matt",
+    body: "If the situation is escalating or your family keeps collapsing back into the same cycle, get direct guidance instead of waiting for clarity to magically appear.",
+    to: funnelLinks.freedomContact,
+    cta: "Get Answers Now",
     icon: ShieldAlert,
     external: true,
   },
@@ -62,10 +63,13 @@ const NextStep = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button variant="hero" size="xl" asChild>
-                  <Link to="/help-now">Back to Help Now</Link>
+                  <a href={funnelLinks.familySquares} target="_blank" rel="noopener noreferrer">
+                    <CalendarCheck className="w-5 h-5" />
+                    Join Family Squares
+                  </a>
                 </Button>
                 <Button variant="heroOutline" size="xl" asChild>
-                  <Link to="/start-here">Start With Basics</Link>
+                  <a href={funnelLinks.freedomReadiness} target="_blank" rel="noopener noreferrer">Check Intervention Readiness</a>
                 </Button>
               </div>
             </div>
@@ -89,7 +93,7 @@ const NextStep = () => {
                       <p className="text-muted-foreground">{pathway.body}</p>
                       <Button variant={pathway.external ? "default" : "outline"} asChild>
                         {pathway.external ? (
-                          <a href={pathway.to}>
+                          <a href={pathway.to} target="_blank" rel="noopener noreferrer">
                             {pathway.cta}
                             <ArrowRight className="w-4 h-4" />
                           </a>
@@ -117,13 +121,10 @@ const NextStep = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Button asChild>
-                  <a href="mailto:matt@partywreckers.com?subject=Need%20Help%20Choosing%20Our%20Next%20Step">
-                    <Mail className="w-4 h-4" />
-                    Email Matt
-                  </a>
+                  <a href={funnelLinks.freedomContact} target="_blank" rel="noopener noreferrer">Get Answers Now</a>
                 </Button>
                 <Button variant="outline" asChild>
-                  <Link to="/family-resources">Review Family Resources</Link>
+                  <a href={funnelLinks.familySquares} target="_blank" rel="noopener noreferrer">Join Family Squares</a>
                 </Button>
               </div>
             </div>
