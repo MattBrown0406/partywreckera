@@ -8,3 +8,6 @@ verify_jwt = false
 
 [functions.send-advertiser-inquiry]
 verify_jwt = false
+
+[functions.party-wreckers-revenue-report]
+verify_jwt = false
