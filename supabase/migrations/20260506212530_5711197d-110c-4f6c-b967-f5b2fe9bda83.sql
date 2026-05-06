@@ -1,0 +1,1 @@
+DELETE FROM public.party_wreckers_advertiser_inquiries WHERE email='verify@example.com' OR source_path='/__verify';
