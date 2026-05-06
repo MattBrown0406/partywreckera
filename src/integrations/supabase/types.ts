@@ -14,7 +14,84 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      party_wreckers_advertiser_inquiries: {
+        Row: {
+          company: string | null
+          created_at: string
+          email: string
+          id: string
+          message: string | null
+          metadata: Json
+          name: string
+          source_path: string | null
+          status: string
+        }
+        Insert: {
+          company?: string | null
+          created_at?: string
+          email: string
+          id?: string
+          message?: string | null
+          metadata?: Json
+          name: string
+          source_path?: string | null
+          status?: string
+        }
+        Update: {
+          company?: string | null
+          created_at?: string
+          email?: string
+          id?: string
+          message?: string | null
+          metadata?: Json
+          name?: string
+          source_path?: string | null
+          status?: string
+        }
+        Relationships: []
+      }
+      party_wreckers_funnel_events: {
+        Row: {
+          anonymous_id: string | null
+          created_at: string
+          cta_label: string | null
+          destination_url: string | null
+          event_name: string
+          id: string
+          metadata: Json
+          page_title: string | null
+          referrer: string | null
+          source_path: string | null
+          user_agent: string | null
+        }
+        Insert: {
+          anonymous_id?: string | null
+          created_at?: string
+          cta_label?: string | null
+          destination_url?: string | null
+          event_name: string
+          id?: string
+          metadata?: Json
+          page_title?: string | null
+          referrer?: string | null
+          source_path?: string | null
+          user_agent?: string | null
+        }
+        Update: {
+          anonymous_id?: string | null
+          created_at?: string
+          cta_label?: string | null
+          destination_url?: string | null
+          event_name?: string
+          id?: string
+          metadata?: Json
+          page_title?: string | null
+          referrer?: string | null
+          source_path?: string | null
+          user_agent?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
