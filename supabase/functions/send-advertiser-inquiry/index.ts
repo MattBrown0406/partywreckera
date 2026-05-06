@@ -24,6 +24,7 @@ serve(async (req) => {
     const supabaseUrl = Deno.env.get("SUPABASE_URL");
     const serviceRoleKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
     const resendApiKey = Deno.env.get("RESEND_API_KEY");
+    const sponsorInquiryTo = Deno.env.get("SPONSOR_INQUIRY_TO") || "matt@freedominterventions.com";
 
     if (!supabaseUrl || !serviceRoleKey) throw new Error("Supabase service role is not configured");
     if (!resendApiKey) throw new Error("RESEND_API_KEY is not configured");
@@ -49,7 +50,7 @@ serve(async (req) => {
       },
       body: JSON.stringify({
         from: "Party Wreckers Sponsors <onboarding@resend.dev>",
-        to: ["matt@partywreckers.com"],
+        to: [sponsorInquiryTo],
         subject: `Sponsor inquiry: ${company || name}`,
         reply_to: email,
         html: `

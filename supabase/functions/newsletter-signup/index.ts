@@ -31,7 +31,7 @@ serve(async (req) => {
     }
 
     const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY");
-    const NEWSLETTER_FORWARD_TO = Deno.env.get("NEWSLETTER_FORWARD_TO") || "matt@partywreckers.com";
+    const NEWSLETTER_FORWARD_TO = Deno.env.get("NEWSLETTER_FORWARD_TO") || "matt@freedominterventions.com";
 
     if (!RESEND_API_KEY) {
       throw new Error("RESEND_API_KEY is not configured");

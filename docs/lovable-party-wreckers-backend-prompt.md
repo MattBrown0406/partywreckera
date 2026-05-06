@@ -10,15 +10,20 @@ Apply the Party Wreckers backend changes that are already present in the repo:
    - `party-wreckers-funnel-report`
    - `send-advertiser-inquiry`
 
-3. Confirm the existing `RESEND_API_KEY` secret is available to `send-advertiser-inquiry`.
+3. Confirm the existing `RESEND_API_KEY` secret is available to `send-advertiser-inquiry`, `send-contact-email`, and `newsletter-signup`.
 
-4. Create a new secret named `PARTY_WRECKERS_REPORT_SECRET` for the owner-only `/funnel-report` page. Use a long random value and send it back to me after deployment so I can open the report page.
+4. Until the Party Wreckers sending domain is verified in Resend, leave these destination secrets unset or set them to `matt@freedominterventions.com`:
+   - `SPONSOR_INQUIRY_TO`
+   - `CONTACT_FORWARD_TO`
+   - `NEWSLETTER_FORWARD_TO`
 
-5. Verification steps:
+5. Create a new secret named `PARTY_WRECKERS_REPORT_SECRET` for the owner-only `/funnel-report` page. Use a long random value and send it back to me after deployment so I can open the report page.
+
+6. Verification steps:
    - Submit a test event to `track-party-wreckers-event` with `event_name: "family_squares_click"` and confirm a row lands in `party_wreckers_funnel_events`.
    - Submit a test advertiser inquiry to `send-advertiser-inquiry` and confirm:
      - a row lands in `party_wreckers_advertiser_inquiries`
-     - the email notification still goes to `matt@partywreckers.com`
+     - the email notification still goes to the configured owner email
    - Call `party-wreckers-funnel-report` with the `x-report-secret` header and confirm it returns totals, by_event, top_pages, top_destinations, and latest_events.
    - Clean up any test rows after verification.
 

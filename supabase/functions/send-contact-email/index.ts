@@ -21,6 +21,7 @@ serve(async (req) => {
     }
 
     const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY");
+    const CONTACT_FORWARD_TO = Deno.env.get("CONTACT_FORWARD_TO") || "matt@freedominterventions.com";
     if (!RESEND_API_KEY) {
       throw new Error("RESEND_API_KEY is not configured");
     }
@@ -33,7 +34,7 @@ serve(async (req) => {
       },
       body: JSON.stringify({
         from: "Party Wreckers Contact <onboarding@resend.dev>",
-        to: ["matt@partywreckers.com"],
+        to: [CONTACT_FORWARD_TO],
         subject: `Contact Form: ${name}`,
         reply_to: email,
         html: `
