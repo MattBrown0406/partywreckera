@@ -87,6 +87,7 @@ import blogImagePermissionNextStep from "@/assets/blog-permission-family-addicti
 import blogImageWhenToGetHelp from "@/assets/blog-when-to-get-help-addicted-loved-one.jpg";
 import blogImageLongTermSobriety from "@/assets/blog-long-term-sobriety-23-years.jpg";
 import blogImageStoppedPerforming from "@/assets/blog-stopped-performing-sobriety.jpg";
+import blogImageJobNobodyApplies from "@/assets/blog-job-nobody-applies-for-interventionist.jpg";
 
 export interface BlogArticle {
   id: string;
@@ -99,6 +100,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "the-job-nobody-applies-for-interventionist",
+    title: "The Job Nobody Applies For: What It's Really Like to Be a Drug and Alcohol Interventionist",
+    date: "May 6, 2026",
+    image: blogImageJobNobodyApplies,
+    imageAlt: "A professional interventionist sitting alone in a quiet hotel room at dawn, reviewing notes before an intervention",
+    excerpt: "A professional interventionist reveals what the job actually looks like — the late calls, the travel, the family rooms, and what families should know before they hire one.",
+    category: "Intervention"
+  },
   {
     id: "the-day-i-stopped-performing-sobriety",
     title: "The Day I Stopped Performing Sobriety and Started Actually Living It",
