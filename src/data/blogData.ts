@@ -101,6 +101,15 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    id: "the-job-nobody-applies-for-interventionist",
+    title: "The Job Nobody Applies For: What It's Really Like to Be a Drug and Alcohol Interventionist",
+    date: "May 6, 2026",
+    image: blogImageJobNobodyApplies,
+    imageAlt: "A professional interventionist sitting alone in a quiet hotel room at dawn, reviewing notes before an intervention",
+    excerpt: "A professional interventionist reveals what the job actually looks like — the late calls, the travel, the family rooms, and what families should know before they hire one.",
+    category: "Intervention"
+  },
+  {
     id: "the-day-i-stopped-performing-sobriety",
     title: "The Day I Stopped Performing Sobriety and Started Actually Living It",
     date: "May 4, 2026",
