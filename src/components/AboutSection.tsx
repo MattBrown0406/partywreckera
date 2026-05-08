@@ -22,17 +22,16 @@ const features = [
 
 const AboutSection = () => {
   return (
-    <section className="py-12 sm:py-24 bg-card relative overflow-hidden">
-      {/* Decorative elements */}
-      <div className="absolute top-0 right-0 w-48 sm:w-96 h-48 sm:h-96 bg-primary/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 left-0 w-48 sm:w-96 h-48 sm:h-96 bg-accent/5 rounded-full blur-3xl" />
+    <section className="relative overflow-hidden border-y border-border bg-card py-12 sm:py-24">
+      <div className="absolute inset-x-0 top-0 h-px bg-[linear-gradient(90deg,transparent,hsl(var(--primary)),transparent)]" />
 
-      <div className="container px-4 relative">
+      <div className="container relative px-4">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Content */}
           <div>
+            <p className="mb-3 text-sm font-semibold uppercase text-primary">The show</p>
             <h2 className="font-script text-4xl sm:text-5xl lg:text-7xl text-burgundy mb-4 sm:mb-6 text-center lg:text-left">
-              About the Show
+              Real recovery talk, built for families under pressure.
             </h2>
             
             <p className="text-muted-foreground text-base sm:text-lg mb-4">
@@ -80,16 +79,25 @@ const AboutSection = () => {
           </div>
         </div>
 
+        {/* Listener Pathway */}
+        <div className="mt-12 grid gap-4 border-y border-border py-6 sm:grid-cols-4">
+          {[
+            ["Listen", "Plain-language episodes that help families name what is happening."],
+            ["Learn", "Articles and tools for boundaries, enabling, treatment, and relapse."],
+            ["Get support", "Family Squares gives people a free weekly room to get steadier."],
+            ["Act", "Freedom Interventions is the path when the risk needs professional guidance."],
+          ].map(([title, body]) => (
+            <div key={title} className="rounded-lg border border-border bg-background p-4">
+              <p className="font-semibold text-foreground">{title}</p>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{body}</p>
+            </div>
+          ))}
+        </div>
+
         {/* Support Resources Grid */}
         <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto mt-10 sm:mt-16">
           {/* Freedom Interventions Card */}
-          <div className="relative bg-gradient-to-br from-primary/20 via-burgundy/10 to-background border border-primary/30 rounded-xl overflow-hidden group">
-            {/* Animated Background */}
-            <div className="absolute inset-0 overflow-hidden pointer-events-none">
-              <div className="absolute -top-10 -left-10 w-32 h-32 bg-primary/10 rounded-full blur-2xl animate-pulse" />
-              <div className="absolute -bottom-10 -right-10 w-28 h-28 bg-burgundy/10 rounded-full blur-2xl animate-pulse" style={{ animationDelay: "1s" }} />
-            </div>
-            
+          <div className="relative overflow-hidden rounded-lg border border-primary/30 bg-gradient-to-br from-primary/20 via-burgundy/10 to-background group">
             {/* Badge */}
             <div className="absolute top-3 right-3 z-10">
               <span className="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-primary text-primary-foreground text-[10px] font-semibold uppercase tracking-wider">
@@ -145,13 +153,7 @@ const AboutSection = () => {
           </div>
 
           {/* Sober Helpline - Dynamic Card */}
-          <div className="relative bg-gradient-to-br from-emerald-900/20 via-teal-900/10 to-background border border-emerald-600/30 rounded-xl overflow-hidden group">
-            {/* Animated Background */}
-            <div className="absolute inset-0 overflow-hidden pointer-events-none">
-              <div className="absolute -top-10 -right-10 w-32 h-32 bg-emerald-500/10 rounded-full blur-2xl animate-pulse" style={{ animationDelay: "0.5s" }} />
-              <div className="absolute -bottom-10 -left-10 w-28 h-28 bg-teal-500/10 rounded-full blur-2xl animate-pulse" style={{ animationDelay: "1.5s" }} />
-            </div>
-            
+          <div className="relative overflow-hidden rounded-lg border border-emerald-600/30 bg-gradient-to-br from-emerald-900/20 via-teal-900/10 to-background group">
             {/* Badge */}
             <div className="absolute top-3 right-3 z-10">
               <span className="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-600 text-emerald-50 text-[10px] font-semibold uppercase tracking-wider">
@@ -179,7 +181,7 @@ const AboutSection = () => {
                 Find treatment education, practical family resources, and a steadier place to start when addiction has everybody spinning.
               </p>
               <p className="text-emerald-400 text-sm font-semibold mb-4">
-                🟢 Free Weekly Family Support Zoom Calls — Every Monday
+                Free weekly Family Squares Zoom calls every Monday
               </p>
               
               {/* Quick features */}
