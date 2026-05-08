@@ -92,6 +92,27 @@ export type Database = {
         }
         Relationships: []
       }
+      party_wreckers_podcast_feed_cache: {
+        Row: {
+          id: string
+          payload: Json
+          source_url: string
+          updated_at: string
+        }
+        Insert: {
+          id?: string
+          payload: Json
+          source_url: string
+          updated_at?: string
+        }
+        Update: {
+          id?: string
+          payload?: Json
+          source_url?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
