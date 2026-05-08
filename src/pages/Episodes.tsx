@@ -189,14 +189,14 @@ const Episodes = () => {
         {/* Content */}
         <section className="py-16">
           <div className="container px-4">
-            {isLoading && (
+            {isLoading && !data && (
               <div className="flex items-center justify-center py-20">
                 <Loader2 className="w-8 h-8 text-primary animate-spin" />
                 <span className="ml-3 text-muted-foreground">Loading episodes...</span>
               </div>
             )}
 
-            {error && (
+            {error && !data && (
               <div className="text-center py-20">
                 <p className="text-muted-foreground">Unable to load episodes. Please try again later.</p>
               </div>

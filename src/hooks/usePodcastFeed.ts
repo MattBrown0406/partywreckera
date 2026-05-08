@@ -1,4 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
+import { podcastFeedSnapshot } from "@/data/podcastFeedSnapshot";
 
 export interface TranscriptInfo {
   url: string;
@@ -25,10 +26,36 @@ export interface PodcastInfo {
 }
 
 const RSS_URL = "https://feeds.buzzsprout.com/1941777.rss";
+const CORS_PROXY_URL = `https://api.allorigins.win/raw?url=${encodeURIComponent(RSS_URL)}`;
+const FEED_TIMEOUT_MS = 6000;
+
+const fetchWithTimeout = async (url: string, timeoutMs: number): Promise<Response> => {
+  const controller = new AbortController();
+  const timeoutId = globalThis.setTimeout(() => controller.abort(), timeoutMs);
+
+  try {
+    return await fetch(url, { signal: controller.signal });
+  } finally {
+    globalThis.clearTimeout(timeoutId);
+  }
+};
+
+const parseDurationText = (value: string): number => {
+  const trimmed = value.trim();
+  if (!trimmed) return 0;
+
+  if (trimmed.includes(":")) {
+    return trimmed
+      .split(":")
+      .map((part) => Number(part) || 0)
+      .reduce((total, part) => total * 60 + part, 0);
+  }
+
+  return Number(trimmed) || 0;
+};
 
 const parseRSSFeed = async (): Promise<PodcastInfo> => {
-  // Use a CORS proxy to fetch the RSS feed
-  const response = await fetch(`https://api.allorigins.win/raw?url=${encodeURIComponent(RSS_URL)}`);
+  const response = await fetchWithTimeout(CORS_PROXY_URL, FEED_TIMEOUT_MS);
   if (!response.ok) {
     throw new Error("Failed to fetch RSS feed");
   }
@@ -50,7 +77,7 @@ const parseRSSFeed = async (): Promise<PodcastInfo> => {
   const items = xml.querySelectorAll("item");
   const episodes: Episode[] = Array.from(items).map((item, index) => {
     const durationText = item.querySelector("itunes\\:duration")?.textContent || "0";
-    const duration = parseInt(durationText, 10);
+    const duration = parseDurationText(durationText);
     
     // Clean up description - remove CDATA markers and HTML tags for preview
     let desc = item.querySelector("itunes\\:summary")?.textContent || 
@@ -89,7 +116,11 @@ export const usePodcastFeed = () => {
   return useQuery({
     queryKey: ["podcast-feed"],
     queryFn: parseRSSFeed,
-    staleTime: 1000 * 60 * 30, // 30 minutes
+    initialData: podcastFeedSnapshot,
+    initialDataUpdatedAt: 0,
+    staleTime: 1000 * 60 * 30,
+    retry: false,
+    refetchOnWindowFocus: false,
   });
 };
 
@@ -105,6 +136,8 @@ export const formatDuration = (seconds: number): string => {
 
 export const formatDate = (dateString: string): string => {
   const date = new Date(dateString);
+  if (Number.isNaN(date.getTime())) return "";
+
   return date.toLocaleDateString("en-US", {
     year: "numeric",
     month: "short",
