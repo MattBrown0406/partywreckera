@@ -5,6 +5,9 @@ import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import { PodcastJsonLd, OrganizationJsonLd, WebsiteJsonLd, FAQJsonLd, ExpertiseJsonLd } from "@/components/JsonLd";
+import EpisodeStarterPath from "@/components/EpisodeStarterPath";
+import AdvertiserMediaStrip from "@/components/AdvertiserMediaStrip";
+import { podcastFeedSnapshot } from "@/data/podcastFeedSnapshot";
 
 // AEO-optimized FAQs for AI answer extraction
 const homepageFAQs = [
@@ -48,9 +51,11 @@ const Index = () => {
       <Navbar />
       <main>
         <HeroSection />
+        <EpisodeStarterPath episodes={podcastFeedSnapshot.episodes} />
         <section id="about">
           <AboutSection />
         </section>
+        <AdvertiserMediaStrip />
         <CTASection />
       </main>
       <Footer />

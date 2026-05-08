@@ -9,53 +9,57 @@ import { Badge } from "@/components/ui/badge";
 import SEOHead from "@/components/SEOHead";
 import { BreadcrumbJsonLd, FAQJsonLd, PodcastJsonLd } from "@/components/JsonLd";
 import TranscriptDialog from "@/components/TranscriptDialog";
+import EpisodeStarterPath from "@/components/EpisodeStarterPath";
+import EpisodeFunnelPanel from "@/components/EpisodeFunnelPanel";
+import AdvertiserMediaStrip from "@/components/AdvertiserMediaStrip";
+import { getEpisodeSearchText, topicFilters } from "@/lib/episodeGuides";
 
 type Category = "all" | "understanding" | "family" | "intervention" | "recovery";
 
 const categories: { id: Category; label: string; keywords: string[] }[] = [
   { id: "all", label: "All Episodes", keywords: [] },
-  { 
-    id: "understanding", 
-    label: "Understanding Addiction", 
+  {
+    id: "understanding",
+    label: "Understanding Addiction",
     keywords: ["brain", "science", "disease", "mental health", "psychology", "myth", "stigma", "alcoholism", "addiction", "substance", "understand", "why", "how addiction", "nature of"]
   },
-  { 
-    id: "family", 
-    label: "Family & Relationships", 
+  {
+    id: "family",
+    label: "Family & Relationships",
     keywords: ["family", "enabling", "codependency", "boundaries", "loved one", "parent", "spouse", "marriage", "relationship", "support", "helping", "care"]
   },
-  { 
-    id: "intervention", 
-    label: "Intervention & Treatment", 
+  {
+    id: "intervention",
+    label: "Intervention & Treatment",
     keywords: ["intervention", "treatment", "detox", "rehab", "facility", "professional", "help", "getting help", "therapy", "therapist", "counselor", "process"]
   },
-  { 
-    id: "recovery", 
-    label: "Recovery & Sobriety", 
+  {
+    id: "recovery",
+    label: "Recovery & Sobriety",
     keywords: ["recovery", "sobriety", "sober", "aa", "12 step", "relapse", "maintain", "life after", "clean", "journey", "story", "success", "hope"]
   },
 ];
 
 const getCategoryForEpisode = (episode: Episode): Category => {
   const searchText = `${episode.title} ${episode.description}`.toLowerCase();
-  
+
   // Score each category based on keyword matches
   let bestCategory: Category = "understanding"; // default
   let bestScore = 0;
-  
+
   for (const cat of categories) {
     if (cat.id === "all") continue;
-    
+
     const score = cat.keywords.reduce((acc, keyword) => {
       return acc + (searchText.includes(keyword.toLowerCase()) ? 1 : 0);
     }, 0);
-    
+
     if (score > bestScore) {
       bestScore = score;
       bestCategory = cat.id;
     }
   }
-  
+
   return bestCategory;
 };
 
@@ -85,6 +89,7 @@ const Episodes = () => {
   const [selectedCategory, setSelectedCategory] = useState<Category>("all");
   const [transcriptEpisode, setTranscriptEpisode] = useState<(Episode & { category: Category }) | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
+  const [selectedTopic, setSelectedTopic] = useState<string | null>(null);
 
   const categorizedEpisodes = useMemo(() => {
     if (!data?.episodes) return [];
@@ -96,29 +101,36 @@ const Episodes = () => {
 
   const filteredEpisodes = useMemo(() => {
     let episodes = categorizedEpisodes;
-    
+
     // Filter by search query
     if (searchQuery.trim()) {
       const query = searchQuery.toLowerCase();
-      episodes = episodes.filter(ep => 
-        ep.title.toLowerCase().includes(query) ||
-        ep.description.toLowerCase().includes(query)
-      );
+      episodes = episodes.filter(ep => getEpisodeSearchText(ep).includes(query));
     }
-    
+
+    if (selectedTopic) {
+      const topic = selectedTopic.toLowerCase();
+      episodes = episodes.filter(ep => getEpisodeSearchText(ep).includes(topic));
+    }
+
     // Filter by category
     if (selectedCategory !== "all") {
       episodes = episodes.filter(ep => ep.category === selectedCategory);
     }
-    
+
     return episodes;
-  }, [categorizedEpisodes, selectedCategory, searchQuery]);
+  }, [categorizedEpisodes, selectedCategory, searchQuery, selectedTopic]);
 
   const isSearching = searchQuery.trim().length > 0;
+  const isFiltering = isSearching || selectedTopic !== null || selectedCategory !== "all";
+  const clearActiveFilters = () => {
+    setSearchQuery("");
+    setSelectedTopic(null);
+  };
   const latestEpisode = categorizedEpisodes[0];
-  const remainingEpisodes = isSearching 
-    ? filteredEpisodes 
-    : filteredEpisodes.slice(selectedCategory === "all" ? 1 : 0);
+  const remainingEpisodes = isFiltering
+    ? filteredEpisodes
+    : filteredEpisodes.slice(1);
 
   const handlePlay = (episodeId: string, audioUrl: string) => {
     if (playingId === episodeId) {
@@ -127,7 +139,7 @@ const Episodes = () => {
       setAudioElement(null);
     } else {
       audioElement?.pause();
-      
+
       const audio = new Audio(audioUrl);
       audio.play();
       audio.onended = () => {
@@ -169,7 +181,7 @@ const Episodes = () => {
         { name: "Home", url: "/" },
         { name: "Episodes", url: "/episodes" }
       ]} />
-      
+
       <Navbar />
       <main className="pt-20">
         {/* Header */}
@@ -210,7 +222,7 @@ const Episodes = () => {
                     <Sparkles className="w-5 h-5 text-primary" />
                     <h2 className="text-lg font-semibold text-foreground">Latest Episode</h2>
                   </div>
-                  
+
                   <article className="p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-primary/10 via-card to-card border-2 border-primary/20 shadow-lg">
                     <div className="flex flex-col gap-4">
                       <div className="flex items-start gap-4">
@@ -226,7 +238,7 @@ const Episodes = () => {
                             <Play className="w-7 h-7 ml-1" />
                           )}
                         </Button>
-                        
+
                         <div className="flex-1 min-w-0">
                           <div className="flex flex-wrap items-center gap-2 mb-2">
                             {latestEpisode.episodeNumber > 0 && (
@@ -238,11 +250,11 @@ const Episodes = () => {
                               {getCategoryLabel(latestEpisode.category)}
                             </Badge>
                           </div>
-                          
+
                           <h3 className="font-semibold text-xl text-burgundy mb-2">
                             {latestEpisode.title}
                           </h3>
-                          
+
                           <div className="flex items-center gap-3 text-sm text-muted-foreground mb-3">
                             <span className="flex items-center gap-1">
                               <Calendar className="w-3.5 h-3.5" />
@@ -253,11 +265,11 @@ const Episodes = () => {
                               {formatDuration(latestEpisode.duration)}
                             </span>
                           </div>
-                          
+
                           <p className="text-muted-foreground text-sm leading-relaxed">
                             {latestEpisode.description}
                           </p>
-                          
+
                           {latestEpisode.transcripts.length > 0 && (
                             <Button
                               variant="ghost"
@@ -275,8 +287,11 @@ const Episodes = () => {
                   </article>
                 </div>
 
+                <EpisodeStarterPath episodes={categorizedEpisodes} compact />
+                <EpisodeFunnelPanel tone="support" />
+
                 {/* Search Bar */}
-                <div className="mb-8">
+                <div className="mb-8 mt-12">
                   <div className="relative">
                     <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
                     <Input
@@ -289,6 +304,7 @@ const Episodes = () => {
                     {searchQuery && (
                       <button
                         onClick={() => setSearchQuery("")}
+                        aria-label="Clear episode search"
                         className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
                       >
                         <X className="w-5 h-5" />
@@ -300,6 +316,29 @@ const Episodes = () => {
                       Found {filteredEpisodes.length} episode{filteredEpisodes.length !== 1 ? 's' : ''} touching on "{searchQuery}"
                     </p>
                   )}
+                </div>
+
+                {/* Topic Filters */}
+                <div className="mb-8">
+                  <h2 className="mb-4 text-lg font-semibold text-foreground">Browse by Topic</h2>
+                  <div className="flex flex-wrap gap-2">
+                    {topicFilters.map((topic) => (
+                      <Button
+                        key={topic.label}
+                        variant={selectedTopic === topic.query ? "default" : "outline"}
+                        size="sm"
+                        onClick={() => setSelectedTopic(selectedTopic === topic.query ? null : topic.query)}
+                        className="rounded-full"
+                      >
+                        {topic.label}
+                      </Button>
+                    ))}
+                    {(selectedTopic || isSearching) && (
+                      <Button variant="ghost" size="sm" onClick={clearActiveFilters} className="rounded-full">
+                        Clear filters
+                      </Button>
+                    )}
+                  </div>
                 </div>
 
                 {/* Category Filters */}
@@ -325,14 +364,14 @@ const Episodes = () => {
                   {remainingEpisodes.length === 0 && (
                     <div className="text-center py-12">
                       <p className="text-muted-foreground">
-                        {isSearching 
-                          ? `No episodes found matching "${searchQuery}" yet.` 
+                        {isSearching
+                          ? `No episodes found matching "${searchQuery}" yet.`
                           : "No episodes found in this category yet."}
                       </p>
                       {isSearching && (
-                        <Button 
-                          variant="outline" 
-                          size="sm" 
+                        <Button
+                          variant="outline"
+                          size="sm"
                           className="mt-4"
                           onClick={() => setSearchQuery("")}
                         >
@@ -341,77 +380,83 @@ const Episodes = () => {
                       )}
                     </div>
                   )}
-                  
-                  {remainingEpisodes.map((episode) => (
-                    <article
-                      key={episode.id}
-                      className="group p-5 rounded-xl bg-card border border-border hover:border-primary/30 transition-all duration-300"
-                    >
-                      <div className="flex flex-col sm:flex-row gap-4">
-                        <div className="flex-shrink-0">
-                          <Button
-                            variant="default"
-                            size="icon"
-                            className="w-12 h-12 rounded-full"
-                            onClick={() => handlePlay(episode.id, episode.audioUrl)}
-                          >
-                            {playingId === episode.id ? (
-                              <Pause className="w-5 h-5" />
-                            ) : (
-                              <Play className="w-5 h-5 ml-0.5" />
-                            )}
-                          </Button>
-                        </div>
 
-                        <div className="flex-1 min-w-0">
-                          <div className="flex flex-wrap items-center gap-2 mb-2 text-sm">
-                            {episode.episodeNumber > 0 && (
-                              <span className="font-semibold text-primary">
-                                EP {episode.episodeNumber}
-                              </span>
-                            )}
-                            <Badge variant="outline" className={`text-xs ${getCategoryColor(episode.category)}`}>
-                              {getCategoryLabel(episode.category)}
-                            </Badge>
-                            <span className="flex items-center gap-1 text-muted-foreground">
-                              <Calendar className="w-3.5 h-3.5" />
-                              {formatDate(episode.pubDate)}
-                            </span>
-                            <span className="flex items-center gap-1 text-muted-foreground">
-                              <Clock className="w-3.5 h-3.5" />
-                              {formatDuration(episode.duration)}
-                            </span>
+                  {remainingEpisodes.map((episode, index) => (
+                    <div key={episode.id}>
+                      {index === 8 && <EpisodeFunnelPanel tone="direct" />}
+                      {index === 20 && <EpisodeFunnelPanel tone="readiness" />}
+                      <article className="group rounded-lg border border-border bg-card p-5 transition-all duration-300 hover:border-primary/30">
+                        <div className="flex flex-col gap-4 sm:flex-row">
+                          <div className="flex-shrink-0">
+                            <Button
+                              variant="default"
+                              size="icon"
+                              className="h-12 w-12 rounded-full"
+                              onClick={() => handlePlay(episode.id, episode.audioUrl)}
+                            >
+                              {playingId === episode.id ? (
+                                <Pause className="h-5 w-5" />
+                              ) : (
+                                <Play className="ml-0.5 h-5 w-5" />
+                              )}
+                            </Button>
                           </div>
 
-                          <h3 className="font-semibold text-foreground mb-2 group-hover:text-burgundy transition-colors">
-                            {episode.title}
-                          </h3>
+                          <div className="min-w-0 flex-1">
+                            <div className="mb-2 flex flex-wrap items-center gap-2 text-sm">
+                              {episode.episodeNumber > 0 && (
+                                <span className="font-semibold text-primary">
+                                  EP {episode.episodeNumber}
+                                </span>
+                              )}
+                              <Badge variant="outline" className={`text-xs ${getCategoryColor(episode.category)}`}>
+                                {getCategoryLabel(episode.category)}
+                              </Badge>
+                              <span className="flex items-center gap-1 text-muted-foreground">
+                                <Calendar className="h-3.5 w-3.5" />
+                                {formatDate(episode.pubDate)}
+                              </span>
+                              <span className="flex items-center gap-1 text-muted-foreground">
+                                <Clock className="h-3.5 w-3.5" />
+                                {formatDuration(episode.duration)}
+                              </span>
+                            </div>
 
-                          <p className="text-muted-foreground text-sm leading-relaxed line-clamp-2">
-                            {episode.description}
-                          </p>
-                          
-                          {episode.transcripts.length > 0 && (
-                            <Button
-                              variant="ghost"
-                              size="sm"
-                              className="mt-2 text-primary hover:text-primary/80 -ml-2"
-                              onClick={() => setTranscriptEpisode(episode)}
-                            >
-                              <FileText className="w-4 h-4 mr-1" />
-                              View Transcript
-                            </Button>
-                          )}
+                            <h3 className="mb-2 font-semibold text-foreground transition-colors group-hover:text-burgundy">
+                              {episode.title}
+                            </h3>
+
+                            <p className="line-clamp-2 text-sm leading-relaxed text-muted-foreground">
+                              {episode.description}
+                            </p>
+
+                            {episode.transcripts.length > 0 && (
+                              <Button
+                                variant="ghost"
+                                size="sm"
+                                className="-ml-2 mt-2 text-primary hover:text-primary/80"
+                                onClick={() => setTranscriptEpisode(episode)}
+                              >
+                                <FileText className="mr-1 h-4 w-4" />
+                                View Transcript
+                              </Button>
+                            )}
+                          </div>
                         </div>
-                      </div>
-                    </article>
+                      </article>
+                    </div>
                   ))}
+                </div>
+                <div className="mt-8">
+                  <EpisodeFunnelPanel tone="support" />
                 </div>
               </div>
             )}
           </div>
         </section>
-        
+
+        <AdvertiserMediaStrip />
+
         {/* Transcript Dialog */}
         <TranscriptDialog
           isOpen={!!transcriptEpisode}

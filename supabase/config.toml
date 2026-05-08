@@ -11,3 +11,9 @@ verify_jwt = false
 
 [functions.party-wreckers-revenue-report]
 verify_jwt = false
+
+[functions.get-party-wreckers-podcast-feed]
+verify_jwt = false
+
+[functions.refresh-party-wreckers-podcast-feed]
+verify_jwt = false
