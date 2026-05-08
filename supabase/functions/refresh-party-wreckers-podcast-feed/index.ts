@@ -55,7 +55,6 @@ serve(async (req) => {
     }
 
     const payload = parsePodcastFeed(await response.text());
-    const supabase = createClient(supabaseUrl, serviceRoleKey);
 
     const { error } = await supabase
       .from("party_wreckers_podcast_feed_cache")
