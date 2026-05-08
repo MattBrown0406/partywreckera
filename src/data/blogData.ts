@@ -103,6 +103,15 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    id: "conflict-avoidance-enabling-addiction-family",
+    title: "The Price of Keeping the Peace: How Conflict Avoidance Enables Addiction at Home",
+    date: "May 8, 2026",
+    image: blogImageConflictAvoidanceEnabling,
+    imageAlt: "A young adult woman sitting tensely at a dim dinner table across from a loved one, holding back what she wants to say",
+    excerpt: "Keeping the peace with an addicted loved one feels like kindness — but it may be fueling the problem. Learn how conflict avoidance enables addiction and how to change the pattern.",
+    category: "Family Recovery"
+  },
+  {
     id: "how-to-choose-an-interventionist",
     title: "How to Choose an Interventionist: What to Look For, What to Avoid, and the Questions That Tell You Everything",
     date: "May 8, 2026",
