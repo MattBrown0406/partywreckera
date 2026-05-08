@@ -88,6 +88,7 @@ import blogImageWhenToGetHelp from "@/assets/blog-when-to-get-help-addicted-love
 import blogImageLongTermSobriety from "@/assets/blog-long-term-sobriety-23-years.jpg";
 import blogImageStoppedPerforming from "@/assets/blog-stopped-performing-sobriety.jpg";
 import blogImageJobNobodyApplies from "@/assets/blog-job-nobody-applies-for-interventionist.jpg";
+import blogImageHowToChooseInterventionist from "@/assets/blog-how-to-choose-an-interventionist.jpg";
 
 export interface BlogArticle {
   id: string;
