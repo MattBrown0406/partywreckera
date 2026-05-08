@@ -102,6 +102,15 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    id: "how-to-choose-an-interventionist",
+    title: "How to Choose an Interventionist: What to Look For, What to Avoid, and the Questions That Tell You Everything",
+    date: "May 8, 2026",
+    image: blogImageHowToChooseInterventionist,
+    imageAlt: "A woman at a kitchen table with a phone and notepad, researching how to choose a professional interventionist",
+    excerpt: "Not all interventionists are created equal. Matt Brown explains what to look for when hiring a professional interventionist — and the questions that tell you everything.",
+    category: "Intervention"
+  },
+  {
     id: "the-job-nobody-applies-for-interventionist",
     title: "The Job Nobody Applies For: What It's Really Like to Be a Drug and Alcohol Interventionist",
     date: "May 6, 2026",
