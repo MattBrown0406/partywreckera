@@ -88,6 +88,7 @@ import blogImageWhenToGetHelp from "@/assets/blog-when-to-get-help-addicted-love
 import blogImageLongTermSobriety from "@/assets/blog-long-term-sobriety-23-years.jpg";
 import blogImageStoppedPerforming from "@/assets/blog-stopped-performing-sobriety.jpg";
 import blogImageJobNobodyApplies from "@/assets/blog-job-nobody-applies-for-interventionist.jpg";
+import blogImageHowToChooseInterventionist from "@/assets/blog-how-to-choose-an-interventionist.jpg";
 
 export interface BlogArticle {
   id: string;
@@ -100,6 +101,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "how-to-choose-an-interventionist",
+    title: "How to Choose an Interventionist: What to Look For, What to Avoid, and the Questions That Tell You Everything",
+    date: "May 8, 2026",
+    image: blogImageHowToChooseInterventionist,
+    imageAlt: "A woman at a kitchen table with a phone and notepad, researching how to choose a professional interventionist",
+    excerpt: "Not all interventionists are created equal. Matt Brown explains what to look for when hiring a professional interventionist — and the questions that tell you everything.",
+    category: "Intervention"
+  },
   {
     id: "the-job-nobody-applies-for-interventionist",
     title: "The Job Nobody Applies For: What It's Really Like to Be a Drug and Alcohol Interventionist",
