@@ -15,21 +15,37 @@ serve(async (req) => {
   }
 
   try {
-    const expectedSecret = Deno.env.get("FOLLOWUP_AUTOMATION_SECRET");
-    const providedSecret = req.headers.get("x-automation-secret");
-
-    if (expectedSecret && providedSecret !== expectedSecret) {
-      return new Response(JSON.stringify({ error: "Unauthorized" }), {
-        status: 401,
-        headers: { ...corsHeaders, "Content-Type": "application/json" },
-      });
-    }
-
     const supabaseUrl = Deno.env.get("SUPABASE_URL");
     const serviceRoleKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
 
     if (!supabaseUrl || !serviceRoleKey) {
       throw new Error("Supabase service role is not configured");
+    }
+
+    const supabase = createClient(supabaseUrl, serviceRoleKey);
+
+    const envSecret = Deno.env.get("FOLLOWUP_AUTOMATION_SECRET");
+    const providedSecret = req.headers.get("x-automation-secret");
+
+    let authorized = !!(envSecret && providedSecret && providedSecret === envSecret);
+
+    if (!authorized && providedSecret) {
+      const { data: vaultRow } = await supabase
+        .schema("vault")
+        .from("decrypted_secrets")
+        .select("decrypted_secret")
+        .eq("name", "followup_automation_secret")
+        .maybeSingle();
+      if (vaultRow?.decrypted_secret && providedSecret === vaultRow.decrypted_secret) {
+        authorized = true;
+      }
+    }
+
+    if (!authorized) {
+      return new Response(JSON.stringify({ error: "Unauthorized" }), {
+        status: 401,
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+      });
     }
 
     const response = await fetch(RSS_URL);
