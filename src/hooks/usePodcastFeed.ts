@@ -54,6 +54,53 @@ const parseDurationText = (value: string): number => {
   return Number(trimmed) || 0;
 };
 
+const getElementByLocalName = (parent: Element | Document, localName: string): Element | null => {
+  const normalizedName = localName.toLowerCase();
+
+  return (
+    Array.from(parent.getElementsByTagName("*")).find((element) => {
+      const tagName = element.tagName.toLowerCase();
+      const elementLocalName = element.localName.toLowerCase();
+
+      return tagName === normalizedName || elementLocalName === normalizedName.split(":").pop();
+    }) || null
+  );
+};
+
+const getText = (parent: Element | Document | null | undefined, ...tagNames: string[]): string => {
+  if (!parent) return "";
+
+  for (const tagName of tagNames) {
+    const directMatch = parent.getElementsByTagName(tagName)[0];
+    const localNameMatch = getElementByLocalName(parent, tagName);
+    const text = directMatch?.textContent || localNameMatch?.textContent || "";
+
+    if (text.trim()) return text;
+  }
+
+  return "";
+};
+
+const getAttribute = (
+  parent: Element | Document | null | undefined,
+  tagName: string,
+  attributeName: string,
+): string => {
+  if (!parent) return "";
+
+  const directMatch = parent.getElementsByTagName(tagName)[0];
+  const localNameMatch = getElementByLocalName(parent, tagName);
+
+  return directMatch?.getAttribute(attributeName) || localNameMatch?.getAttribute(attributeName) || "";
+};
+
+const snapshotDurationsByEpisode = new Map(
+  podcastFeedSnapshot.episodes.flatMap((episode) => [
+    [episode.id, episode.duration],
+    [episode.title, episode.duration],
+  ]),
+);
+
 const parseRSSFeed = async (): Promise<PodcastInfo> => {
   const response = await fetchWithTimeout(CORS_PROXY_URL, FEED_TIMEOUT_MS);
   if (!response.ok) {
@@ -67,21 +114,21 @@ const parseRSSFeed = async (): Promise<PodcastInfo> => {
   const channel = xml.querySelector("channel");
   
   // Get podcast info
-  const title = channel?.querySelector("title")?.textContent || "The Party Wreckers";
-  const description = channel?.querySelector("description")?.textContent || "";
-  const author = channel?.querySelector("itunes\\:author")?.textContent || "Matt Brown";
-  const image = channel?.querySelector("itunes\\:image")?.getAttribute("href") || 
-                channel?.querySelector("image url")?.textContent || "";
+  const title = getText(channel, "title") || "The Party Wreckers";
+  const description = getText(channel, "description");
+  const author = getText(channel, "itunes:author", "author") || "Matt Brown";
+  const image = getAttribute(channel, "itunes:image", "href") || getText(channel, "url");
   
   // Parse episodes
   const items = xml.querySelectorAll("item");
   const episodes: Episode[] = Array.from(items).map((item, index) => {
-    const durationText = item.querySelector("itunes\\:duration")?.textContent || "0";
-    const duration = parseDurationText(durationText);
+    const id = getText(item, "guid") || `episode-${index}`;
+    const title = getText(item, "title") || "Untitled Episode";
+    const durationText = getText(item, "itunes:duration", "duration");
+    const duration = parseDurationText(durationText) || snapshotDurationsByEpisode.get(id) || snapshotDurationsByEpisode.get(title) || 0;
     
     // Clean up description - remove CDATA markers and HTML tags for preview
-    let desc = item.querySelector("itunes\\:summary")?.textContent || 
-               item.querySelector("description")?.textContent || "";
+    let desc = getText(item, "itunes:summary", "summary", "description");
     desc = desc.replace(/<!\[CDATA\[|\]\]>/g, "").replace(/<[^>]*>/g, "").trim();
     
     // Parse transcript tags (podcast:transcript)
@@ -92,13 +139,13 @@ const parseRSSFeed = async (): Promise<PodcastInfo> => {
     })).filter(t => t.url);
     
     return {
-      id: item.querySelector("guid")?.textContent || `episode-${index}`,
-      title: item.querySelector("title")?.textContent || "Untitled Episode",
+      id,
+      title,
       description: desc.slice(0, 300) + (desc.length > 300 ? "..." : ""),
-      pubDate: item.querySelector("pubDate")?.textContent || "",
+      pubDate: getText(item, "pubDate"),
       duration,
-      episodeNumber: parseInt(item.querySelector("itunes\\:episode")?.textContent || "0", 10),
-      audioUrl: item.querySelector("enclosure")?.getAttribute("url") || "",
+      episodeNumber: parseInt(getText(item, "itunes:episode", "episode") || "0", 10),
+      audioUrl: getAttribute(item, "enclosure", "url"),
       transcripts,
     };
   });
