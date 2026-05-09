@@ -14,7 +14,10 @@ const allowedEvents = new Set([
   "freedom_bridge_click",
   "podcast_platform_click",
   "sponsor_click",
+  "advertiser_package_click",
+  "advertiser_inquiry_start",
   "advertiser_inquiry_click",
+  "advertiser_email_click",
   "openclaw_phone_click",
 ]);
 

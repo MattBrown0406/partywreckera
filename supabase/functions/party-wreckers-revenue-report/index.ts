@@ -28,6 +28,9 @@ const REVENUE_INTENT_EVENTS = new Set([
   "assessment_click",
   "phone_click",
   "phone_intent",
+  "advertiser_package_click",
+  "advertiser_inquiry_start",
+  "advertiser_email_click",
 ]);
 
 const READINESS_EVENTS = new Set([
@@ -104,6 +107,16 @@ serve(async (req) => {
     const readiness = rows.filter((r) =>
       r.event_name ? READINESS_EVENTS.has(r.event_name) : false,
     ).length;
+    const advertiserIntent = rows.filter((r) =>
+      ["advertiser_package_click", "advertiser_inquiry_start", "advertiser_inquiry_click", "advertiser_email_click"].includes(
+        r.event_name || "",
+      ),
+    );
+    const listenerLeadEvents = rows.filter((r) =>
+      ["family_squares_click", "get_answers_now_click", "intervention_readiness_click", "freedom_bridge_click"].includes(
+        r.event_name || "",
+      ),
+    );
 
     const pickPage = (row: Record<string, unknown>) => {
       const meta = (row.metadata as Record<string, unknown> | null) || {};
@@ -144,12 +157,15 @@ serve(async (req) => {
           revenue_intent_clicks: revenueIntent,
           consultation_requests: 0,
           intervention_readiness_clicks: readiness,
+          advertiser_intent_events: advertiserIntent.length,
           advertiser_inquiries: advertiserCount || 0,
           registrations: 0,
         },
         by_event: countBy(rows as unknown as Array<Record<string, unknown>>, (r) => r.event_name as string | null),
         top_pages: countBy(rows as unknown as Array<Record<string, unknown>>, pickPage),
         top_destinations: countBy(rows as unknown as Array<Record<string, unknown>>, pickDestination),
+        listener_lead_pages: countBy(listenerLeadEvents as unknown as Array<Record<string, unknown>>, pickPage),
+        advertiser_pages: countBy(advertiserIntent as unknown as Array<Record<string, unknown>>, pickPage),
         latest_events: latest,
       }),
       { headers: { ...corsHeaders, "Content-Type": "application/json" } },

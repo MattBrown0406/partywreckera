@@ -12,7 +12,7 @@ serve(async (req) => {
   }
 
   try {
-    const { name, email, company, message, source_path, metadata } = await req.json();
+    const { name, email, company, packageInterest, message, source_path, metadata } = await req.json();
 
     if (!name || !email || !message) {
       return new Response(JSON.stringify({ error: "Name, email, and message are required" }), {
@@ -37,7 +37,10 @@ serve(async (req) => {
       company: company || null,
       message,
       source_path: source_path || null,
-      metadata: metadata || {},
+      metadata: {
+        ...(metadata || {}),
+        package_interest: packageInterest || metadata?.package_interest || null,
+      },
     });
 
     if (insertError) throw insertError;
@@ -58,6 +61,7 @@ serve(async (req) => {
           <p><strong>Name:</strong> ${name}</p>
           <p><strong>Email:</strong> ${email}</p>
           <p><strong>Company:</strong> ${company || "Not provided"}</p>
+          <p><strong>Package interest:</strong> ${packageInterest || metadata?.package_interest || "Not provided"}</p>
           <p><strong>Source path:</strong> ${source_path || "Not provided"}</p>
           <hr />
           <p><strong>Message:</strong></p>

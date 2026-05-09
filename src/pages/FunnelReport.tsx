@@ -14,6 +14,10 @@ interface FunnelReportData {
   by_event: Array<{ name: string; count: number }>;
   top_pages: Array<{ name: string; count: number }>;
   top_destinations: Array<{ name: string; count: number }>;
+  listener_lead_pages?: Array<{ name: string; count: number }>;
+  listener_lead_destinations?: Array<{ name: string; count: number }>;
+  advertiser_pages?: Array<{ name: string; count: number }>;
+  sponsor_package_interest?: Array<{ name: string; count: number }>;
   latest_events: Array<Record<string, string | null>>;
 }
 
@@ -109,6 +113,13 @@ const FunnelReport = () => {
                   <ReportList title="Events" items={data.by_event} />
                   <ReportList title="Top Pages" items={data.top_pages} />
                   <ReportList title="Top Destinations" items={data.top_destinations} />
+                </div>
+
+                <div className="grid gap-6 lg:grid-cols-4">
+                  <ReportList title="Listener Lead Pages" items={data.listener_lead_pages || []} />
+                  <ReportList title="Listener Destinations" items={data.listener_lead_destinations || []} />
+                  <ReportList title="Advertiser Pages" items={data.advertiser_pages || []} />
+                  <ReportList title="Package Interest" items={data.sponsor_package_interest || []} />
                 </div>
               </div>
             ) : (
