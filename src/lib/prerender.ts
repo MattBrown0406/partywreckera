@@ -7,6 +7,8 @@ export const prerenderRoutes = [
   "/family-resources",
   "/press",
   "/sponsors",
+  "/advertise",
+  "/advertise/packages",
 ];
 
 export const prerenderReadinessNote =

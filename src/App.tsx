@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import Episodes from "./pages/Episodes";
 import Sponsors from "./pages/Sponsors";
 import Advertise from "./pages/Advertise";
+import SponsorProposal from "./pages/SponsorProposal";
 import FunnelReport from "./pages/FunnelReport";
 import Host from "./pages/Host";
 import FamilyResources from "./pages/FamilyResources";
@@ -56,6 +57,7 @@ export const App = ({ Router = DefaultRouter }: AppProps) => (
           <Route path="/episodes" element={<Episodes />} />
           <Route path="/sponsors" element={<Sponsors />} />
           <Route path="/advertise" element={<Advertise />} />
+          <Route path="/advertise/packages" element={<SponsorProposal />} />
           <Route path="/funnel-report" element={<FunnelReport />} />
           <Route path="/host" element={<Host />} />
           <Route path="/blog" element={<BlogIndex />} />

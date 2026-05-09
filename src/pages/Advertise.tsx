@@ -13,59 +13,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { supabase } from "@/integrations/supabase/client";
 import { trackPartyWreckersEvent } from "@/lib/funnelTracking";
-
-const advertiserFit = [
-  "Ethical treatment providers",
-  "Family support services",
-  "Recovery-centered technology",
-  "Sober living and continuing care",
-  "Books, trainings, and professional education",
-  "Brands serving parents, partners, and loved ones",
-];
-
-const inventoryOptions = [
-  "Any available inventory",
-  "Episode sponsorship",
-  "Monthly website placement",
-  "Category partner availability",
-  "Podcast mention only",
-  "Custom bundle",
-];
-
-const sponsorPackages = [
-  {
-    name: "Starter Mention",
-    price: "Starts at $250",
-    fit: "A simple host-read mention for a relevant provider, resource, or service.",
-    inventory: "One host-read podcast mention",
-    deliverables: ["Host-read mention", "Show-note link", "Sponsor click tracking"],
-    event: "podcast_mention",
-  },
-  {
-    name: "Episode Sponsor",
-    price: "Starts at $500",
-    fit: "Own a specific episode topic that aligns with your audience and offer.",
-    inventory: "Episode placement plus show-note link",
-    deliverables: ["Episode intro mention", "Show-note link", "Sponsor page listing"],
-    event: "episode_sponsor",
-  },
-  {
-    name: "Resource Placement",
-    price: "Starts at $750/mo",
-    fit: "Show up around articles, episode guides, or family resource pages.",
-    inventory: "Site placement with tracked CTA",
-    deliverables: ["Article/resource placement", "Tracked CTA", "Monthly activity snapshot"],
-    event: "resource_placement",
-  },
-  {
-    name: "Category Partner",
-    price: "Custom",
-    fit: "Combine podcast, site, and resource placements into one campaign.",
-    inventory: "Podcast plus site plus reportable clicks",
-    deliverables: ["Podcast placement", "Sponsor directory feature", "Monthly sponsor report"],
-    event: "bundle_package",
-  },
-];
+import { advertiserFit, inventoryOptions, proofPoints, sponsorPackages } from "@/lib/sponsorPackages";
 
 const audienceSignals = [
   ["High-intent context", "Listeners are often researching treatment, boundaries, intervention, or family support."],
@@ -304,7 +252,7 @@ const Advertise = () => {
                 </p>
               </div>
 
-              <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+              <div className="grid gap-4 md:grid-cols-3">
                 {sponsorPackages.map((sponsorPackage) => (
                   <Card key={sponsorPackage.name} className="border-border bg-background">
                     <CardHeader>
@@ -321,6 +269,9 @@ const Advertise = () => {
                     <CardContent>
                       <p className="text-sm text-muted-foreground mb-4">{sponsorPackage.fit}</p>
                       <p className="text-xs uppercase tracking-widest text-primary mb-4">{sponsorPackage.inventory}</p>
+                      <p className="mb-4 rounded-lg border border-border bg-secondary/40 p-3 text-sm text-foreground">
+                        <span className="font-semibold">Best for:</span> {sponsorPackage.bestFor}
+                      </p>
                       <ul className="mb-5 space-y-2">
                         {sponsorPackage.deliverables.map((deliverable) => (
                           <li key={deliverable} className="flex items-start gap-2 text-sm text-muted-foreground">
@@ -344,6 +295,11 @@ const Advertise = () => {
               <p className="mt-5 text-sm text-muted-foreground">
                 Introductory rates can be adjusted as audience reporting matures. Best-fit sponsors can reserve a category, episode theme, or monthly site placement depending on availability.
               </p>
+              <div className="mt-6">
+                <Button variant="outline" asChild>
+                  <Link to="/advertise/packages">View Sponsor Proposal Page</Link>
+                </Button>
+              </div>
             </div>
           </div>
         </section>
@@ -351,13 +307,17 @@ const Advertise = () => {
         <section className="py-12">
           <div className="container px-4">
             <div className="max-w-6xl mx-auto grid gap-4 md:grid-cols-3">
-              {audienceSignals.map(([title, body]) => (
+              {[...audienceSignals, ...proofPoints.slice(0, 1)].map((item) => {
+                const title = Array.isArray(item) ? item[0] : item.label;
+                const body = Array.isArray(item) ? item[1] : item.body;
+                return (
                 <div key={title} className="rounded-lg border border-border bg-card p-5">
                   <BarChart3 className="w-5 h-5 text-primary mb-3" />
                   <p className="font-semibold text-foreground">{title}</p>
                   <p className="text-sm text-muted-foreground mt-2">{body}</p>
                 </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </section>

@@ -1,8 +1,9 @@
 {
-  "generatedAt": "2026-05-09T00:20:05.603Z",
+  "generatedAt": "2026-05-09T01:03:40.760Z",
   "routes": [
     "/",
     "/advertise",
+    "/advertise/packages",
     "/blog",
     "/blog/addiction-ambiguity-clarity",
     "/blog/addiction-control-illusion",

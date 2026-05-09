@@ -151,6 +151,8 @@ const FunnelReport = () => {
     printWindow.print();
   };
 
+  const sponsorActionItems = getSponsorActionItems(prospects);
+
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
@@ -266,6 +268,43 @@ const FunnelReport = () => {
                       </div>
                     )}
 
+                    {prospects.length > 0 && (
+                      <div className="mb-5 rounded-lg border border-primary/20 bg-primary/10 p-4">
+                        <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                          <div>
+                            <p className="font-semibold text-foreground">Next Sponsor Actions</p>
+                            <p className="mt-1 text-sm text-muted-foreground">
+                              The hottest sponsor work based on inquiry status and saved next actions.
+                            </p>
+                          </div>
+                          <div className="grid grid-cols-3 gap-2 text-center">
+                            <div className="rounded-lg border border-border bg-background px-3 py-2">
+                              <p className="text-xs uppercase tracking-widest text-muted-foreground">New</p>
+                              <p className="text-xl font-semibold text-foreground">{countProspectsByStatus(prospects, "new")}</p>
+                            </div>
+                            <div className="rounded-lg border border-border bg-background px-3 py-2">
+                              <p className="text-xs uppercase tracking-widest text-muted-foreground">Proposal</p>
+                              <p className="text-xl font-semibold text-foreground">{countProspectsByStatus(prospects, "proposal_sent")}</p>
+                            </div>
+                            <div className="rounded-lg border border-border bg-background px-3 py-2">
+                              <p className="text-xs uppercase tracking-widest text-muted-foreground">Close</p>
+                              <p className="text-xl font-semibold text-foreground">{countProspectsByStatus(prospects, "negotiating")}</p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div className="mt-4 grid gap-3 lg:grid-cols-3">
+                          {sponsorActionItems.map((item) => (
+                            <div key={item.id} className="rounded-lg border border-border bg-background p-3">
+                              <p className="text-sm font-semibold text-foreground">{item.company}</p>
+                              <p className="mt-1 text-xs uppercase tracking-widest text-primary">{item.statusLabel}</p>
+                              <p className="mt-2 text-sm text-muted-foreground">{item.action}</p>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
                     <div className="space-y-4">
                       {prospects.length ? (
                         prospects.map((prospect) => (
@@ -338,6 +377,7 @@ const SponsorProspectCard = ({
 }) => {
   const packageInterest = getMetadataString(prospect.metadata, "package_interest") || "Not provided";
   const inventoryInterest = getMetadataString(prospect.metadata, "inventory_interest") || "Not provided";
+  const recommendation = getProspectRecommendation(prospect);
 
   return (
     <div className="rounded-lg border border-border bg-background p-4">
@@ -352,6 +392,10 @@ const SponsorProspectCard = ({
             <span className="rounded-full border border-border px-3 py-1">Package: {packageInterest}</span>
             <span className="rounded-full border border-border px-3 py-1">Inventory: {inventoryInterest}</span>
             <span className="rounded-full border border-border px-3 py-1">{new Date(prospect.created_at).toLocaleDateString()}</span>
+          </div>
+          <div className="mt-4 rounded-lg border border-primary/20 bg-primary/10 p-3">
+            <p className="text-xs font-semibold uppercase tracking-widest text-primary">Suggested next move</p>
+            <p className="mt-1 text-sm text-foreground">{recommendation}</p>
           </div>
         </div>
 
@@ -489,5 +533,55 @@ const buildSponsorPrintHtml = (data: FunnelReportData) => {
 
 const escapeHtml = (value: string) =>
   value.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+
+const countProspectsByStatus = (prospects: SponsorProspect[], status: string) =>
+  prospects.filter((prospect) => prospect.status === status).length;
+
+const getProspectRecommendation = (prospect: SponsorProspect) => {
+  const nextAction = getMetadataString(prospect.metadata, "next_action");
+  if (nextAction) return nextAction;
+
+  switch (prospect.status) {
+    case "new":
+      return "Reply today, confirm sponsor fit, and send the package page if the offer belongs on the show.";
+    case "contacted":
+      return "Ask which package they want to reserve, then move them toward a proposal.";
+    case "proposal_sent":
+      return "Follow up with a short close: placement, timing, link destination, and first report date.";
+    case "negotiating":
+      return "Resolve the open term and turn this into a paid placement.";
+    case "sold":
+      return "Confirm assets, sponsor link, placement date, and monthly reporting expectations.";
+    case "lost":
+      return "Leave a note on why it did not fit and whether it is worth revisiting later.";
+    default:
+      return "Set a specific next action so this prospect does not drift.";
+  }
+};
+
+const getSponsorActionItems = (prospects: SponsorProspect[]) => {
+  const priority = new Map([
+    ["negotiating", 0],
+    ["proposal_sent", 1],
+    ["new", 2],
+    ["contacted", 3],
+    ["sold", 4],
+    ["lost", 5],
+  ]);
+
+  return [...prospects]
+    .sort((a, b) => {
+      const statusScore = (priority.get(a.status) ?? 9) - (priority.get(b.status) ?? 9);
+      if (statusScore !== 0) return statusScore;
+      return new Date(b.created_at).getTime() - new Date(a.created_at).getTime();
+    })
+    .slice(0, 3)
+    .map((prospect) => ({
+      id: prospect.id,
+      company: prospect.company || prospect.name,
+      statusLabel: prospect.status.replace(/_/g, " "),
+      action: getProspectRecommendation(prospect),
+    }));
+};
 
 export default FunnelReport;
