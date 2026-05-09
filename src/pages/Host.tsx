@@ -3,7 +3,7 @@ import Footer, { SocialLinks } from "@/components/Footer";
 import { Mic, Heart, Users, Clock } from "lucide-react";
 import mattHeadshot from "@/assets/matt-headshot.jpg";
 import SEOHead from "@/components/SEOHead";
-import { PersonJsonLd, BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
+import { PersonJsonLd, BreadcrumbJsonLd, FAQJsonLd, WebPageJsonLd } from "@/components/JsonLd";
 
 // AEO-optimized FAQs about Matt Brown
 const hostFAQs = [
@@ -35,6 +35,12 @@ const Host = () => {
         keywords="Matt Brown interventionist, addiction intervention specialist, family recovery expert, The Party Wreckers host, professional interventionist"
       />
       <PersonJsonLd />
+      <WebPageJsonLd
+        name="About Matt Brown"
+        description="Professional interventionist, Party Wreckers host, and family recovery guide."
+        url="https://partywreckers.com/host"
+        about={["Matt Brown", "Addiction Intervention", "Family Recovery", "Recovery Coaching"]}
+      />
       
       <FAQJsonLd faqs={hostFAQs} />
       <BreadcrumbJsonLd items={[

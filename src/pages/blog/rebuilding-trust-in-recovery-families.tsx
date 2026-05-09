@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import SocialShareButtons from "@/components/SocialShareButtons";
+import ArticleAnswerSummary from "@/components/ArticleAnswerSummary";
 import { ArrowLeft } from "lucide-react";
 import { ArticleJsonLd, BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
 import blogImage from "@/assets/blog-rebuilding-trust-recovery-families.jpg";
@@ -103,6 +104,7 @@ const RebuildingTrustInRecoveryFamilies = () => {
             title="When Your Loved One Gets Sober — And You Still Can't Breathe"
           />
         </div>
+        <ArticleAnswerSummary slug="rebuilding-trust-in-recovery-families" />
 
         <div className="prose prose-lg max-w-none text-foreground">
           <p>

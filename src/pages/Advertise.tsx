@@ -5,13 +5,16 @@ import { BarChart3, CheckCircle, FileText, Mail, Megaphone, Radio, ShieldCheck, 
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import SEOHead from "@/components/SEOHead";
+import AeoAnswerBlock from "@/components/AeoAnswerBlock";
+import FaqSection from "@/components/FaqSection";
 import TrackedExternalLink from "@/components/TrackedExternalLink";
-import { BreadcrumbJsonLd } from "@/components/JsonLd";
+import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { supabase } from "@/integrations/supabase/client";
+import { coreFaqs, primaryAeoAnswers } from "@/lib/aeoContent";
 import { trackPartyWreckersEvent } from "@/lib/funnelTracking";
 import { advertiserFit, inventoryOptions, proofPoints, sponsorPackages } from "@/lib/sponsorPackages";
 
@@ -125,6 +128,7 @@ const Advertise = () => {
         canonical="/advertise"
         keywords="addiction podcast advertising, recovery podcast sponsor, treatment center podcast ads, family recovery advertising"
       />
+      <FAQJsonLd faqs={coreFaqs.sponsorInfo} />
       <BreadcrumbJsonLd items={[{ name: "Home", url: "/" }, { name: "Advertise", url: "/advertise" }]} />
 
       <Navbar />
@@ -179,6 +183,14 @@ const Advertise = () => {
                   </TrackedExternalLink>
                 </Button>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-12 sm:py-16">
+          <div className="container px-4">
+            <div className="mx-auto max-w-5xl">
+              <AeoAnswerBlock content={primaryAeoAnswers.sponsorInfo} />
             </div>
           </div>
         </section>
@@ -427,6 +439,12 @@ const Advertise = () => {
             </div>
           </div>
         </section>
+
+        <FaqSection
+          faqs={coreFaqs.sponsorInfo}
+          title="Sponsor FAQ"
+          description="Short answers for advertisers evaluating whether Party Wreckers is a fit."
+        />
       </main>
 
       <Footer />

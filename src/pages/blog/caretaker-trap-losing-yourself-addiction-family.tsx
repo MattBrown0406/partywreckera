@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import SocialShareButtons from "@/components/SocialShareButtons";
+import ArticleAnswerSummary from "@/components/ArticleAnswerSummary";
 import { ArrowLeft } from "lucide-react";
 import { ArticleJsonLd, BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
 import blogImage from "@/assets/blog-caretaker-trap-addiction-family.jpg";
@@ -103,6 +104,7 @@ const CaretakerTrapLosingYourselfAddictionFamily = () => {
             title="You Can't Save Someone Else by Losing Yourself: The Caretaker Trap in Addiction Families"
           />
         </div>
+        <ArticleAnswerSummary slug="caretaker-trap-losing-yourself-addiction-family" />
 
         <div className="prose prose-lg max-w-none text-foreground">
           <p>

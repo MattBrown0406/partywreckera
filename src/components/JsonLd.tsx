@@ -451,3 +451,122 @@ export const MedicalWebPageJsonLd = ({
     </Helmet>
   );
 };
+
+export const WebPageJsonLd = ({
+  name,
+  description,
+  url,
+  about,
+}: {
+  name: string;
+  description: string;
+  url: string;
+  about?: string[];
+}) => {
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": name,
+    "description": description,
+    "url": url,
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": SITE_NAME,
+      "url": SITE_URL
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Matt Brown",
+      "url": `${SITE_URL}/host`
+    },
+    ...(about && {
+      "about": about.map((topic) => ({
+        "@type": "Thing",
+        "name": topic
+      }))
+    })
+  };
+
+  return (
+    <Helmet>
+      <script type="application/ld+json">
+        {JSON.stringify(webPageSchema)}
+      </script>
+    </Helmet>
+  );
+};
+
+export const DefinedTermSetJsonLd = ({
+  name,
+  description,
+  url,
+  terms,
+}: {
+  name: string;
+  description: string;
+  url: string;
+  terms: { term: string; definition: string }[];
+}) => {
+  const termSetSchema = {
+    "@context": "https://schema.org",
+    "@type": "DefinedTermSet",
+    "name": name,
+    "description": description,
+    "url": url,
+    "hasDefinedTerm": terms.map((item) => ({
+      "@type": "DefinedTerm",
+      "name": item.term,
+      "description": item.definition,
+      "inDefinedTermSet": url
+    }))
+  };
+
+  return (
+    <Helmet>
+      <script type="application/ld+json">
+        {JSON.stringify(termSetSchema)}
+      </script>
+    </Helmet>
+  );
+};
+
+export const CollectionPageJsonLd = ({
+  name,
+  description,
+  url,
+  items,
+}: {
+  name: string;
+  description: string;
+  url: string;
+  items: { name: string; url: string; description?: string }[];
+}) => {
+  const collectionSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": name,
+    "description": description,
+    "url": url,
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": items.map((item, index) => ({
+        "@type": "ListItem",
+        "position": index + 1,
+        "item": {
+          "@type": "WebPage",
+          "name": item.name,
+          "url": item.url,
+          ...(item.description && { "description": item.description })
+        }
+      }))
+    }
+  };
+
+  return (
+    <Helmet>
+      <script type="application/ld+json">
+        {JSON.stringify(collectionSchema)}
+      </script>
+    </Helmet>
+  );
+};

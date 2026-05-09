@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
+import AeoAnswerBlock from "@/components/AeoAnswerBlock";
 import { FAQJsonLd, BreadcrumbJsonLd } from "@/components/JsonLd";
 import { 
   Heart, 
@@ -31,6 +32,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { primaryAeoAnswers } from "@/lib/aeoContent";
 
 const coreConcepts = [
   {
@@ -204,6 +206,14 @@ const FamilyResources = () => {
                   <Link to="/help-now">Need Help Right Now?</Link>
                 </Button>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-12 sm:py-16">
+          <div className="container px-4">
+            <div className="mx-auto max-w-5xl">
+              <AeoAnswerBlock content={primaryAeoAnswers.enablingVsSupport} />
             </div>
           </div>
         </section>

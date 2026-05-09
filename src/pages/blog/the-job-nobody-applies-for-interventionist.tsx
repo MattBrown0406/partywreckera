@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import SocialShareButtons from "@/components/SocialShareButtons";
+import ArticleAnswerSummary from "@/components/ArticleAnswerSummary";
 import { ArrowLeft } from "lucide-react";
 import { ArticleJsonLd, BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
 import blogImage from "@/assets/blog-job-nobody-applies-for-interventionist.jpg";
@@ -102,6 +103,7 @@ const TheJobNobodyAppliesFor = () => {
             title="The Job Nobody Applies For: What It's Really Like to Be a Drug and Alcohol Interventionist"
           />
         </div>
+        <ArticleAnswerSummary slug="the-job-nobody-applies-for-interventionist" />
 
         <div className="prose prose-lg max-w-none text-foreground">
           <p>

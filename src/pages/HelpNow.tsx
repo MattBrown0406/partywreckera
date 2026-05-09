@@ -1,12 +1,14 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
+import AeoAnswerBlock from "@/components/AeoAnswerBlock";
 import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import TrackedExternalLink from "@/components/TrackedExternalLink";
 import { AlertTriangle, BookOpen, CalendarCheck, HeartHandshake, PhoneCall } from "lucide-react";
 import { Link } from "react-router-dom";
+import { primaryAeoAnswers } from "@/lib/aeoContent";
 import { funnelLinks } from "@/lib/funnelLinks";
 
 const faqItems = [
@@ -64,6 +66,14 @@ const HelpNow = () => {
                   <TrackedExternalLink href={funnelLinks.freedomReadiness} target="_blank" rel="noopener noreferrer" eventName="intervention_readiness_click" ctaLabel="Help Now hero Intervention Readiness">Check Intervention Readiness</TrackedExternalLink>
                 </Button>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-12 sm:py-16">
+          <div className="container px-4">
+            <div className="mx-auto max-w-5xl">
+              <AeoAnswerBlock content={primaryAeoAnswers.familyAddictionHelp} />
             </div>
           </div>
         </section>

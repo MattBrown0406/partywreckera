@@ -1,12 +1,30 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
+import AeoAnswerBlock from "@/components/AeoAnswerBlock";
 import TrackedExternalLink from "@/components/TrackedExternalLink";
+import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Play, BookOpen, ExternalLink, PhoneCall, Mail, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { primaryAeoAnswers } from "@/lib/aeoContent";
 import { funnelLinks } from "@/lib/funnelLinks";
+
+const startHereFaqs = [
+  {
+    question: "Where should I start if someone I love has an addiction?",
+    answer: "Start by slowing down, learning the basic family patterns, and choosing one next step. Party Wreckers points families toward education, free support through Family Squares, and direct intervention guidance when the situation cannot wait."
+  },
+  {
+    question: "Should I listen to episodes or ask for help first?",
+    answer: "If the situation is stable enough, start with the source guides and episodes. If safety, money, treatment refusal, legal issues, or family division are escalating, ask for help before trying another conversation."
+  },
+  {
+    question: "What is the fastest path from this site to live support?",
+    answer: "Join the free Family Squares support meeting, book a session if you cannot wait until Monday, or use the intervention readiness path if your family may need professional intervention guidance."
+  }
+];
 
 const StartHere = () => {
   return (
@@ -17,6 +35,8 @@ const StartHere = () => {
         canonical="/start-here"
         keywords="addiction help, family support, where to start addiction, intervention help, addiction resources for families"
       />
+      <FAQJsonLd faqs={startHereFaqs} />
+      <BreadcrumbJsonLd items={[{ name: "Home", url: "/" }, { name: "Start Here", url: "/start-here" }]} />
       
       <Navbar />
       
@@ -49,7 +69,13 @@ const StartHere = () => {
           </div>
         </section>
 
-        <div className="container px-4 space-y-16">
+        <div className="container px-4 py-16 space-y-16">
+          <section>
+            <div className="max-w-5xl mx-auto">
+              <AeoAnswerBlock content={primaryAeoAnswers.familyAddictionHelp} />
+            </div>
+          </section>
+
           {/* Section 1: Read First */}
           <section>
             <div className="max-w-4xl mx-auto">

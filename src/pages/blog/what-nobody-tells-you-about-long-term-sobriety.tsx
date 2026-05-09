@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import SocialShareButtons from "@/components/SocialShareButtons";
+import ArticleAnswerSummary from "@/components/ArticleAnswerSummary";
 import { ArrowLeft } from "lucide-react";
 import { ArticleJsonLd, BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
 import blogImage from "@/assets/blog-long-term-sobriety-23-years.jpg";
@@ -102,6 +103,7 @@ const WhatNobodyTellsYouAboutLongTermSobriety = () => {
             title="What Nobody Tells You About Long-Term Sobriety"
           />
         </div>
+        <ArticleAnswerSummary slug="what-nobody-tells-you-about-long-term-sobriety" />
 
         <div className="prose prose-lg max-w-none text-foreground">
           <p>

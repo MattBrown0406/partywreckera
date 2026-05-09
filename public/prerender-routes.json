@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-09T01:03:40.760Z",
+  "generatedAt": "2026-05-09T16:18:55.904Z",
   "routes": [
     "/",
     "/advertise",
@@ -96,15 +96,21 @@
     "/blog/you-already-know-the-problem-isnt-information",
     "/blog/you-said-yes-intervention",
     "/conversation-starters",
+    "/enabling-vs-support",
     "/episodes",
+    "/family-addiction-help",
     "/family-reflection",
     "/family-resources",
     "/fear-inventory",
     "/from-party-wreckers",
+    "/glossary",
     "/help-now",
     "/host",
+    "/intervention-readiness",
     "/next-step",
     "/press",
+    "/recovery-resources",
+    "/sponsor-info",
     "/sponsors",
     "/start-here"
   ],

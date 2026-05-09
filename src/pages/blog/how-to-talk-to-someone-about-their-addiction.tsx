@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import SocialShareButtons from "@/components/SocialShareButtons";
+import ArticleAnswerSummary from "@/components/ArticleAnswerSummary";
 import { ArrowLeft } from "lucide-react";
 import { ArticleJsonLd, BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
 import blogImage from "@/assets/blog-how-to-talk-about-addiction-conversation.jpg";
@@ -103,6 +104,7 @@ const HowToTalkToSomeoneAboutTheirAddiction = () => {
             title="The Conversation You're Terrified to Have (And How to Actually Have It)"
           />
         </div>
+        <ArticleAnswerSummary slug="how-to-talk-to-someone-about-their-addiction" />
 
         <div className="prose prose-lg max-w-none text-foreground">
           <p>

@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import SocialShareButtons from "@/components/SocialShareButtons";
+import ArticleAnswerSummary from "@/components/ArticleAnswerSummary";
 import { ArrowLeft } from "lucide-react";
 import { ArticleJsonLd, BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
 import blogImage from "@/assets/blog-stopped-performing-sobriety.jpg";
@@ -98,6 +99,7 @@ const TheDayIStoppedPerformingSobriety = () => {
             title="The Day I Stopped Performing Sobriety and Started Actually Living It"
           />
         </div>
+        <ArticleAnswerSummary slug="the-day-i-stopped-performing-sobriety" />
 
         <div className="prose prose-lg max-w-none text-foreground">
           <p>

@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import SocialShareButtons from "@/components/SocialShareButtons";
+import ArticleAnswerSummary from "@/components/ArticleAnswerSummary";
 import { ArrowLeft } from "lucide-react";
 import { ArticleJsonLd, BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
 import blogImage from "@/assets/blog-how-to-choose-an-interventionist.jpg";
@@ -98,6 +99,7 @@ const HowToChooseAnInterventionist = () => {
             title="How to Choose an Interventionist: What to Look For, What to Avoid, and the Questions That Tell You Everything"
           />
         </div>
+        <ArticleAnswerSummary slug="how-to-choose-an-interventionist" />
 
         <div className="prose prose-lg max-w-none text-foreground">
           <p>

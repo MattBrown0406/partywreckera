@@ -20,6 +20,12 @@ import StartHere from "./pages/StartHere";
 import HelpNow from "./pages/HelpNow";
 import NextStep from "./pages/NextStep";
 import FromPartyWreckers from "./pages/FromPartyWreckers";
+import FamilyAddictionHelp from "./pages/FamilyAddictionHelp";
+import InterventionReadiness from "./pages/InterventionReadiness";
+import EnablingVsSupport from "./pages/EnablingVsSupport";
+import RecoveryResources from "./pages/RecoveryResources";
+import SponsorInfo from "./pages/SponsorInfo";
+import Glossary from "./pages/Glossary";
 import BlogIndex from "./pages/BlogIndex";
 import BlogPost from "./pages/BlogPost";
 import NotFound from "./pages/NotFound";
@@ -54,6 +60,12 @@ export const App = ({ Router = DefaultRouter }: AppProps) => (
           <Route path="/from-party-wreckers" element={<FromPartyWreckers />} />
           <Route path="/start-here" element={<StartHere />} />
           <Route path="/next-step" element={<NextStep />} />
+          <Route path="/family-addiction-help" element={<FamilyAddictionHelp />} />
+          <Route path="/intervention-readiness" element={<InterventionReadiness />} />
+          <Route path="/enabling-vs-support" element={<EnablingVsSupport />} />
+          <Route path="/recovery-resources" element={<RecoveryResources />} />
+          <Route path="/sponsor-info" element={<SponsorInfo />} />
+          <Route path="/glossary" element={<Glossary />} />
           <Route path="/episodes" element={<Episodes />} />
           <Route path="/sponsors" element={<Sponsors />} />
           <Route path="/advertise" element={<Advertise />} />
