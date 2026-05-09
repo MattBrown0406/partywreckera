@@ -1,0 +1,1 @@
+DELETE FROM public.party_wreckers_advertiser_inquiries WHERE email IN ('verify@example.com','bulk1@example.com','bulk2@example.com');
