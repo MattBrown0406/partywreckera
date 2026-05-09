@@ -124,6 +124,29 @@ const outreachTemplates = [
   },
 ];
 
+const weeklyFunnelRhythm = [
+  {
+    title: "Monday: publish and index",
+    body: "Confirm the latest Lovable publish is live, open Search Console, resubmit https://partywreckers.com/sitemap.xml, and inspect the newest source page URL.",
+  },
+  {
+    title: "Tuesday: strengthen links",
+    body: "Add or update internal links from the homepage, episodes page, blog index, and two relevant articles into the strongest source page.",
+  },
+  {
+    title: "Wednesday: listener path check",
+    body: "Review Family Squares, Get Answers Now, and Intervention Readiness clicks. Rewrite one CTA if the path is getting views but not clicks.",
+  },
+  {
+    title: "Thursday: sponsor proof",
+    body: "Export the sponsor report, note the best pages and placements, and prepare one proof point for outreach.",
+  },
+  {
+    title: "Friday: money list",
+    body: "Contact 10 sponsor prospects, follow up with 5, move 2 into proposal or close status, and mark the rest yes, no, or maybe.",
+  },
+];
+
 const FunnelReport = () => {
   const [secret, setSecret] = useState(() =>
     typeof window === "undefined" ? "" : window.localStorage.getItem(reportTokenKey) || "",
@@ -367,6 +390,28 @@ const FunnelReport = () => {
                 Could not load the report. Check the report secret and confirm the Lovable backend function is deployed.
               </div>
             )}
+
+            <Card className="mb-6 border-border bg-card">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <CheckSquare className="h-5 w-5 text-primary" />
+                  Weekly AEO and Revenue Rhythm
+                </CardTitle>
+                <p className="text-sm text-muted-foreground">
+                  Use this as the operating cadence: one indexing check, one internal-link pass, one listener-path check, one sponsor proof update, and one money-list session every week.
+                </p>
+              </CardHeader>
+              <CardContent>
+                <div className="grid gap-3 lg:grid-cols-5">
+                  {weeklyFunnelRhythm.map((item) => (
+                    <div key={item.title} className="rounded-lg border border-border bg-background p-4">
+                      <p className="text-sm font-semibold text-foreground">{item.title}</p>
+                      <p className="mt-2 text-xs leading-relaxed text-muted-foreground">{item.body}</p>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
 
             {data ? (
               <div className="space-y-6">

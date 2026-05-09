@@ -1,6 +1,8 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
+import ListenerRevenuePath from "@/components/ListenerRevenuePath";
+import SourcePageLinks from "@/components/SourcePageLinks";
 import { BreadcrumbJsonLd } from "@/components/JsonLd";
 import TrackedExternalLink from "@/components/TrackedExternalLink";
 import { Button } from "@/components/ui/button";
@@ -101,6 +103,18 @@ const FromPartyWreckers = () => {
             </div>
           </div>
         </section>
+
+        <ListenerRevenuePath
+          title="Choose based on urgency, not guilt."
+          description="This is the revenue bridge from the podcast into the larger family-help funnel: free support, immediate coaching, or intervention readiness."
+        />
+
+        <SourcePageLinks
+          compact
+          sponsor={false}
+          title="Still sorting out what this is?"
+          description="These short source pages are built for the questions listeners usually ask after an episode sounds too much like home."
+        />
 
         {partyWreckersPhone && (
           <section className="py-8">

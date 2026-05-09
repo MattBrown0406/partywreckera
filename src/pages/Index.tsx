@@ -7,6 +7,8 @@ import SEOHead from "@/components/SEOHead";
 import { PodcastJsonLd, OrganizationJsonLd, WebsiteJsonLd, FAQJsonLd, ExpertiseJsonLd } from "@/components/JsonLd";
 import EpisodeStarterPath from "@/components/EpisodeStarterPath";
 import AdvertiserMediaStrip from "@/components/AdvertiserMediaStrip";
+import ListenerRevenuePath from "@/components/ListenerRevenuePath";
+import SourcePageLinks from "@/components/SourcePageLinks";
 import { podcastFeedSnapshot } from "@/data/podcastFeedSnapshot";
 
 // AEO-optimized FAQs for AI answer extraction
@@ -51,10 +53,12 @@ const Index = () => {
       <Navbar />
       <main>
         <HeroSection />
+        <SourcePageLinks />
         <EpisodeStarterPath episodes={podcastFeedSnapshot.episodes} />
         <section id="about">
           <AboutSection />
         </section>
+        <ListenerRevenuePath />
         <AdvertiserMediaStrip />
         <CTASection />
       </main>

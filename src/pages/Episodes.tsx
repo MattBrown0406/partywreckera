@@ -13,6 +13,8 @@ import EpisodeStarterPath from "@/components/EpisodeStarterPath";
 import EpisodeFunnelPanel from "@/components/EpisodeFunnelPanel";
 import AdvertiserMediaStrip from "@/components/AdvertiserMediaStrip";
 import SponsorPlacement from "@/components/SponsorPlacement";
+import ListenerRevenuePath from "@/components/ListenerRevenuePath";
+import SourcePageLinks from "@/components/SourcePageLinks";
 import { getEpisodeSearchText, topicFilters } from "@/lib/episodeGuides";
 
 type Category = "all" | "understanding" | "family" | "intervention" | "recovery";
@@ -293,6 +295,13 @@ const Episodes = () => {
                 </div>
 
                 <EpisodeStarterPath episodes={categorizedEpisodes} compact />
+                <SourcePageLinks
+                  compact
+                  sponsor={false}
+                  title="Need the answer version?"
+                  description="If browsing episodes turns into circling the same problem, these source pages give families a direct path into help, readiness, and clearer language."
+                />
+                <ListenerRevenuePath compact />
                 <EpisodeFunnelPanel tone="support" />
 
                 {/* Search Bar */}

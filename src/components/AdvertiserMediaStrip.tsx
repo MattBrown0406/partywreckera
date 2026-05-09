@@ -1,4 +1,4 @@
-import { BarChart3, Mail, Mic2, Users } from "lucide-react";
+import { BarChart3, FileText, Mail, Mic2, ShieldCheck, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -18,6 +18,11 @@ const advertiserSignals = [
     label: "Placement",
     value: "Podcast, article, newsletter, and resource-page sponsorship opportunities",
   },
+  {
+    icon: ShieldCheck,
+    label: "Standards",
+    value: "Sponsor fit is screened so offers belong beside family recovery and addiction education.",
+  },
 ];
 
 const AdvertiserMediaStrip = () => {
@@ -36,6 +41,12 @@ const AdvertiserMediaStrip = () => {
                 <Link to="/advertise">
                   <Mail className="h-4 w-4" />
                   Sponsor Inquiry
+                </Link>
+              </Button>
+              <Button variant="outline" asChild>
+                <Link to="/sponsor-info">
+                  <FileText className="h-4 w-4" />
+                  Sponsor Info
                 </Link>
               </Button>
               <Button variant="outline" asChild>

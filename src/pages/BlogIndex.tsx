@@ -7,6 +7,7 @@ import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
 import { blogArticles } from "@/data/blogData";
 import NewsletterSignup from "@/components/NewsletterSignup";
 import BlogConversionPanel from "@/components/BlogConversionPanel";
+import SourcePageLinks from "@/components/SourcePageLinks";
 
 const BlogIndex = () => {
   return (
@@ -53,6 +54,15 @@ const BlogIndex = () => {
             Practical insights on addiction, family dynamics, and recovery. 
             Real advice for real families navigating complex challenges.
           </p>
+        </div>
+
+        <div className="mb-12">
+          <SourcePageLinks
+            compact
+            sponsor={false}
+            title="Start with the source guides"
+            description="The blog is the library. These pages are the answer-first routes that should earn links, show up in answer engines, and move families toward the right next step."
+          />
         </div>
         
         {/* Article Cards Grid */}

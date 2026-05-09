@@ -62,6 +62,15 @@ const mattLinks = [
   { label: "Press & Media Kit", href: "/press" },
 ];
 
+const guideLinks = [
+  { label: "Family Addiction Help", href: "/family-addiction-help" },
+  { label: "Intervention Readiness", href: "/intervention-readiness" },
+  { label: "Enabling vs Support", href: "/enabling-vs-support" },
+  { label: "Recovery Resources", href: "/recovery-resources" },
+  { label: "Glossary", href: "/glossary" },
+  { label: "Sponsor Information", href: "/sponsor-info" },
+];
+
 const podcastLinks = [
   { label: "Apple Podcasts", href: "https://podcasts.apple.com/us/podcast/the-party-wreckers/id1611904917", icon: ApplePodcastsIcon, color: "text-[#9933CC]" },
   { label: "Spotify", href: "https://open.spotify.com/show/4YJLvnFuZr5EkcGs9b47fn?si=bde59f5f480c45a2", icon: SpotifyIcon, color: "text-[#1DB954]" },
@@ -87,7 +96,7 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop nav */}
-          <div className="hidden md:flex items-center gap-6">
+          <div className="hidden md:flex items-center gap-4 text-sm">
             {navLinks.map((link) => (
               link.href.startsWith("/") && !link.href.includes("#") ? (
                 <Link
@@ -115,6 +124,23 @@ const Navbar = () => {
                 </a>
               )
             ))}
+
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <button className="text-muted-foreground hover:text-foreground transition-colors font-medium flex items-center gap-1">
+                  Guides <ChevronDown className="h-4 w-4" />
+                </button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end" className="bg-background border-border">
+                {guideLinks.map((link) => (
+                  <DropdownMenuItem key={link.label} asChild>
+                    <Link to={link.href} className="cursor-pointer">
+                      {link.label}
+                    </Link>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
             
             {/* Matt Dropdown */}
             <DropdownMenu>
@@ -206,6 +232,21 @@ const Navbar = () => {
                 )
               ))}
               
+              {/* Matt links in mobile */}
+              <div className="border-t border-border pt-4 mt-2">
+                <p className="text-xs uppercase tracking-wider text-muted-foreground mb-2">Guides</p>
+                {guideLinks.map((link) => (
+                  <Link
+                    key={link.label}
+                    to={link.href}
+                    className="text-muted-foreground hover:text-foreground transition-colors font-medium py-2 block"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+
               {/* Matt links in mobile */}
               <div className="border-t border-border pt-4 mt-2">
                 <p className="text-xs uppercase tracking-wider text-muted-foreground mb-2">About Matt</p>
