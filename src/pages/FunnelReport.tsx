@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BarChart3, Download, DollarSign, Lock, Mail, Printer, RefreshCw, Save } from "lucide-react";
+import { BarChart3, CalendarDays, CheckSquare, Download, DollarSign, Lock, Mail, Printer, RefreshCw, Save } from "lucide-react";
 
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
@@ -40,6 +40,37 @@ interface SponsorProspect {
 
 const reportTokenKey = "party_wreckers_report_secret";
 const prospectStatuses = ["new", "contacted", "proposal_sent", "negotiating", "sold", "lost"];
+const sponsorSlotStatuses = ["available", "reserved", "sold"];
+const sponsorSlotTypes = [
+  {
+    id: "episode",
+    label: "Episode sponsor",
+    capacity: 4,
+    guidance: "Offer a specific episode theme or hold one slot while sponsor fit is confirmed.",
+    soldOutGuidance: "Episode inventory is full. Offer next month or move them into a bundle waitlist.",
+  },
+  {
+    id: "monthly_site",
+    label: "Monthly site sponsor",
+    capacity: 3,
+    guidance: "Offer a tracked page placement tied to a relevant recovery or family topic.",
+    soldOutGuidance: "Site inventory is full. Offer next month or a podcast-only sponsor slot.",
+  },
+  {
+    id: "bundle",
+    label: "Bundle sponsor",
+    capacity: 1,
+    guidance: "Reserve this for the best-fit sponsor with podcast plus website value.",
+    soldOutGuidance: "Bundle inventory is full. Offer next month or split the package into episode plus site waitlist.",
+  },
+];
+const sponsorChecklistItems = [
+  ["logo_received", "Logo received"],
+  ["link_received", "Link received"],
+  ["copy_approved", "Copy approved"],
+  ["placement_live", "Placement live"],
+  ["first_report_sent", "First report sent"],
+] as const;
 
 const FunnelReport = () => {
   const [secret, setSecret] = useState(() =>
@@ -49,6 +80,7 @@ const FunnelReport = () => {
   const [status, setStatus] = useState<"idle" | "loading" | "error">("idle");
   const [prospects, setProspects] = useState<SponsorProspect[]>([]);
   const [prospectStatus, setProspectStatus] = useState<"idle" | "loading" | "saving" | "error">("idle");
+  const [inventoryMonth, setInventoryMonth] = useState(getCurrentSponsorMonth);
 
   const loadReport = async () => {
     setStatus("loading");
@@ -117,12 +149,7 @@ const FunnelReport = () => {
         action: "update",
         id: prospect.id,
         status: prospect.status,
-        metadata_patch: {
-          sponsor_notes: getMetadataString(prospect.metadata, "sponsor_notes"),
-          next_action: getMetadataString(prospect.metadata, "next_action"),
-          expected_monthly_value: getMetadataString(prospect.metadata, "expected_monthly_value"),
-          sold_amount: getMetadataString(prospect.metadata, "sold_amount"),
-        },
+        metadata_patch: buildProspectMetadataPatch(prospect),
       },
     });
 
@@ -155,6 +182,7 @@ const FunnelReport = () => {
 
   const sponsorActionItems = getSponsorActionItems(prospects);
   const sponsorRevenue = getSponsorRevenueSummary(prospects);
+  const sponsorInventory = getSponsorInventory(prospects, inventoryMonth);
 
   return (
     <div className="min-h-screen bg-background">
@@ -302,6 +330,41 @@ const FunnelReport = () => {
                           <RevenueMetricCard label="Sold monthly" value={sponsorRevenue.soldMonthly} />
                         </div>
 
+                        <div className="mt-4 rounded-lg border border-border bg-background p-4">
+                          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                            <div>
+                              <p className="flex items-center gap-2 font-semibold text-foreground">
+                                <CalendarDays className="h-4 w-4 text-primary" />
+                                Monthly Sponsor Inventory
+                              </p>
+                              <p className="mt-1 text-sm text-muted-foreground">Default monthly capacity: 4 episode slots, 3 site slots, 1 bundle slot.</p>
+                            </div>
+                            <Input
+                              type="month"
+                              value={inventoryMonth}
+                              onChange={(event) => setInventoryMonth(event.target.value)}
+                              className="w-full sm:w-44"
+                            />
+                          </div>
+
+                          <div className="mt-4 grid gap-3 lg:grid-cols-3">
+                            {sponsorInventory.map((slot) => (
+                              <div key={slot.id} className="rounded-lg border border-border bg-card p-4">
+                                <p className="font-semibold text-foreground">{slot.label}</p>
+                                <div className="mt-3 grid grid-cols-4 gap-2 text-center text-sm">
+                                  <InventoryCount label="Cap" value={slot.capacity} />
+                                  <InventoryCount label="Reserved" value={slot.reserved} />
+                                  <InventoryCount label="Sold" value={slot.sold} />
+                                  <InventoryCount label="Available" value={slot.available} />
+                                </div>
+                                <p className={`mt-3 text-sm ${slot.available <= 0 ? "text-destructive" : "text-muted-foreground"}`}>
+                                  {slot.available <= 0 ? slot.soldOutGuidance : slot.guidance}
+                                </p>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+
                         <div className="mt-4 grid gap-3 lg:grid-cols-3">
                           {sponsorActionItems.map((item) => (
                             <div key={item.id} className="rounded-lg border border-border bg-background p-3">
@@ -381,6 +444,13 @@ const RevenueMetricCard = ({ label, value }: { label: string; value: number }) =
   </div>
 );
 
+const InventoryCount = ({ label, value }: { label: string; value: number }) => (
+  <div className="rounded-md border border-border bg-background px-2 py-2">
+    <p className="text-[10px] uppercase tracking-widest text-muted-foreground">{label}</p>
+    <p className="mt-1 text-lg font-semibold text-foreground">{value}</p>
+  </div>
+);
+
 const SponsorProspectCard = ({
   prospect,
   onChange,
@@ -399,6 +469,9 @@ const SponsorProspectCard = ({
   const recommendation = getProspectRecommendation(prospect);
   const expectedValue = getMetadataString(prospect.metadata, "expected_monthly_value");
   const soldAmount = getMetadataString(prospect.metadata, "sold_amount");
+  const slotType = getMetadataString(prospect.metadata, "sponsor_slot_type");
+  const slotMonth = getMetadataString(prospect.metadata, "sponsor_slot_month") || getCurrentSponsorMonth();
+  const slotStatus = getMetadataString(prospect.metadata, "sponsor_slot_status") || "available";
   const proposalHref = buildProposalEmailHref(prospect);
 
   return (
@@ -471,6 +544,64 @@ const SponsorProspectCard = ({
             onChange={(event) => onMetadataChange(prospect.id, { sponsor_notes: event.target.value })}
             className="min-h-[96px]"
           />
+          <div className="rounded-lg border border-border bg-card p-3">
+            <p className="mb-3 flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+              <CalendarDays className="h-4 w-4 text-primary" />
+              Inventory Match
+            </p>
+            <div className="grid gap-3 sm:grid-cols-2">
+              <select
+                value={slotType}
+                onChange={(event) => onMetadataChange(prospect.id, { sponsor_slot_type: event.target.value })}
+                className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground"
+              >
+                <option value="">No slot selected</option>
+                {sponsorSlotTypes.map((slot) => (
+                  <option key={slot.id} value={slot.id}>
+                    {slot.label}
+                  </option>
+                ))}
+              </select>
+              <Input
+                type="month"
+                value={slotMonth}
+                onChange={(event) => onMetadataChange(prospect.id, { sponsor_slot_month: event.target.value })}
+              />
+              <select
+                value={slotStatus}
+                onChange={(event) => onMetadataChange(prospect.id, { sponsor_slot_status: event.target.value })}
+                className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground sm:col-span-2"
+              >
+                {sponsorSlotStatuses.map((status) => (
+                  <option key={status} value={status}>
+                    {status}
+                  </option>
+                ))}
+              </select>
+            </div>
+          </div>
+          <div className="rounded-lg border border-border bg-card p-3">
+            <p className="mb-3 flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+              <CheckSquare className="h-4 w-4 text-primary" />
+              Placement Checklist
+            </p>
+            <div className="grid gap-2 sm:grid-cols-2">
+              {sponsorChecklistItems.map(([key, label]) => {
+                const isChecked = getMetadataString(prospect.metadata, key) === "true";
+                return (
+                  <label key={key} className="flex items-center gap-2 rounded-md border border-border bg-background px-3 py-2 text-sm text-muted-foreground">
+                    <input
+                      type="checkbox"
+                      checked={isChecked}
+                      onChange={(event) => onMetadataChange(prospect.id, { [key]: event.target.checked ? "true" : "false" })}
+                      className="h-4 w-4"
+                    />
+                    <span>{label}</span>
+                  </label>
+                );
+              })}
+            </div>
+          </div>
           <Button variant="outline" className="w-full" asChild>
             <a href={proposalHref}>
               <Mail className="h-4 w-4" />
@@ -490,7 +621,29 @@ const SponsorProspectCard = ({
 const getMetadataString = (metadata: Record<string, unknown> | null, key: string) => {
   const value = metadata?.[key];
   if (typeof value === "number") return String(value);
+  if (typeof value === "boolean") return value ? "true" : "false";
   return typeof value === "string" ? value : "";
+};
+
+const buildProspectMetadataPatch = (prospect: SponsorProspect) => {
+  const slotType = getMetadataString(prospect.metadata, "sponsor_slot_type");
+  const slotMonth = getMetadataString(prospect.metadata, "sponsor_slot_month");
+  const slotStatus = getMetadataString(prospect.metadata, "sponsor_slot_status");
+
+  return {
+    sponsor_notes: getMetadataString(prospect.metadata, "sponsor_notes"),
+    next_action: getMetadataString(prospect.metadata, "next_action"),
+    expected_monthly_value: getMetadataString(prospect.metadata, "expected_monthly_value"),
+    sold_amount: getMetadataString(prospect.metadata, "sold_amount"),
+    sponsor_slot_type: slotType,
+    sponsor_slot_month: slotType ? slotMonth || getCurrentSponsorMonth() : slotMonth,
+    sponsor_slot_status: slotType ? slotStatus || "available" : slotStatus,
+    logo_received: getMetadataString(prospect.metadata, "logo_received"),
+    link_received: getMetadataString(prospect.metadata, "link_received"),
+    copy_approved: getMetadataString(prospect.metadata, "copy_approved"),
+    placement_live: getMetadataString(prospect.metadata, "placement_live"),
+    first_report_sent: getMetadataString(prospect.metadata, "first_report_sent"),
+  };
 };
 
 const downloadCsv = (filename: string, csv: string) => {
@@ -672,6 +825,39 @@ const getSponsorRevenueSummary = (prospects: SponsorProspect[]) =>
     },
     { openPipeline: 0, closingPipeline: 0, soldMonthly: 0 },
   );
+
+const getCurrentSponsorMonth = () => {
+  const now = new Date();
+  return `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}`;
+};
+
+const getSponsorInventory = (prospects: SponsorProspect[], month: string) =>
+  sponsorSlotTypes.map((slot) => {
+    const matchedProspects = prospects.filter((prospect) => {
+      const prospectSlot = getMetadataString(prospect.metadata, "sponsor_slot_type");
+      const prospectMonth = getMetadataString(prospect.metadata, "sponsor_slot_month");
+      return prospectSlot === slot.id && prospectMonth === month;
+    });
+
+    const sold = matchedProspects.filter((prospect) => {
+      const slotStatus = getMetadataString(prospect.metadata, "sponsor_slot_status");
+      return slotStatus === "sold" || prospect.status === "sold";
+    }).length;
+
+    const reserved = matchedProspects.filter((prospect) => {
+      const slotStatus = getMetadataString(prospect.metadata, "sponsor_slot_status");
+      return slotStatus === "reserved" || (!slotStatus && ["proposal_sent", "negotiating"].includes(prospect.status));
+    }).length;
+
+    const available = Math.max(slot.capacity - sold - reserved, 0);
+
+    return {
+      ...slot,
+      sold,
+      reserved,
+      available,
+    };
+  });
 
 const buildProposalEmailHref = (prospect: SponsorProspect) => {
   const companyName = prospect.company || "your organization";
