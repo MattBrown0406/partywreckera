@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BarChart3, CalendarDays, CheckSquare, Download, DollarSign, Lock, Mail, Printer, RefreshCw, Save } from "lucide-react";
+import { BarChart3, CalendarDays, CheckSquare, ClipboardList, Download, DollarSign, Lock, Mail, Plus, Printer, RefreshCw, Save, Trash2, Upload } from "lucide-react";
 
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
@@ -71,6 +71,58 @@ const sponsorChecklistItems = [
   ["placement_live", "Placement live"],
   ["first_report_sent", "First report sent"],
 ] as const;
+const sponsorCategories = [
+  "Treatment center",
+  "Sober living",
+  "Detox provider",
+  "Therapist",
+  "Recovery coach",
+  "Author / course",
+  "Recovery tech",
+  "Intervention / family service",
+  "Other",
+];
+const emptyTargetForm = {
+  company: "",
+  name: "",
+  email: "",
+  sponsorCategory: sponsorCategories[0],
+  contactRole: "",
+  website: "",
+  message: "",
+};
+const outreachTemplates = [
+  {
+    id: "first_contact",
+    label: "First contact",
+    subject: "Sponsoring Party Wreckers",
+    body: "I wanted to reach out because Party Wreckers reaches families and recovery-adjacent listeners while they are thinking about addiction, support, treatment, and next steps. If your organization is open to sponsor placements, I can send the package page and current inventory.",
+  },
+  {
+    id: "follow_up",
+    label: "Follow-up",
+    subject: "Following up on Party Wreckers sponsorship",
+    body: "Just wanted to follow up on the Party Wreckers sponsor options. The available packages include episode sponsorship, monthly site placement, and a podcast plus website bundle. Happy to point you toward the best fit if this is still worth exploring.",
+  },
+  {
+    id: "proposal",
+    label: "Proposal link",
+    subject: "Party Wreckers sponsor package",
+    body: "Here is the sponsor package page with the Episode Sponsor, Monthly Site Sponsor, and Bundle Sponsor options: https://partywreckers.com/advertise/packages. If one looks close, reply with the package that fits and I can send available inventory.",
+  },
+  {
+    id: "not_fit",
+    label: "Not a fit",
+    subject: "Party Wreckers sponsor fit",
+    body: "Thanks for taking a look. I do not think this is the right sponsor fit for Party Wreckers right now, but I appreciate the conversation and will keep you in mind if the audience or inventory changes.",
+  },
+  {
+    id: "asset_request",
+    label: "Asset request",
+    subject: "Sponsor assets for Party Wreckers",
+    body: "To get your sponsor placement ready, please send the final sponsor URL, logo, approved short copy, and any required language. Once the placement is live, I will track activity for the first sponsor report.",
+  },
+];
 
 const FunnelReport = () => {
   const [secret, setSecret] = useState(() =>
@@ -81,6 +133,8 @@ const FunnelReport = () => {
   const [prospects, setProspects] = useState<SponsorProspect[]>([]);
   const [prospectStatus, setProspectStatus] = useState<"idle" | "loading" | "saving" | "error">("idle");
   const [inventoryMonth, setInventoryMonth] = useState(getCurrentSponsorMonth);
+  const [targetForm, setTargetForm] = useState(emptyTargetForm);
+  const [csvInput, setCsvInput] = useState("");
 
   const loadReport = async () => {
     setStatus("loading");
@@ -164,6 +218,90 @@ const FunnelReport = () => {
     setProspectStatus("idle");
   };
 
+  const createTarget = async () => {
+    if (!targetForm.company && !targetForm.email) return;
+    setProspectStatus("saving");
+
+    const { data: result, error } = await supabase.functions.invoke("party-wreckers-advertiser-admin", {
+      headers: {
+        "x-report-secret": secret,
+      },
+      body: {
+        action: "create",
+        prospect: {
+          name: targetForm.name,
+          email: targetForm.email,
+          company: targetForm.company,
+          message: targetForm.message || `Owner-added sponsor target: ${targetForm.sponsorCategory}`,
+          status: "new",
+          sponsor_category: targetForm.sponsorCategory,
+          contact_role: targetForm.contactRole,
+          website: targetForm.website,
+          target_source: "manual",
+        },
+      },
+    });
+
+    if (error) {
+      setProspectStatus("error");
+      return;
+    }
+
+    setProspects((current) => [...((result?.prospects || []) as SponsorProspect[]), ...current]);
+    setTargetForm(emptyTargetForm);
+    setProspectStatus("idle");
+  };
+
+  const importTargets = async () => {
+    const importedProspects = parseSponsorCsv(csvInput);
+    if (!importedProspects.length) return;
+    setProspectStatus("saving");
+
+    const { data: result, error } = await supabase.functions.invoke("party-wreckers-advertiser-admin", {
+      headers: {
+        "x-report-secret": secret,
+      },
+      body: {
+        action: "bulk_create",
+        prospects: importedProspects,
+      },
+    });
+
+    if (error) {
+      setProspectStatus("error");
+      return;
+    }
+
+    setProspects((current) => [...((result?.prospects || []) as SponsorProspect[]), ...current]);
+    setCsvInput("");
+    setProspectStatus("idle");
+  };
+
+  const deleteProspect = async (prospect: SponsorProspect) => {
+    setProspectStatus("saving");
+    const { error } = await supabase.functions.invoke("party-wreckers-advertiser-admin", {
+      headers: {
+        "x-report-secret": secret,
+      },
+      body: {
+        action: "delete",
+        id: prospect.id,
+      },
+    });
+
+    if (error) {
+      setProspectStatus("error");
+      return;
+    }
+
+    setProspects((current) => current.filter((currentProspect) => currentProspect.id !== prospect.id));
+    setProspectStatus("idle");
+  };
+
+  const exportProspects = () => {
+    downloadCsv("party-wreckers-sponsor-prospects.csv", buildProspectCsv(prospects));
+  };
+
   const downloadSponsorCsv = () => {
     if (!data) return;
     downloadCsv("party-wreckers-sponsor-report.csv", buildSponsorCsv(data));
@@ -183,6 +321,7 @@ const FunnelReport = () => {
   const sponsorActionItems = getSponsorActionItems(prospects);
   const sponsorRevenue = getSponsorRevenueSummary(prospects);
   const sponsorInventory = getSponsorInventory(prospects, inventoryMonth);
+  const weeklyActions = getWeeklySponsorActions(prospects);
 
   return (
     <div className="min-h-screen bg-background">
@@ -377,6 +516,126 @@ const FunnelReport = () => {
                       </div>
                     )}
 
+                    {prospects.length > 0 && (
+                      <div className="mb-5 rounded-lg border border-border bg-background p-4">
+                        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                          <div>
+                            <p className="flex items-center gap-2 font-semibold text-foreground">
+                              <ClipboardList className="h-4 w-4 text-primary" />
+                              Weekly Sponsor Sales Action List
+                            </p>
+                            <p className="mt-1 text-sm text-muted-foreground">A simple weekly queue: contact 10, follow up with 5, close 2.</p>
+                          </div>
+                          <Button variant="outline" onClick={exportProspects}>
+                            <Download className="h-4 w-4" />
+                            Export Prospects
+                          </Button>
+                        </div>
+                        <div className="mt-4 grid gap-4 lg:grid-cols-3">
+                          <ActionList title="Contact These" items={weeklyActions.contact} />
+                          <ActionList title="Follow Up" items={weeklyActions.followUp} />
+                          <ActionList title="Close These" items={weeklyActions.close} />
+                        </div>
+                      </div>
+                    )}
+
+                    <div className="mb-5 grid gap-5 lg:grid-cols-[1fr_0.9fr]">
+                      <Card className="border-border bg-background">
+                        <CardHeader>
+                          <CardTitle className="text-xl">Add Sponsor Target</CardTitle>
+                        </CardHeader>
+                        <CardContent className="space-y-3">
+                          <div className="grid gap-3 sm:grid-cols-2">
+                            <Input
+                              placeholder="Company"
+                              value={targetForm.company}
+                              onChange={(event) => setTargetForm({ ...targetForm, company: event.target.value })}
+                            />
+                            <Input
+                              placeholder="Contact name"
+                              value={targetForm.name}
+                              onChange={(event) => setTargetForm({ ...targetForm, name: event.target.value })}
+                            />
+                          </div>
+                          <div className="grid gap-3 sm:grid-cols-2">
+                            <Input
+                              type="email"
+                              placeholder="Email"
+                              value={targetForm.email}
+                              onChange={(event) => setTargetForm({ ...targetForm, email: event.target.value })}
+                            />
+                            <Input
+                              placeholder="Contact role"
+                              value={targetForm.contactRole}
+                              onChange={(event) => setTargetForm({ ...targetForm, contactRole: event.target.value })}
+                            />
+                          </div>
+                          <div className="grid gap-3 sm:grid-cols-2">
+                            <select
+                              value={targetForm.sponsorCategory}
+                              onChange={(event) => setTargetForm({ ...targetForm, sponsorCategory: event.target.value })}
+                              className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground"
+                            >
+                              {sponsorCategories.map((category) => (
+                                <option key={category} value={category}>
+                                  {category}
+                                </option>
+                              ))}
+                            </select>
+                            <Input
+                              placeholder="Website"
+                              value={targetForm.website}
+                              onChange={(event) => setTargetForm({ ...targetForm, website: event.target.value })}
+                            />
+                          </div>
+                          <Textarea
+                            placeholder="Why this sponsor is a fit"
+                            value={targetForm.message}
+                            onChange={(event) => setTargetForm({ ...targetForm, message: event.target.value })}
+                            className="min-h-[90px]"
+                          />
+                          <Button onClick={createTarget} disabled={prospectStatus === "saving" || !secret || (!targetForm.company && !targetForm.email)}>
+                            <Plus className="h-4 w-4" />
+                            Add Target
+                          </Button>
+                        </CardContent>
+                      </Card>
+
+                      <Card className="border-border bg-background">
+                        <CardHeader>
+                          <CardTitle className="text-xl">CSV Import</CardTitle>
+                        </CardHeader>
+                        <CardContent className="space-y-3">
+                          <p className="text-sm text-muted-foreground">
+                            Paste rows with headers: company, name, email, category, role, website, notes.
+                          </p>
+                          <Textarea
+                            placeholder="company,name,email,category,role,website,notes"
+                            value={csvInput}
+                            onChange={(event) => setCsvInput(event.target.value)}
+                            className="min-h-[150px] font-mono text-xs"
+                          />
+                          <Button variant="outline" onClick={importTargets} disabled={prospectStatus === "saving" || !secret || !csvInput.trim()}>
+                            <Upload className="h-4 w-4" />
+                            Import Targets
+                          </Button>
+                        </CardContent>
+                      </Card>
+                    </div>
+
+                    <div className="mb-5 rounded-lg border border-border bg-background p-4">
+                      <p className="font-semibold text-foreground">Outreach Templates</p>
+                      <p className="mt-1 text-sm text-muted-foreground">Use these from individual prospect cards to open a prewritten email.</p>
+                      <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-5">
+                        {outreachTemplates.map((template) => (
+                          <div key={template.id} className="rounded-lg border border-border bg-card p-3">
+                            <p className="font-semibold text-foreground">{template.label}</p>
+                            <p className="mt-2 text-xs text-muted-foreground">{template.body}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
                     <div className="space-y-4">
                       {prospects.length ? (
                         prospects.map((prospect) => (
@@ -386,6 +645,7 @@ const FunnelReport = () => {
                             onChange={updateProspect}
                             onMetadataChange={updateProspectMetadata}
                             onSave={saveProspect}
+                            onDelete={deleteProspect}
                             isSaving={prospectStatus === "saving"}
                           />
                         ))
@@ -451,17 +711,37 @@ const InventoryCount = ({ label, value }: { label: string; value: number }) => (
   </div>
 );
 
+const ActionList = ({ title, items }: { title: string; items: Array<{ id: string; company: string; detail: string }> }) => (
+  <div className="rounded-lg border border-border bg-card p-4">
+    <p className="font-semibold text-foreground">{title}</p>
+    <div className="mt-3 space-y-3">
+      {items.length ? (
+        items.map((item) => (
+          <div key={item.id} className="rounded-md border border-border bg-background p-3">
+            <p className="text-sm font-semibold text-foreground">{item.company}</p>
+            <p className="mt-1 text-xs text-muted-foreground">{item.detail}</p>
+          </div>
+        ))
+      ) : (
+        <p className="text-sm text-muted-foreground">No prospects in this bucket yet.</p>
+      )}
+    </div>
+  </div>
+);
+
 const SponsorProspectCard = ({
   prospect,
   onChange,
   onMetadataChange,
   onSave,
+  onDelete,
   isSaving,
 }: {
   prospect: SponsorProspect;
   onChange: (id: string, updates: Partial<SponsorProspect>) => void;
   onMetadataChange: (id: string, metadataUpdates: Record<string, string>) => void;
   onSave: (prospect: SponsorProspect) => void;
+  onDelete: (prospect: SponsorProspect) => void;
   isSaving: boolean;
 }) => {
   const packageInterest = getMetadataString(prospect.metadata, "package_interest") || "Not provided";
@@ -608,9 +888,23 @@ const SponsorProspectCard = ({
               Email Proposal
             </a>
           </Button>
+          <div className="grid gap-2">
+            {outreachTemplates.map((template) => (
+              <Button key={template.id} variant="outline" size="sm" asChild>
+                <a href={buildTemplateEmailHref(prospect, template)}>
+                  <Mail className="h-4 w-4" />
+                  {template.label}
+                </a>
+              </Button>
+            ))}
+          </div>
           <Button className="w-full" onClick={() => onSave(prospect)} disabled={isSaving}>
             <Save className="h-4 w-4" />
             {isSaving ? "Saving..." : "Save Prospect"}
+          </Button>
+          <Button variant="outline" className="w-full text-destructive hover:text-destructive" onClick={() => onDelete(prospect)} disabled={isSaving}>
+            <Trash2 className="h-4 w-4" />
+            Delete Prospect
           </Button>
         </div>
       </div>
@@ -672,6 +966,27 @@ const buildSponsorCsv = (data: FunnelReportData) => {
   appendCsvSection(rows, "Sponsor placements", data.sponsor_placements || []);
   appendCsvSection(rows, "Sponsor pages", data.sponsor_pages || []);
   appendCsvSection(rows, "Package interest", data.sponsor_package_interest || []);
+
+  return rows.map((row) => row.map(escapeCsv).join(",")).join("\n");
+};
+
+const buildProspectCsv = (prospects: SponsorProspect[]) => {
+  const rows = [
+    ["Company", "Name", "Email", "Status", "Category", "Role", "Website", "Expected Monthly", "Sold Monthly", "Next Action", "Notes"],
+    ...prospects.map((prospect) => [
+      prospect.company || "",
+      prospect.name,
+      prospect.email,
+      prospect.status,
+      getMetadataString(prospect.metadata, "sponsor_category"),
+      getMetadataString(prospect.metadata, "contact_role"),
+      getMetadataString(prospect.metadata, "website"),
+      getMetadataString(prospect.metadata, "expected_monthly_value"),
+      getMetadataString(prospect.metadata, "sold_amount"),
+      getMetadataString(prospect.metadata, "next_action"),
+      getMetadataString(prospect.metadata, "sponsor_notes"),
+    ]),
+  ];
 
   return rows.map((row) => row.map(escapeCsv).join(",")).join("\n");
 };
@@ -790,6 +1105,92 @@ const getSponsorActionItems = (prospects: SponsorProspect[]) => {
     }));
 };
 
+const getWeeklySponsorActions = (prospects: SponsorProspect[]) => ({
+  contact: prospects
+    .filter((prospect) => prospect.status === "new")
+    .slice(0, 10)
+    .map((prospect) => ({
+      id: prospect.id,
+      company: prospect.company || prospect.name,
+      detail: getMetadataString(prospect.metadata, "sponsor_category") || "Send first contact email.",
+    })),
+  followUp: prospects
+    .filter((prospect) => ["contacted", "proposal_sent"].includes(prospect.status))
+    .slice(0, 5)
+    .map((prospect) => ({
+      id: prospect.id,
+      company: prospect.company || prospect.name,
+      detail: getMetadataString(prospect.metadata, "next_action") || "Follow up and move toward package selection.",
+    })),
+  close: prospects
+    .filter((prospect) => prospect.status === "negotiating")
+    .slice(0, 2)
+    .map((prospect) => ({
+      id: prospect.id,
+      company: prospect.company || prospect.name,
+      detail: getMetadataString(prospect.metadata, "next_action") || "Confirm slot, price, sponsor assets, and close date.",
+    })),
+});
+
+const parseSponsorCsv = (csv: string) => {
+  const rows = csv
+    .split(/\r?\n/)
+    .map((row) => row.trim())
+    .filter(Boolean)
+    .map(parseCsvRow);
+
+  if (rows.length < 2) return [];
+
+  const headers = rows[0].map((header) => header.toLowerCase().trim());
+  return rows.slice(1).map((row) => {
+    const get = (name: string) => row[headers.indexOf(name)] || "";
+    const sponsorCategory = get("category") || get("sponsor_category") || sponsorCategories[0];
+    const message = get("notes") || get("message") || `CSV sponsor target: ${sponsorCategory}`;
+
+    return {
+      company: get("company"),
+      name: get("name") || get("contact"),
+      email: get("email"),
+      sponsor_category: sponsorCategory,
+      contact_role: get("role") || get("contact_role"),
+      website: get("website"),
+      message,
+      target_source: "csv_import",
+      metadata: {
+        sponsor_category: sponsorCategory,
+        contact_role: get("role") || get("contact_role"),
+        website: get("website"),
+      },
+    };
+  });
+};
+
+const parseCsvRow = (row: string) => {
+  const values: string[] = [];
+  let currentValue = "";
+  let isQuoted = false;
+
+  for (let index = 0; index < row.length; index += 1) {
+    const character = row[index];
+    const nextCharacter = row[index + 1];
+
+    if (character === "\"" && nextCharacter === "\"") {
+      currentValue += "\"";
+      index += 1;
+    } else if (character === "\"") {
+      isQuoted = !isQuoted;
+    } else if (character === "," && !isQuoted) {
+      values.push(currentValue.trim());
+      currentValue = "";
+    } else {
+      currentValue += character;
+    }
+  }
+
+  values.push(currentValue.trim());
+  return values;
+};
+
 const parseMoney = (value: string) => {
   const cleanedValue = value.replace(/[^0-9.]/g, "");
   const parsedValue = Number.parseFloat(cleanedValue);
@@ -882,6 +1283,18 @@ const buildProposalEmailHref = (prospect: SponsorProspect) => {
     .join("\n");
 
   return `mailto:${encodeURIComponent(prospect.email)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+};
+
+const buildTemplateEmailHref = (prospect: SponsorProspect, template: (typeof outreachTemplates)[number]) => {
+  const body = [
+    `Hi ${prospect.name},`,
+    "",
+    template.body,
+    "",
+    "Matt",
+  ].join("\n");
+
+  return `mailto:${encodeURIComponent(prospect.email)}?subject=${encodeURIComponent(template.subject)}&body=${encodeURIComponent(body)}`;
 };
 
 export default FunnelReport;
