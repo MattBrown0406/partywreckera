@@ -1,0 +1,1 @@
+DELETE FROM party_wreckers_advertiser_inquiries WHERE id = 'e9229947-72b6-4bf3-8132-da3dc625ecd1';
