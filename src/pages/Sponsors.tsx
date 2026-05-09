@@ -9,7 +9,9 @@ import betterhelpLogo from "@/assets/betterhelp-logo.png";
 import SEOHead from "@/components/SEOHead";
 import { BreadcrumbJsonLd } from "@/components/JsonLd";
 import TrackedExternalLink from "@/components/TrackedExternalLink";
+import SponsorPlacement from "@/components/SponsorPlacement";
 import { funnelLinks } from "@/lib/funnelLinks";
+import { sponsors } from "@/lib/sponsorInventory";
 
 const Sponsors = () => {
   return (
@@ -80,6 +82,65 @@ const Sponsors = () => {
                     </Button>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Sponsor Directory */}
+        <section className="border-y border-border bg-card py-12 sm:py-16">
+          <div className="container px-4">
+            <div className="mx-auto max-w-6xl">
+              <div className="mb-8 grid gap-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
+                <div>
+                  <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary">Sponsor directory</p>
+                  <h2 className="font-script text-4xl text-burgundy sm:text-5xl">Useful Partners, Cleanly Organized</h2>
+                </div>
+                <p className="text-muted-foreground">
+                  We keep sponsor placement selective so the site stays trustworthy for listeners and valuable for partners.
+                  Sponsors here should make sense for families, recovery, mental health, or the podcast community.
+                </p>
+              </div>
+
+              <div className="grid gap-4 md:grid-cols-3">
+                {sponsors.map((sponsor) => (
+                  <article key={sponsor.id} className="rounded-lg border border-border bg-background p-5">
+                    <div className="mb-4 flex h-16 items-center justify-center rounded-lg bg-white p-3">
+                      {sponsor.image ? (
+                        <img src={sponsor.image} alt={sponsor.imageAlt || sponsor.name} className="max-h-full max-w-full object-contain" />
+                      ) : (
+                        <span className="font-semibold text-foreground">{sponsor.name}</span>
+                      )}
+                    </div>
+                    <p className="text-xs font-semibold uppercase tracking-widest text-primary">{sponsor.label}</p>
+                    <h3 className="mt-2 text-xl font-semibold text-foreground">{sponsor.name}</h3>
+                    <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{sponsor.description}</p>
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      {sponsor.fit.map((item) => (
+                        <span key={item} className="rounded-full border border-border bg-secondary/60 px-3 py-1 text-xs text-muted-foreground">
+                          {item}
+                        </span>
+                      ))}
+                    </div>
+                    <Button className="mt-5 w-full" variant={sponsor.featured ? "default" : "outline"} asChild>
+                      <TrackedExternalLink
+                        href={sponsor.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        eventName="sponsor_click"
+                        ctaLabel={`Sponsors directory ${sponsor.name}`}
+                        metadata={{ sponsor_id: sponsor.id, sponsor_name: sponsor.name, placement: "sponsors_directory" }}
+                      >
+                        {sponsor.cta}
+                        <ExternalLink className="h-4 w-4" />
+                      </TrackedExternalLink>
+                    </Button>
+                  </article>
+                ))}
+              </div>
+
+              <div className="mt-8">
+                <SponsorPlacement placement="sponsors" title="Featured sponsor" />
               </div>
             </div>
           </div>

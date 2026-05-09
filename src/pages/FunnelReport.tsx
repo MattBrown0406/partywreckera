@@ -18,6 +18,10 @@ interface FunnelReportData {
   listener_lead_destinations?: Array<{ name: string; count: number }>;
   advertiser_pages?: Array<{ name: string; count: number }>;
   sponsor_package_interest?: Array<{ name: string; count: number }>;
+  sponsor_impressions_by_sponsor?: Array<{ name: string; count: number }>;
+  sponsor_clicks_by_sponsor?: Array<{ name: string; count: number }>;
+  sponsor_placements?: Array<{ name: string; count: number }>;
+  sponsor_pages?: Array<{ name: string; count: number }>;
   latest_events: Array<Record<string, string | null>>;
 }
 
@@ -120,6 +124,13 @@ const FunnelReport = () => {
                   <ReportList title="Listener Destinations" items={data.listener_lead_destinations || []} />
                   <ReportList title="Advertiser Pages" items={data.advertiser_pages || []} />
                   <ReportList title="Package Interest" items={data.sponsor_package_interest || []} />
+                </div>
+
+                <div className="grid gap-6 lg:grid-cols-4">
+                  <ReportList title="Sponsor Impressions" items={data.sponsor_impressions_by_sponsor || []} />
+                  <ReportList title="Sponsor Clicks" items={data.sponsor_clicks_by_sponsor || []} />
+                  <ReportList title="Sponsor Placements" items={data.sponsor_placements || []} />
+                  <ReportList title="Sponsor Pages" items={data.sponsor_pages || []} />
                 </div>
               </div>
             ) : (

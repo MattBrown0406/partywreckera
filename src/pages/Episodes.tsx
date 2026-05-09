@@ -12,6 +12,7 @@ import TranscriptDialog from "@/components/TranscriptDialog";
 import EpisodeStarterPath from "@/components/EpisodeStarterPath";
 import EpisodeFunnelPanel from "@/components/EpisodeFunnelPanel";
 import AdvertiserMediaStrip from "@/components/AdvertiserMediaStrip";
+import SponsorPlacement from "@/components/SponsorPlacement";
 import { getEpisodeSearchText, topicFilters } from "@/lib/episodeGuides";
 
 type Category = "all" | "understanding" | "family" | "intervention" | "recovery";
@@ -285,6 +286,10 @@ const Episodes = () => {
                       </div>
                     </div>
                   </article>
+                </div>
+
+                <div className="mb-12">
+                  <SponsorPlacement placement="episodes" title="Sponsor spot" />
                 </div>
 
                 <EpisodeStarterPath episodes={categorizedEpisodes} compact />

@@ -117,6 +117,11 @@ serve(async (req) => {
         r.event_name || "",
       ),
     );
+    const sponsorEvents = rows.filter((r) =>
+      ["sponsor_impression", "sponsor_click"].includes(r.event_name || ""),
+    );
+    const sponsorImpressionRows = rows.filter((r) => r.event_name === "sponsor_impression");
+    const sponsorClickRows = rows.filter((r) => r.event_name === "sponsor_click");
 
     const pickPage = (row: Record<string, unknown>) => {
       const meta = (row.metadata as Record<string, unknown> | null) || {};
@@ -140,6 +145,22 @@ serve(async (req) => {
         null
       );
     };
+    const pickSponsor = (row: Record<string, unknown>) => {
+      const meta = (row.metadata as Record<string, unknown> | null) || {};
+      return (
+        (meta.sponsor_name as string | undefined) ||
+        (meta.sponsor_id as string | undefined) ||
+        (row.cta_label as string | null) ||
+        null
+      );
+    };
+    const pickPlacement = (row: Record<string, unknown>) => {
+      const meta = (row.metadata as Record<string, unknown> | null) || {};
+      return (meta.placement as string | undefined) || "unknown";
+    };
+    const sponsorClickThroughRate = sponsorImpressionRows.length
+      ? Number((sponsorClickRows.length / sponsorImpressionRows.length).toFixed(4))
+      : 0;
 
     const latest = rows.slice(0, 25).map((r) => ({
       event_name: r.event_name,
@@ -159,6 +180,9 @@ serve(async (req) => {
           intervention_readiness_clicks: readiness,
           advertiser_intent_events: advertiserIntent.length,
           advertiser_inquiries: advertiserCount || 0,
+          sponsor_impressions: sponsorImpressionRows.length,
+          sponsor_clicks: sponsorClickRows.length,
+          sponsor_click_through_rate: sponsorClickThroughRate,
           registrations: 0,
         },
         by_event: countBy(rows as unknown as Array<Record<string, unknown>>, (r) => r.event_name as string | null),
@@ -166,6 +190,9 @@ serve(async (req) => {
         top_destinations: countBy(rows as unknown as Array<Record<string, unknown>>, pickDestination),
         listener_lead_pages: countBy(listenerLeadEvents as unknown as Array<Record<string, unknown>>, pickPage),
         advertiser_pages: countBy(advertiserIntent as unknown as Array<Record<string, unknown>>, pickPage),
+        sponsor_activity_by_sponsor: countBy(sponsorEvents as unknown as Array<Record<string, unknown>>, pickSponsor),
+        sponsor_pages: countBy(sponsorEvents as unknown as Array<Record<string, unknown>>, pickPage),
+        sponsor_placements: countBy(sponsorEvents as unknown as Array<Record<string, unknown>>, pickPlacement),
         latest_events: latest,
       }),
       { headers: { ...corsHeaders, "Content-Type": "application/json" } },

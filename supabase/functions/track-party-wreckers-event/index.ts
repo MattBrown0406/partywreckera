@@ -13,6 +13,7 @@ const allowedEvents = new Set([
   "intervention_readiness_click",
   "freedom_bridge_click",
   "podcast_platform_click",
+  "sponsor_impression",
   "sponsor_click",
   "advertiser_package_click",
   "advertiser_inquiry_start",

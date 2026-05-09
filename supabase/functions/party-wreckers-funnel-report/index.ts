@@ -94,10 +94,30 @@ serve(async (req) => {
         row.event_name || "",
       ),
     );
+    const sponsorEvents = rows.filter((row) =>
+      ["sponsor_impression", "sponsor_click"].includes(row.event_name || ""),
+    );
+    const sponsorImpressionRows = rows.filter((row) => row.event_name === "sponsor_impression");
+    const sponsorClickRows = rows.filter((row) => row.event_name === "sponsor_click");
     const pickPackage = (row: Record<string, unknown>) => {
       const metadata = (row.metadata as Record<string, unknown> | null) || {};
       return (metadata.package_type as string | undefined) || (row.cta_label as string | null);
     };
+    const pickSponsor = (row: Record<string, unknown>) => {
+      const metadata = (row.metadata as Record<string, unknown> | null) || {};
+      return (
+        (metadata.sponsor_name as string | undefined) ||
+        (metadata.sponsor_id as string | undefined) ||
+        (row.cta_label as string | null)
+      );
+    };
+    const pickPlacement = (row: Record<string, unknown>) => {
+      const metadata = (row.metadata as Record<string, unknown> | null) || {};
+      return (metadata.placement as string | undefined) || "unknown";
+    };
+    const sponsorClickThroughRate = sponsorImpressionRows.length
+      ? Number((sponsorClickRows.length / sponsorImpressionRows.length).toFixed(4))
+      : 0;
 
     return new Response(
       JSON.stringify({
@@ -112,6 +132,9 @@ serve(async (req) => {
           advertiser_package_clicks: packageClicks,
           advertiser_email_clicks: emailClicks,
           advertiser_inquiries: advertiserCount || 0,
+          sponsor_impressions: sponsorImpressionRows.length,
+          sponsor_clicks: sponsorClickRows.length,
+          sponsor_click_through_rate: sponsorClickThroughRate,
           revenue_intent_clicks: getAnswers + readiness + advertiserClicks + packageClicks + emailClicks,
         },
         by_event: countBy(rows, "event_name"),
@@ -121,6 +144,13 @@ serve(async (req) => {
         listener_lead_destinations: countBy(listenerLeadEvents as unknown as Array<Record<string, unknown>>, "destination_url"),
         advertiser_pages: countBy(advertiserEvents as unknown as Array<Record<string, unknown>>, "source_path"),
         sponsor_package_interest: countBy(advertiserEvents as unknown as Array<Record<string, unknown>>, pickPackage),
+        sponsor_impressions_by_sponsor: countBy(
+          sponsorImpressionRows as unknown as Array<Record<string, unknown>>,
+          pickSponsor,
+        ),
+        sponsor_clicks_by_sponsor: countBy(sponsorClickRows as unknown as Array<Record<string, unknown>>, pickSponsor),
+        sponsor_placements: countBy(sponsorEvents as unknown as Array<Record<string, unknown>>, pickPlacement),
+        sponsor_pages: countBy(sponsorEvents as unknown as Array<Record<string, unknown>>, "source_path"),
         latest_events: rows.slice(0, 25),
       }),
       { headers: { ...corsHeaders, "Content-Type": "application/json" } },
