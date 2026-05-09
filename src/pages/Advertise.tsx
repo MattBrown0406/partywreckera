@@ -23,6 +23,15 @@ const advertiserFit = [
   "Brands serving parents, partners, and loved ones",
 ];
 
+const inventoryOptions = [
+  "Any available inventory",
+  "Episode sponsorship",
+  "Monthly website placement",
+  "Category partner availability",
+  "Podcast mention only",
+  "Custom bundle",
+];
+
 const sponsorPackages = [
   {
     name: "Starter Mention",
@@ -81,7 +90,14 @@ const reportItems = [
 ];
 
 const Advertise = () => {
-  const [form, setForm] = useState({ name: "", email: "", company: "", packageInterest: "", message: "" });
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    company: "",
+    packageInterest: "",
+    inventoryInterest: inventoryOptions[0],
+    message: "",
+  });
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [hasTrackedStart, setHasTrackedStart] = useState(false);
 
@@ -115,6 +131,7 @@ const Advertise = () => {
       metadata: {
         company: form.company,
         package_interest: form.packageInterest,
+        inventory_interest: form.inventoryInterest,
       },
     });
 
@@ -126,6 +143,7 @@ const Advertise = () => {
         metadata: {
           source: "party_wreckers_advertise_page",
           package_interest: form.packageInterest,
+          inventory_interest: form.inventoryInterest,
         },
       },
     });
@@ -134,9 +152,10 @@ const Advertise = () => {
       body: {
         name: form.name,
         email: form.email,
-        message: `Advertiser inquiry\n\nCompany: ${form.company}\n\n${form.message}`,
+        message: `Advertiser inquiry\n\nCompany: ${form.company}\nPackage interest: ${form.packageInterest || "Not provided"}\nInventory interest: ${form.inventoryInterest}\n\n${form.message}`,
         metadata: {
           package_interest: form.packageInterest,
+          inventory_interest: form.inventoryInterest,
         },
       },
     }) : { error: null };
@@ -147,7 +166,7 @@ const Advertise = () => {
     }
 
     setStatus("success");
-    setForm({ name: "", email: "", company: "", packageInterest: "", message: "" });
+    setForm({ name: "", email: "", company: "", packageInterest: "", inventoryInterest: inventoryOptions[0], message: "" });
   };
 
   return (
@@ -198,6 +217,18 @@ const Advertise = () => {
                     View Media Kit
                     <FileText className="w-5 h-5" />
                   </a>
+                </Button>
+                <Button variant="outline" size="xl" asChild>
+                  <TrackedExternalLink
+                    href="/party-wreckers-media-kit.pdf"
+                    eventName="advertiser_package_click"
+                    ctaLabel="Download media kit PDF"
+                    metadata={{ package_type: "media_kit_download" }}
+                    download
+                  >
+                    Download PDF
+                    <FileText className="w-5 h-5" />
+                  </TrackedExternalLink>
                 </Button>
               </div>
             </div>
@@ -394,6 +425,20 @@ const Advertise = () => {
                         <Input required type="email" placeholder="Email" value={form.email} onChange={(event) => setForm({ ...form, email: event.target.value })} />
                       </div>
                       <Input required placeholder="Company or organization" value={form.company} onChange={(event) => setForm({ ...form, company: event.target.value })} />
+                      <label className="block">
+                        <span className="mb-2 block text-sm font-medium text-foreground">Available inventory</span>
+                        <select
+                          value={form.inventoryInterest}
+                          onChange={(event) => setForm({ ...form, inventoryInterest: event.target.value })}
+                          className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base text-foreground ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 md:text-sm"
+                        >
+                          {inventoryOptions.map((option) => (
+                            <option key={option} value={option}>
+                              {option}
+                            </option>
+                          ))}
+                        </select>
+                      </label>
                       <Input placeholder="Package interest" value={form.packageInterest} onChange={(event) => setForm({ ...form, packageInterest: event.target.value })} />
                       <Textarea required placeholder="Tell us what you offer and what kind of audience you want to reach." className="min-h-[140px]" value={form.message} onChange={(event) => setForm({ ...form, message: event.target.value })} />
                       <Button type="submit" disabled={status === "loading"} className="w-full">

@@ -17,3 +17,6 @@ verify_jwt = false
 
 [functions.refresh-party-wreckers-podcast-feed]
 verify_jwt = false
+
+[functions.party-wreckers-advertiser-admin]
+verify_jwt = false
