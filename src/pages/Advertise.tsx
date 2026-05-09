@@ -1,6 +1,6 @@
 import { FormEvent, useState } from "react";
 import { Link } from "react-router-dom";
-import { BarChart3, CheckCircle, Mail, Megaphone, Radio, ShieldCheck, TrendingUp, Users } from "lucide-react";
+import { BarChart3, CheckCircle, FileText, Mail, Megaphone, Radio, ShieldCheck, Target, TrendingUp, Users } from "lucide-react";
 
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
@@ -25,27 +25,35 @@ const advertiserFit = [
 
 const sponsorPackages = [
   {
-    name: "Podcast Mention",
+    name: "Starter Mention",
+    price: "Starts at $250",
     fit: "A simple host-read mention for a relevant provider, resource, or service.",
-    inventory: "Pre-roll or mid-roll mention",
+    inventory: "One host-read podcast mention",
+    deliverables: ["Host-read mention", "Show-note link", "Sponsor click tracking"],
     event: "podcast_mention",
   },
   {
     name: "Episode Sponsor",
+    price: "Starts at $500",
     fit: "Own a specific episode topic that aligns with your audience and offer.",
     inventory: "Episode placement plus show-note link",
+    deliverables: ["Episode intro mention", "Show-note link", "Sponsor page listing"],
     event: "episode_sponsor",
   },
   {
     name: "Resource Placement",
+    price: "Starts at $750/mo",
     fit: "Show up around articles, episode guides, or family resource pages.",
     inventory: "Site placement with tracked CTA",
+    deliverables: ["Article/resource placement", "Tracked CTA", "Monthly activity snapshot"],
     event: "resource_placement",
   },
   {
-    name: "Bundle Package",
+    name: "Category Partner",
+    price: "Custom",
     fit: "Combine podcast, site, and resource placements into one campaign.",
     inventory: "Podcast plus site plus reportable clicks",
+    deliverables: ["Podcast placement", "Sponsor directory feature", "Monthly sponsor report"],
     event: "bundle_package",
   },
 ];
@@ -54,6 +62,22 @@ const audienceSignals = [
   ["High-intent context", "Listeners are often researching treatment, boundaries, intervention, or family support."],
   ["Trusted host voice", "Matt's work across Party Wreckers, Sober Helpline, and Freedom Interventions creates a practical bridge from education to action."],
   ["Reportable actions", "Sponsor interest, package clicks, inquiry submissions, and listener path clicks can be measured in the owner report."],
+];
+
+const placementInventory = [
+  ["Podcast", "Host-read mentions, episode sponsorships, and show-note links around relevant conversations."],
+  ["Website", "Sponsor directory cards, episode-page sponsor blocks, and selected high-intent article placements."],
+  ["Funnel", "Tracked sponsor clicks, sponsor impressions, package interest, and inquiry activity."],
+  ["Content", "Sponsor-fit placement near addiction education, family support, intervention, and recovery resources."],
+];
+
+const reportItems = [
+  "Sponsor impressions by sponsor",
+  "Sponsor clicks by sponsor",
+  "Top sponsor placements",
+  "Top sponsor pages",
+  "Package interest clicks",
+  "Advertiser inquiry starts",
 ];
 
 const Advertise = () => {
@@ -147,32 +171,40 @@ const Advertise = () => {
                 <span className="text-sm uppercase tracking-widest text-muted-foreground">Premium sponsor channel</span>
               </div>
               <h1 className="font-script text-5xl sm:text-6xl text-burgundy mb-6">
-                Reach families before they choose their next step.
+                Reach families while the topic is urgent.
               </h1>
               <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-                The Party Wreckers audience is not casual traffic. They are families, loved ones, and professionals actively looking for better answers around addiction, intervention, and recovery.
+                Party Wreckers is a sponsor channel for brands that belong near addiction education, family support, intervention, treatment, recovery, and the hard decisions people make before they ask for help.
               </p>
-              <Button
-                variant="hero"
-                size="xl"
-                asChild
-                onClick={() =>
-                  trackPartyWreckersEvent({
-                    eventName: "advertiser_inquiry_start",
-                    ctaLabel: "Advertise hero request sponsor info",
-                  })
-                }
-              >
-                <a href="#sponsor-inquiry">
-                  Request Sponsor Info
-                  <Mail className="w-5 h-5" />
-                </a>
-              </Button>
+              <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
+                <Button
+                  variant="hero"
+                  size="xl"
+                  asChild
+                  onClick={() =>
+                    trackPartyWreckersEvent({
+                      eventName: "advertiser_inquiry_start",
+                      ctaLabel: "Advertise hero request sponsor info",
+                    })
+                  }
+                >
+                  <a href="#sponsor-inquiry">
+                    Request Availability
+                    <Mail className="w-5 h-5" />
+                  </a>
+                </Button>
+                <Button variant="outline" size="xl" asChild>
+                  <a href="#media-kit">
+                    View Media Kit
+                    <FileText className="w-5 h-5" />
+                  </a>
+                </Button>
+              </div>
             </div>
           </div>
         </section>
 
-        <section className="py-12 sm:py-16">
+        <section id="media-kit" className="py-12 sm:py-16">
           <div className="container px-4">
             <div className="grid gap-6 max-w-6xl mx-auto md:grid-cols-3">
               <Card className="border-border bg-card">
@@ -205,6 +237,29 @@ const Advertise = () => {
           </div>
         </section>
 
+        <section className="border-y border-border bg-card py-12">
+          <div className="container px-4">
+            <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
+              <div>
+                <p className="text-sm uppercase font-semibold text-primary mb-2">Media kit snapshot</p>
+                <h2 className="font-script text-4xl sm:text-5xl text-burgundy">A clean sponsor story in one place.</h2>
+                <p className="mt-4 text-muted-foreground">
+                  The pitch is simple: useful sponsor placements near addiction and family decision content, measured with sponsor impressions, clicks, page performance, and package interest.
+                </p>
+              </div>
+              <div className="grid gap-3 sm:grid-cols-2">
+                {placementInventory.map(([title, body]) => (
+                  <div key={title} className="rounded-lg border border-border bg-background p-5">
+                    <Target className="mb-3 h-5 w-5 text-primary" />
+                    <p className="font-semibold text-foreground">{title}</p>
+                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{body}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="py-12 border-y border-border bg-card">
           <div className="container px-4">
             <div className="max-w-6xl mx-auto">
@@ -222,14 +277,27 @@ const Advertise = () => {
                 {sponsorPackages.map((sponsorPackage) => (
                   <Card key={sponsorPackage.name} className="border-border bg-background">
                     <CardHeader>
-                      <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                        <Megaphone className="h-5 w-5" />
+                      <div className="mb-3 flex items-center justify-between gap-3">
+                        <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                          <Megaphone className="h-5 w-5" />
+                        </div>
+                        <span className="rounded-full border border-border bg-secondary/60 px-3 py-1 text-xs font-semibold uppercase text-muted-foreground">
+                          {sponsorPackage.price}
+                        </span>
                       </div>
                       <CardTitle className="text-xl">{sponsorPackage.name}</CardTitle>
                     </CardHeader>
                     <CardContent>
                       <p className="text-sm text-muted-foreground mb-4">{sponsorPackage.fit}</p>
                       <p className="text-xs uppercase tracking-widest text-primary mb-4">{sponsorPackage.inventory}</p>
+                      <ul className="mb-5 space-y-2">
+                        {sponsorPackage.deliverables.map((deliverable) => (
+                          <li key={deliverable} className="flex items-start gap-2 text-sm text-muted-foreground">
+                            <CheckCircle className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />
+                            <span>{deliverable}</span>
+                          </li>
+                        ))}
+                      </ul>
                       <Button
                         variant={form.packageInterest === sponsorPackage.name ? "default" : "outline"}
                         size="sm"
@@ -242,6 +310,9 @@ const Advertise = () => {
                   </Card>
                 ))}
               </div>
+              <p className="mt-5 text-sm text-muted-foreground">
+                Introductory rates can be adjusted as audience reporting matures. Best-fit sponsors can reserve a category, episode theme, or monthly site placement depending on availability.
+              </p>
             </div>
           </div>
         </section>
@@ -256,6 +327,28 @@ const Advertise = () => {
                   <p className="text-sm text-muted-foreground mt-2">{body}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="border-y border-border bg-card py-12">
+          <div className="container px-4">
+            <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[1fr_0.9fr] lg:items-center">
+              <div>
+                <p className="mb-2 text-sm font-semibold uppercase text-primary">Monthly sponsor report</p>
+                <h2 className="font-script text-4xl text-burgundy sm:text-5xl">Sponsors should see more than a logo.</h2>
+                <p className="mt-4 text-muted-foreground">
+                  Every sponsor package can be backed by a simple monthly activity summary that shows where the sponsor appeared, how often the placement was seen, and how many people clicked.
+                </p>
+              </div>
+              <div className="grid gap-3 sm:grid-cols-2">
+                {reportItems.map((item) => (
+                  <div key={item} className="flex items-center gap-3 rounded-lg border border-border bg-background p-4">
+                    <BarChart3 className="h-4 w-4 flex-shrink-0 text-primary" />
+                    <span className="text-sm text-foreground">{item}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
