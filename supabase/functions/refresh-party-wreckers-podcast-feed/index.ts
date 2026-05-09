@@ -30,13 +30,8 @@ serve(async (req) => {
     let authorized = !!(envSecret && providedSecret && providedSecret === envSecret);
 
     if (!authorized && providedSecret) {
-      const { data: vaultRow } = await supabase
-        .schema("vault")
-        .from("decrypted_secrets")
-        .select("decrypted_secret")
-        .eq("name", "followup_automation_secret")
-        .maybeSingle();
-      if (vaultRow?.decrypted_secret && providedSecret === vaultRow.decrypted_secret) {
+      const { data: vaultSecret } = await supabase.rpc("get_followup_automation_secret");
+      if (vaultSecret && providedSecret === vaultSecret) {
         authorized = true;
       }
     }
