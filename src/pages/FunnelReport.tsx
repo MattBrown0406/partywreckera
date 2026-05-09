@@ -421,6 +421,12 @@ const FunnelReport = () => {
                     <p className="text-sm text-muted-foreground">Create a monthly sponsor summary from the current 30-day report.</p>
                   </div>
                   <div className="flex flex-col gap-2 sm:flex-row">
+                    <Button variant="outline" asChild>
+                      <a href="/sponsor-kit" target="_blank" rel="noopener noreferrer">
+                        <FileText className="h-4 w-4" />
+                        Sponsor Kit
+                      </a>
+                    </Button>
                     <Button variant="outline" onClick={downloadSponsorCsv}>
                       <Download className="h-4 w-4" />
                       Export CSV

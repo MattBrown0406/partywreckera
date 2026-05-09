@@ -551,6 +551,11 @@
     <priority>0.75</priority>
   </url>
   <url>
+    <loc>https://partywreckers.com/sponsor-kit</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
     <loc>https://partywreckers.com/sponsors</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

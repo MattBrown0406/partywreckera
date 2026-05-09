@@ -43,6 +43,12 @@ const SponsorProposal = () => (
                   </Link>
                 </Button>
                 <Button variant="outline" size="xl" asChild>
+                  <Link to="/sponsor-kit">
+                    Sponsor Kit
+                    <FileText className="h-5 w-5" />
+                  </Link>
+                </Button>
+                <Button variant="outline" size="xl" asChild>
                   <TrackedExternalLink
                     href="/party-wreckers-media-kit.pdf"
                     eventName="advertiser_package_click"

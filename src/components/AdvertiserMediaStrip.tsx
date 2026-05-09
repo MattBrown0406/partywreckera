@@ -50,6 +50,9 @@ const AdvertiserMediaStrip = () => {
                 </Link>
               </Button>
               <Button variant="outline" asChild>
+                <Link to="/sponsor-kit">Sales Kit</Link>
+              </Button>
+              <Button variant="outline" asChild>
                 <Link to="/sponsors">View Sponsors</Link>
               </Button>
             </div>

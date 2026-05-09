@@ -10,7 +10,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { coreFaqs, primaryAeoAnswers } from "@/lib/aeoContent";
 import { trackPartyWreckersEvent } from "@/lib/funnelTracking";
 import { sponsorPackages } from "@/lib/sponsorPackages";
-import { BarChart3, Megaphone, ShieldCheck, Target } from "lucide-react";
+import { BarChart3, FileText, Megaphone, ShieldCheck, Target } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const sponsorFit = [
@@ -138,6 +138,12 @@ const SponsorInfo = () => (
                 <TrackedExternalLink href="/party-wreckers-media-kit.pdf" eventName="advertiser_package_click" ctaLabel="Sponsor info media kit download" download>
                   Download Media Kit
                 </TrackedExternalLink>
+              </Button>
+              <Button variant="outline" asChild>
+                <Link to="/sponsor-kit">
+                  <FileText className="h-4 w-4" />
+                  View Sponsor Sales Kit
+                </Link>
               </Button>
             </div>
           </div>

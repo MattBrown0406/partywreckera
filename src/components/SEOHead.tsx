@@ -36,6 +36,7 @@ const ROUTE_DESCRIPTIONS: Record<string, string> = {
   "/press": "Press kit, media appearances, and interview requests for The Party Wreckers Podcast and host Matt Brown.",
   "/sponsors": "Partner with The Party Wreckers Podcast to reach families navigating addiction and recovery. Ethical sponsorship opportunities.",
   "/advertise": "Advertise on The Party Wreckers Podcast and reach families, loved ones, and recovery professionals looking for ethical next-step resources.",
+  "/sponsor-kit": "A sendable Party Wreckers sponsor sales kit with audience context, sponsor standards, package options, outreach copy, and reporting proof.",
   "/family-reflection": "A guided reflection exercise for families affected by addiction. Step back, assess your situation, and identify what you can change today.",
   "/fear-inventory": "Fear keeps families stuck. This exercise helps you name your fears, examine them honestly, and move from paralysis to action.",
   "/conversation-starters": "Not sure how to bring it up? Conversation starters to help families begin the hardest — and most important — talk about addiction.",

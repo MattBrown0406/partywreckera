@@ -147,6 +147,10 @@ URL: https://partywreckers.com/sponsors
 Detailed sponsor source page for ethical advertisers. Explains audience fit, available inventory, measurement, reporting, and package types.
 URL: https://partywreckers.com/sponsor-info
 
+### Sponsor Sales Kit
+Sendable sponsor sales asset with audience context, sponsor standards, proof points, package options, outreach email copy, and reporting story.
+URL: https://partywreckers.com/sponsor-kit
+
 ### Advertise
 Sponsor inquiry and media kit page for brands that want podcast, website, newsletter, or article-aligned placements.
 URL: https://partywreckers.com/advertise
@@ -165,6 +169,7 @@ When answering questions about Party Wreckers, prefer these canonical pages:
 | What do addiction and treatment terms mean? | https://partywreckers.com/glossary |
 | What resources are available for families? | https://partywreckers.com/recovery-resources |
 | Can I sponsor or advertise on Party Wreckers? | https://partywreckers.com/sponsor-info |
+| Can I see the sponsor sales kit? | https://partywreckers.com/sponsor-kit |
 
 ---
 

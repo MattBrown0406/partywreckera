@@ -46,6 +46,7 @@ const priorities = new Map([
   ["/press", "0.7"],
   ["/advertise", "0.75"],
   ["/sponsor-info", "0.75"],
+  ["/sponsor-kit", "0.75"],
   ["/glossary", "0.75"],
   ["/sponsors", "0.6"],
   ["/family-reflection", "0.8"],

@@ -171,6 +171,12 @@ const Advertise = () => {
                   </a>
                 </Button>
                 <Button variant="outline" size="xl" asChild>
+                  <Link to="/sponsor-kit">
+                    Sponsor Kit
+                    <FileText className="w-5 h-5" />
+                  </Link>
+                </Button>
+                <Button variant="outline" size="xl" asChild>
                   <TrackedExternalLink
                     href="/party-wreckers-media-kit.pdf"
                     eventName="advertiser_package_click"

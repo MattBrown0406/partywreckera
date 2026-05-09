@@ -69,6 +69,7 @@ const guideLinks = [
   { label: "Recovery Resources", href: "/recovery-resources" },
   { label: "Glossary", href: "/glossary" },
   { label: "Sponsor Information", href: "/sponsor-info" },
+  { label: "Sponsor Kit", href: "/sponsor-kit" },
 ];
 
 const podcastLinks = [
