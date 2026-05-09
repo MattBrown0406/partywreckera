@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BarChart3, Download, Lock, Printer, RefreshCw, Save } from "lucide-react";
+import { BarChart3, Download, DollarSign, Lock, Mail, Printer, RefreshCw, Save } from "lucide-react";
 
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
@@ -120,6 +120,8 @@ const FunnelReport = () => {
         metadata_patch: {
           sponsor_notes: getMetadataString(prospect.metadata, "sponsor_notes"),
           next_action: getMetadataString(prospect.metadata, "next_action"),
+          expected_monthly_value: getMetadataString(prospect.metadata, "expected_monthly_value"),
+          sold_amount: getMetadataString(prospect.metadata, "sold_amount"),
         },
       },
     });
@@ -152,6 +154,7 @@ const FunnelReport = () => {
   };
 
   const sponsorActionItems = getSponsorActionItems(prospects);
+  const sponsorRevenue = getSponsorRevenueSummary(prospects);
 
   return (
     <div className="min-h-screen bg-background">
@@ -293,6 +296,12 @@ const FunnelReport = () => {
                           </div>
                         </div>
 
+                        <div className="mt-4 grid gap-3 md:grid-cols-3">
+                          <RevenueMetricCard label="Open pipeline" value={sponsorRevenue.openPipeline} />
+                          <RevenueMetricCard label="Proposal / close" value={sponsorRevenue.closingPipeline} />
+                          <RevenueMetricCard label="Sold monthly" value={sponsorRevenue.soldMonthly} />
+                        </div>
+
                         <div className="mt-4 grid gap-3 lg:grid-cols-3">
                           {sponsorActionItems.map((item) => (
                             <div key={item.id} className="rounded-lg border border-border bg-background p-3">
@@ -362,6 +371,16 @@ const ReportList = ({ title, items }: { title: string; items: Array<{ name: stri
   </Card>
 );
 
+const RevenueMetricCard = ({ label, value }: { label: string; value: number }) => (
+  <div className="rounded-lg border border-border bg-background p-3">
+    <div className="flex items-center gap-2">
+      <DollarSign className="h-4 w-4 text-primary" />
+      <p className="text-xs uppercase tracking-widest text-muted-foreground">{label}</p>
+    </div>
+    <p className="mt-2 text-2xl font-semibold text-foreground">{formatCurrency(value)}</p>
+  </div>
+);
+
 const SponsorProspectCard = ({
   prospect,
   onChange,
@@ -378,6 +397,9 @@ const SponsorProspectCard = ({
   const packageInterest = getMetadataString(prospect.metadata, "package_interest") || "Not provided";
   const inventoryInterest = getMetadataString(prospect.metadata, "inventory_interest") || "Not provided";
   const recommendation = getProspectRecommendation(prospect);
+  const expectedValue = getMetadataString(prospect.metadata, "expected_monthly_value");
+  const soldAmount = getMetadataString(prospect.metadata, "sold_amount");
+  const proposalHref = buildProposalEmailHref(prospect);
 
   return (
     <div className="rounded-lg border border-border bg-background p-4">
@@ -396,6 +418,16 @@ const SponsorProspectCard = ({
           <div className="mt-4 rounded-lg border border-primary/20 bg-primary/10 p-3">
             <p className="text-xs font-semibold uppercase tracking-widest text-primary">Suggested next move</p>
             <p className="mt-1 text-sm text-foreground">{recommendation}</p>
+          </div>
+          <div className="mt-4 grid gap-3 sm:grid-cols-2">
+            <div className="rounded-lg border border-border bg-card p-3">
+              <p className="text-xs uppercase tracking-widest text-muted-foreground">Expected monthly</p>
+              <p className="mt-1 text-lg font-semibold text-foreground">{formatCurrency(parseMoney(expectedValue))}</p>
+            </div>
+            <div className="rounded-lg border border-border bg-card p-3">
+              <p className="text-xs uppercase tracking-widest text-muted-foreground">Sold monthly</p>
+              <p className="mt-1 text-lg font-semibold text-foreground">{formatCurrency(parseMoney(soldAmount))}</p>
+            </div>
           </div>
         </div>
 
@@ -419,12 +451,32 @@ const SponsorProspectCard = ({
             value={getMetadataString(prospect.metadata, "next_action")}
             onChange={(event) => onMetadataChange(prospect.id, { next_action: event.target.value })}
           />
+          <div className="grid gap-3 sm:grid-cols-2">
+            <Input
+              inputMode="decimal"
+              placeholder="Expected monthly $"
+              value={expectedValue}
+              onChange={(event) => onMetadataChange(prospect.id, { expected_monthly_value: event.target.value })}
+            />
+            <Input
+              inputMode="decimal"
+              placeholder="Sold monthly $"
+              value={soldAmount}
+              onChange={(event) => onMetadataChange(prospect.id, { sold_amount: event.target.value })}
+            />
+          </div>
           <Textarea
             placeholder="Internal notes"
             value={getMetadataString(prospect.metadata, "sponsor_notes")}
             onChange={(event) => onMetadataChange(prospect.id, { sponsor_notes: event.target.value })}
             className="min-h-[96px]"
           />
+          <Button variant="outline" className="w-full" asChild>
+            <a href={proposalHref}>
+              <Mail className="h-4 w-4" />
+              Email Proposal
+            </a>
+          </Button>
           <Button className="w-full" onClick={() => onSave(prospect)} disabled={isSaving}>
             <Save className="h-4 w-4" />
             {isSaving ? "Saving..." : "Save Prospect"}
@@ -437,6 +489,7 @@ const SponsorProspectCard = ({
 
 const getMetadataString = (metadata: Record<string, unknown> | null, key: string) => {
   const value = metadata?.[key];
+  if (typeof value === "number") return String(value);
   return typeof value === "string" ? value : "";
 };
 
@@ -582,6 +635,67 @@ const getSponsorActionItems = (prospects: SponsorProspect[]) => {
       statusLabel: prospect.status.replace(/_/g, " "),
       action: getProspectRecommendation(prospect),
     }));
+};
+
+const parseMoney = (value: string) => {
+  const cleanedValue = value.replace(/[^0-9.]/g, "");
+  const parsedValue = Number.parseFloat(cleanedValue);
+  return Number.isFinite(parsedValue) ? parsedValue : 0;
+};
+
+const formatCurrency = (value: number) =>
+  new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+    maximumFractionDigits: 0,
+  }).format(value);
+
+const getSponsorRevenueSummary = (prospects: SponsorProspect[]) =>
+  prospects.reduce(
+    (summary, prospect) => {
+      const expectedMonthly = parseMoney(getMetadataString(prospect.metadata, "expected_monthly_value"));
+      const soldMonthly = parseMoney(getMetadataString(prospect.metadata, "sold_amount")) || expectedMonthly;
+
+      if (!["sold", "lost"].includes(prospect.status)) {
+        summary.openPipeline += expectedMonthly;
+      }
+
+      if (["proposal_sent", "negotiating"].includes(prospect.status)) {
+        summary.closingPipeline += expectedMonthly;
+      }
+
+      if (prospect.status === "sold") {
+        summary.soldMonthly += soldMonthly;
+      }
+
+      return summary;
+    },
+    { openPipeline: 0, closingPipeline: 0, soldMonthly: 0 },
+  );
+
+const buildProposalEmailHref = (prospect: SponsorProspect) => {
+  const companyName = prospect.company || "your organization";
+  const packageInterest = getMetadataString(prospect.metadata, "package_interest");
+  const expectedValue = getMetadataString(prospect.metadata, "expected_monthly_value");
+  const subject = "Party Wreckers sponsor package";
+  const body = [
+    `Hi ${prospect.name},`,
+    "",
+    `Thanks for reaching out about sponsoring Party Wreckers. Based on ${companyName}${packageInterest ? ` and your interest in ${packageInterest}` : ""}, I think the sponsor package page is the best next place to start:`,
+    "",
+    "https://partywreckers.com/advertise/packages",
+    "",
+    "The page lays out the Episode Sponsor, Monthly Site Sponsor, and Bundle Sponsor options, along with how monthly reporting works.",
+    expectedValue ? `\nI also marked your expected monthly range around ${expectedValue}, so we can shape the placement around the right level of visibility.` : "",
+    "",
+    "If it looks like a fit, reply with the package that feels closest and I can send over available inventory and next steps.",
+    "",
+    "Matt",
+  ]
+    .filter(Boolean)
+    .join("\n");
+
+  return `mailto:${encodeURIComponent(prospect.email)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 };
 
 export default FunnelReport;
