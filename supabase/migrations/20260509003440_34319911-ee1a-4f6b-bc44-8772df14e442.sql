@@ -1,0 +1,1 @@
+DELETE FROM public.party_wreckers_funnel_events WHERE anonymous_id IN ('verify-sponsor-imp','verify-sponsor-click');
