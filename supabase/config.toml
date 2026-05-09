@@ -21,5 +21,5 @@ verify_jwt = false
 [functions.party-wreckers-advertiser-admin]
 verify_jwt = false
 
-[functions._verify_admin2]
+[functions.verify-admin-temp2]
 verify_jwt = false
