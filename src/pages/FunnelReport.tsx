@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BarChart3, CalendarDays, CheckSquare, ClipboardList, Download, DollarSign, Lock, Mail, Plus, Printer, RefreshCw, Save, Trash2, Upload } from "lucide-react";
+import { BarChart3, CalendarDays, CheckSquare, ClipboardList, Download, DollarSign, FileText, Lock, Mail, Plus, Printer, RefreshCw, Save, Trash2, Upload } from "lucide-react";
 
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";

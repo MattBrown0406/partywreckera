@@ -319,6 +319,23 @@ export const glossaryTerms = [
 ];
 
 export const articleAnswerSummaries: Record<string, AnswerBlockContent> = {
+  "parentified-child-addiction-family": {
+    eyebrow: "Article answer",
+    title: "What is a parentified child in an addicted family?",
+    answer:
+      "A parentified child takes on adult emotional or practical responsibilities — managing the household, caring for siblings, or regulating a parent's emotions — because active addiction has left a gap that nobody else is filling.",
+    bullets: [
+      "Instrumental parentification looks like cooking, cleaning, and caring for siblings.",
+      "Emotional parentification looks like managing a parent's moods and being their confidant.",
+      "Quiet and capable is not the same as okay.",
+    ],
+    nextSteps: [
+      "Name what the young person in your family is actually carrying.",
+      "Get support for the whole family system, not just the addict.",
+      "Talk to a professional before the pattern hardens further.",
+    ],
+    links: [{ label: "Read about Family Roles", href: "/blog/family-roles" }],
+  },
   "conflict-avoidance-enabling-addiction-family": {
     eyebrow: "Article answer",
     title: "How does conflict avoidance enable addiction?",

@@ -90,6 +90,7 @@ import blogImageStoppedPerforming from "@/assets/blog-stopped-performing-sobriet
 import blogImageJobNobodyApplies from "@/assets/blog-job-nobody-applies-for-interventionist.jpg";
 import blogImageHowToChooseInterventionist from "@/assets/blog-how-to-choose-an-interventionist.jpg";
 import blogImageConflictAvoidanceEnabling from "@/assets/blog-conflict-avoidance-enabling-addiction-family.jpg";
+import blogImageParentifiedChild from "@/assets/blog-parentified-child-addiction-family.jpg";
 
 export interface BlogArticle {
   id: string;
@@ -102,6 +103,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "parentified-child-addiction-family",
+    title: "The Parentified Child: When Kids in Addicted Families Are Forced to Grow Up Too Fast",
+    date: "May 11, 2026",
+    image: blogImageParentifiedChild,
+    imageAlt: "A young adult woman sitting alone at a kitchen table in dim evening light, weighed down by years of caretaking",
+    excerpt: "When a parent's addiction takes over, children often become silent caretakers. Interventionist Matt Brown explains the parentified child — and what families can do about it.",
+    category: "Family"
+  },
   {
     id: "conflict-avoidance-enabling-addiction-family",
     title: "The Price of Keeping the Peace: How Conflict Avoidance Enables Addiction at Home",
