@@ -319,6 +319,23 @@ export const glossaryTerms = [
 ];
 
 export const articleAnswerSummaries: Record<string, AnswerBlockContent> = {
+  "adult-children-of-addicts-patterns": {
+    eyebrow: "Article answer",
+    title: "What patterns follow adult children of addicts into adulthood?",
+    answer:
+      "Adult children of addicts often carry hypervigilance, conflict avoidance, people-pleasing, and difficulty trusting into adulthood — adaptive responses to an unpredictable home that quietly shape relationships, work, and parenting.",
+    bullets: [
+      "Family roles like Hero, Caretaker, Lost Child, and Mascot persist long after childhood.",
+      "Chaos can feel like home, drawing people toward unavailable or unpredictable partners.",
+      "These patterns are trained responses, not character flaws — and they can be unlearned.",
+    ],
+    nextSteps: [
+      "Consider trauma-informed therapy (IFS, EMDR, somatic, attachment-focused).",
+      "Try ACA/ACOA or Al-Anon for peer support.",
+      "Be honest with yourself about what your childhood actually was.",
+    ],
+    links: [{ label: "Read about Family Roles", href: "/blog/family-roles" }],
+  },
   "parentified-child-addiction-family": {
     eyebrow: "Article answer",
     title: "What is a parentified child in an addicted family?",
