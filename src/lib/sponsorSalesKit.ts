@@ -25,6 +25,29 @@ export const sponsorProofPoints = [
   "The new AEO source pages create evergreen sponsor inventory near family addiction help, intervention readiness, and recovery resources.",
 ];
 
+export const sponsorProofPackage = [
+  {
+    label: "Audience and inventory snapshot",
+    body: "Current sponsor package, placement type, inventory month, pages or episodes included, and why the sponsor fits the audience.",
+  },
+  {
+    label: "Placement activity report",
+    body: "Sponsor impressions, sponsor clicks, sponsor pages, placements, package interest, and top advertiser-facing pages.",
+  },
+  {
+    label: "Listener path context",
+    body: "Family Squares clicks, get-answers-now clicks, intervention-readiness clicks, and top listener paths without exposing private lead information.",
+  },
+  {
+    label: "Sponsor pipeline update",
+    body: "Status, next action, asset checklist, slot month, slot type, and whether the placement should renew, move, expand, or pause.",
+  },
+  {
+    label: "Renewal recommendation",
+    body: "A simple next-month recommendation based on fit, audience activity, available inventory, and sponsor quality.",
+  },
+];
+
 export const sponsorOutreachTemplates = [
   {
     label: "First outreach",

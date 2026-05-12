@@ -8,7 +8,7 @@ import SEOHead from "@/components/SEOHead";
 import TrackedExternalLink from "@/components/TrackedExternalLink";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { sponsorOneSheet, sponsorOutreachTemplates, sponsorProofPoints, sponsorSalesChecklist } from "@/lib/sponsorSalesKit";
+import { sponsorOneSheet, sponsorOutreachTemplates, sponsorProofPackage, sponsorProofPoints, sponsorSalesChecklist } from "@/lib/sponsorSalesKit";
 import { advertiserFit, proofPoints, sponsorPackages } from "@/lib/sponsorPackages";
 
 const encodeMailto = (subject: string, body: string) =>
@@ -130,6 +130,41 @@ const SponsorKit = () => (
                 <div key={point} className="flex gap-3 rounded-lg border border-border bg-background p-4">
                   <CheckCircle2 className="mt-0.5 h-5 w-5 flex-none text-primary" />
                   <p className="text-sm leading-relaxed text-foreground">{point}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 print:break-before-page">
+        <div className="container px-4">
+          <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
+            <div>
+              <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-primary">Advertiser proof package</p>
+              <h2 className="font-script text-4xl text-burgundy sm:text-5xl">Sponsors should leave with a report, not a hunch.</h2>
+              <p className="mt-4 text-muted-foreground">
+                The sponsor product is stronger when every package includes a clear recap of what ran, where it ran, what people clicked, and what should happen next.
+              </p>
+              <Button className="mt-6 print:hidden" variant="outline" asChild>
+                <Link to="/funnel-report">
+                  Open Owner Report
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
+            <div className="grid gap-3">
+              {sponsorProofPackage.map((item, index) => (
+                <div key={item.label} className="rounded-lg border border-border bg-card p-4">
+                  <div className="flex gap-3">
+                    <span className="flex h-7 w-7 flex-none items-center justify-center rounded-full bg-primary text-sm font-semibold text-primary-foreground">
+                      {index + 1}
+                    </span>
+                    <div>
+                      <p className="font-semibold text-foreground">{item.label}</p>
+                      <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{item.body}</p>
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
