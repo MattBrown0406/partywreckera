@@ -105,6 +105,15 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    id: "adult-children-of-addicts-patterns",
+    title: "You Moved Out. The Patterns Didn't. What Growing Up with Addiction Does to Adults",
+    date: "May 12, 2026",
+    image: blogImageAdultChildrenOfAddicts,
+    imageAlt: "A young adult woman at a desk in dim evening light, quietly scanning the room",
+    excerpt: "Growing up with addiction in the family leaves marks that follow people into adulthood. Interventionist Matt Brown explains the patterns, why they happen, and what to do about them.",
+    category: "Family"
+  },
+  {
     id: "parentified-child-addiction-family",
     title: "The Parentified Child: When Kids in Addicted Families Are Forced to Grow Up Too Fast",
     date: "May 11, 2026",
