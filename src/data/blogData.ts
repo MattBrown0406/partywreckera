@@ -91,6 +91,7 @@ import blogImageJobNobodyApplies from "@/assets/blog-job-nobody-applies-for-inte
 import blogImageHowToChooseInterventionist from "@/assets/blog-how-to-choose-an-interventionist.jpg";
 import blogImageConflictAvoidanceEnabling from "@/assets/blog-conflict-avoidance-enabling-addiction-family.jpg";
 import blogImageParentifiedChild from "@/assets/blog-parentified-child-addiction-family.jpg";
+import blogImageAdultChildrenOfAddicts from "@/assets/blog-adult-children-of-addicts-patterns.jpg";
 
 export interface BlogArticle {
   id: string;
