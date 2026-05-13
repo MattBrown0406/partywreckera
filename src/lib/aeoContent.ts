@@ -319,6 +319,26 @@ export const glossaryTerms = [
 ];
 
 export const articleAnswerSummaries: Record<string, AnswerBlockContent> = {
+  "family-secret-addiction-silence": {
+    eyebrow: "Article answer",
+    title: "Why do families keep addiction a secret?",
+    answer:
+      "Families keep addiction secret because shame is louder than fear. The silence often starts as protection — for the person struggling and the family's reputation — and hardens into an operating system where honest conversation feels impossible.",
+    bullets: [
+      "Love, fear, shame, and hope all reinforce the silence.",
+      "The secret costs connection, time, and the chance to get help sooner.",
+      "Children absorb the unspoken rules: don't talk, don't trust, don't feel.",
+    ],
+    nextSteps: [
+      "Tell the truth to one safe person — a therapist, sponsor, or professional.",
+      "You don't need a plan, just stop carrying it alone.",
+      "Get family support before the next crisis.",
+    ],
+    links: [
+      { label: "Adult Children of Addicts", href: "/blog/adult-children-of-addicts-patterns" },
+      { label: "Family Addiction Help", href: "/family-addiction-help" },
+    ],
+  },
   "adult-children-of-addicts-patterns": {
     eyebrow: "Article answer",
     title: "What patterns follow adult children of addicts into adulthood?",
