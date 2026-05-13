@@ -92,6 +92,7 @@ import blogImageHowToChooseInterventionist from "@/assets/blog-how-to-choose-an-
 import blogImageConflictAvoidanceEnabling from "@/assets/blog-conflict-avoidance-enabling-addiction-family.jpg";
 import blogImageParentifiedChild from "@/assets/blog-parentified-child-addiction-family.jpg";
 import blogImageAdultChildrenOfAddicts from "@/assets/blog-adult-children-of-addicts-patterns.jpg";
+import blogImageFamilySecretSilence from "@/assets/blog-family-secret-addiction-silence.jpg";
 
 export interface BlogArticle {
   id: string;
@@ -104,6 +105,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "family-secret-addiction-silence",
+    title: "The Family Secret: How Addiction Teaches Everyone to Stop Talking",
+    date: "May 13, 2026",
+    image: blogImageFamilySecretSilence,
+    imageAlt: "A young adult woman sitting silently at a dimly lit kitchen table while a family member stands in the background",
+    excerpt: "Addiction doesn't just affect the person using — it teaches the entire family to stop talking. Interventionist Matt Brown explains the dangerous silence and how to break it.",
+    category: "Family"
+  },
   {
     id: "adult-children-of-addicts-patterns",
     title: "You Moved Out. The Patterns Didn't. What Growing Up with Addiction Does to Adults",
