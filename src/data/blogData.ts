@@ -93,6 +93,7 @@ import blogImageConflictAvoidanceEnabling from "@/assets/blog-conflict-avoidance
 import blogImageParentifiedChild from "@/assets/blog-parentified-child-addiction-family.jpg";
 import blogImageAdultChildrenOfAddicts from "@/assets/blog-adult-children-of-addicts-patterns.jpg";
 import blogImageFamilySecretSilence from "@/assets/blog-family-secret-addiction-silence.jpg";
+import blogImageGrandparentAddiction from "@/assets/blog-grandparent-addiction-family.jpg";
 
 export interface BlogArticle {
   id: string;
@@ -105,6 +106,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "grandparent-addiction-family",
+    title: "When Grandpa Won't Admit He Has a Problem: Older Adult Addiction",
+    date: "May 14, 2026",
+    image: blogImageGrandparentAddiction,
+    imageAlt: "An elderly man sitting alone at a dimly lit study with an empty whiskey tumbler beside him",
+    excerpt: "When a grandparent or elderly parent struggles with addiction, families often suffer in silence. Interventionist Matt Brown explains the signs, the family impact, and what to do next.",
+    category: "Family"
+  },
   {
     id: "family-secret-addiction-silence",
     title: "The Family Secret: How Addiction Teaches Everyone to Stop Talking",
