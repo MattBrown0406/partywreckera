@@ -319,6 +319,26 @@ export const glossaryTerms = [
 ];
 
 export const articleAnswerSummaries: Record<string, AnswerBlockContent> = {
+  "grandparent-addiction-family": {
+    eyebrow: "Article answer",
+    title: "What should families do when a grandparent or elderly parent has an addiction?",
+    answer:
+      "Older adult addiction is widely underdiagnosed and families often stay silent out of grief, role-reversal discomfort, or the false belief that it's too late. Recovery is possible at any age — the first step is naming it honestly within the family.",
+    bullets: [
+      "Alcohol misuse affects an estimated 1 in 10 to 1 in 5 adults over 65.",
+      "Signs include isolation, defensive anger, missed medications, and falls.",
+      "Quality of time is not cancelled by age — older adults respond well to treatment.",
+    ],
+    nextSteps: [
+      "Get the family on the same page before approaching the person.",
+      "Consider a professional intervention with a neutral third party.",
+      "Look for treatment programs designed for older adults.",
+    ],
+    links: [
+      { label: "The Family Secret", href: "/blog/family-secret-addiction-silence" },
+      { label: "When to Consider Intervention", href: "/blog/when-to-consider-intervention" },
+    ],
+  },
   "family-secret-addiction-silence": {
     eyebrow: "Article answer",
     title: "Why do families keep addiction a secret?",
