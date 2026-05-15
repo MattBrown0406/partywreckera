@@ -94,6 +94,7 @@ import blogImageParentifiedChild from "@/assets/blog-parentified-child-addiction
 import blogImageAdultChildrenOfAddicts from "@/assets/blog-adult-children-of-addicts-patterns.jpg";
 import blogImageFamilySecretSilence from "@/assets/blog-family-secret-addiction-silence.jpg";
 import blogImageGrandparentAddiction from "@/assets/blog-grandparent-addiction-family.jpg";
+import blogImageAmbiguousLoss from "@/assets/blog-ambiguous-loss-addiction-family-grief.jpg";
 
 export interface BlogArticle {
   id: string;
@@ -106,6 +107,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "ambiguous-loss-addiction-family-grief",
+    title: "The Grief Nobody Talks About: Losing Someone Who Is Still Alive to Addiction",
+    date: "May 15, 2026",
+    image: blogImageAmbiguousLoss,
+    imageAlt: "A young adult woman sitting alone at a dim kitchen table at dusk, looking quietly toward an empty chair",
+    excerpt: "When someone you love is still alive but lost to addiction, the grief is real — but unnamed. Interventionist Matt Brown explains ambiguous loss and how families can cope.",
+    category: "Family"
+  },
   {
     id: "grandparent-addiction-family",
     title: "When Grandpa Won't Admit He Has a Problem: Older Adult Addiction",
