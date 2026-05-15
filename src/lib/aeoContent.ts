@@ -319,6 +319,26 @@ export const glossaryTerms = [
 ];
 
 export const articleAnswerSummaries: Record<string, AnswerBlockContent> = {
+  "ambiguous-loss-addiction-family-grief": {
+    eyebrow: "Article answer",
+    title: "What is ambiguous loss in addiction families?",
+    answer:
+      "Ambiguous loss is grief that occurs when a loved one is physically present but psychologically absent due to addiction. Families mourn the person they knew without any clear ending or social ritual to mark the loss — making it uniquely difficult to process.",
+    bullets: [
+      "Coined by Dr. Pauline Boss to describe grief without closure.",
+      "Shows up as resentment, false hope, and uncounted secondary losses.",
+      "Becomes 'frozen grief' when it goes unnamed for years.",
+    ],
+    nextSteps: [
+      "Name what you're feeling as grief — not just worry or exhaustion.",
+      "Find a counselor or peer group familiar with addiction and family systems.",
+      "Separate hope from denial; acknowledge secondary losses too.",
+    ],
+    links: [
+      { label: "What Happens Before an Intervention", href: "/blog/what-happens-before-intervention" },
+      { label: "Family Addiction Help", href: "/family-addiction-help" },
+    ],
+  },
   "grandparent-addiction-family": {
     eyebrow: "Article answer",
     title: "What should families do when a grandparent or elderly parent has an addiction?",
