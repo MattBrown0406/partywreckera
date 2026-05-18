@@ -131,6 +131,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://partywreckers.com/blog/good-days-trap-intermittent-reinforcement</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
     <loc>https://partywreckers.com/blog/grandparent-addiction-family</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

@@ -80,7 +80,7 @@ const GoodDaysTrapIntermittentReinforcement = () => {
         <div className="mb-8">
           <img
             src={blogImage}
-            alt="A young adult woman sitting at a dim kitchen table at dusk, holding a phone with a quietly hopeful but uncertain expression"
+            alt="Soft morning fog over rolling green hills with a single tree silhouette in a quiet contemplative landscape"
             className="w-full rounded-lg shadow-lg"
             width={1280}
             height={720}
