@@ -95,6 +95,7 @@ import blogImageAdultChildrenOfAddicts from "@/assets/blog-adult-children-of-add
 import blogImageFamilySecretSilence from "@/assets/blog-family-secret-addiction-silence.jpg";
 import blogImageGrandparentAddiction from "@/assets/blog-grandparent-addiction-family.jpg";
 import blogImageAmbiguousLoss from "@/assets/blog-ambiguous-loss-addiction-family-grief.jpg";
+import blogImageGoodDaysTrap from "@/assets/blog-good-days-trap-intermittent-reinforcement.jpg";
 
 export interface BlogArticle {
   id: string;
@@ -107,6 +108,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "good-days-trap-intermittent-reinforcement",
+    title: "The Good Days Are Part of the Problem: Intermittent Reinforcement in Addiction Families",
+    date: "May 18, 2026",
+    image: blogImageGoodDaysTrap,
+    imageAlt: "Soft morning fog over rolling green hills with a single tree silhouette in a quiet contemplative landscape",
+    excerpt: "The good days keep families stuck in a loved one's addiction cycle. Interventionist Matt Brown explains intermittent reinforcement and how to break the pattern.",
+    category: "Family"
+  },
   {
     id: "ambiguous-loss-addiction-family-grief",
     title: "The Grief Nobody Talks About: Losing Someone Who Is Still Alive to Addiction",

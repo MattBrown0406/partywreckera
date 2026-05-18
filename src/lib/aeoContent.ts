@@ -319,6 +319,26 @@ export const glossaryTerms = [
 ];
 
 export const articleAnswerSummaries: Record<string, AnswerBlockContent> = {
+  "good-days-trap-intermittent-reinforcement": {
+    eyebrow: "Article answer",
+    title: "What is intermittent reinforcement in addiction families?",
+    answer:
+      "Intermittent reinforcement is the cycle of crisis and brief good periods that keeps families emotionally bonded to and stuck in a loved one's addiction. Because positive moments arrive unpredictably, they become more psychologically powerful than consistent rewards — making it very hard for families to act decisively.",
+    bullets: [
+      "Unpredictable rewards drive stronger attachment than consistent ones.",
+      "The good days provide 'evidence' that postpones the hard decision.",
+      "It's neuroscience and love — not weakness or naïveté.",
+    ],
+    nextSteps: [
+      "Track behavior over 30 to 90 days, not single moments.",
+      "Separate the person you love from the chronic addiction pattern.",
+      "Make decisions based on the trend, not today's mood.",
+    ],
+    links: [
+      { label: "Enabling in Addiction Families", href: "/blog/enabling-addiction-families" },
+      { label: "When to Consider Intervention", href: "/blog/when-to-consider-intervention" },
+    ],
+  },
   "ambiguous-loss-addiction-family-grief": {
     eyebrow: "Article answer",
     title: "What is ambiguous loss in addiction families?",
