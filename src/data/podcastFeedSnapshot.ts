@@ -7,6 +7,60 @@ export const podcastFeedSnapshot = {
   "image": "https://storage.buzzsprout.com/bs609jqq9aucxqvig2xvs5z2fc0a?.jpg",
   "episodes": [
     {
+      "id": "Buzzsprout-19193489",
+      "title": "The Good One: Why the \"Easy\" Child in an Addicted Family Is Hurting Too",
+      "description": "We want to hear from you! Send us a question or comment. Every family touched by addiction has one — the person nobody worries about. They get good grades, or hold down a steady job, or keep the house running. They don't cause problems. They don't ask for much. While everything else is falling apart...",
+      "pubDate": "Mon, 18 May 2026 04:00:00 -0700",
+      "duration": 658,
+      "episodeNumber": 77,
+      "audioUrl": "https://www.buzzsprout.com/1941777/episodes/19193489-the-good-one-why-the-easy-child-in-an-addicted-family-is-hurting-too.mp3",
+      "transcripts": [
+        {
+          "url": "https://www.buzzsprout.com/1941777/19193489/transcript",
+          "type": "text/html"
+        },
+        {
+          "url": "https://www.buzzsprout.com/1941777/19193489/transcript.json",
+          "type": "application/json"
+        },
+        {
+          "url": "https://www.buzzsprout.com/1941777/19193489/transcript.srt",
+          "type": "application/x-subrip"
+        },
+        {
+          "url": "https://www.buzzsprout.com/1941777/19193489/transcript.vtt",
+          "type": "text/vtt"
+        }
+      ]
+    },
+    {
+      "id": "Buzzsprout-19125216",
+      "title": "The Fixer: How Enabling Behavior Keeps Addiction Alive (And What to Do Instead)",
+      "description": "We want to hear from you! Send us a question or comment. Are you the one who keeps everything from falling apart? The one who manages the crises, covers the mistakes, makes the calls, and holds the family together while everyone else is struggling? If so, this episode was made for you. In the first ...",
+      "pubDate": "Mon, 11 May 2026 04:00:00 -0700",
+      "duration": 859,
+      "episodeNumber": 76,
+      "audioUrl": "https://www.buzzsprout.com/1941777/episodes/19125216-the-fixer-how-enabling-behavior-keeps-addiction-alive-and-what-to-do-instead.mp3",
+      "transcripts": [
+        {
+          "url": "https://www.buzzsprout.com/1941777/19125216/transcript",
+          "type": "text/html"
+        },
+        {
+          "url": "https://www.buzzsprout.com/1941777/19125216/transcript.json",
+          "type": "application/json"
+        },
+        {
+          "url": "https://www.buzzsprout.com/1941777/19125216/transcript.srt",
+          "type": "application/x-subrip"
+        },
+        {
+          "url": "https://www.buzzsprout.com/1941777/19125216/transcript.vtt",
+          "type": "text/vtt"
+        }
+      ]
+    },
+    {
       "id": "Buzzsprout-19036456",
       "title": "\"I Know I Need to Stop\": When Awareness Isn't Action — What Families Need to Hear",
       "description": "We want to hear from you! Send us a question or comment. If someone you love has ever looked you in the eye and said \"I know I need to stop\" — and then nothing changed — this episode is for you. In the sixth and final episode of The Lies We Tell, we break down the most sophisticated lie in addiction...",
