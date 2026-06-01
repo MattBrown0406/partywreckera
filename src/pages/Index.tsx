@@ -9,6 +9,7 @@ import EpisodeStarterPath from "@/components/EpisodeStarterPath";
 import AdvertiserMediaStrip from "@/components/AdvertiserMediaStrip";
 import ListenerRevenuePath from "@/components/ListenerRevenuePath";
 import SourcePageLinks from "@/components/SourcePageLinks";
+import FamilyBridgeBanner from "@/components/FamilyBridgeBanner";
 import { podcastFeedSnapshot } from "@/data/podcastFeedSnapshot";
 
 // AEO-optimized FAQs for AI answer extraction
@@ -55,6 +56,7 @@ const Index = () => {
         <HeroSection />
         <SourcePageLinks />
         <EpisodeStarterPath episodes={podcastFeedSnapshot.episodes} />
+        <FamilyBridgeBanner />
         <section id="about">
           <AboutSection />
         </section>

@@ -7,7 +7,6 @@ import ThemePlayer from "@/components/ThemePlayer";
 import TrackedExternalLink from "@/components/TrackedExternalLink";
 import { usePodcastFeed } from "@/hooks/usePodcastFeed";
 import { funnelLinks } from "@/lib/funnelLinks";
-import AppStoreBadge from "@/components/AppStoreBadge";
 
 const listenerPaths = [
   ["For the listener", "Start with episodes and plain-language education."],
@@ -159,12 +158,6 @@ const HeroSection = () => {
               <Mail className="h-4 w-4" />
               Want to be a guest?
             </a>
-          </div>
-
-          {/* FamilyBridge App */}
-          <div className="mt-8 flex flex-col items-center gap-2">
-            <p className="text-sm text-white/70 uppercase tracking-wide font-medium">Matt's AI Support App for Families</p>
-            <AppStoreBadge height={44} />
           </div>
         </div>
       </div>
