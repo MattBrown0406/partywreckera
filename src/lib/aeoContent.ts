@@ -319,6 +319,26 @@ export const glossaryTerms = [
 ];
 
 export const articleAnswerSummaries: Record<string, AnswerBlockContent> = {
+  "how-recovery-changes-relationships": {
+    eyebrow: "Article answer",
+    title: "How does recovery change relationships?",
+    answer:
+      "Recovery reshapes how a person shows up — their honesty, emotional availability, and priorities. Every relationship adjusts to that shift. Some get dramatically better; some that were held together by dysfunction don't survive. Marriages, friendships, and family bonds all go through a period of adjustment that takes time, support, and honesty.",
+    bullets: [
+      "Marriages often get harder before they get better as the old system destabilizes.",
+      "Friendships built only on shared using rarely survive sobriety.",
+      "Families may feel anger surface once the immediate crisis lifts.",
+    ],
+    nextSteps: [
+      "Let trust rebuild gradually based on consistent behavior over time.",
+      "Get your own support — Al-Anon, family therapy, or individual counseling.",
+      "Consider couples or family therapy during early recovery, not just for the person in recovery.",
+    ],
+    links: [
+      { label: "Rebuilding Trust in Recovery Families", href: "/blog/rebuilding-trust-in-recovery-families" },
+      { label: "What Nobody Tells You About Long-Term Sobriety", href: "/blog/what-nobody-tells-you-about-long-term-sobriety" },
+    ],
+  },
   "good-days-trap-intermittent-reinforcement": {
     eyebrow: "Article answer",
     title: "What is intermittent reinforcement in addiction families?",
