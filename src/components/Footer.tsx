@@ -1,6 +1,7 @@
 import { Instagram, Youtube, Facebook } from "lucide-react";
 import { Link } from "react-router-dom";
 import NewsletterSignup from "./NewsletterSignup";
+import AppStoreBadge from "@/components/AppStoreBadge";
 
 const TikTokIcon = ({ className }: { className?: string }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor">
@@ -150,6 +151,12 @@ const Footer = () => {
 
           {/* Social links */}
           <SocialLinks />
+
+          {/* FamilyBridge App */}
+          <div className="pt-4">
+            <p className="text-xs text-muted-foreground mb-2 uppercase tracking-wide font-medium">Matt's AI Support App</p>
+            <AppStoreBadge height={36} />
+          </div>
 
           {/* Copyright */}
           <p className="text-muted-foreground text-xs sm:text-sm">
