@@ -96,6 +96,7 @@ import blogImageFamilySecretSilence from "@/assets/blog-family-secret-addiction-
 import blogImageGrandparentAddiction from "@/assets/blog-grandparent-addiction-family.jpg";
 import blogImageAmbiguousLoss from "@/assets/blog-ambiguous-loss-addiction-family-grief.jpg";
 import blogImageGoodDaysTrap from "@/assets/blog-good-days-trap-intermittent-reinforcement.jpg";
+import blogImageHowRecoveryChangesRelationships from "@/assets/blog-how-recovery-changes-relationships.jpg";
 
 export interface BlogArticle {
   id: string;
@@ -108,6 +109,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "how-recovery-changes-relationships",
+    title: "Nobody Warned Me That Getting Sober Would Change Every Relationship I Had",
+    date: "May 25, 2026",
+    image: blogImageHowRecoveryChangesRelationships,
+    imageAlt: "Two young adults in quiet, honest conversation across a cafe table at golden hour",
+    excerpt: "Recovery changes relationships in ways nobody warns you about. Matt Brown — interventionist with 22 years of sobriety — explains what families and people in recovery should expect.",
+    category: "Recovery"
+  },
   {
     id: "good-days-trap-intermittent-reinforcement",
     title: "The Good Days Are Part of the Problem: Intermittent Reinforcement in Addiction Families",
