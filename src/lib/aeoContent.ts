@@ -319,6 +319,27 @@ export const glossaryTerms = [
 ];
 
 export const articleAnswerSummaries: Record<string, AnswerBlockContent> = {
+  "first-year-sobriety-what-to-expect": {
+    eyebrow: "Article answer",
+    title: "What should you expect in the first year of sobriety?",
+    answer:
+      "The first year of sobriety is rarely the smooth relief families imagine. It's a period of brain healing, identity reconstruction, and emotional volatility. Sobriety removes the substance; recovery rebuilds the person — and those happen on different timelines.",
+    bullets: [
+      "Months 1–3: cognitive fog, mood swings, and Post-Acute Withdrawal Syndrome.",
+      "Months 4–6: emptiness and 'dry drunk' irritability as substances stop filling space.",
+      "Months 6–12: slow stabilization, identity forming, glimpses of purpose.",
+    ],
+    nextSteps: [
+      "Families: get your own support (Al-Anon, therapy) — don't make recovery the only topic.",
+      "Rebuild trust through small, consistent interactions, not grand reconciliations.",
+      "Expect nonlinear progress; mood shifts are healing, not relapse.",
+    ],
+    links: [
+      { label: "How Recovery Changes Every Relationship", href: "/blog/how-recovery-changes-relationships" },
+      { label: "Dry Drunk Syndrome in the Family", href: "/blog/dry-drunk-syndrome-family" },
+      { label: "What Nobody Tells You About Long-Term Sobriety", href: "/blog/what-nobody-tells-you-about-long-term-sobriety" },
+    ],
+  },
   "how-recovery-changes-relationships": {
     eyebrow: "Article answer",
     title: "How does recovery change relationships?",
