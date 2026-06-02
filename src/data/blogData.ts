@@ -97,6 +97,7 @@ import blogImageGrandparentAddiction from "@/assets/blog-grandparent-addiction-f
 import blogImageAmbiguousLoss from "@/assets/blog-ambiguous-loss-addiction-family-grief.jpg";
 import blogImageGoodDaysTrap from "@/assets/blog-good-days-trap-intermittent-reinforcement.jpg";
 import blogImageHowRecoveryChangesRelationships from "@/assets/blog-how-recovery-changes-relationships.jpg";
+import blogImageFirstYearSobriety from "@/assets/blog-first-year-sobriety-what-to-expect.jpg";
 
 export interface BlogArticle {
   id: string;
