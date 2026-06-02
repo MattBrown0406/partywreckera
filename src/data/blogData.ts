@@ -111,6 +111,15 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    id: "first-year-sobriety-what-to-expect",
+    title: "The First Year Nobody Warned Me About: What Getting Sober Actually Looks Like",
+    date: "June 2, 2026",
+    image: blogImageFirstYearSobriety,
+    imageAlt: "Young adult sitting on a park bench at golden hour, looking contemplative",
+    excerpt: "Interventionist Matt Brown shares what his first year of sobriety was really like — the fog, the fear, and what finally made it stick. Real talk for families and people in recovery.",
+    category: "Recovery"
+  },
+  {
     id: "how-recovery-changes-relationships",
     title: "Nobody Warned Me That Getting Sober Would Change Every Relationship I Had",
     date: "May 25, 2026",
