@@ -98,6 +98,7 @@ import blogImageAmbiguousLoss from "@/assets/blog-ambiguous-loss-addiction-famil
 import blogImageGoodDaysTrap from "@/assets/blog-good-days-trap-intermittent-reinforcement.jpg";
 import blogImageHowRecoveryChangesRelationships from "@/assets/blog-how-recovery-changes-relationships.jpg";
 import blogImageFirstYearSobriety from "@/assets/blog-first-year-sobriety-what-to-expect.jpg";
+import blogImageCallingInterventionist from "@/assets/blog-what-families-should-know-before-calling-interventionist.jpg";
 
 export interface BlogArticle {
   id: string;
@@ -110,6 +111,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "what-families-should-know-before-calling-interventionist",
+    title: "What I Wish Every Family Knew Before Calling an Interventionist",
+    date: "June 6, 2026",
+    image: blogImageCallingInterventionist,
+    imageAlt: "Young adult woman at a dim kitchen table at twilight, holding a phone and notepad, considering an important call",
+    excerpt: "Interventionist Matt Brown shares what he wishes every family knew before making that first call — and why timing, honesty, and family readiness matter just as much as the person in crisis.",
+    category: "Intervention"
+  },
   {
     id: "first-year-sobriety-what-to-expect",
     title: "The First Year Nobody Warned Me About: What Getting Sober Actually Looks Like",

@@ -319,6 +319,27 @@ export const glossaryTerms = [
 ];
 
 export const articleAnswerSummaries: Record<string, AnswerBlockContent> = {
+  "what-families-should-know-before-calling-interventionist": {
+    eyebrow: "Article answer",
+    title: "What should families know before calling an interventionist?",
+    answer:
+      "Calling an interventionist is the beginning, not the end. The families who get the best outcomes come in early, tell the whole truth, and accept that the family system — not just the person using — has to change. The intervention day itself is maybe 20% of the work; the prep before and the follow-through after are the rest.",
+    bullets: [
+      "Don't wait for rock bottom — leverage erodes the longer you wait.",
+      "Be unsanitized about history, dynamics, mental health, and money.",
+      "Expect to look at your own role in the system, not just the loved one's behavior.",
+    ],
+    nextSteps: [
+      "Write down the full, honest picture before you make the call.",
+      "Plan consequences you can actually hold — not ultimatums you can't.",
+      "Ask the interventionist about model, experience, and what happens if your loved one says no.",
+    ],
+    links: [
+      { label: "What Really Happens Before a Professional Intervention", href: "/blog/what-happens-before-intervention" },
+      { label: "How to Choose an Interventionist", href: "/blog/how-to-choose-an-interventionist" },
+      { label: "Intervention Myths Families Need to Know", href: "/blog/intervention-myths-families" },
+    ],
+  },
   "first-year-sobriety-what-to-expect": {
     eyebrow: "Article answer",
     title: "What should you expect in the first year of sobriety?",
