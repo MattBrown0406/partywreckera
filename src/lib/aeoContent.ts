@@ -319,6 +319,27 @@ export const glossaryTerms = [
 ];
 
 export const articleAnswerSummaries: Record<string, AnswerBlockContent> = {
+  "how-interventionists-choose-treatment-center": {
+    eyebrow: "Article answer",
+    title: "How do interventionists choose a treatment center?",
+    answer:
+      "Interventionists choose a treatment center based on clinical fit, not marketing — matching level of care, co-occurring issues, and the person's history to a program where the staff has experience with that combination and where the interventionist has a trusted working relationship with admissions.",
+    bullets: [
+      "Decisions start before intervention day, with calls to centers about your loved one's specifics.",
+      "Relationships with admissions teams matter more than glossy websites or amenities.",
+      "Insurance and cost are addressed up front so families aren't blindsided after a 'yes.'",
+    ],
+    nextSteps: [
+      "Ask any interventionist which centers they refer to and why — and whether they take referral fees.",
+      "Share the full medical, mental health, and substance history so placement can be matched accurately.",
+      "Expect a primary and a backup option, and stay flexible on which door your loved one walks through.",
+    ],
+    links: [
+      { label: "What Really Happens Before a Professional Intervention", href: "/blog/what-happens-before-intervention" },
+      { label: "How to Choose an Interventionist", href: "/blog/how-to-choose-an-interventionist" },
+      { label: "Addiction Treatment Options Guide", href: "/blog/addiction-treatment-options-guide" },
+    ],
+  },
   "what-families-should-know-before-calling-interventionist": {
     eyebrow: "Article answer",
     title: "What should families know before calling an interventionist?",

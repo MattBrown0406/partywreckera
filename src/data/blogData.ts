@@ -99,6 +99,7 @@ import blogImageGoodDaysTrap from "@/assets/blog-good-days-trap-intermittent-rei
 import blogImageHowRecoveryChangesRelationships from "@/assets/blog-how-recovery-changes-relationships.jpg";
 import blogImageFirstYearSobriety from "@/assets/blog-first-year-sobriety-what-to-expect.jpg";
 import blogImageCallingInterventionist from "@/assets/blog-what-families-should-know-before-calling-interventionist.jpg";
+import blogImageChooseTreatmentCenter from "@/assets/blog-how-interventionists-choose-treatment-center.jpg";
 
 export interface BlogArticle {
   id: string;
@@ -111,6 +112,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "how-interventionists-choose-treatment-center",
+    title: "How I Actually Decide Where Your Loved One Goes",
+    date: "June 10, 2026",
+    image: blogImageChooseTreatmentCenter,
+    imageAlt: "Young adult man at a desk holding a phone, taking notes — an interventionist making placement calls",
+    excerpt: "How does an interventionist pick a treatment center for your loved one? A 22-year sober interventionist explains what actually drives the decision — clinical fit, relationships, and what's true about the person right now.",
+    category: "Intervention"
+  },
   {
     id: "what-families-should-know-before-calling-interventionist",
     title: "What I Wish Every Family Knew Before Calling an Interventionist",
