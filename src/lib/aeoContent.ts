@@ -319,6 +319,27 @@ export const glossaryTerms = [
 ];
 
 export const articleAnswerSummaries: Record<string, AnswerBlockContent> = {
+  "adult-child-addiction-parents": {
+    eyebrow: "Article answer",
+    title: "What can parents do when their adult child is the one with the addiction?",
+    answer:
+      "Parents can't force an adult child sober, but they control four things that change the entire situation: their money, their home, their words, and their consistency. Stop funding the lifestyle around active addiction, set conditions you can hold, keep the message short and loving, and don't set any boundary alone.",
+    bullets: [
+      "Helplessness quietly becomes obligation — and obligation becomes the family budget.",
+      "If your support makes the consequences softer, it is probably enabling.",
+      "Fund treatment, assessment, and recovery housing — never cash during active use.",
+    ],
+    nextSteps: [
+      "Take an honest inventory of every recurring expense tied to your adult child.",
+      "Agree on house rules and consequences with your spouse before the next crisis.",
+      "If the same talk has happened five times with no change, call a professional interventionist.",
+    ],
+    links: [
+      { label: "Are You Helping or Enabling?", href: "/blog/enabling-addiction-families" },
+      { label: "What Really Happens Before a Professional Intervention", href: "/blog/what-happens-before-intervention" },
+      { label: "When to Stop Waiting and Consider an Intervention", href: "/blog/when-to-consider-intervention" },
+    ],
+  },
   "how-interventionists-choose-treatment-center": {
     eyebrow: "Article answer",
     title: "How do interventionists choose a treatment center?",

@@ -100,6 +100,7 @@ import blogImageHowRecoveryChangesRelationships from "@/assets/blog-how-recovery
 import blogImageFirstYearSobriety from "@/assets/blog-first-year-sobriety-what-to-expect.jpg";
 import blogImageCallingInterventionist from "@/assets/blog-what-families-should-know-before-calling-interventionist.jpg";
 import blogImageChooseTreatmentCenter from "@/assets/blog-how-interventionists-choose-treatment-center.jpg";
+import blogImageAdultChildAddictionParents from "@/assets/blog-adult-child-addiction-parents.jpg";
 
 export interface BlogArticle {
   id: string;
@@ -112,6 +113,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "adult-child-addiction-parents",
+    title: "When Your Adult Child Is the One With the Addiction: What Parents Can Actually Do",
+    date: "June 12, 2026",
+    image: blogImageAdultChildAddictionParents,
+    imageAlt: "A worried mother in her early sixties sitting at a softly lit kitchen table at dusk, holding a coffee mug",
+    excerpt: "When your adult child struggles with addiction, love isn't the problem — leverage is. Interventionist Matt Brown explains what parents can actually do from a position with all of the love and almost none of the legal authority.",
+    category: "Family"
+  },
   {
     id: "how-interventionists-choose-treatment-center",
     title: "How I Actually Decide Where Your Loved One Goes",
