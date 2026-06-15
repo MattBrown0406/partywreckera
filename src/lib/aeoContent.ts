@@ -687,4 +687,24 @@ export const articleAnswerSummaries: Record<string, AnswerBlockContent> = {
       { label: "Family Roles in Addiction", href: "/blog/family-roles" },
     ],
   },
+  "how-addiction-changes-family-holidays": {
+    eyebrow: "Article answer",
+    title: "How does addiction change family holidays?",
+    answer:
+      "Addiction changes holidays by replacing presence with performance — the person is physically there but emotionally managing their use, image, or anxiety, while everyone else senses something is off but can't quite name it.",
+    bullets: [
+      "Families quietly adjust traditions, conversations, and timing to protect themselves.",
+      "Someone usually becomes the 'translator' managing the room's mood all day.",
+      "Kids notice far more than adults realize, including the hours of the day to avoid.",
+    ],
+    nextSteps: [
+      "Have one honest conversation with one person — not at the table, not during the event.",
+      "Decide your own plan in advance for when things get uncomfortable.",
+      "Talk to someone outside the family — a coach, support group, or interventionist.",
+    ],
+    links: [
+      { label: "Why Families Live in Constant Alert", href: "/blog/family-constant-alert" },
+      { label: "Family Roles in Addiction", href: "/blog/family-roles" },
+    ],
+  },
 };
