@@ -101,6 +101,7 @@ import blogImageFirstYearSobriety from "@/assets/blog-first-year-sobriety-what-t
 import blogImageCallingInterventionist from "@/assets/blog-what-families-should-know-before-calling-interventionist.jpg";
 import blogImageChooseTreatmentCenter from "@/assets/blog-how-interventionists-choose-treatment-center.jpg";
 import blogImageAdultChildAddictionParents from "@/assets/blog-adult-child-addiction-parents.jpg";
+import blogImageHowAddictionAffectsSiblings from "@/assets/blog-how-addiction-affects-siblings.jpg";
 
 export interface BlogArticle {
   id: string;
@@ -113,6 +114,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "how-addiction-affects-siblings",
+    title: "The Sibling Nobody Checks On",
+    date: "June 14, 2026",
+    image: blogImageHowAddictionAffectsSiblings,
+    imageAlt: "A young adult man sitting quietly at the edge of his bed in a dim bedroom while warm light spills from under a closed door",
+    excerpt: "How addiction affects siblings in families with substance abuse — the silent toll on brothers and sisters, and how to start repairing it.",
+    category: "Family"
+  },
   {
     id: "adult-child-addiction-parents",
     title: "When Your Adult Child Is the One With the Addiction: What Parents Can Actually Do",
