@@ -102,6 +102,7 @@ import blogImageCallingInterventionist from "@/assets/blog-what-families-should-
 import blogImageChooseTreatmentCenter from "@/assets/blog-how-interventionists-choose-treatment-center.jpg";
 import blogImageAdultChildAddictionParents from "@/assets/blog-adult-child-addiction-parents.jpg";
 import blogImageHowAddictionAffectsSiblings from "@/assets/blog-how-addiction-affects-siblings.jpg";
+import blogImageHowAddictionChangesFamilyHolidays from "@/assets/blog-how-addiction-changes-family-holidays.jpg";
 
 export interface BlogArticle {
   id: string;
@@ -114,6 +115,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "how-addiction-changes-family-holidays",
+    title: "How Addiction Quietly Rewrites Family Holidays — And How to Get Them Back",
+    date: "June 15, 2026",
+    image: blogImageHowAddictionChangesFamilyHolidays,
+    imageAlt: "A dimly lit holiday dining table at dusk with an empty chair, half-full wine glass, and indistinct family members in the background",
+    excerpt: "How addiction quietly reshapes family holidays and traditions, and what families can do to reclaim them in recovery. Real talk from interventionist Matt Brown.",
+    category: "Family"
+  },
   {
     id: "how-addiction-affects-siblings",
     title: "The Sibling Nobody Checks On",
