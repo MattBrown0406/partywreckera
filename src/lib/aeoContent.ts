@@ -667,4 +667,24 @@ export const articleAnswerSummaries: Record<string, AnswerBlockContent> = {
     nextSteps: ["Name what you have been carrying.", "Choose one limit.", "Get support for yourself."],
     links: [{ label: "Family Addiction Help", href: "/family-addiction-help" }],
   },
+  "how-addiction-affects-siblings": {
+    eyebrow: "Article answer",
+    title: "How does addiction affect siblings in a family?",
+    answer:
+      "Addiction affects siblings by pulling family attention, money, and emotional energy toward the addicted person — leaving brothers and sisters to feel invisible, responsible, or guilty by comparison, often becoming the 'easy one' and paying for it in silence.",
+    bullets: [
+      "Siblings commonly fall into three roles: the Overachiever, the Caretaker, or the Lost One.",
+      "Quiet kids are not necessarily okay kids — 'doing fine' and 'actually fine' are different.",
+      "The effects often follow siblings into adult relationships, work, and how they ask for help.",
+    ],
+    nextSteps: [
+      "Name what's happening with the non-addicted kids directly.",
+      "Carve out time and attention that has nothing to do with the addicted sibling.",
+      "Get them their own outside support — a counselor, group, or trusted adult.",
+    ],
+    links: [
+      { label: "The Forgotten Ones: Sibling Addiction Impact", href: "/blog/sibling-addiction-affects-family" },
+      { label: "Family Roles in Addiction", href: "/blog/family-roles" },
+    ],
+  },
 };
