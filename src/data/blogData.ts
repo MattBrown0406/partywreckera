@@ -103,6 +103,7 @@ import blogImageChooseTreatmentCenter from "@/assets/blog-how-interventionists-c
 import blogImageAdultChildAddictionParents from "@/assets/blog-adult-child-addiction-parents.jpg";
 import blogImageHowAddictionAffectsSiblings from "@/assets/blog-how-addiction-affects-siblings.jpg";
 import blogImageHowAddictionChangesFamilyHolidays from "@/assets/blog-how-addiction-changes-family-holidays.jpg";
+import blogImageRescuerTrap from "@/assets/blog-rescuer-trap-enabling-addiction-families.jpg";
 
 export interface BlogArticle {
   id: string;
@@ -115,6 +116,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "rescuer-trap-enabling-addiction-families",
+    title: "The Rescuer Trap: Why Your Help Might Be Keeping Them Sick",
+    date: "June 16, 2026",
+    image: blogImageRescuerTrap,
+    imageAlt: "A mother standing at a dim front doorway at dusk with her hand outstretched toward her young adult son on the porch",
+    excerpt: "Loving someone with addiction can turn you into a rescuer—and rescuing keeps them sick. Interventionist Matt Brown explains why and what to do instead.",
+    category: "Family"
+  },
   {
     id: "how-addiction-changes-family-holidays",
     title: "How Addiction Quietly Rewrites Family Holidays — And How to Get Them Back",

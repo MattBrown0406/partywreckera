@@ -707,4 +707,25 @@ export const articleAnswerSummaries: Record<string, AnswerBlockContent> = {
       { label: "Family Roles in Addiction", href: "/blog/family-roles" },
     ],
   },
+  "rescuer-trap-enabling-addiction-families": {
+    eyebrow: "Article answer",
+    title: "What is the rescuer trap in addiction families?",
+    answer:
+      "The rescuer trap is when a family member's identity becomes organized around saving someone with addiction. It looks like love — and it is — but by intercepting consequences (paying bills, covering stories, fixing crises), the family removes the very information that might motivate the person to change.",
+    bullets: [
+      "Rescuing stops being a behavior and becomes a role — much harder to give up.",
+      "Consequences are often the only thing powerful enough to disrupt addiction's pain-avoidance loop.",
+      "The rescuer often loses their own friendships, sleep, finances, and identity in the process.",
+    ],
+    nextSteps: [
+      "Pick one specific behavior to stop — not all of them at once.",
+      "Say it once, calmly: 'I won't do X anymore. I love you. I hope you'll get help.'",
+      "Get your own support — Al-Anon, a therapist, or a family coach — before announcing a limit.",
+    ],
+    links: [
+      { label: "What Enabling Really Looks Like", href: "/blog/enabling-addiction-families" },
+      { label: "Enabling vs. Supporting: Detachment with Love", href: "/blog/enabling-vs-supporting-boundaries" },
+      { label: "When to Consider an Intervention", href: "/blog/when-to-consider-intervention" },
+    ],
+  },
 };
