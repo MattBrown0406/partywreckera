@@ -728,4 +728,25 @@ export const articleAnswerSummaries: Record<string, AnswerBlockContent> = {
       { label: "When to Consider an Intervention", href: "/blog/when-to-consider-intervention" },
     ],
   },
+  "negotiating-with-addiction-family-patterns": {
+    eyebrow: "Article answer",
+    title: "Why do families end up negotiating with addiction?",
+    answer:
+      "Families negotiate with addiction because bargaining feels like control. Setting conditions, raising thresholds, and offering 'one more chance' creates the illusion of agency — but addiction doesn't honor terms, and every redrawn line teaches the addicted person that the limit isn't real.",
+    bullets: [
+      "Negotiation is a grief response — it extends hope when the evidence doesn't support it.",
+      "Serial 'last chances' train the addicted person that your lines are moveable.",
+      "A response says 'this is happening, here's what we're doing' — not 'if X, then Y.'",
+    ],
+    nextSteps: [
+      "Get honest about what's actually true right now, not the best-case version.",
+      "Decide what you're doing today — stop waiting for things to get worse.",
+      "Get support outside the family: Al-Anon, a therapist, or a professional interventionist.",
+    ],
+    links: [
+      { label: "The Rescuer Trap", href: "/blog/rescuer-trap-enabling-addiction-families" },
+      { label: "Enabling vs. Supporting: Detachment with Love", href: "/blog/enabling-vs-supporting-boundaries" },
+      { label: "When to Consider an Intervention", href: "/blog/when-to-consider-intervention" },
+    ],
+  },
 };

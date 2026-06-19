@@ -104,6 +104,7 @@ import blogImageAdultChildAddictionParents from "@/assets/blog-adult-child-addic
 import blogImageHowAddictionAffectsSiblings from "@/assets/blog-how-addiction-affects-siblings.jpg";
 import blogImageHowAddictionChangesFamilyHolidays from "@/assets/blog-how-addiction-changes-family-holidays.jpg";
 import blogImageRescuerTrap from "@/assets/blog-rescuer-trap-enabling-addiction-families.jpg";
+import blogImageNegotiatingFamilyPatterns from "@/assets/blog-negotiating-with-addiction-family-patterns.jpg";
 
 export interface BlogArticle {
   id: string;
@@ -116,6 +117,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "negotiating-with-addiction-family-patterns",
+    title: "Why Your Family Has Been Negotiating With Addiction — And Why It Never Works",
+    date: "June 19, 2026",
+    image: blogImageNegotiatingFamilyPatterns,
+    imageAlt: "A worried mother in her late fifties sitting across a dim kitchen table from her young adult son at dusk during a serious family conversation",
+    excerpt: "Families of addicts often negotiate with the disease instead of responding to it. Matt Brown explains this exhausting cycle—and how to break it.",
+    category: "Family"
+  },
   {
     id: "rescuer-trap-enabling-addiction-families",
     title: "The Rescuer Trap: Why Your Help Might Be Keeping Them Sick",
