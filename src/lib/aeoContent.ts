@@ -770,4 +770,25 @@ export const articleAnswerSummaries: Record<string, AnswerBlockContent> = {
       { label: "When to Consider an Intervention", href: "/blog/when-to-consider-intervention" },
     ],
   },
+  "living-amends-what-recovery-asks-after-sorry": {
+    eyebrow: "Article answer",
+    title: "What is a living amends in recovery?",
+    answer:
+      "A living amends is the ongoing, behavioral proof that you've changed — not a one-time apology. It's what you do consistently, over months and years, that the people you hurt can actually observe and rely on. Words make the apology; pattern makes the amends.",
+    bullets: [
+      "An apology is an event. A living amends is a pattern that has to keep going indefinitely.",
+      "Trust rebuilds on boring Tuesdays, not on big repair conversations.",
+      "Family members are allowed to wait for proof before re-extending trust — that's accuracy, not punishment.",
+    ],
+    nextSteps: [
+      "Stop measuring progress by how forgiven you feel; measure it by whether your actions match your words.",
+      "Pick the small, unwitnessed follow-throughs and do them anyway.",
+      "If you're the family member, watch the pattern under inconvenience — that's where the truth lives.",
+    ],
+    links: [
+      { label: "Making Amends in Recovery", href: "/blog/making-amends-recovery" },
+      { label: "Rebuilding Trust in Recovery: Families", href: "/blog/rebuilding-trust-in-recovery-families" },
+      { label: "Why Apologies Don't Equal Change", href: "/blog/apologies-dont-equal-change" },
+    ],
+  },
 };
