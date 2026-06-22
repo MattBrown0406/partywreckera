@@ -20,3 +20,6 @@ verify_jwt = false
 
 [functions.party-wreckers-advertiser-admin]
 verify_jwt = false
+
+[functions.drain-spine-outbox]
+verify_jwt = false

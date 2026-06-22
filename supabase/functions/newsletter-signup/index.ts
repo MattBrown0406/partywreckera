@@ -1,4 +1,5 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
+import { enqueueSpineEvent } from "../_shared/spine.ts";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -60,6 +61,11 @@ serve(async (req) => {
       const body = await result.text();
       throw new Error(`Failed to forward signup: ${body}`);
     }
+
+    await enqueueSpineEvent("lead_captured", {
+      email: normalizedEmail,
+      props: { source: source || "website" },
+    });
 
     return new Response(JSON.stringify({ success: true }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },

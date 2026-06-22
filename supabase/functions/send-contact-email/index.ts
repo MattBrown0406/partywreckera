@@ -1,4 +1,5 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
+import { enqueueSpineEvent } from "../_shared/spine.ts";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -55,6 +56,13 @@ serve(async (req) => {
     }
 
     const data = await res.json();
+
+    await enqueueSpineEvent("lead_captured", {
+      email: email.trim().toLowerCase(),
+      name: name.trim(),
+      props: { source: "contact_form" },
+    });
+
     return new Response(
       JSON.stringify({ success: true, id: data.id }),
       { headers: { ...corsHeaders, "Content-Type": "application/json" } }
