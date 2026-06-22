@@ -106,6 +106,7 @@ import blogImageHowAddictionChangesFamilyHolidays from "@/assets/blog-how-addict
 import blogImageRescuerTrap from "@/assets/blog-rescuer-trap-enabling-addiction-families.jpg";
 import blogImageNegotiatingFamilyPatterns from "@/assets/blog-negotiating-with-addiction-family-patterns.jpg";
 import blogImageTriangulationFamilies from "@/assets/blog-triangulation-families-addiction.jpg";
+import blogImageLivingAmendsRecovery from "@/assets/blog-living-amends-recovery.jpg";
 
 export interface BlogArticle {
   id: string;
@@ -118,6 +119,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "living-amends-what-recovery-asks-after-sorry",
+    title: "Living Amends: What Recovery Actually Asks of You After You Say Sorry",
+    date: "June 22, 2026",
+    image: blogImageLivingAmendsRecovery,
+    imageAlt: "A father in his early fifties on a dim front porch at dusk talking quietly with his young adult daughter who stands with arms crossed listening",
+    excerpt: "Saying sorry is the easy part. Interventionist Matt Brown on what a living amends in recovery actually requires — and why it takes years, not an apology.",
+    category: "Recovery"
+  },
   {
     id: "triangulation-in-families-with-addiction",
     title: "Stop Talking Through Me: Triangulation in Families With Addiction",
