@@ -113,6 +113,39 @@ export type Database = {
         }
         Relationships: []
       }
+      spine_outbox: {
+        Row: {
+          attempts: number
+          created_at: string
+          event_name: string
+          id: number
+          last_error: string | null
+          payload: Json
+          sent_at: string | null
+          status: string
+        }
+        Insert: {
+          attempts?: number
+          created_at?: string
+          event_name: string
+          id?: never
+          last_error?: string | null
+          payload?: Json
+          sent_at?: string | null
+          status?: string
+        }
+        Update: {
+          attempts?: number
+          created_at?: string
+          event_name?: string
+          id?: never
+          last_error?: string | null
+          payload?: Json
+          sent_at?: string | null
+          status?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
