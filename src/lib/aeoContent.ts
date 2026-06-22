@@ -749,4 +749,25 @@ export const articleAnswerSummaries: Record<string, AnswerBlockContent> = {
       { label: "When to Consider an Intervention", href: "/blog/when-to-consider-intervention" },
     ],
   },
+  "triangulation-in-families-with-addiction": {
+    eyebrow: "Article answer",
+    title: "What is triangulation in families with addiction?",
+    answer:
+      "Triangulation is when two family members communicate about a third person — usually the person with addiction — instead of directly with them. It feels safer than confrontation, but it removes the direct, unfiltered feedback that might actually move things, and it keeps the family stuck in roles like messenger, buffer, and protected one.",
+    bullets: [
+      "Triangulation softens or distorts hard truths by the time they reach the addicted person.",
+      "Roles like 'messenger' and 'buffer' calcify and start governing unrelated family issues too.",
+      "Everyone loses trust — the addicted person feels managed, the messenger feels used, the avoider never finds out what direct honesty could do.",
+    ],
+    nextSteps: [
+      "Say the hard thing to the person it's about, not the person it's easiest to tell.",
+      "Stop relaying messages between other adults in your family — name it out loud, once.",
+      "If you need a third party, make it a structured one: a family meeting, counselor, or interventionist.",
+    ],
+    links: [
+      { label: "The Rescuer Trap", href: "/blog/rescuer-trap-enabling-addiction-families" },
+      { label: "Why Families Negotiate With Addiction", href: "/blog/negotiating-with-addiction-family-patterns" },
+      { label: "When to Consider an Intervention", href: "/blog/when-to-consider-intervention" },
+    ],
+  },
 };

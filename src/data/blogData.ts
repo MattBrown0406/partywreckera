@@ -105,6 +105,7 @@ import blogImageHowAddictionAffectsSiblings from "@/assets/blog-how-addiction-af
 import blogImageHowAddictionChangesFamilyHolidays from "@/assets/blog-how-addiction-changes-family-holidays.jpg";
 import blogImageRescuerTrap from "@/assets/blog-rescuer-trap-enabling-addiction-families.jpg";
 import blogImageNegotiatingFamilyPatterns from "@/assets/blog-negotiating-with-addiction-family-patterns.jpg";
+import blogImageTriangulationFamilies from "@/assets/blog-triangulation-families-addiction.jpg";
 
 export interface BlogArticle {
   id: string;
@@ -117,6 +118,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "triangulation-in-families-with-addiction",
+    title: "Stop Talking Through Me: Triangulation in Families With Addiction",
+    date: "June 20, 2026",
+    image: blogImageTriangulationFamilies,
+    imageAlt: "A dim dining room at dusk where two family members lean in and whisper to each other while a young adult man sits isolated at the far end of the table",
+    excerpt: "Triangulation in families with addiction means talking around the person instead of to them. Matt Brown breaks down why it backfires—and what to do instead.",
+    category: "Family"
+  },
   {
     id: "negotiating-with-addiction-family-patterns",
     title: "Why Your Family Has Been Negotiating With Addiction — And Why It Never Works",
