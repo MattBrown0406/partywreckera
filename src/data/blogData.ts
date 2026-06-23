@@ -1,4 +1,5 @@
 // Blog post data for routing and index page
+import blogImageComingHomeFromRehab from "@/assets/blog-coming-home-from-rehab.jpg";
 import blogImageExerciseNutrition from "@/assets/blog-exercise-nutrition-recovery.jpg";
 import blogImageEnabling from "@/assets/blog-family-support-enabling.jpg";
 import blogImageConversation from "@/assets/blog-right-moment-conversation.jpg";
@@ -119,6 +120,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "coming-home-from-rehab-what-families-arent-prepared-for",
+    title: "Coming Home From Rehab: The Part Nobody Prepares Families For",
+    date: "June 23, 2026",
+    image: blogImageComingHomeFromRehab,
+    imageAlt: "A young adult man at dusk standing in the doorway of a suburban family home holding a duffel bag while his parents wait quietly in the foyer",
+    excerpt: "Coming home from rehab is the part families aren't ready for. Interventionist Matt Brown on the first 90 days, supporting recovery without enabling, and what to do if relapse happens.",
+    category: "Recovery"
+  },
   {
     id: "living-amends-what-recovery-asks-after-sorry",
     title: "Living Amends: What Recovery Actually Asks of You After You Say Sorry",

@@ -791,4 +791,25 @@ export const articleAnswerSummaries: Record<string, AnswerBlockContent> = {
       { label: "Why Apologies Don't Equal Change", href: "/blog/apologies-dont-equal-change" },
     ],
   },
+  "coming-home-from-rehab-what-families-arent-prepared-for": {
+    eyebrow: "Article answer",
+    title: "What should families expect when someone comes home from rehab?",
+    answer:
+      "Coming home from rehab is the start of recovery, not the finish line. The first 90 days at home are fragile — expect mood swings, awkwardness in the house, and triggers everywhere. Families support recovery best by holding structure and boundaries while letting the person own their program.",
+    bullets: [
+      "Treatment stabilizes someone; it does not fix them. Home is where the tools either get practiced or dropped.",
+      "Structure beats motivation: meetings, routine, sober support, and steady days carry the early weeks.",
+      "It is normal to feel relieved and resentful at once — trust returns through evidence over time, not on a 30-day certificate.",
+    ],
+    nextSteps: [
+      "Keep the first 90 days small and steady — no big family reckoning yet.",
+      "Hold the boundaries you set during the crisis; support the person, not the addiction.",
+      "Make a written relapse plan as a family before it is needed, so panic does not run the response.",
+    ],
+    links: [
+      { label: "Rebuilding Trust in Recovery: Families", href: "/blog/rebuilding-trust-in-recovery-families" },
+      { label: "Enabling vs Supporting: Where the Line Is", href: "/blog/enabling-vs-supporting-boundaries" },
+      { label: "Living Amends in Recovery", href: "/blog/living-amends-what-recovery-asks-after-sorry" },
+    ],
+  },
 };
