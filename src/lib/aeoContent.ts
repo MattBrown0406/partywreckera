@@ -812,4 +812,25 @@ export const articleAnswerSummaries: Record<string, AnswerBlockContent> = {
       { label: "Living Amends in Recovery", href: "/blog/living-amends-what-recovery-asks-after-sorry" },
     ],
   },
+  "second-year-of-sobriety-what-to-expect": {
+    eyebrow: "Article answer",
+    title: "What should you expect in the second year of sobriety?",
+    answer:
+      "The second year of sobriety is when the applause stops and the real work begins. The urgency of year one fades, the nervous system comes back online, and you have to learn to live ordinary days without anything to soften the edges. It's not harder because you're failing — it's harder because the rebuild has started.",
+    bullets: [
+      "Year one is fueled by adrenaline and attention; year two has neither, and that's the relapse risk nobody warns about.",
+      "Feelings the substance numbed — grief, anger, restlessness — surface in year two as the brain rebalances.",
+      "Relationships stop grading on a curve; trust now has to be earned through ordinary, repeated consistency.",
+    ],
+    nextSteps: [
+      "Build internal tools and routines you'll lean on when no one is watching.",
+      "Families: stay engaged past the one-year mark — quiet steadiness matters more than celebration.",
+      "Do the deeper work — amends, resentments, old patterns — that year one was too loud for.",
+    ],
+    links: [
+      { label: "First Year of Sobriety: What to Expect", href: "/blog/first-year-sobriety-what-to-expect" },
+      { label: "Rebuilding Trust in Recovery: Families", href: "/blog/rebuilding-trust-in-recovery-families" },
+      { label: "What Nobody Tells You About Long-Term Sobriety", href: "/blog/what-nobody-tells-you-about-long-term-sobriety" },
+    ],
+  },
 };

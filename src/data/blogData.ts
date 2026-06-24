@@ -1,4 +1,5 @@
 // Blog post data for routing and index page
+import blogImageSecondYearSobriety from "@/assets/blog-second-year-sobriety.jpg";
 import blogImageComingHomeFromRehab from "@/assets/blog-coming-home-from-rehab.jpg";
 import blogImageExerciseNutrition from "@/assets/blog-exercise-nutrition-recovery.jpg";
 import blogImageEnabling from "@/assets/blog-family-support-enabling.jpg";
@@ -120,6 +121,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "second-year-of-sobriety-what-to-expect",
+    title: "Nobody Warns You About the Second Year of Sobriety",
+    date: "June 24, 2026",
+    image: blogImageSecondYearSobriety,
+    imageAlt: "A young adult sitting quietly on a couch holding a coffee mug in soft morning light, representing the quiet, ordinary second year of sobriety",
+    excerpt: "Everybody throws a party for year one. Year two is when the room gets quiet. Interventionist Matt Brown on why the second year of sobriety is the year the real work begins.",
+    category: "Recovery"
+  },
   {
     id: "coming-home-from-rehab-what-families-arent-prepared-for",
     title: "Coming Home From Rehab: The Part Nobody Prepares Families For",
