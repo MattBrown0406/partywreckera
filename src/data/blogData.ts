@@ -1,4 +1,5 @@
 // Blog post data for routing and index page
+import blogImageRelapseFirst24 from "@/assets/blog-relapse-first-24-hours.jpg";
 import blogImageSecondYearSobriety from "@/assets/blog-second-year-sobriety.jpg";
 import blogImageComingHomeFromRehab from "@/assets/blog-coming-home-from-rehab.jpg";
 import blogImageExerciseNutrition from "@/assets/blog-exercise-nutrition-recovery.jpg";
@@ -121,6 +122,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "what-to-do-after-a-relapse-first-24-hours",
+    title: "A Relapse Is Not a Verdict: What to Do in the First 24 Hours",
+    date: "June 25, 2026",
+    image: blogImageRelapseFirst24,
+    imageAlt: "A young adult sitting on the edge of a bed at dawn with head in hands while a concerned parent stands quietly in the doorway, representing the morning after a relapse",
+    excerpt: "A relapse isn't the end of recovery. Interventionist Matt Brown on what a relapse really means and what to do in the first 24 hours to keep your loved one safe and moving forward.",
+    category: "Recovery"
+  },
   {
     id: "second-year-of-sobriety-what-to-expect",
     title: "Nobody Warns You About the Second Year of Sobriety",

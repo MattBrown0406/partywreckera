@@ -833,4 +833,25 @@ export const articleAnswerSummaries: Record<string, AnswerBlockContent> = {
       { label: "What Nobody Tells You About Long-Term Sobriety", href: "/blog/what-nobody-tells-you-about-long-term-sobriety" },
     ],
   },
+  "what-to-do-after-a-relapse-first-24-hours": {
+    eyebrow: "Article answer",
+    title: "What should families do in the first 24 hours after a relapse?",
+    answer:
+      "A relapse is not a verdict — it's information. In the first 24 hours, safety comes before everything else: check for overdose, keep naloxone on hand for opioids, and call 911 if needed. Don't drive the confrontation tonight, don't make permanent decisions in a temporary crisis, and save the honest conversation for tomorrow.",
+    bullets: [
+      "Tolerance drops fast in sobriety, so a relapse carries real overdose risk — physical safety is the first job.",
+      "Shame fuels more using; accountability without contempt is what actually brings people back.",
+      "A slip doesn't erase the recovery already built — the skills and time still count as a foundation to rebuild on.",
+    ],
+    nextSteps: [
+      "Get through the night safely, then have one direct, non-shaming conversation the next day.",
+      "Ask for one next small step — a meeting, a sponsor call, the therapist, the treatment center.",
+      "If the slip is part of a pattern or the using is escalating, step up the level of care or call an interventionist.",
+    ],
+    links: [
+      { label: "First Year of Sobriety: What to Expect", href: "/blog/first-year-sobriety-what-to-expect" },
+      { label: "Coming Home From Rehab", href: "/blog/coming-home-from-rehab-what-families-arent-prepared-for" },
+      { label: "Living Amends in Recovery", href: "/blog/living-amends-what-recovery-asks-after-sorry" },
+    ],
+  },
 };
