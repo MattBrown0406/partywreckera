@@ -1,4 +1,5 @@
 // Blog post data for routing and index page
+import blogImageHopeIsAVerb from "@/assets/blog-hope-is-a-verb-daily-actions-families.jpg";
 import blogImageRelapseFirst24 from "@/assets/blog-relapse-first-24-hours.jpg";
 import blogImageSecondYearSobriety from "@/assets/blog-second-year-sobriety.jpg";
 import blogImageComingHomeFromRehab from "@/assets/blog-coming-home-from-rehab.jpg";
@@ -122,6 +123,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "hope-is-a-verb-small-daily-actions-families-addiction",
+    title: "Hope Is a Verb: Small Daily Actions for Families Who Aren't in Crisis Yet",
+    date: "June 26, 2026",
+    image: blogImageHopeIsAVerb,
+    imageAlt: "A worried mother in her late forties sitting at a sunlit kitchen table early in the morning, writing in a small notebook beside a coffee mug",
+    excerpt: "You don't need a crisis to act. Interventionist Matt Brown on how to help a family member with addiction through small, daily steps that build momentum long before anyone calls for help.",
+    category: "Family"
+  },
   {
     id: "what-to-do-after-a-relapse-first-24-hours",
     title: "A Relapse Is Not a Verdict: What to Do in the First 24 Hours",

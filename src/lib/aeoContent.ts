@@ -854,4 +854,25 @@ export const articleAnswerSummaries: Record<string, AnswerBlockContent> = {
       { label: "Living Amends in Recovery", href: "/blog/living-amends-what-recovery-asks-after-sorry" },
     ],
   },
+  "hope-is-a-verb-small-daily-actions-families-addiction": {
+    eyebrow: "Article answer",
+    title: "How can families help a loved one with addiction before there's a crisis?",
+    answer:
+      "Start small and start now. You don't need a rock bottom to act. The families who change things treat hope as a verb — they take small, consistent daily steps that build traction long before anyone calls an interventionist. Boring and repeatable beats dramatic and occasional every time.",
+    bullets: [
+      "Passive hope feels like effort but changes nothing — if your hope has no next step attached, it's avoidance.",
+      "Early action is usually the cheapest and safest, and it builds a foundation for whatever comes next.",
+      "Small steps don't require your loved one to cooperate, agree, or even know — that's what makes them work.",
+    ],
+    nextSteps: [
+      "Learn one true thing a day, and write down what you actually saw.",
+      "Stop one piece of enabling, and make one call to get support for yourself.",
+      "Say one true sentence out loud — to them, or to someone safe.",
+    ],
+    links: [
+      { label: "Stop Waiting for Rock Bottom", href: "/blog/stop-waiting-rock-bottom" },
+      { label: "What Families Can Do Right Now", href: "/blog/families-can-do-right-now" },
+      { label: "When to Consider an Intervention", href: "/blog/when-to-consider-intervention" },
+    ],
+  },
 };
