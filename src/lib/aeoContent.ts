@@ -875,4 +875,25 @@ export const articleAnswerSummaries: Record<string, AnswerBlockContent> = {
       { label: "When to Consider an Intervention", href: "/blog/when-to-consider-intervention" },
     ],
   },
+  "stop-waiting-for-a-sign-when-to-call-professional-interventionist": {
+    eyebrow: "Article answer",
+    title: "When should a family call a professional interventionist?",
+    answer:
+      "Most families wait far too long. If you're already asking whether to call someone, you should probably call. You don't need a rock bottom or a crisis to reach out — earlier action means safer, less dramatic options and a family that's ready when it counts.",
+    bullets: [
+      "Conversations have become negotiations and damage-control instead of relationship.",
+      "You've reorganized your life around the addiction — canceled trips, hidden money, lies told to protect them.",
+      "Past treatment didn't hold, or you've quietly stopped believing things will change.",
+    ],
+    nextSteps: [
+      "Treat the first call as a conversation, not a commitment — no pressure, just information.",
+      "Get the family aligned and strategic before anyone sits down in the same room.",
+      "Reach Matt Brown directly at FreedomInterventions.com for a free initial consultation.",
+    ],
+    links: [
+      { label: "What Happens Before an Intervention", href: "/blog/what-happens-before-intervention" },
+      { label: "How Interventionists Choose a Treatment Center", href: "/blog/how-interventionists-choose-treatment-center" },
+      { label: "What Families Should Know Before Calling", href: "/blog/what-families-should-know-before-calling-interventionist" },
+    ],
+  },
 };

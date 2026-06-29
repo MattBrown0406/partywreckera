@@ -1,4 +1,5 @@
 // Blog post data for routing and index page
+import blogImageWhenToCallInterventionist from "@/assets/blog-when-to-call-interventionist.jpg";
 import blogImageHopeIsAVerb from "@/assets/blog-hope-is-a-verb-daily-actions-families.jpg";
 import blogImageRelapseFirst24 from "@/assets/blog-relapse-first-24-hours.jpg";
 import blogImageSecondYearSobriety from "@/assets/blog-second-year-sobriety.jpg";
@@ -123,6 +124,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "stop-waiting-for-a-sign-when-to-call-professional-interventionist",
+    title: "Stop Waiting for a Sign: When It's Time to Call a Professional Interventionist",
+    date: "June 29, 2026",
+    image: blogImageWhenToCallInterventionist,
+    imageAlt: "A young adult woman sitting alone at a kitchen table in warm evening light, holding a phone and thinking about making an important call",
+    excerpt: "If you've been managing your loved one's addiction alone and wondering when to call for help, interventionist Matt Brown shares the signs it's already time to make the call.",
+    category: "Intervention"
+  },
   {
     id: "hope-is-a-verb-small-daily-actions-families-addiction",
     title: "Hope Is a Verb: Small Daily Actions for Families Who Aren't in Crisis Yet",
