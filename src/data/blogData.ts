@@ -1,5 +1,6 @@
 // Blog post data for routing and index page
 import blogImageWhenToCallInterventionist from "@/assets/blog-when-to-call-interventionist.jpg";
+import blogImageTriedEverythingOutOfHope from "@/assets/blog-tried-everything-out-of-hope.jpg";
 import blogImageHopeIsAVerb from "@/assets/blog-hope-is-a-verb-daily-actions-families.jpg";
 import blogImageRelapseFirst24 from "@/assets/blog-relapse-first-24-hours.jpg";
 import blogImageSecondYearSobriety from "@/assets/blog-second-year-sobriety.jpg";
@@ -124,6 +125,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "tried-everything-what-to-do-when-out-of-hope-addiction",
+    title: "I've Tried Everything and Nothing Works: What to Do When You're Out of Hope",
+    date: "June 30, 2026",
+    image: blogImageTriedEverythingOutOfHope,
+    imageAlt: "A worn-out woman in her early thirties sitting on a couch in a softly lit living room at dusk, head resting on her hand, looking quietly exhausted",
+    excerpt: "Tried everything with an addicted loved one and out of hope? Interventionist Matt Brown on what to do next, and why exhaustion isn't the end of the road.",
+    category: "Family"
+  },
   {
     id: "stop-waiting-for-a-sign-when-to-call-professional-interventionist",
     title: "Stop Waiting for a Sign: When It's Time to Call a Professional Interventionist",
