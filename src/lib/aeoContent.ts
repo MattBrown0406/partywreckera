@@ -896,4 +896,25 @@ export const articleAnswerSummaries: Record<string, AnswerBlockContent> = {
       { label: "What Families Should Know Before Calling", href: "/blog/what-families-should-know-before-calling-interventionist" },
     ],
   },
+  "tried-everything-what-to-do-when-out-of-hope-addiction": {
+    eyebrow: "Article answer",
+    title: "What should I do when I've tried everything with an addicted loved one?",
+    answer:
+      "When you've tried everything, the next move is not to try harder — it's to try differently, and to stop carrying it alone. Exhaustion means your current approach has hit its limit, not that the situation is hopeless. \u201CTried everything\u201D usually means \u201Ctried everything we knew to do alone.\u201D",
+    bullets: [
+      "Most family effort is one person repeating a few private strategies — pleading, controlling, rescuing — on a loop.",
+      "Structure and outside help are almost always what \u201CI tried everything\u201D leaves out.",
+      "As long as your loved one is alive, it's not too late, and you don't have to feel hopeful first to act.",
+    ],
+    nextSteps: [
+      "Take an honest inventory of what you've actually done — see the pattern.",
+      "Bring one outside person into the room: counselor, interventionist, or Al-Anon.",
+      "Pick one enabling behavior to stop this week, and get the family aligned on a consistent message.",
+    ],
+    links: [
+      { label: "Stop Waiting for a Sign It's Time", href: "/blog/stop-waiting-for-a-sign-when-to-call-professional-interventionist" },
+      { label: "Hope Is a Verb: Small Daily Actions", href: "/blog/hope-is-a-verb-small-daily-actions-families-addiction" },
+      { label: "When the Family Is Exhausted by Addiction", href: "/blog/addiction-family-exhaustion" },
+    ],
+  },
 };
