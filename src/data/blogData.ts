@@ -2,6 +2,7 @@
 import blogImageWhenToCallInterventionist from "@/assets/blog-when-to-call-interventionist.jpg";
 import blogImageTriedEverythingOutOfHope from "@/assets/blog-tried-everything-out-of-hope.jpg";
 import blogImageEarlyRecoveryShowsUp from "@/assets/blog-early-recovery-who-shows-up.jpg";
+import blogImageMyRockBottomQuietTuesday from "@/assets/blog-my-rock-bottom-quiet-tuesday.jpg";
 import blogImageHopeIsAVerb from "@/assets/blog-hope-is-a-verb-daily-actions-families.jpg";
 import blogImageRelapseFirst24 from "@/assets/blog-relapse-first-24-hours.jpg";
 import blogImageSecondYearSobriety from "@/assets/blog-second-year-sobriety.jpg";
@@ -126,6 +127,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "my-rock-bottom-was-a-quiet-tuesday-morning",
+    title: "My Rock Bottom Wasn't a Crash. It Was a Quiet Tuesday Morning.",
+    date: "July 2, 2026",
+    image: blogImageMyRockBottomQuietTuesday,
+    imageAlt: "A young adult man standing in a quiet kitchen at dawn holding a coffee mug, soft morning light through the blinds, thoughtful and honest expression",
+    excerpt: "My rock bottom in addiction wasn't dramatic. It was a quiet Tuesday morning. Interventionist Matt Brown on what hitting bottom actually felt like — and why it changed everything.",
+    category: "Recovery"
+  },
   {
     id: "early-recovery-who-actually-shows-up",
     title: "Early Recovery Taught Me Who Actually Shows Up",

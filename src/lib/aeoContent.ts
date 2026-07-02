@@ -938,4 +938,25 @@ export const articleAnswerSummaries: Record<string, AnswerBlockContent> = {
       { label: "Hope Is a Verb: Small Daily Actions", href: "/blog/hope-is-a-verb-small-daily-actions-families-addiction" },
     ],
   },
+  "my-rock-bottom-was-a-quiet-tuesday-morning": {
+    eyebrow: "Article answer",
+    title: "What does hitting rock bottom in addiction really feel like?",
+    answer:
+      "Rock bottom is usually quiet, not dramatic. It's the moment the story you've been telling yourself finally stops working — when the gap between who you say you are and how you actually live becomes too wide to step over. Families can't schedule someone else's bottom, but they can stop building the floor that keeps them from reaching the ground.",
+    bullets: [
+      "Most bottoms are ordinary — a normal morning where the excuses finally collapse.",
+      "Waiting for a dramatic bottom is a gamble with your loved one's life as the stake.",
+      "Raising the bottom is done through honesty and stopping the rescue, not through cruelty.",
+    ],
+    nextSteps: [
+      "Say the real thing once, plainly: \u201CI love you, and I'm not going to help you keep this going.\u201D",
+      "Let one natural consequence stand instead of softening it.",
+      "Get your own support so you're not carrying it alone — coaching, Al-Anon, or a professional.",
+    ],
+    links: [
+      { label: "Stop Waiting for Rock Bottom", href: "/blog/stop-waiting-for-rock-bottom" },
+      { label: "The Rock Bottom Myth in Addiction Recovery", href: "/blog/rock-bottom-myth-addiction" },
+      { label: "Stop Waiting for a Sign It's Time", href: "/blog/stop-waiting-for-a-sign-when-to-call-professional-interventionist" },
+    ],
+  },
 };
