@@ -917,4 +917,25 @@ export const articleAnswerSummaries: Record<string, AnswerBlockContent> = {
       { label: "When the Family Is Exhausted by Addiction", href: "/blog/addiction-family-exhaustion" },
     ],
   },
+  "early-recovery-who-actually-shows-up": {
+    eyebrow: "Article answer",
+    title: "Who actually shows up for someone in early recovery?",
+    answer:
+      "In early recovery, the people who show up are rarely the ones you'd predict — they're usually people in recovery themselves who keep it simple: they answer the phone, tell the truth, and don't disappear. Families help most by connecting their loved one to recovery-specific support and then letting that support carry the weight.",
+    bullets: [
+      "Consistency beats intensity — ordinary check-ins hold recovery together.",
+      "People who pull away usually aren't rejecting the person; they're protecting themselves from hope that hurt before.",
+      "Recovery communities are already full of people willing to show up for a newcomer.",
+    ],
+    nextSteps: [
+      "Help your loved one get to treatment or meetings without hovering over whether they went.",
+      "Get your own support — Al-Anon, a family coach, or other parents who've walked this road.",
+      "Stop constant testing and rescuing; let recovery-specific support do its job.",
+    ],
+    links: [
+      { label: "What to Expect in the First Year of Sobriety", href: "/blog/first-year-sobriety-what-to-expect" },
+      { label: "Nobody Warns You About the Second Year of Sobriety", href: "/blog/second-year-of-sobriety-what-to-expect" },
+      { label: "Hope Is a Verb: Small Daily Actions", href: "/blog/hope-is-a-verb-small-daily-actions-families-addiction" },
+    ],
+  },
 };

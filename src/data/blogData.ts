@@ -1,6 +1,7 @@
 // Blog post data for routing and index page
 import blogImageWhenToCallInterventionist from "@/assets/blog-when-to-call-interventionist.jpg";
 import blogImageTriedEverythingOutOfHope from "@/assets/blog-tried-everything-out-of-hope.jpg";
+import blogImageEarlyRecoveryShowsUp from "@/assets/blog-early-recovery-who-shows-up.jpg";
 import blogImageHopeIsAVerb from "@/assets/blog-hope-is-a-verb-daily-actions-families.jpg";
 import blogImageRelapseFirst24 from "@/assets/blog-relapse-first-24-hours.jpg";
 import blogImageSecondYearSobriety from "@/assets/blog-second-year-sobriety.jpg";
@@ -125,6 +126,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "early-recovery-who-actually-shows-up",
+    title: "Early Recovery Taught Me Who Actually Shows Up",
+    date: "July 1, 2026",
+    image: blogImageEarlyRecoveryShowsUp,
+    imageAlt: "A man in his mid-forties sitting on a porch step at dawn holding a coffee mug and a phone, quietly taking a call in soft warm morning light",
+    excerpt: "In early recovery, I learned who actually shows up. What 23 years of sobriety taught me about the people who stay — and how families can find them.",
+    category: "Recovery"
+  },
   {
     id: "tried-everything-what-to-do-when-out-of-hope-addiction",
     title: "I've Tried Everything and Nothing Works: What to Do When You're Out of Hope",
