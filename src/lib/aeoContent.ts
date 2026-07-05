@@ -959,4 +959,25 @@ export const articleAnswerSummaries: Record<string, AnswerBlockContent> = {
       { label: "Stop Waiting for a Sign It's Time", href: "/blog/stop-waiting-for-a-sign-when-to-call-professional-interventionist" },
     ],
   },
+  "why-i-still-go-to-meetings-after-23-years-sober": {
+    eyebrow: "Article answer",
+    title: "Why do people still go to meetings after decades of sobriety?",
+    answer:
+      "Long-term sobriety is maintenance, not a finish line. People with decades of recovery keep going to meetings because memory of active addiction fades over time, and because being around newcomers keeps the truth of where they came from present. The most common cause of late-stage relapse isn't craving — it's the quiet drift that starts with \u201CI'm fine.\u201D",
+    bullets: [
+      "Addiction doesn't honor seniority — the thinking that fueled it stays available even decades later.",
+      "Relapse after many years usually follows a slow drift away from recovery practices, not a sudden event.",
+      "An hour or two a week of recovery maintenance protects the ordinary life it makes possible.",
+    ],
+    nextSteps: [
+      "If a loved one has dropped recovery activities because they're \u201Cdoing great,\u201D ask one calm, curious question about what changed.",
+      "Watch for a pattern — dropped meetings, lost sponsor contact, irritability about recovery questions — not a single instance.",
+      "Support the routines that keep your person well, and get your own support so you're not the only one paying attention.",
+    ],
+    links: [
+      { label: "What Nobody Tells You About Long-Term Sobriety", href: "/blog/what-nobody-tells-you-about-long-term-sobriety" },
+      { label: "Being Busy Is Not the Same as Being in Recovery", href: "/blog/busy-not-recovery" },
+      { label: "Nobody Warns You About the Second Year of Sobriety", href: "/blog/second-year-of-sobriety-what-to-expect" },
+    ],
+  },
 };

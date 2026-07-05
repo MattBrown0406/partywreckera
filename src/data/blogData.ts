@@ -1,5 +1,6 @@
 // Blog post data for routing and index page
 import blogImageWhenToCallInterventionist from "@/assets/blog-when-to-call-interventionist.jpg";
+import blogImageWhyIStillGoToMeetings from "@/assets/blog-why-i-still-go-to-meetings.jpg";
 import blogImageTriedEverythingOutOfHope from "@/assets/blog-tried-everything-out-of-hope.jpg";
 import blogImageEarlyRecoveryShowsUp from "@/assets/blog-early-recovery-who-shows-up.jpg";
 import blogImageMyRockBottomQuietTuesday from "@/assets/blog-my-rock-bottom-quiet-tuesday.jpg";
@@ -127,6 +128,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "why-i-still-go-to-meetings-after-23-years-sober",
+    title: "Long-Term Sobriety: Why I Still Go to Meetings After 23 Years",
+    date: "July 5, 2026",
+    image: blogImageWhyIStillGoToMeetings,
+    imageAlt: "An empty metal folding chair in a softly lit church basement recovery meeting room with a coffee urn on a folding table in the background",
+    excerpt: "After 23 years sober, interventionist Matt Brown explains why he still goes to meetings — and what long-term sobriety really requires to last.",
+    category: "Recovery"
+  },
   {
     id: "my-rock-bottom-was-a-quiet-tuesday-morning",
     title: "My Rock Bottom Wasn't a Crash. It Was a Quiet Tuesday Morning.",
