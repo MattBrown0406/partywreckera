@@ -980,4 +980,25 @@ export const articleAnswerSummaries: Record<string, AnswerBlockContent> = {
       { label: "Nobody Warns You About the Second Year of Sobriety", href: "/blog/second-year-of-sobriety-what-to-expect" },
     ],
   },
+  "do-interventions-actually-work-success-rates": {
+    eyebrow: "Article answer",
+    title: "Do interventions actually work?",
+    answer:
+      "Yes — when a trained professional facilitates them, 80–90% of interventions end with the person agreeing to enter treatment, usually that same day. But getting someone to treatment isn't the same as getting someone well. Whether an intervention truly \u201Cworks\u201D depends on the family's preparation before the meeting and their follow-through in the months after.",
+    bullets: [
+      "Most professionally led interventions result in a same-day yes to treatment.",
+      "The meeting is about an hour — the prep and the follow-through are where change actually happens.",
+      "A refusal isn't failure; many people say yes weeks later when the family holds their boundaries.",
+    ],
+    nextSteps: [
+      "Get the whole family aligned — including the reluctant ones — before the meeting.",
+      "Have a treatment bed reserved and logistics ready before you have the conversation.",
+      "Decide what you will change in your own behavior whether the answer is yes or no.",
+    ],
+    links: [
+      { label: "What Happens Before a Professional Intervention", href: "/blog/what-happens-before-intervention" },
+      { label: "When Someone Says No to an Intervention", href: "/blog/when-someone-says-no-intervention" },
+      { label: "7 Intervention Myths That Keep Families Stuck", href: "/blog/intervention-myths-families" },
+    ],
+  },
 };
