@@ -1,4 +1,5 @@
 // Blog post data for routing and index page
+import blogImageDoInterventionsWork from "@/assets/blog-do-interventions-work.jpg";
 import blogImageWhenToCallInterventionist from "@/assets/blog-when-to-call-interventionist.jpg";
 import blogImageWhyIStillGoToMeetings from "@/assets/blog-why-i-still-go-to-meetings.jpg";
 import blogImageTriedEverythingOutOfHope from "@/assets/blog-tried-everything-out-of-hope.jpg";
@@ -128,6 +129,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "do-interventions-actually-work-success-rates",
+    title: "Do Interventions Actually Work? An Interventionist's Honest Answer",
+    date: "July 8, 2026",
+    image: blogImageDoInterventionsWork,
+    imageAlt: "A young adult man sitting across a desk from an unseen professional in a warm, softly lit office, hands clasped in quiet resolve",
+    excerpt: "Do interventions work? An interventionist with 20+ years of experience shares real success rates, what \"working\" actually means, and how families can improve the odds.",
+    category: "Intervention"
+  },
   {
     id: "why-i-still-go-to-meetings-after-23-years-sober",
     title: "Long-Term Sobriety: Why I Still Go to Meetings After 23 Years",
