@@ -33,9 +33,9 @@ const HeroSection = () => {
               rel="noopener noreferrer"
               eventName="family_squares_click"
               ctaLabel="Hero Sober Helpline banner"
-              className="inline-flex items-center gap-3 rounded-full border border-emerald-400/30 bg-emerald-950/35 px-4 py-2 text-sm font-semibold text-emerald-100 transition-colors hover:border-emerald-300 hover:bg-emerald-900/45"
+              className="inline-flex items-center gap-3 rounded-full border border-slate-400/30 bg-slate-900/50 px-4 py-2 text-sm font-semibold text-slate-100 transition-colors hover:border-slate-300 hover:bg-slate-800/60"
             >
-              <img src={soberHelplineLogo} alt="Sober Helpline logo" className="h-7 w-auto rounded-sm bg-white" />
+              <img src={soberHelplineLogo} alt="Sober Helpline logo" className="h-7 w-7 rounded-sm" />
               Free Monday Family Squares support
             </TrackedExternalLink>
             <div className="flex flex-wrap items-center justify-center gap-2 text-xs uppercase text-white/65">

@@ -153,10 +153,10 @@ const AboutSection = () => {
           </div>
 
           {/* Sober Helpline - Dynamic Card */}
-          <div className="relative overflow-hidden rounded-lg border border-emerald-600/30 bg-gradient-to-br from-emerald-900/20 via-teal-900/10 to-background group">
+          <div className="relative overflow-hidden rounded-lg border border-slate-500/30 bg-gradient-to-br from-slate-900/40 via-slate-900/20 to-background group">
             {/* Badge */}
             <div className="absolute top-3 right-3 z-10">
-              <span className="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-600 text-emerald-50 text-[10px] font-semibold uppercase tracking-wider">
+              <span className="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-slate-700 text-slate-50 text-[10px] font-semibold uppercase tracking-wider">
                 <BookOpen className="w-3 h-3" />
                 Education
               </span>
@@ -164,15 +164,15 @@ const AboutSection = () => {
             
             <div className="relative p-6">
               <div className="flex items-center gap-4 mb-4">
-                <div className="bg-white rounded-lg p-3 shadow-md flex-shrink-0">
+                <div className="rounded-lg shadow-md flex-shrink-0 overflow-hidden">
                   <img 
                     src={soberHelplineLogo} 
                     alt="Sober Helpline" 
-                    className="w-28 h-auto"
+                    className="w-20 h-20"
                   />
                 </div>
                 <div>
-                  <h3 className="font-script text-2xl text-emerald-400">Sober Helpline</h3>
+                  <h3 className="font-script text-2xl text-slate-200">Sober Helpline</h3>
                   <p className="text-xs text-muted-foreground">Addiction Education Resources</p>
                 </div>
               </div>
@@ -180,17 +180,17 @@ const AboutSection = () => {
               <p className="text-muted-foreground text-sm mb-2">
                 Find treatment education, practical family resources, and a steadier place to start when addiction has everybody spinning.
               </p>
-              <p className="text-emerald-400 text-sm font-semibold mb-4">
+              <p className="text-slate-300 text-sm font-semibold mb-4">
                 Free weekly Family Squares Zoom calls every Monday
               </p>
               
               {/* Quick features */}
               <div className="flex flex-wrap gap-2 mb-4">
-                <div className="flex items-center gap-1.5 px-2 py-1 rounded-full bg-emerald-600/10 border border-emerald-600/20 text-xs text-emerald-400">
+                <div className="flex items-center gap-1.5 px-2 py-1 rounded-full bg-slate-500/10 border border-slate-500/20 text-xs text-slate-300">
                   <Users className="w-3 h-3" />
                   Family Forum
                 </div>
-                <div className="flex items-center gap-1.5 px-2 py-1 rounded-full bg-emerald-600/10 border border-emerald-600/20 text-xs text-emerald-400">
+                <div className="flex items-center gap-1.5 px-2 py-1 rounded-full bg-slate-500/10 border border-slate-500/20 text-xs text-slate-300">
                   <Phone className="w-3 h-3" />
                   (541) 241-5886
                 </div>
@@ -198,7 +198,7 @@ const AboutSection = () => {
               
               <Button 
                 size="sm"
-                className="w-full bg-emerald-600 hover:bg-emerald-700 text-white shadow-md shadow-emerald-600/20"
+                className="w-full bg-slate-700 hover:bg-slate-800 text-white shadow-md shadow-slate-900/30"
                 asChild
               >
                 <TrackedExternalLink
