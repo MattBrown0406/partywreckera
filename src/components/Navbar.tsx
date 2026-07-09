@@ -201,14 +201,24 @@ const Navbar = () => {
             </DropdownMenu>
           </div>
 
-          {/* Mobile menu button */}
-          <button
-            className="md:hidden p-2 text-foreground"
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label="Toggle menu"
-          >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          {/* Mobile: call + menu buttons */}
+          <div className="flex items-center gap-2 md:hidden">
+            <a
+              href={SITE_PHONE_HREF}
+              className="inline-flex items-center gap-1.5 rounded-full border border-burgundy/40 bg-burgundy/10 px-3 py-1.5 text-sm font-semibold text-burgundy transition-colors hover:bg-burgundy hover:text-white"
+              aria-label={`Call ${SITE_PHONE_DISPLAY}`}
+            >
+              <Phone className="h-4 w-4" />
+              Call
+            </a>
+            <button
+              className="p-2 text-foreground"
+              onClick={() => setIsOpen(!isOpen)}
+              aria-label="Toggle menu"
+            >
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile nav */}
