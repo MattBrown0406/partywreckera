@@ -64,8 +64,10 @@ export const OrganizationJsonLd = () => {
     "contactPoint": {
       "@type": "ContactPoint",
       "contactType": "customer service",
-      "email": "matt@partywreckers.com"
-    }
+      "email": "matt@partywreckers.com",
+      "telephone": "+1-458-298-8004"
+    },
+    "telephone": "+1-458-298-8004"
   };
 
   return (
