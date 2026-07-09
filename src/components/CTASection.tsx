@@ -1,8 +1,9 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CalendarCheck, Headphones, ShieldCheck } from "lucide-react";
+import { ArrowRight, CalendarCheck, Headphones, Phone, ShieldCheck } from "lucide-react";
 import { Link } from "react-router-dom";
 import { funnelLinks, podcastLinks } from "@/lib/funnelLinks";
 import TrackedExternalLink from "@/components/TrackedExternalLink";
+import { SITE_PHONE_DISPLAY, SITE_PHONE_HREF } from "@/lib/site";
 
 const SpotifyIcon = () => (
   <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor">
@@ -43,6 +44,19 @@ const CTASection = () => {
             <p className="text-base leading-relaxed text-muted-foreground sm:text-lg">
               If an episode made you realize the family needs more than another conversation, use the pathway that matches the pressure today: listen, join support, get answers now, or check intervention readiness.
             </p>
+          </div>
+
+          <div className="mt-8 rounded-lg border border-burgundy/30 bg-burgundy/5 p-5 text-center sm:flex sm:items-center sm:justify-between sm:text-left">
+            <div>
+              <p className="text-sm font-semibold uppercase text-burgundy">Talk to someone now</p>
+              <p className="mt-1 text-base text-foreground">Call the Party Wreckers helpline — a real human, not a menu.</p>
+            </div>
+            <Button variant="hero" size="xl" asChild className="mt-4 sm:mt-0">
+              <a href={SITE_PHONE_HREF}>
+                <Phone className="h-5 w-5" />
+                Call {SITE_PHONE_DISPLAY}
+              </a>
+            </Button>
           </div>
 
           <div className="mt-8 grid gap-3 lg:grid-cols-4">
