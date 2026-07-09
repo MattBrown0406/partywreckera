@@ -284,6 +284,16 @@ const Navbar = () => {
                   </Link>
                 ))}
               </div>
+
+              <a
+                href={SITE_PHONE_HREF}
+                className="mt-2 inline-flex items-center justify-center gap-2 rounded-md border border-burgundy/40 bg-burgundy/10 px-4 py-2 text-sm font-semibold text-burgundy transition-colors hover:bg-burgundy hover:text-white"
+                onClick={() => setIsOpen(false)}
+              >
+                <Phone className="h-4 w-4" />
+                Call {SITE_PHONE_DISPLAY}
+              </a>
+
               
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
