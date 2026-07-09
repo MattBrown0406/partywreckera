@@ -1,4 +1,5 @@
 // Blog post data for routing and index page
+import blogImageWhoShouldBeAtIntervention from "@/assets/blog-who-should-be-at-an-intervention.jpg";
 import blogImageDoInterventionsWork from "@/assets/blog-do-interventions-work.jpg";
 import blogImageWhenToCallInterventionist from "@/assets/blog-when-to-call-interventionist.jpg";
 import blogImageWhyIStillGoToMeetings from "@/assets/blog-why-i-still-go-to-meetings.jpg";
@@ -129,6 +130,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "who-should-be-at-an-intervention",
+    title: "Who Should Be at an Intervention? Choosing the Right People for the Room",
+    date: "July 9, 2026",
+    image: blogImageWhoShouldBeAtIntervention,
+    imageAlt: "A small group of young adults sitting in a semicircle around one empty chair in a softly lit living room, waiting for an intervention to begin",
+    excerpt: "Who should be at an intervention — and who shouldn't? A professional interventionist explains how to choose the right people for the room.",
+    category: "Intervention"
+  },
   {
     id: "do-interventions-actually-work-success-rates",
     title: "Do Interventions Actually Work? An Interventionist's Honest Answer",
