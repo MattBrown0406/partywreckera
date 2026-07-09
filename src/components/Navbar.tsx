@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, Phone } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -9,6 +9,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import logo from "@/assets/party-wreckers-logo-2026.png";
+import { SITE_PHONE_DISPLAY, SITE_PHONE_HREF } from "@/lib/site";
 
 const SpotifyIcon = () => (
   <svg viewBox="0 0 24 24" className="w-4 h-4" fill="currentColor">
@@ -164,6 +165,17 @@ const Navbar = () => {
               </DropdownMenuContent>
             </DropdownMenu>
             
+            {/* Call button */}
+            <a
+              href={SITE_PHONE_HREF}
+              className="inline-flex items-center gap-1.5 rounded-full border border-burgundy/40 bg-burgundy/10 px-3 py-1.5 text-sm font-semibold text-burgundy transition-colors hover:bg-burgundy hover:text-white"
+              aria-label={`Call ${SITE_PHONE_DISPLAY}`}
+            >
+              <Phone className="h-4 w-4" />
+              <span className="hidden lg:inline">{SITE_PHONE_DISPLAY}</span>
+              <span className="lg:hidden">Call</span>
+            </a>
+
             {/* Subscribe Dropdown */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
