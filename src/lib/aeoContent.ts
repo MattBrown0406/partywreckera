@@ -1001,4 +1001,25 @@ export const articleAnswerSummaries: Record<string, AnswerBlockContent> = {
       { label: "7 Intervention Myths That Keep Families Stuck", href: "/blog/intervention-myths-families" },
     ],
   },
+  "who-should-be-at-an-intervention": {
+    eyebrow: "Article answer",
+    title: "Who should be at an intervention?",
+    answer:
+      "Four to eight people who have genuine emotional influence with the addicted person, who can stay calm under pressure, and who are willing to follow a plan. Not everyone who loves them, and not necessarily the people closest to the daily chaos — influence matters more than proximity or obligation.",
+    bullets: [
+      "Choose people whose voices your loved one actually listens to — often a sibling, best friend, employer, or grandparent, not just parents.",
+      "Leave out anyone in active addiction, anyone carrying uncontained rage, anyone who won't follow the plan, and anyone your loved one can manipulate in real time.",
+      "Distance doesn't disqualify — an important voice can join by video or through a letter read aloud.",
+    ],
+    nextSteps: [
+      "Make a long list of everyone who cares, then filter by influence and stability, not obligation.",
+      "Keep young children out of the room; protect them from carrying the weight of an intervention.",
+      "Work with a professional interventionist before finalizing the team — team selection is where interventions are quietly won or lost.",
+    ],
+    links: [
+      { label: "How to Choose an Interventionist", href: "/blog/how-to-choose-an-interventionist" },
+      { label: "What Happens Before a Professional Intervention", href: "/blog/what-happens-before-intervention" },
+      { label: "Do Interventions Actually Work?", href: "/blog/do-interventions-actually-work-success-rates" },
+    ],
+  },
 };
