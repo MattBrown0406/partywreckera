@@ -1,6 +1,7 @@
-import { Instagram, Youtube, Facebook } from "lucide-react";
+import { Instagram, Youtube, Facebook, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import NewsletterSignup from "./NewsletterSignup";
+import { SITE_PHONE_DISPLAY, SITE_PHONE_HREF } from "@/lib/site";
 
 const TikTokIcon = ({ className }: { className?: string }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor">
@@ -75,6 +76,13 @@ const Footer = () => {
           <div className="flex flex-col items-center gap-3">
             <p className="text-sm text-muted-foreground">Need a clearer path tonight?</p>
             <div className="flex flex-wrap justify-center gap-3">
+              <a
+                href={SITE_PHONE_HREF}
+                className="inline-flex items-center gap-2 rounded-full border border-burgundy bg-burgundy px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-burgundy/90"
+              >
+                <Phone className="h-4 w-4" />
+                Call {SITE_PHONE_DISPLAY}
+              </a>
               <Link to="/help-now" className="rounded-full border border-primary/30 px-4 py-2 text-sm text-foreground hover:border-primary hover:text-primary transition-colors">
                 Help Now
               </Link>

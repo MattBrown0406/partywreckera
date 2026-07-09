@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CalendarCheck, Headphones, Mail, Mic2, Play, ShieldAlert } from "lucide-react";
+import { ArrowRight, CalendarCheck, Headphones, Mail, Mic2, Phone, Play, ShieldAlert } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "@/assets/party-wreckers-logo-2026.png";
 import soberHelplineLogo from "@/assets/sober-helpline-logo.png";
@@ -7,6 +7,7 @@ import ThemePlayer from "@/components/ThemePlayer";
 import TrackedExternalLink from "@/components/TrackedExternalLink";
 import { usePodcastFeed } from "@/hooks/usePodcastFeed";
 import { funnelLinks } from "@/lib/funnelLinks";
+import { SITE_PHONE_DISPLAY, SITE_PHONE_HREF } from "@/lib/site";
 
 const listenerPaths = [
   ["For the listener", "Start with episodes and plain-language education."],
@@ -67,8 +68,14 @@ const HeroSection = () => {
                 Matt Brown brings intervention experience, recovery truth, and a little well-earned irreverence to the conversations families usually have in whispers.
               </p>
 
-              <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row lg:items-start">
+              <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:flex-wrap lg:items-start">
                 <Button variant="hero" size="xl" asChild>
+                  <a href={SITE_PHONE_HREF}>
+                    <Phone className="h-5 w-5" />
+                    Call {SITE_PHONE_DISPLAY}
+                  </a>
+                </Button>
+                <Button variant="heroOutline" size="xl" asChild>
                   <Link to="/help-now">
                     <ShieldAlert className="h-5 w-5" />
                     Help Now

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, Phone } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -9,6 +9,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import logo from "@/assets/party-wreckers-logo-2026.png";
+import { SITE_PHONE_DISPLAY, SITE_PHONE_HREF } from "@/lib/site";
 
 const SpotifyIcon = () => (
   <svg viewBox="0 0 24 24" className="w-4 h-4" fill="currentColor">
@@ -164,6 +165,17 @@ const Navbar = () => {
               </DropdownMenuContent>
             </DropdownMenu>
             
+            {/* Call button */}
+            <a
+              href={SITE_PHONE_HREF}
+              className="inline-flex items-center gap-1.5 rounded-full border border-burgundy/40 bg-burgundy/10 px-3 py-1.5 text-sm font-semibold text-burgundy transition-colors hover:bg-burgundy hover:text-white"
+              aria-label={`Call ${SITE_PHONE_DISPLAY}`}
+            >
+              <Phone className="h-4 w-4" />
+              <span className="hidden lg:inline">{SITE_PHONE_DISPLAY}</span>
+              <span className="lg:hidden">Call</span>
+            </a>
+
             {/* Subscribe Dropdown */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
@@ -189,14 +201,24 @@ const Navbar = () => {
             </DropdownMenu>
           </div>
 
-          {/* Mobile menu button */}
-          <button
-            className="md:hidden p-2 text-foreground"
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label="Toggle menu"
-          >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          {/* Mobile: call + menu buttons */}
+          <div className="flex items-center gap-2 md:hidden">
+            <a
+              href={SITE_PHONE_HREF}
+              className="inline-flex items-center gap-1.5 rounded-full border border-burgundy/40 bg-burgundy/10 px-3 py-1.5 text-sm font-semibold text-burgundy transition-colors hover:bg-burgundy hover:text-white"
+              aria-label={`Call ${SITE_PHONE_DISPLAY}`}
+            >
+              <Phone className="h-4 w-4" />
+              Call
+            </a>
+            <button
+              className="p-2 text-foreground"
+              onClick={() => setIsOpen(!isOpen)}
+              aria-label="Toggle menu"
+            >
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile nav */}
@@ -262,6 +284,16 @@ const Navbar = () => {
                   </Link>
                 ))}
               </div>
+
+              <a
+                href={SITE_PHONE_HREF}
+                className="mt-2 inline-flex items-center justify-center gap-2 rounded-md border border-burgundy/40 bg-burgundy/10 px-4 py-2 text-sm font-semibold text-burgundy transition-colors hover:bg-burgundy hover:text-white"
+                onClick={() => setIsOpen(false)}
+              >
+                <Phone className="h-4 w-4" />
+                Call {SITE_PHONE_DISPLAY}
+              </a>
+
               
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>

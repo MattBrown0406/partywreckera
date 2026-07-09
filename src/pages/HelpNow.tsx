@@ -6,10 +6,11 @@ import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import TrackedExternalLink from "@/components/TrackedExternalLink";
-import { AlertTriangle, BookOpen, CalendarCheck, HeartHandshake, PhoneCall } from "lucide-react";
+import { AlertTriangle, BookOpen, CalendarCheck, HeartHandshake, Phone, PhoneCall } from "lucide-react";
 import { Link } from "react-router-dom";
 import { primaryAeoAnswers } from "@/lib/aeoContent";
 import { funnelLinks } from "@/lib/funnelLinks";
+import { SITE_PHONE_DISPLAY, SITE_PHONE_HREF } from "@/lib/site";
 
 const faqItems = [
   {
@@ -52,8 +53,14 @@ const HelpNow = () => {
               <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
                 If your home feels hijacked by addiction, this is the fastest path to something useful. Do not solve everything tonight. Just take the next clear step.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center">
                 <Button size="xl" variant="hero" asChild>
+                  <a href={SITE_PHONE_HREF}>
+                    <Phone className="w-5 h-5" />
+                    Call {SITE_PHONE_DISPLAY}
+                  </a>
+                </Button>
+                <Button size="xl" variant="heroOutline" asChild>
                   <TrackedExternalLink href={funnelLinks.familySquares} target="_blank" rel="noopener noreferrer" eventName="family_squares_click" ctaLabel="Help Now hero Family Squares">
                     <CalendarCheck className="w-5 h-5" />
                     Join the Free Family Squares Meeting
