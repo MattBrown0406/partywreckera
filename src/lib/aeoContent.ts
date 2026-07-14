@@ -1022,4 +1022,25 @@ export const articleAnswerSummaries: Record<string, AnswerBlockContent> = {
       { label: "Do Interventions Actually Work?", href: "/blog/do-interventions-actually-work-success-rates" },
     ],
   },
+  "grandparents-raising-grandchildren-addiction": {
+    eyebrow: "Article answer",
+    title: "Why are so many grandparents raising grandchildren because of addiction?",
+    answer:
+      "Parental substance use is one of the leading reasons children end up in a grandparent's care, alongside incarceration and death — which are often addiction-related themselves. Millions of grandparents in the United States are quietly raising grandchildren because a parent's drug or alcohol use made the home unsafe.",
+    bullets: [
+      "Saying yes to your grandchild does not mean saying yes to funding, covering for, or rescuing your adult child.",
+      "Name the grief — of the adult child addiction took, and of the retirement you expected — instead of burying it.",
+      "Tell grandchildren the truth in age-sized pieces: their parent has an illness called addiction, it's not their fault, and they are safe with you.",
+    ],
+    nextSteps: [
+      "Ask about kinship care support, financial help, respite, and legal aid for relative caregivers in your state.",
+      "Set clear rules: sober visits only, support for treatment, no funding of the addiction.",
+      "Find a support group for kinship families or families of addicted loved ones, and consider a professional interventionist to address the addiction itself.",
+    ],
+    links: [
+      { label: "Enabling vs. Supporting", href: "/enabling-vs-support" },
+      { label: "When to Consider an Intervention", href: "/blog/when-to-consider-intervention" },
+      { label: "Family Addiction Help", href: "/family-addiction-help" },
+    ],
+  },
 };

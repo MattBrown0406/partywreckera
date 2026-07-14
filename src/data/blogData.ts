@@ -1,4 +1,5 @@
 // Blog post data for routing and index page
+import blogImageGrandparentsRaising from "@/assets/blog-grandparents-raising-grandchildren.jpg";
 import blogImageWhoShouldBeAtIntervention from "@/assets/blog-who-should-be-at-an-intervention.jpg";
 import blogImageDoInterventionsWork from "@/assets/blog-do-interventions-work.jpg";
 import blogImageWhenToCallInterventionist from "@/assets/blog-when-to-call-interventionist.jpg";
@@ -130,6 +131,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "grandparents-raising-grandchildren-addiction",
+    title: "When Grandparents Become Parents Again: Raising Grandchildren Because of Addiction",
+    date: "July 14, 2026",
+    image: blogImageGrandparentsRaising,
+    imageAlt: "A grandmother and grandfather sitting on a couch in a warm living room with a young grandchild between them, quiet loving expressions",
+    excerpt: "Millions of grandparents are raising grandchildren because of addiction. An interventionist explains the grief, the boundaries, and where to find real support.",
+    category: "Family"
+  },
   {
     id: "who-should-be-at-an-intervention",
     title: "Who Should Be at an Intervention? Choosing the Right People for the Room",
