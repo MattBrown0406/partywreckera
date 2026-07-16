@@ -293,11 +293,11 @@ const Sponsors = () => {
                     </Button>
                     
                     <a
-                      href="tel:5412415886"
+                      href="tel:+14582988008"
                       className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-emerald-600/30 text-emerald-400 hover:bg-emerald-600/10 transition-colors font-medium"
                     >
                       <Phone className="w-4 h-4" />
-                      (541) 241-5886
+                      (458) 298-8008
                     </a>
                   </div>
                 </div>

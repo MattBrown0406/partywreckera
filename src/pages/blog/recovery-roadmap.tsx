@@ -262,8 +262,8 @@ const RecoveryRoadmap = () => {
               SoberHelpline.com
             </a>
             . For a free consultation, call{" "}
-            <a href="tel:+15418386009" className="text-primary underline hover:text-primary/80">
-              (541) 838-6009
+            <a href="tel:+14582988000" className="text-primary underline hover:text-primary/80">
+              (458) 298-8000
             </a>
             .
           </p>
