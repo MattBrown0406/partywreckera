@@ -192,7 +192,7 @@ const AboutSection = () => {
                 </div>
                 <div className="flex items-center gap-1.5 px-2 py-1 rounded-full bg-slate-500/10 border border-slate-500/20 text-xs text-slate-300">
                   <Phone className="w-3 h-3" />
-                  (541) 241-5886
+                  (458) 298-8008
                 </div>
               </div>
               
