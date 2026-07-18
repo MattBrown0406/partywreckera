@@ -1,4 +1,5 @@
 // Blog post data for routing and index page
+import blogImagePeacekeeper from "@/assets/blog-peacekeeper-conflict-avoidance.jpg";
 import blogImageGrandparentsRaising from "@/assets/blog-grandparents-raising-grandchildren.jpg";
 import blogImageWhoShouldBeAtIntervention from "@/assets/blog-who-should-be-at-an-intervention.jpg";
 import blogImageDoInterventionsWork from "@/assets/blog-do-interventions-work.jpg";
@@ -132,6 +133,15 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    id: "peacekeeper-conflict-avoidance-addiction-family",
+    title: "The Peacekeeper: When Keeping the Peace Keeps the Addiction Alive",
+    date: "July 17, 2026",
+    image: blogImagePeacekeeper,
+    imageAlt: "A mother standing alone in a quiet kitchen at morning, arms crossed, looking out the window in heavy silence",
+    excerpt: "Keeping the peace in a family with addiction often protects the addiction, not the person. Interventionist Matt Brown on the peacekeeper role and how to break the silence.",
+    category: "Family"
+  },
+  {
     id: "grandparents-raising-grandchildren-addiction",
     title: "When Grandparents Become Parents Again: Raising Grandchildren Because of Addiction",
     date: "July 14, 2026",
@@ -149,6 +159,8 @@ export const blogArticles: BlogArticle[] = [
     excerpt: "Who should be at an intervention — and who shouldn't? A professional interventionist explains how to choose the right people for the room.",
     category: "Intervention"
   },
+
+
   {
     id: "do-interventions-actually-work-success-rates",
     title: "Do Interventions Actually Work? An Interventionist's Honest Answer",

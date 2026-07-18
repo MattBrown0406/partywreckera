@@ -917,6 +917,27 @@ export const articleAnswerSummaries: Record<string, AnswerBlockContent> = {
       { label: "When the Family Is Exhausted by Addiction", href: "/blog/addiction-family-exhaustion" },
     ],
   },
+  "peacekeeper-conflict-avoidance-addiction-family": {
+    eyebrow: "Article answer",
+    title: "Is keeping the peace in a family with addiction actually helping?",
+    answer:
+      "Usually no. Conflict avoidance in families with addiction protects the addiction, not the person. When honest conversations never happen, the addicted person experiences the silence as permission, and the family carries the tension in private. The peace being kept is a ceasefire only one side knows about.",
+    bullets: [
+      "The peacekeeper manages tension instead of addressing the problem — usually out of love.",
+      "Silence is a form of enabling, even when no money or cover stories are involved.",
+      "Healthy conflict is calm, specific, and honest — not screaming or ambushing.",
+    ],
+    nextSteps: [
+      "Say one true sentence about your own experience and let it stand.",
+      "Stop relaying messages between family members — let them talk directly.",
+      "Get outside support: Al-Anon, a family coach, or a professional interventionist.",
+    ],
+    links: [
+      { label: "Enabling Addiction in Families", href: "/blog/enabling-addiction-families" },
+      { label: "How to Talk to Someone About Their Addiction", href: "/blog/how-to-talk-to-someone-about-their-addiction" },
+      { label: "Stop Waiting for a Sign It's Time", href: "/blog/stop-waiting-for-a-sign-when-to-call-professional-interventionist" },
+    ],
+  },
   "early-recovery-who-actually-shows-up": {
     eyebrow: "Article answer",
     title: "Who actually shows up for someone in early recovery?",
