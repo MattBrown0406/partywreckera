@@ -1,4 +1,5 @@
 // Blog post data for routing and index page
+import blogImageFamilyRolesInAddiction from "@/assets/blog-family-roles-in-addiction.jpg";
 import blogImagePeacekeeper from "@/assets/blog-peacekeeper-conflict-avoidance.jpg";
 import blogImageGrandparentsRaising from "@/assets/blog-grandparents-raising-grandchildren.jpg";
 import blogImageWhoShouldBeAtIntervention from "@/assets/blog-who-should-be-at-an-intervention.jpg";
@@ -132,6 +133,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "family-roles-in-addiction-hero-scapegoat-lost-child",
+    title: "The Roles Every Family Hands Out When Addiction Moves In",
+    date: "July 18, 2026",
+    image: blogImageFamilyRolesInAddiction,
+    imageAlt: "A family of young adults and parents seated around a dining table, visibly disconnected — each playing a different role",
+    excerpt: "Hero, scapegoat, mascot, lost child — an interventionist explains the family roles in addiction, how to spot yours, and how to step out of the script.",
+    category: "Family"
+  },
   {
     id: "peacekeeper-conflict-avoidance-addiction-family",
     title: "The Peacekeeper: When Keeping the Peace Keeps the Addiction Alive",

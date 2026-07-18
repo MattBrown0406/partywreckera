@@ -917,6 +917,27 @@ export const articleAnswerSummaries: Record<string, AnswerBlockContent> = {
       { label: "When the Family Is Exhausted by Addiction", href: "/blog/addiction-family-exhaustion" },
     ],
   },
+  "family-roles-in-addiction-hero-scapegoat-lost-child": {
+    eyebrow: "Article answer",
+    title: "What are the family roles in addiction, and how do you step out of yours?",
+    answer:
+      "The family roles in addiction — enabler, hero, scapegoat, lost child, and mascot — are unconscious survival strategies that develop when someone in the family is using. They reduce chaos in the short term but protect the addiction long term. You can't control the addicted person, but you can step out of your role by letting one consequence land, saying one honest sentence, and getting outside support.",
+    bullets: [
+      "Five common roles: enabler, hero, scapegoat, lost child, mascot — most people cycle through more than one.",
+      "Roles protect the addiction by absorbing consequences the addicted person never has to feel.",
+      "Family recovery matters as much as the addicted person's treatment — roles outlast the drinking or using.",
+    ],
+    nextSteps: [
+      "Notice your automatic reflex the next time a crisis hits — that's your role talking.",
+      "Skip one rescue this week and let the consequence land where it belongs.",
+      "Get outside support: Al-Anon, family therapy, or a professional interventionist.",
+    ],
+    links: [
+      { label: "How Addiction Affects Siblings", href: "/blog/how-addiction-affects-siblings" },
+      { label: "Enmeshment and Codependency in Families", href: "/blog/enmeshment-addiction-family-patterns" },
+      { label: "The Peacekeeper Role", href: "/blog/peacekeeper-conflict-avoidance-addiction-family" },
+    ],
+  },
   "peacekeeper-conflict-avoidance-addiction-family": {
     eyebrow: "Article answer",
     title: "Is keeping the peace in a family with addiction actually helping?",
