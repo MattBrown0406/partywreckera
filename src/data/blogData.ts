@@ -133,6 +133,15 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    id: "peacekeeper-conflict-avoidance-addiction-family",
+    title: "The Peacekeeper: When Keeping the Peace Keeps the Addiction Alive",
+    date: "July 17, 2026",
+    image: blogImagePeacekeeper,
+    imageAlt: "A mother standing alone in a quiet kitchen at morning, arms crossed, looking out the window in heavy silence",
+    excerpt: "Keeping the peace in a family with addiction often protects the addiction, not the person. Interventionist Matt Brown on the peacekeeper role and how to break the silence.",
+    category: "Family"
+  },
+  {
     id: "grandparents-raising-grandchildren-addiction",
     title: "When Grandparents Become Parents Again: Raising Grandchildren Because of Addiction",
     date: "July 14, 2026",
