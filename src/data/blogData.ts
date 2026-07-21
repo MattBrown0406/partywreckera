@@ -1,4 +1,5 @@
 // Blog post data for routing and index page
+import blogImageStillAngryAfterSober from "@/assets/blog-still-angry-after-sober.jpg";
 import blogImageFamilyRolesInAddiction from "@/assets/blog-family-roles-in-addiction.jpg";
 import blogImagePeacekeeper from "@/assets/blog-peacekeeper-conflict-avoidance.jpg";
 import blogImageGrandparentsRaising from "@/assets/blog-grandparents-raising-grandchildren.jpg";
@@ -133,6 +134,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "still-angry-after-loved-one-gets-sober",
+    title: "They Got Sober. So Why Are You Still Angry?",
+    date: "July 21, 2026",
+    image: blogImageStillAngryAfterSober,
+    imageAlt: "A young adult daughter and her mother sitting at a kitchen table in the morning, quiet tension between them",
+    excerpt: "Your loved one got sober, but you're still angry. Interventionist Matt Brown explains why family healing after addiction runs on its own timeline.",
+    category: "Family"
+  },
   {
     id: "family-roles-in-addiction-hero-scapegoat-lost-child",
     title: "The Roles Every Family Hands Out When Addiction Moves In",
