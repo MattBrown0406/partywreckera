@@ -917,6 +917,27 @@ export const articleAnswerSummaries: Record<string, AnswerBlockContent> = {
       { label: "When the Family Is Exhausted by Addiction", href: "/blog/addiction-family-exhaustion" },
     ],
   },
+  "still-angry-after-loved-one-gets-sober": {
+    eyebrow: "Article answer",
+    title: "Why am I still angry after my loved one got sober?",
+    answer:
+      "Because families heal from addiction on a different timeline than the person in recovery. During active addiction, survival mode suppresses anger and grief; once the crisis ends, those stored feelings finally surface. Being angry doesn't mean you're broken or ungrateful — it means the family is starting to thaw. Healing requires your own support, honest conversation, and time.",
+    bullets: [
+      "Anger after sobriety is normal — it appears once it's finally safe to feel it.",
+      "Newly sober people and their families are at different mile markers on the same road.",
+      "Suppressed anger leaks out as sarcasm and distance; expressed anger can be worked through.",
+    ],
+    nextSteps: [
+      "Get your own support — Al-Anon, a therapist, or a family coaching program.",
+      "Say one honest sentence: 'I'm glad you're sober, and I'm still angry. Both are true.'",
+      "Stop performing gratitude and let trust be rebuilt through consistency over months.",
+    ],
+    links: [
+      { label: "How Recovery Changes Relationships", href: "/blog/how-recovery-changes-relationships" },
+      { label: "Rebuilding Trust in Recovery for Families", href: "/blog/rebuilding-trust-in-recovery-families" },
+      { label: "Coming Home From Rehab", href: "/blog/coming-home-from-rehab-what-families-arent-prepared-for" },
+    ],
+  },
   "family-roles-in-addiction-hero-scapegoat-lost-child": {
     eyebrow: "Article answer",
     title: "What are the family roles in addiction, and how do you step out of yours?",
