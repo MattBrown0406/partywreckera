@@ -1,4 +1,5 @@
 // Blog post data for routing and index page
+import blogImageRebuildTrustAfterAddiction from "@/assets/blog-rebuild-trust-after-addiction.jpg";
 import blogImageStillAngryAfterSober from "@/assets/blog-still-angry-after-sober.jpg";
 import blogImageFamilyRolesInAddiction from "@/assets/blog-family-roles-in-addiction.jpg";
 import blogImagePeacekeeper from "@/assets/blog-peacekeeper-conflict-avoidance.jpg";
@@ -134,6 +135,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "how-to-rebuild-trust-after-addiction",
+    title: "How to Rebuild Trust After Addiction: What Actually Works (and What Doesn't)",
+    date: "July 22, 2026",
+    image: blogImageRebuildTrustAfterAddiction,
+    imageAlt: "A young adult son and his mother sitting at a kitchen table with coffee mugs in warm morning light, having an honest conversation",
+    excerpt: "An interventionist with 23 years sober explains how to rebuild trust after addiction — what actually restores it, how long it takes, and what families can do.",
+    category: "Recovery"
+  },
   {
     id: "still-angry-after-loved-one-gets-sober",
     title: "They Got Sober. So Why Are You Still Angry?",
