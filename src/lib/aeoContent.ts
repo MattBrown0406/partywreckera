@@ -917,6 +917,27 @@ export const articleAnswerSummaries: Record<string, AnswerBlockContent> = {
       { label: "When the Family Is Exhausted by Addiction", href: "/blog/addiction-family-exhaustion" },
     ],
   },
+  "how-to-rebuild-trust-after-addiction": {
+    eyebrow: "Article answer",
+    title: "How do you rebuild trust after addiction?",
+    answer:
+      "Trust is rebuilt through predictability, not promises. It returns when what someone says and what they do match, consistently, over a long period — especially when it's inconvenient. Most families see meaningful shifts after one to three years of steady sobriety, and trust tends to return at roughly the pace it was lost.",
+    bullets: [
+      "Trust is a prediction the nervous system makes based on evidence — it can't be argued into existence.",
+      "Volunteering honesty and staying calm when questioned rebuilds trust faster than any apology.",
+      "Verification is healthy in early recovery; permanent surveillance after years of sobriety is its own problem.",
+    ],
+    nextSteps: [
+      "If you're in recovery: keep tiny commitments and offer transparency before it's asked for.",
+      "If you're the family: extend opportunity in small increments as evidence accumulates.",
+      "Get outside support — Al-Anon for family, a sponsor or counselor for the person in recovery.",
+    ],
+    links: [
+      { label: "Living Amends: What Recovery Asks After Sorry", href: "/blog/living-amends-recovery" },
+      { label: "Coming Home From Rehab", href: "/blog/coming-home-from-rehab-what-families-arent-prepared-for" },
+      { label: "They Got Sober. So Why Are You Still Angry?", href: "/blog/still-angry-after-loved-one-gets-sober" },
+    ],
+  },
   "still-angry-after-loved-one-gets-sober": {
     eyebrow: "Article answer",
     title: "Why am I still angry after my loved one got sober?",
