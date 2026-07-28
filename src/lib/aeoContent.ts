@@ -917,6 +917,27 @@ export const articleAnswerSummaries: Record<string, AnswerBlockContent> = {
       { label: "When the Family Is Exhausted by Addiction", href: "/blog/addiction-family-exhaustion" },
     ],
   },
+  "you-dont-need-whole-family-on-board-to-start": {
+    eyebrow: "Article answer",
+    title: "How do you help a family member with addiction when the rest of the family isn't ready?",
+    answer:
+      "You don't need consensus to act. One person changing their own behavior — stopping financial support, documenting what's happening, getting their own support, and having one honest conversation — is enough to start moving a family system. Interventions require three to six steady people, not the whole family. Waiting for everyone to agree costs years the addiction is happy to take.",
+    bullets: [
+      "Unanimous family agreement is not a prerequisite for meaningful action.",
+      "Lead with what you're doing, not what others should do — action recruits better than argument.",
+      "Waiting is not neutral; tolerance, legal risk, and family exhaustion all climb with time.",
+    ],
+    nextSteps: [
+      "Pick one thing to do this week — stop one form of financial support, or write the timeline.",
+      "Get your own support: Al-Anon, a family coach, or the Monday night Family Squares call.",
+      "Call a professional interventionist for information — a conversation, not a commitment.",
+    ],
+    links: [
+      { label: "Stop Waiting for a Sign It's Time", href: "/blog/stop-waiting-for-a-sign-when-to-call-professional-interventionist" },
+      { label: "Who Should Be at an Intervention", href: "/blog/who-should-be-at-an-intervention" },
+      { label: "Do Interventions Actually Work?", href: "/blog/do-interventions-actually-work-success-rates" },
+    ],
+  },
   "how-to-rebuild-trust-after-addiction": {
     eyebrow: "Article answer",
     title: "How do you rebuild trust after addiction?",
