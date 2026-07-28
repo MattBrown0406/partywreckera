@@ -1,4 +1,5 @@
 // Blog post data for routing and index page
+import blogImageYouDontNeedWholeFamily from "@/assets/blog-you-dont-need-whole-family.jpg";
 import blogImageRebuildTrustAfterAddiction from "@/assets/blog-rebuild-trust-after-addiction.jpg";
 import blogImageStillAngryAfterSober from "@/assets/blog-still-angry-after-sober.jpg";
 import blogImageFamilyRolesInAddiction from "@/assets/blog-family-roles-in-addiction.jpg";
@@ -135,6 +136,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "you-dont-need-whole-family-on-board-to-start",
+    title: "You Don't Need the Whole Family on Board to Start",
+    date: "July 28, 2026",
+    image: blogImageYouDontNeedWholeFamily,
+    imageAlt: "A mother in her 50s sitting alone at a warmly lit kitchen table, holding a coffee mug with quiet determination",
+    excerpt: "You don't need the whole family to agree before you act. How to help a family member with addiction when you're the only one ready to move.",
+    category: "Family"
+  },
   {
     id: "how-to-rebuild-trust-after-addiction",
     title: "How to Rebuild Trust After Addiction: What Actually Works (and What Doesn't)",
