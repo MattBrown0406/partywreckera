@@ -1,4 +1,5 @@
 // Blog post data for routing and index page
+import blogImagePhoneCallNotMaking from "@/assets/blog-phone-call-you-keep-not-making.jpg";
 import blogImageYouDontNeedWholeFamily from "@/assets/blog-you-dont-need-whole-family.jpg";
 import blogImageRebuildTrustAfterAddiction from "@/assets/blog-rebuild-trust-after-addiction.jpg";
 import blogImageStillAngryAfterSober from "@/assets/blog-still-angry-after-sober.jpg";
@@ -136,6 +137,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "the-phone-call-you-keep-not-making",
+    title: "The Phone Call You Keep Not Making",
+    date: "July 30, 2026",
+    image: blogImagePhoneCallNotMaking,
+    imageAlt: "A woman in her 50s sitting in her parked car at dusk with her phone face down on the passenger seat",
+    excerpt: "You keep almost making the call. What to say, what to have ready, and what actually happens when you call an interventionist.",
+    category: "Intervention"
+  },
   {
     id: "you-dont-need-whole-family-on-board-to-start",
     title: "You Don't Need the Whole Family on Board to Start",
