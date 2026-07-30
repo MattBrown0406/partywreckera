@@ -917,6 +917,27 @@ export const articleAnswerSummaries: Record<string, AnswerBlockContent> = {
       { label: "When the Family Is Exhausted by Addiction", href: "/blog/addiction-family-exhaustion" },
     ],
   },
+  "the-phone-call-you-keep-not-making": {
+    eyebrow: "Article answer",
+    title: "How do you get help for a family member with addiction?",
+    answer:
+      "You make one call. The first conversation with an interventionist is an assessment, not a sales pitch — usually 20 to 45 minutes covering what's being used, safety risks, who's in the family system, and what's already been tried. You don't have to be ready to hire anyone to make it.",
+    bullets: [
+      "The first call is free at Freedom Interventions and ends with clarity, not a contract.",
+      "Bring five things: a rough timeline, the financial picture, the list of people, the medical history, and the line you're no longer willing to cross.",
+      "Refusal by your loved one is the starting condition for an intervention, not a disqualifier.",
+    ],
+    nextSteps: [
+      "Write ten minutes of honest notes — dates, incidents, monthly dollar amounts.",
+      "Put the call on the calendar like a doctor's appointment, from a private room.",
+      "Make it alone if the rest of the family isn't there yet; you don't need consensus to gather information.",
+    ],
+    links: [
+      { label: "You Don't Need the Whole Family on Board", href: "/blog/you-dont-need-whole-family-on-board-to-start" },
+      { label: "Stop Waiting for a Sign It's Time", href: "/blog/stop-waiting-for-a-sign-when-to-call-professional-interventionist" },
+      { label: "Do Interventions Actually Work?", href: "/blog/do-interventions-actually-work-success-rates" },
+    ],
+  },
   "you-dont-need-whole-family-on-board-to-start": {
     eyebrow: "Article answer",
     title: "How do you help a family member with addiction when the rest of the family isn't ready?",
