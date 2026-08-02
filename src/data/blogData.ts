@@ -1,4 +1,5 @@
 // Blog post data for routing and index page
+import blogImageDidntWantToGetSober from "@/assets/blog-didnt-want-to-get-sober.jpg";
 import blogImagePhoneCallNotMaking from "@/assets/blog-phone-call-you-keep-not-making.jpg";
 import blogImageYouDontNeedWholeFamily from "@/assets/blog-you-dont-need-whole-family.jpg";
 import blogImageRebuildTrustAfterAddiction from "@/assets/blog-rebuild-trust-after-addiction.jpg";
@@ -137,6 +138,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "i-didnt-want-to-get-sober",
+    title: "I Didn't Want to Get Sober. I Got Sober Anyway.",
+    date: "August 2, 2026",
+    image: blogImageDidntWantToGetSober,
+    imageAlt: "A young man sitting on the edge of a bed with his arms crossed and a packed bag by the open door",
+    excerpt: "Twenty-three years ago I said yes to sobriety just to get out of the room. Why willingness beats desire — and what families can do while they wait.",
+    category: "Recovery"
+  },
   {
     id: "the-phone-call-you-keep-not-making",
     title: "The Phone Call You Keep Not Making",

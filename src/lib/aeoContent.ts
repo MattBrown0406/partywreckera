@@ -917,6 +917,27 @@ export const articleAnswerSummaries: Record<string, AnswerBlockContent> = {
       { label: "When the Family Is Exhausted by Addiction", href: "/blog/addiction-family-exhaustion" },
     ],
   },
+  "i-didnt-want-to-get-sober": {
+    eyebrow: "Article answer",
+    title: "Do you have to want recovery for it to work?",
+    answer:
+      "No. Most people in long-term recovery started without wanting it. Desire is a feeling; willingness is a behavior — showing up, making the call, staying one more day. The wanting typically arrives weeks or months into sobriety, not before it.",
+    bullets: [
+      "Outcomes for pressured or court-mandated treatment are broadly comparable to voluntary admission.",
+      "What predicts success is the ninety days after the yes, not the enthusiasm of the yes.",
+      "A family can prepare the entire plan without the loved one's cooperation or permission.",
+    ],
+    nextSteps: [
+      "Handle logistics first: placement, cost, insurance, and who is driving.",
+      "Identify who in the family will hold the line — and who won't.",
+      "Write down what you are no longer willing to do, as a fact rather than a threat.",
+    ],
+    links: [
+      { label: "The Phone Call You Keep Not Making", href: "/blog/the-phone-call-you-keep-not-making" },
+      { label: "You Don't Need the Whole Family on Board", href: "/blog/you-dont-need-whole-family-on-board-to-start" },
+      { label: "Do Interventions Actually Work?", href: "/blog/do-interventions-actually-work-success-rates" },
+    ],
+  },
   "the-phone-call-you-keep-not-making": {
     eyebrow: "Article answer",
     title: "How do you get help for a family member with addiction?",
