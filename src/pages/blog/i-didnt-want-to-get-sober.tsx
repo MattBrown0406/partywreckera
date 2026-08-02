@@ -183,11 +183,7 @@ const IDidntWantToGetSober = () => {
           </p>
 
           <p>
-            Watching hundreds of families since, I've learned the quality of the yes almost never predicts the outcome. I've seen people weep and promise and be back out in nine days. I've seen people sulk into a car and get twenty years. What predicts the outcome is the ninety days after the yes — whether the person stays put, whether{" "}
-            <Link to="/blog/what-happens-when-families-get-help-too" className="text-primary hover:underline">
-              the family gets their own help
-            </Link>
-            , and whether the door back to the old life stayed shut.
+            Watching hundreds of families since, I've learned the quality of the yes almost never predicts the outcome. I've seen people weep and promise and be back out in nine days. I've seen people sulk into a car and get twenty years. What predicts the outcome is the ninety days after the yes — whether the person stays put, whether the family gets their own help, and whether the door back to the old life stayed shut.
           </p>
 
           <h2>What Your Family Can Do This Week</h2>
