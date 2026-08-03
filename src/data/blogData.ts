@@ -1,4 +1,5 @@
 // Blog post data for routing and index page
+import blogImageNobodyWarnedBoredom from "@/assets/blog-nobody-warned-me-about-the-boredom.jpg";
 import blogImageDidntWantToGetSober from "@/assets/blog-didnt-want-to-get-sober.jpg";
 import blogImagePhoneCallNotMaking from "@/assets/blog-phone-call-you-keep-not-making.jpg";
 import blogImageYouDontNeedWholeFamily from "@/assets/blog-you-dont-need-whole-family.jpg";
@@ -138,6 +139,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "nobody-warned-me-about-the-boredom",
+    title: "Nobody Warned Me About the Boredom",
+    date: "August 3, 2026",
+    image: blogImageNobodyWarnedBoredom,
+    imageAlt: "A man in his early 30s sitting alone on the edge of a made bed in a quiet room during the early evening",
+    excerpt: "Nobody warns you about boredom in early sobriety. Why the quiet almost took me out at four months sober, and what actually worked.",
+    category: "Recovery"
+  },
   {
     id: "i-didnt-want-to-get-sober",
     title: "I Didn't Want to Get Sober. I Got Sober Anyway.",

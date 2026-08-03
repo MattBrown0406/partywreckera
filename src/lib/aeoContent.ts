@@ -917,6 +917,27 @@ export const articleAnswerSummaries: Record<string, AnswerBlockContent> = {
       { label: "When the Family Is Exhausted by Addiction", href: "/blog/addiction-family-exhaustion" },
     ],
   },
+  "nobody-warned-me-about-the-boredom": {
+    eyebrow: "Article answer",
+    title: "Why is boredom in early sobriety so dangerous?",
+    answer:
+      "Because it's the first time in years the person has nothing to react to. Addiction is a full-time job — getting, using, hiding, explaining. Remove it and you don't get peace, you get a hole where a schedule used to be. Unstructured hours plus isolation is the most common setup for a first-year relapse.",
+    bullets: [
+      "Restlessness, irritability, and impulsive decisions are boredom wearing a costume — not ingratitude.",
+      "The sharpest stretch usually falls between month two and month eight of sobriety.",
+      "Structure protects the dangerous hours, but long-term recovery also requires tolerance for quiet.",
+    ],
+    nextSteps: [
+      "Identify the dangerous window (often 6–10 p.m. and Sundays) and schedule something into it in advance.",
+      "Say the restlessness out loud to another person in recovery within ten minutes of noticing it.",
+      "Families: ask \u201cwhat does tonight look like?\u201d instead of \u201care you okay?\u201d and offer ordinary company.",
+    ],
+    links: [
+      { label: "I Didn't Want to Get Sober. I Got Sober Anyway.", href: "/blog/i-didnt-want-to-get-sober" },
+      { label: "What To Do After a Relapse: The First 24 Hours", href: "/blog/what-to-do-after-a-relapse-first-24-hours" },
+      { label: "The Phone Call You Keep Not Making", href: "/blog/the-phone-call-you-keep-not-making" },
+    ],
+  },
   "i-didnt-want-to-get-sober": {
     eyebrow: "Article answer",
     title: "Do you have to want recovery for it to work?",
