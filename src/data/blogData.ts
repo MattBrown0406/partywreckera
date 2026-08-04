@@ -1,4 +1,5 @@
 // Blog post data for routing and index page
+import blogImageEndOfTheTable from "@/assets/blog-end-of-the-table.jpg";
 import blogImageNobodyWarnedBoredom from "@/assets/blog-nobody-warned-me-about-the-boredom.jpg";
 import blogImageDidntWantToGetSober from "@/assets/blog-didnt-want-to-get-sober.jpg";
 import blogImagePhoneCallNotMaking from "@/assets/blog-phone-call-you-keep-not-making.jpg";
