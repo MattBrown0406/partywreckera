@@ -917,6 +917,27 @@ export const articleAnswerSummaries: Record<string, AnswerBlockContent> = {
       { label: "When the Family Is Exhausted by Addiction", href: "/blog/addiction-family-exhaustion" },
     ],
   },
+  "what-your-addicted-loved-one-is-really-thinking": {
+    eyebrow: "Article answer",
+    title: "What is your addicted loved one thinking when you confront them?",
+    answer:
+      "Almost never whether you're right — they're thinking about how to end the conversation. Confrontation registers as a threat to the substance, and the brain goes straight to defense. Three voices run underneath: fear of living without it, shame at being seen, and calculation about which promise buys the most time.",
+    bullets: [
+      "Denial is usually a defense against shame, not genuine ignorance — they already know.",
+      "Guilt trips feed shame, and shame drives use. The rehearsed speech rarely lands.",
+      "Anger is a bodyguard for fear. It's aimed at you but usually isn't about you.",
+    ],
+    nextSteps: [
+      "Trade the courtroom for the doorway: what you see, what you'll do, door left open.",
+      "Refuse vague promises — a real response is a concrete step with a date attached.",
+      "Stop absorbing consequences so reality, not argument, does the persuading.",
+    ],
+    links: [
+      { label: "I Didn't Want to Get Sober. I Got Sober Anyway.", href: "/blog/i-didnt-want-to-get-sober" },
+      { label: "The Phone Call You Keep Not Making", href: "/blog/the-phone-call-you-keep-not-making" },
+      { label: "Who Should Be at an Intervention?", href: "/blog/who-should-be-at-an-intervention" },
+    ],
+  },
   "nobody-warned-me-about-the-boredom": {
     eyebrow: "Article answer",
     title: "Why is boredom in early sobriety so dangerous?",
