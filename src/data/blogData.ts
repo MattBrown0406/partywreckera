@@ -1,4 +1,5 @@
 // Blog post data for routing and index page
+import blogImageEndOfTheTable from "@/assets/blog-end-of-the-table.jpg";
 import blogImageNobodyWarnedBoredom from "@/assets/blog-nobody-warned-me-about-the-boredom.jpg";
 import blogImageDidntWantToGetSober from "@/assets/blog-didnt-want-to-get-sober.jpg";
 import blogImagePhoneCallNotMaking from "@/assets/blog-phone-call-you-keep-not-making.jpg";
@@ -139,6 +140,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "what-your-addicted-loved-one-is-really-thinking",
+    title: "I Was the One at the End of the Table: What Your Addicted Loved One Is Really Thinking",
+    date: "August 4, 2026",
+    image: blogImageEndOfTheTable,
+    imageAlt: "A man in his early 30s sitting at the end of a kitchen table with blurred family members gathered at the other end",
+    excerpt: "Before I was an interventionist, I was the one being confronted. What was actually running through my head — and the one sentence that got through.",
+    category: "Intervention"
+  },
   {
     id: "nobody-warned-me-about-the-boredom",
     title: "Nobody Warned Me About the Boredom",
