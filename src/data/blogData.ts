@@ -128,6 +128,7 @@ import blogImageRescuerTrap from "@/assets/blog-rescuer-trap-enabling-addiction-
 import blogImageNegotiatingFamilyPatterns from "@/assets/blog-negotiating-with-addiction-family-patterns.jpg";
 import blogImageTriangulationFamilies from "@/assets/blog-triangulation-families-addiction.jpg";
 import blogImageLivingAmendsRecovery from "@/assets/blog-living-amends-recovery.jpg";
+import blogImageClosestToDrinkingAgain from "@/assets/blog-closest-i-came-to-drinking-again.jpg";
 
 export interface BlogArticle {
   id: string;
@@ -140,6 +141,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "closest-i-came-to-drinking-again",
+    title: "The Closest I Ever Came to Drinking Again: What It Taught Me About How to Stay Sober Long Term",
+    date: "August 5, 2026",
+    image: blogImageClosestToDrinkingAgain,
+    imageAlt: "A man standing alone at night in a dim hotel room in front of an open minibar",
+    excerpt: "Eight years sober, alone in a hotel room, standing in front of a minibar. What that night taught me about how to stay sober long term.",
+    category: "Recovery"
+  },
   {
     id: "what-your-addicted-loved-one-is-really-thinking",
     title: "I Was the One at the End of the Table: What Your Addicted Loved One Is Really Thinking",
