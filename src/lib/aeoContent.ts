@@ -917,6 +917,27 @@ export const articleAnswerSummaries: Record<string, AnswerBlockContent> = {
       { label: "When the Family Is Exhausted by Addiction", href: "/blog/addiction-family-exhaustion" },
     ],
   },
+  "closest-i-came-to-drinking-again": {
+    eyebrow: "Article answer",
+    title: "How do you stay sober long term?",
+    answer:
+      "You keep doing the basic practices of recovery long after you feel like you need them. Late relapse rarely starts with a craving — it starts with a quiet drift away from meetings, honesty, and connection, months before any drink. Watch the drift, not the drink.",
+    bullets: [
+      "Passing thoughts about drinking can appear decades in; isolation, not the thought, is the emergency.",
+      "Say it out loud the same day — secrecy is the fuel that turns a thought into a relapse.",
+      "Warning signs show up weeks or months early: dropped routines, secrecy, romanticizing old days.",
+    ],
+    nextSteps: [
+      "Ask 'when did I last do the things that keep me well?' instead of 'do I want to drink?'",
+      "Keep one warm line open — a weekly call with someone sober, in good seasons too.",
+      "Families: welcome honesty about hard days, and speak up early if the recovery talk stops.",
+    ],
+    links: [
+      { label: "Why I Still Go to Meetings After 23 Years Sober", href: "/blog/why-i-still-go-to-meetings-after-23-years-sober" },
+      { label: "What to Do After a Relapse: The First 24 Hours", href: "/blog/what-to-do-after-a-relapse-first-24-hours" },
+      { label: "Nobody Warned Me About the Boredom", href: "/blog/nobody-warned-me-about-the-boredom" },
+    ],
+  },
   "what-your-addicted-loved-one-is-really-thinking": {
     eyebrow: "Article answer",
     title: "What is your addicted loved one thinking when you confront them?",
