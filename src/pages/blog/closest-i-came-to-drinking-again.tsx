@@ -164,7 +164,7 @@ const ClosestICameToDrinkingAgain = () => {
           <ul>
             <li>
               <strong>Stay connected on purpose.</strong> I still go to meetings — here's{" "}
-              <Link to="/blog/why-i-still-go-to-meetings" className="text-primary hover:underline">
+              <Link to="/blog/why-i-still-go-to-meetings-after-23-years-sober" className="text-primary hover:underline">
                 why I still go to meetings after 23 years
               </Link>
               . I still have sober men I talk to every week — not because I'm in crisis, but so the line is warm when I need it.
@@ -193,7 +193,7 @@ const ClosestICameToDrinkingAgain = () => {
 
           <p>
             I've watched people with fifteen years relapse, and I've watched people with fifteen days stay sober through unbelievable stress. The difference is almost never willpower. It's whether they picked up the phone. If a drink has already happened, that isn't the end of the story either —{" "}
-            <Link to="/blog/what-to-do-after-a-relapse" className="text-primary hover:underline">
+            <Link to="/blog/what-to-do-after-a-relapse-first-24-hours" className="text-primary hover:underline">
               what to do after a relapse
             </Link>{" "}
             matters far more than the relapse itself.
