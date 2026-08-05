@@ -128,6 +128,7 @@ import blogImageRescuerTrap from "@/assets/blog-rescuer-trap-enabling-addiction-
 import blogImageNegotiatingFamilyPatterns from "@/assets/blog-negotiating-with-addiction-family-patterns.jpg";
 import blogImageTriangulationFamilies from "@/assets/blog-triangulation-families-addiction.jpg";
 import blogImageLivingAmendsRecovery from "@/assets/blog-living-amends-recovery.jpg";
+import blogImageClosestToDrinkingAgain from "@/assets/blog-closest-i-came-to-drinking-again.jpg";
 
 export interface BlogArticle {
   id: string;
