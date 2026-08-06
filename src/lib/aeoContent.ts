@@ -917,6 +917,27 @@ export const articleAnswerSummaries: Record<string, AnswerBlockContent> = {
       { label: "When the Family Is Exhausted by Addiction", href: "/blog/addiction-family-exhaustion" },
     ],
   },
+  "what-tv-gets-wrong-about-interventions": {
+    eyebrow: "Article answer",
+    title: "What really happens at an intervention?",
+    answer:
+      "A real intervention is a carefully prepared family meeting led by a professional, where people tell the truth with compassion and offer a clear path to help — with treatment already arranged before anyone sits down. The TV ambush is a distorted slice of a much longer process.",
+    bullets: [
+      "Surprise is optional — many interventions today are invitational, and that's a clinical decision.",
+      "You don't have to wait for rock bottom; a good intervention raises the bottom on a day the family chooses.",
+      "Letters work because they're prepared and lead with love, not because they're dramatic.",
+    ],
+    nextSteps: [
+      "Expect days of preparation before the meeting and weeks of follow-up after.",
+      "Decide who belongs in the room and what boundaries the family will hold.",
+      "Have treatment, travel, and insurance arranged before the conversation happens.",
+    ],
+    links: [
+      { label: "Who Should Be at an Intervention?", href: "/blog/who-should-be-at-an-intervention" },
+      { label: "Do Interventions Actually Work?", href: "/blog/do-interventions-actually-work-success-rates" },
+      { label: "What Happens Before an Intervention", href: "/blog/what-happens-before-intervention" },
+    ],
+  },
   "closest-i-came-to-drinking-again": {
     eyebrow: "Article answer",
     title: "How do you stay sober long term?",

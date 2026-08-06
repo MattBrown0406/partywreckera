@@ -1,4 +1,5 @@
 // Blog post data for routing and index page
+import blogImageWhatTvGetsWrong from "@/assets/blog-what-tv-gets-wrong-about-interventions.jpg";
 import blogImageEndOfTheTable from "@/assets/blog-end-of-the-table.jpg";
 import blogImageNobodyWarnedBoredom from "@/assets/blog-nobody-warned-me-about-the-boredom.jpg";
 import blogImageDidntWantToGetSober from "@/assets/blog-didnt-want-to-get-sober.jpg";
@@ -141,6 +142,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "what-tv-gets-wrong-about-interventions",
+    title: "What Really Happens at an Intervention? What TV Gets Wrong — and What Your Family Should Actually Expect",
+    date: "August 6, 2026",
+    image: blogImageWhatTvGetsWrong,
+    imageAlt: "A family sitting calmly in a circle of chairs in a warmly lit living room during an intervention, one person holding a prepared letter",
+    excerpt: "An interventionist with 23 years sober explains what really happens at an intervention — and why the TV version gets almost everything wrong.",
+    category: "Intervention"
+  },
   {
     id: "closest-i-came-to-drinking-again",
     title: "The Closest I Ever Came to Drinking Again: What It Taught Me About How to Stay Sober Long Term",
