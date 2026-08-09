@@ -917,6 +917,27 @@ export const articleAnswerSummaries: Record<string, AnswerBlockContent> = {
       { label: "When the Family Is Exhausted by Addiction", href: "/blog/addiction-family-exhaustion" },
     ],
   },
+  "intervention-without-a-professional": {
+    eyebrow: "Article answer",
+    title: "Can you do an intervention without a professional?",
+    answer:
+      "Yes — sometimes. A unified family with no history of violence, no serious untreated mental illness, treatment already arranged, and no previous failed attempts can hold an effective family-led intervention. If any of those conditions are missing, a professional significantly improves the odds.",
+    bullets: [
+      "Family dynamics matter more than how severe the addiction is.",
+      "A divided family, past failed attempts, or co-occurring mental illness are signs to hire help.",
+      "The conversation is about 20% of the work; preparation and follow-through are the rest.",
+    ],
+    nextSteps: [
+      "Meet as a family at least twice without your loved one to align on the message and boundaries.",
+      "Arrange treatment — bed, date, and ride — before the conversation happens.",
+      "Decide in advance what changes if the answer is no, and pick one calm person to lead.",
+    ],
+    links: [
+      { label: "How to Choose an Interventionist", href: "/blog/how-to-choose-an-interventionist" },
+      { label: "Who Should Be at an Intervention?", href: "/blog/who-should-be-at-an-intervention" },
+      { label: "Intervention Myths Families Believe", href: "/blog/intervention-myths-families" },
+    ],
+  },
   "what-tv-gets-wrong-about-interventions": {
     eyebrow: "Article answer",
     title: "What really happens at an intervention?",
