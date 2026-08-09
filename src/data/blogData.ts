@@ -1,4 +1,5 @@
 // Blog post data for routing and index page
+import blogImageInterventionWithoutPro from "@/assets/blog-intervention-without-a-professional.jpg";
 import blogImageWhatTvGetsWrong from "@/assets/blog-what-tv-gets-wrong-about-interventions.jpg";
 import blogImageEndOfTheTable from "@/assets/blog-end-of-the-table.jpg";
 import blogImageNobodyWarnedBoredom from "@/assets/blog-nobody-warned-me-about-the-boredom.jpg";
@@ -142,6 +143,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "intervention-without-a-professional",
+    title: "Can You Do an Intervention Without a Professional? An Honest Answer",
+    date: "August 9, 2026",
+    image: blogImageInterventionWithoutPro,
+    imageAlt: "A family sitting around a kitchen table in warm morning light having a serious conversation, one chair empty",
+    excerpt: "Can you do an intervention without a professional? An interventionist with 23 years sober gives an honest answer — when families can, and when it backfires.",
+    category: "Intervention"
+  },
   {
     id: "what-tv-gets-wrong-about-interventions",
     title: "What Really Happens at an Intervention? What TV Gets Wrong — and What Your Family Should Actually Expect",
