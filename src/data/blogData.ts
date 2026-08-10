@@ -1,4 +1,5 @@
 // Blog post data for routing and index page
+import blogImageWhatToExpectCallInterventionist from "@/assets/blog-what-to-expect-when-you-call-an-interventionist.jpg";
 import blogImageInterventionWithoutPro from "@/assets/blog-intervention-without-a-professional.jpg";
 import blogImageWhatTvGetsWrong from "@/assets/blog-what-tv-gets-wrong-about-interventions.jpg";
 import blogImageEndOfTheTable from "@/assets/blog-end-of-the-table.jpg";
@@ -143,6 +144,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "what-to-expect-when-you-call-an-interventionist",
+    title: "What to Expect When You Call an Interventionist for the First Time",
+    date: "August 10, 2026",
+    image: blogImageWhatToExpectCallInterventionist,
+    imageAlt: "A woman sitting alone in her parked car at dusk, holding a phone to her ear",
+    excerpt: "Nervous about calling an interventionist? Here's what actually happens on that first call — what I'll ask, what you should ask, and what comes next.",
+    category: "Intervention"
+  },
   {
     id: "intervention-without-a-professional",
     title: "Can You Do an Intervention Without a Professional? An Honest Answer",
