@@ -917,6 +917,27 @@ export const articleAnswerSummaries: Record<string, AnswerBlockContent> = {
       { label: "When the Family Is Exhausted by Addiction", href: "/blog/addiction-family-exhaustion" },
     ],
   },
+  "what-to-expect-when-you-call-an-interventionist": {
+    eyebrow: "Article answer",
+    title: "What happens when you call an interventionist?",
+    answer:
+      "The first call is a 30–60 minute conversation, usually free and always confidential. You describe what's happening, the interventionist asks practical questions about the family, and together you decide whether an intervention is the right next step. Nothing happens to your loved one because you called.",
+    bullets: [
+      "It's a conversation, not a commitment — your loved one is not notified.",
+      "Expect questions about substances, past attempts, family dynamics, safety, and finances.",
+      "Sometimes the honest recommendation is coaching or boundaries, not a full intervention.",
+    ],
+    nextSteps: [
+      "Ask about training, model used, cost, and what happens if your loved one says no.",
+      "Watch for red flags: pressure to sign, guaranteed outcomes, treatment-center kickbacks.",
+      "If it's not time yet, leave the call with language, boundaries, and a signal for when to move.",
+    ],
+    links: [
+      { label: "How to Choose an Interventionist", href: "/blog/how-to-choose-an-interventionist" },
+      { label: "Can You Do an Intervention Without a Professional?", href: "/blog/intervention-without-a-professional" },
+      { label: "What Really Happens at an Intervention?", href: "/blog/what-tv-gets-wrong-about-interventions" },
+    ],
+  },
   "intervention-without-a-professional": {
     eyebrow: "Article answer",
     title: "Can you do an intervention without a professional?",
