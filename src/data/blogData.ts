@@ -1,4 +1,5 @@
 // Blog post data for routing and index page
+import blogImageCoParentingAddictedEx from "@/assets/blog-co-parenting-with-an-addicted-ex.jpg";
 import blogImageWhatToExpectCallInterventionist from "@/assets/blog-what-to-expect-when-you-call-an-interventionist.jpg";
 import blogImageInterventionWithoutPro from "@/assets/blog-intervention-without-a-professional.jpg";
 import blogImageWhatTvGetsWrong from "@/assets/blog-what-tv-gets-wrong-about-interventions.jpg";
@@ -144,6 +145,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "co-parenting-with-an-addicted-ex",
+    title: "Co-Parenting With an Addicted Ex: Protecting Your Kids Without Losing Yourself",
+    date: "August 11, 2026",
+    image: blogImageCoParentingAddictedEx,
+    imageAlt: "A mother standing alone in a dim kitchen at night, holding her phone and watching an empty driveway",
+    excerpt: "You divorced the chaos, and the chaos kept visitation rights. How to protect your kids, hold real boundaries, and know when to get help.",
+    category: "Family Support"
+  },
   {
     id: "what-to-expect-when-you-call-an-interventionist",
     title: "What to Expect When You Call an Interventionist for the First Time",

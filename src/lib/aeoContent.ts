@@ -1001,6 +1001,27 @@ export const articleAnswerSummaries: Record<string, AnswerBlockContent> = {
       { label: "Nobody Warned Me About the Boredom", href: "/blog/nobody-warned-me-about-the-boredom" },
     ],
   },
+  "co-parenting-with-an-addicted-ex": {
+    eyebrow: "Article answer",
+    title: "How do you co-parent with an addicted ex?",
+    answer:
+      "You stop trying to manage their disease and start managing your kids' exposure to it. Safety is judged on current behavior, not history — impaired driving, blackouts during visits, unsafe people in the home, or kids who come home describing how they cared for their parent all mean act now, not wait.",
+    bullets: [
+      "Boundaries that hold are about behavior, not sobriety: no driving the kids after drinking, no visit if they arrive impaired.",
+      "Keep communication in writing and logistics-only — it stays calmer and builds a record.",
+      "Stop covering. \"Dad couldn't make it today\" protects your kids' grip on reality; invented excuses don't.",
+    ],
+    nextSteps: [
+      "Document dates, times, what you saw, and what the kids said unprompted.",
+      "Tell kids the truth in age-sized pieces: not your fault, not your job — and never use them as messengers.",
+      "Get legal advice for custody changes, and consider an intervention — ex-spouses can be part of one.",
+    ],
+    links: [
+      { label: "How Addiction Affects Siblings", href: "/blog/how-addiction-affects-siblings" },
+      { label: "Enabling vs. Supporting: Where the Line Is", href: "/blog/enabling-vs-supporting-boundaries" },
+      { label: "When Grandparents Become Parents Again", href: "/blog/grandparents-raising-grandchildren-addiction" },
+    ],
+  },
   "what-your-addicted-loved-one-is-really-thinking": {
     eyebrow: "Article answer",
     title: "What is your addicted loved one thinking when you confront them?",
