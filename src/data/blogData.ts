@@ -134,6 +134,7 @@ import blogImageNegotiatingFamilyPatterns from "@/assets/blog-negotiating-with-a
 import blogImageTriangulationFamilies from "@/assets/blog-triangulation-families-addiction.jpg";
 import blogImageLivingAmendsRecovery from "@/assets/blog-living-amends-recovery.jpg";
 import blogImageClosestToDrinkingAgain from "@/assets/blog-closest-i-came-to-drinking-again.jpg";
+import blogImageNobodyTalksToEachOther from "@/assets/blog-nobody-talks-to-each-other.jpg";
 
 export interface BlogArticle {
   id: string;
@@ -146,6 +147,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "families-talk-about-each-other-triangulation",
+    title: "Nobody in This Family Talks to Each Other \u2014 They Talk About Each Other",
+    date: "August 17, 2026",
+    image: blogImageNobodyTalksToEachOther,
+    imageAlt: "Three adults speaking quietly together in a dim kitchen at dusk while a young adult man stands alone in the doorway behind them",
+    excerpt: "Why families with addiction stop talking to each other directly, how triangulation protects everyone from the truth, and how to break the pattern.",
+    category: "Family"
+  },
   {
     id: "how-families-normalize-addiction-moving-the-bar",
     title: "\u201CAt Least He\u2019s Not Doing That Anymore\u201D: How Families Normalize Addiction Without Ever Deciding To",
