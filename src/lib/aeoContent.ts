@@ -1001,6 +1001,28 @@ export const articleAnswerSummaries: Record<string, AnswerBlockContent> = {
       { label: "Nobody Warned Me About the Boredom", href: "/blog/nobody-warned-me-about-the-boredom" },
     ],
   },
+  "families-talk-about-each-other-triangulation": {
+    eyebrow: "Article answer",
+    title: "Why do families talk about their addicted loved one instead of to him?",
+    answer:
+      "Because talking about someone lowers anxiety without the risk of rejection. That's triangulation \u2014 concern routes through a middleman until everyone in the family is informed except the person it's about. It feels like communication, but it keeps the truth from ever landing.",
+    bullets: [
+      "One person usually becomes the switchboard and burns out carrying everyone's worry.",
+      "Secondhand concern hands the addicted person a subject change \u2014 who said it, behind whose back.",
+      "Resentment builds between people who are actually on the same side, while the addiction goes untouched.",
+    ],
+    nextSteps: [
+      "Say one direct sentence in your own words, without building a case.",
+      "Decline the messenger job: \"That's real \u2014 he needs to hear it from you.\"",
+      "Get the whole family in one room so everyone hears the same information at once.",
+      "Bring in an interventionist when the room gets too hot to hold a direct conversation.",
+    ],
+    links: [
+      { label: "Stop Talking Through Me: Triangulation in Families", href: "/blog/triangulation-in-families-with-addiction" },
+      { label: "The Roles Every Family Hands Out", href: "/blog/family-roles-in-addiction-hero-scapegoat-lost-child" },
+      { label: "What to Expect When You Call an Interventionist", href: "/blog/what-to-expect-when-you-call-an-interventionist" },
+    ],
+  },
   "how-families-normalize-addiction-moving-the-bar": {
     eyebrow: "Article answer",
     title: "What does it mean when a family normalizes addiction?",
