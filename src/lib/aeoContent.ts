@@ -1001,6 +1001,28 @@ export const articleAnswerSummaries: Record<string, AnswerBlockContent> = {
       { label: "Nobody Warned Me About the Boredom", href: "/blog/nobody-warned-me-about-the-boredom" },
     ],
   },
+  "how-families-normalize-addiction-moving-the-bar": {
+    eyebrow: "Article answer",
+    title: "What does it mean when a family normalizes addiction?",
+    answer:
+      "Normalizing addiction means the family slowly adjusts its definition of normal to match whatever the addiction is doing. Behavior that once would have been alarming becomes routine \u2014 not because anyone stopped caring, but because they ran out of alarm. It is a survival adaptation, and it is invisible from the inside.",
+    bullets: [
+      "The bar moves by comparison: families measure against last month's crisis instead of against a healthy life.",
+      "Exhaustion drops standards too \u2014 unfunded standards quietly stop being enforced.",
+      "Normalizing is perception; enabling is action. Normalizing usually comes first and makes enabling feel reasonable.",
+    ],
+    nextSteps: [
+      "Write the two-year comparison: life then vs. life now, side by side.",
+      "Ask the stranger question \u2014 what would you tell a friend in this exact situation?",
+      "Name one thing you've stopped noticing, out loud, to one other person.",
+      "Pick one small standard and fund it, knowing it may cost a fight.",
+    ],
+    links: [
+      { label: "When Helping Turns Harmful: How Enabling Develops", href: "/blog/helping-turns-harmful-enabling" },
+      { label: "Enabling vs. Supporting: Where the Line Is", href: "/blog/enabling-vs-supporting-boundaries" },
+      { label: "What to Expect When You Call an Interventionist", href: "/blog/what-to-expect-when-you-call-an-interventionist" },
+    ],
+  },
   "co-parenting-with-an-addicted-ex": {
     eyebrow: "Article answer",
     title: "How do you co-parent with an addicted ex?",
