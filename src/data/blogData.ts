@@ -1,4 +1,5 @@
 // Blog post data for routing and index page
+import blogImageNormalizeAddiction from "@/assets/blog-how-families-normalize-addiction.jpg";
 import blogImageCoParentingAddictedEx from "@/assets/blog-co-parenting-with-an-addicted-ex.jpg";
 import blogImageWhatToExpectCallInterventionist from "@/assets/blog-what-to-expect-when-you-call-an-interventionist.jpg";
 import blogImageInterventionWithoutPro from "@/assets/blog-intervention-without-a-professional.jpg";
@@ -145,6 +146,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "how-families-normalize-addiction-moving-the-bar",
+    title: "\u201CAt Least He\u2019s Not Doing That Anymore\u201D: How Families Normalize Addiction Without Ever Deciding To",
+    date: "August 16, 2026",
+    image: blogImageNormalizeAddiction,
+    imageAlt: "A mother sitting alone at a worn kitchen table at dusk with a mug, empty chairs around her",
+    excerpt: "Families normalize addiction one small adjustment at a time. Here's how the bar moves without anyone deciding to move it \u2014 and four ways to find it again.",
+    category: "Family Support"
+  },
   {
     id: "co-parenting-with-an-addicted-ex",
     title: "Co-Parenting With an Addicted Ex: Protecting Your Kids Without Losing Yourself",
