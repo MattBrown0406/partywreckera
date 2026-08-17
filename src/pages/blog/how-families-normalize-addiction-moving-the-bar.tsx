@@ -233,8 +233,8 @@ const HowFamiliesNormalizeAddiction = () => {
 
           <p>
             If a standard costs a fight, decide in advance you can afford one fight. Choose the smallest one that matters — no using in the house, no lending money, no lying to Grandma on his behalf. Small and held beats big and abandoned. Every time. And remember that{" "}
-            <Link to="/blog/detachment-with-love" className="text-primary hover:underline">
-              detachment isn't abandonment
+            <Link to="/blog/enabling-vs-supporting-boundaries" className="text-primary hover:underline">
+              holding a boundary isn't abandonment
             </Link>
             .
           </p>
@@ -291,8 +291,8 @@ const HowFamiliesNormalizeAddiction = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/blog/detachment-with-love" className="text-primary hover:underline">
-                  Detachment With Love in Families Facing Addiction
+                <Link to="/blog/enabling-vs-supporting-boundaries" className="text-primary hover:underline">
+                  Enabling vs. Supporting: Where the Line Actually Is
                 </Link>
               </li>
               <li>
