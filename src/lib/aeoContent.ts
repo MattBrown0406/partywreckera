@@ -319,6 +319,27 @@ export const glossaryTerms = [
 ];
 
 export const articleAnswerSummaries: Record<string, AnswerBlockContent> = {
+  "sober-but-still-miserable-dry-drunk-syndrome": {
+    eyebrow: "Article answer",
+    title: "What is dry drunk syndrome and what can families do about it?",
+    answer:
+      "Dry drunk syndrome is when someone stops drinking or using but never changes the thinking, behavior, or emotional patterns that came with the addiction. Abstinence happened; recovery didn't. It isn't a moral failure \u2014 it's a predictable stage, and it usually means the person is doing the hardest part of the work with none of the support.",
+    bullets: [
+      "Abstinence is a decision; recovery is a reconstruction that takes a program, other people, and honesty.",
+      "Markers at home: triggerless irritability, isolating, keeping score, replacement compulsions, refusing help.",
+      "The difference from normal early recovery is direction, not mood \u2014 is the discomfort reaching toward something or managed with control and blame?",
+    ],
+    nextSteps: [
+      "Say one true sentence, once, without a lecture \u2014 then stop talking.",
+      "Get your own support first: Al-Anon, a therapist, or a family coach.",
+      "Ask for behavior, not gratitude, and watch for the replacement compulsion.",
+    ],
+    links: [
+      { label: "Why Sobriety Alone Isn't Enough", href: "/blog/dry-drunk-syndrome-family" },
+      { label: "First Year of Sobriety: What to Expect", href: "/blog/first-year-sobriety-what-to-expect" },
+      { label: "Coming Home From Rehab", href: "/blog/coming-home-from-rehab-what-families-arent-prepared-for" },
+    ],
+  },
   "adult-child-addiction-parents": {
     eyebrow: "Article answer",
     title: "What can parents do when their adult child is the one with the addiction?",

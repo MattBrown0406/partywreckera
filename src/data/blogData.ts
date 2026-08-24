@@ -1,4 +1,5 @@
 // Blog post data for routing and index page
+import blogImageSoberButStillMiserable from "@/assets/blog-sober-but-still-miserable-dry-drunk.jpg";
 import blogImageNormalizeAddiction from "@/assets/blog-how-families-normalize-addiction.jpg";
 import blogImageCoParentingAddictedEx from "@/assets/blog-co-parenting-with-an-addicted-ex.jpg";
 import blogImageWhatToExpectCallInterventionist from "@/assets/blog-what-to-expect-when-you-call-an-interventionist.jpg";
@@ -147,6 +148,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "sober-but-still-miserable-dry-drunk-syndrome",
+    title: "Sober and Still Miserable: The Dry Drunk Nobody Warned You About",
+    date: "August 24, 2026",
+    image: blogImageSoberButStillMiserable,
+    imageAlt: "A tense young adult man sitting alone at a dim kitchen table at night, staring at an untouched mug of coffee beside an empty glass",
+    excerpt: "Sober but still miserable? Dry drunk syndrome is when the drinking stops but nothing else changes. Here's what it looks like and how to fix it.",
+    category: "Recovery"
+  },
   {
     id: "families-talk-about-each-other-triangulation",
     title: "Nobody in This Family Talks to Each Other \u2014 They Talk About Each Other",
