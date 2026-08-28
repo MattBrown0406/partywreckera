@@ -1,4 +1,5 @@
 // Blog post data for routing and index page
+import blogImage72Hours from "@/assets/blog-72-hours-after-crisis.jpg";
 import blogImageSoberButStillMiserable from "@/assets/blog-sober-but-still-miserable-dry-drunk.jpg";
 import blogImageNormalizeAddiction from "@/assets/blog-how-families-normalize-addiction.jpg";
 import blogImageCoParentingAddictedEx from "@/assets/blog-co-parenting-with-an-addicted-ex.jpg";
@@ -148,6 +149,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "72-hours-after-crisis-window-of-willingness",
+    title: "The 72 Hours After the Crisis: What to Do When the Door Cracks Open",
+    date: "August 27, 2026",
+    image: blogImage72Hours,
+    imageAlt: "A mother and father sitting apart in an empty hospital corridor at four in the morning under fluorescent lights, holding cups of coffee",
+    excerpt: "After an overdose, arrest, or ER visit there's a short window when your loved one may say yes to help. Here's what to do in the first 72 hours.",
+    category: "Intervention"
+  },
   {
     id: "sober-but-still-miserable-dry-drunk-syndrome",
     title: "Sober and Still Miserable: The Dry Drunk Nobody Warned You About",

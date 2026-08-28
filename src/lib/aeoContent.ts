@@ -319,6 +319,27 @@ export const glossaryTerms = [
 ];
 
 export const articleAnswerSummaries: Record<string, AnswerBlockContent> = {
+  "72-hours-after-crisis-window-of-willingness": {
+    eyebrow: "Article answer",
+    title: "What should families do in the first 72 hours after an overdose or arrest?",
+    answer:
+      "There is a short window \u2014 usually 24 to 72 hours after a crisis \u2014 when someone with an addiction is scared enough to accept help they would normally refuse. It is driven by fear, not insight, and that is fine. Your job in that window is not to teach a lesson or get an apology; it is to remove every obstacle between your loved one and a treatment bed.",
+    bullets: [
+      "Willingness does not have to be pure to be useful \u2014 a shaky, scared yes is still a yes.",
+      "Call a professional or admissions team before you call a family meeting; speed matters more than eloquence.",
+      "The window closes because shame comes back online, usually within a few days.",
+    ],
+    nextSteps: [
+      "Confirm today's bed availability, insurance coverage, and whether direct transfer from hospital or jail is possible.",
+      "Solve the excuses in advance: the dog, the job, the car, the phone.",
+      "Pick one calm person to talk and keep the message short: \u201CI love you. There's a bed. I'll drive you right now.\u201D",
+    ],
+    links: [
+      { label: "What to Expect When You Call an Interventionist", href: "/blog/what-to-expect-when-you-call-an-interventionist" },
+      { label: "Stop Waiting for Rock Bottom", href: "/blog/stop-waiting-for-rock-bottom" },
+      { label: "Who Should Be at an Intervention?", href: "/blog/who-should-be-at-an-intervention" },
+    ],
+  },
   "sober-but-still-miserable-dry-drunk-syndrome": {
     eyebrow: "Article answer",
     title: "What is dry drunk syndrome and what can families do about it?",
