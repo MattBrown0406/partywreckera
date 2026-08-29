@@ -319,6 +319,27 @@ export const glossaryTerms = [
 ];
 
 export const articleAnswerSummaries: Record<string, AnswerBlockContent> = {
+  "overdose-safety-plan-for-families": {
+    eyebrow: "Article answer",
+    title: "What is an overdose safety plan for families?",
+    answer:
+      "An overdose safety plan is a short, written agreement about what you keep in the house, what you do in an emergency, and who does it. It takes about an hour, does not require your loved one's permission, and has one purpose: keeping them alive long enough to get well. It runs alongside the recovery plan, not instead of it.",
+    bullets: [
+      "Keep at least two doses of naloxone nasal spray somewhere anyone in the house can reach \u2014 not a locked drawer.",
+      "Naloxone is over the counter at major U.S. pharmacies and will not harm someone who is not overdosing.",
+      "A safety plan is not enabling \u2014 dying is not a consequence anyone learns from.",
+    ],
+    nextSteps: [
+      "If you cannot wake them: call 911, give naloxone, give rescue breaths if you know how, repeat after 2\u20133 minutes, then roll them on their side and stay.",
+      "Tape a list of what they use, their medical conditions, and your address inside a cabinet door.",
+      "Tell them once, without a lecture: \u201CI bought naloxone. It's in the drawer by the sink.\u201D",
+    ],
+    links: [
+      { label: "The 72 Hours After the Crisis", href: "/blog/72-hours-after-crisis-window-of-willingness" },
+      { label: "When Someone Says No to an Intervention", href: "/blog/when-someone-says-no-intervention" },
+      { label: "Enabling vs. Supporting: Setting Boundaries", href: "/blog/enabling-vs-supporting-boundaries" },
+    ],
+  },
   "72-hours-after-crisis-window-of-willingness": {
     eyebrow: "Article answer",
     title: "What should families do in the first 72 hours after an overdose or arrest?",

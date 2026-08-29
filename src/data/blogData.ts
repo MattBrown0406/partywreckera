@@ -1,4 +1,5 @@
 // Blog post data for routing and index page
+import blogImageOverdoseSafetyPlan from "@/assets/blog-overdose-safety-plan-for-families.jpg";
 import blogImage72Hours from "@/assets/blog-72-hours-after-crisis.jpg";
 import blogImageSoberButStillMiserable from "@/assets/blog-sober-but-still-miserable-dry-drunk.jpg";
 import blogImageNormalizeAddiction from "@/assets/blog-how-families-normalize-addiction.jpg";
@@ -149,6 +150,15 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    id: "overdose-safety-plan-for-families",
+    title: "Keeping Them Alive Long Enough to Get Well: The Overdose Safety Plan Every Family Needs",
+    date: "August 28, 2026",
+    image: blogImageOverdoseSafetyPlan,
+    imageAlt: "A mother's hands placing a naloxone nasal spray box into an open kitchen drawer in a dimly lit home at night",
+    excerpt: "An overdose safety plan for families keeps your loved one alive while you work toward treatment. Here is exactly what to do and what to keep in the house.",
+    category: "Family Support"
+  },
   {
     id: "72-hours-after-crisis-window-of-willingness",
     title: "The 72 Hours After the Crisis: What to Do When the Door Cracks Open",
